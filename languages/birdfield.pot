@@ -1,0 +1,193 @@
+# Translation of the WordPress theme BirdFIELD 1.0 by sysbird
+# Copyright (C) Sysbird
+# This file is distributed under the same license as the BirdFIELD package.
+# FIRST AUTHOR <sysbird@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: BirdFIELD 1.00\n"
+"Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
+"POT-Creation-Date: 2014-07-30 00:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: sysbird <sysbird@gmail.com>\n"
+"Language-Team: sysbird <sysbird@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:12
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: 404.php:16
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: archive.php:14
+msgid "Category Archives: %s"
+msgstr ""
+
+#: archive.php:17
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: archive.php:20
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:23
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:23
+msgid "F, Y"
+msgstr ""
+
+#: archive.php:26
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:26
+msgid "Y"
+msgstr ""
+
+#: archive.php:29
+msgid "Author Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:45
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: comments.php:8
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+msgstr ""
+
+#: comments.php:17
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr ""
+
+#: comments.php:24 comments.php:35
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:25 comments.php:36
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:43
+msgid "Name"
+msgstr ""
+
+#: comments.php:43 comments.php:44 comments.php:50
+msgid "(*required)"
+msgstr ""
+
+#: comments.php:44
+msgid "Email (will not be published)"
+msgstr ""
+
+#: comments.php:45
+msgid "Website"
+msgstr ""
+
+#: comments.php:50
+msgid "Comment"
+msgstr ""
+
+#: content.php:9 content.php:50 news-content.php:18
+msgid "Permalink to %s"
+msgstr ""
+
+#: content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: content.php:43
+msgid "Category"
+msgstr ""
+
+#: content.php:44
+msgid "Tags"
+msgstr ""
+
+#: footer.php:14
+msgid "Proudly powered by WordPress"
+msgstr ""
+
+#: footer.php:16
+msgid "Go Top"
+msgstr ""
+
+#: functions.php:18
+msgid "Widget Area for header"
+msgstr ""
+
+#: functions.php:20
+msgid "Ont text widget for header"
+msgstr ""
+
+#: functions.php:31
+msgid "Widget Area for footer"
+msgstr ""
+
+#: functions.php:54
+msgid "Pingback"
+msgstr ""
+
+#: function.php:54
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:64
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:323
+msgid "Navigation Menu"
+msgstr ""
+
+#: functions.php:426
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:465
+msgid "Theme Options"
+msgstr ""
+
+#: functions.php:475
+msgid "Text Color"
+msgstr ""
+
+#: functions.php:486
+msgid "Link Color"
+msgstr ""
+
+#: functions.php:497
+msgid "Header, Footer Background Color"
+msgstr ""
+
+#: news-content.php:28
+msgid "NEWS"
+msgstr ""
+
+#: home.php:9
+msgid "RECENT"
+msgstr ""
+
+#: search.php:12
+msgid "Search Results: %s"
+msgstr ""
+
+#: search.php:25
+msgid "Sorry, no posts matched &#8216;%s&#8217;"
+msgstr ""

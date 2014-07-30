@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BirdFIELD 1.00 ja\n"
+"Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
+"POT-Creation-Date: 2014-07-30 00:00+0300\n"
+"PO-Revision-Date: 2014-07-30 17:36+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.7\n"
+"Last-Translator: TORIYAMA Yuko <sysbirdj@gmail.com>\n"
+"Language-Team: sysbird <sysbird@gmail.com>\n"
+"Language: ja\n"
+
+#: 404.php:12
+msgid "Error 404 - Not Found"
+msgstr "エラー404 - ページが見つかりませんでした"
+
+#: 404.php:16
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのページが見つかりませんでした。検索してみてください。"
+
+#: archive.php:14
+msgid "Category Archives: %s"
+msgstr "「%s」カテゴリーの一覧"
+
+#: archive.php:17
+msgid "Tag Archives: %s"
+msgstr "「%s」に関する一覧"
+
+#: archive.php:20
+msgid "Daily Archives: %s"
+msgstr "%s の一覧"
+
+#: archive.php:23
+msgid "Monthly Archives: %s"
+msgstr "%s の一覧"
+
+#: archive.php:23
+msgid "F, Y"
+msgstr "Y年n月"
+
+#: archive.php:26
+msgid "Yearly Archives: %s"
+msgstr "%s の一覧"
+
+#: archive.php:26
+msgid "Y"
+msgstr "Y年"
+
+#: archive.php:29
+msgid "Author Archives: %s"
+msgstr "%s による投稿"
+
+#: archive.php:32
+msgid "Blog Archives"
+msgstr "アーカイブ"
+
+#: archive.php:45
+msgid "Sorry, no posts matched your criteria."
+msgstr "投稿が見つかりません。"
+
+#: comments.php:8
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"パスワード保護されています。コメントを見るにはパスワードを入力してください。"
+
+#: comments.php:17
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "%1$s件のコメント"
+
+#: comments.php:24 comments.php:35
+msgid "Older Comments"
+msgstr "古いコメント"
+
+#: comments.php:25 comments.php:36
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+#: comments.php:43
+msgid "Name"
+msgstr "お名前"
+
+#: comments.php:43 comments.php:44 comments.php:50
+msgid "(*required)"
+msgstr "(*必須)"
+
+#: comments.php:44
+msgid "Email (will not be published)"
+msgstr "メールアドレス (公開されません)"
+
+#: comments.php:45
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: comments.php:50
+msgid "Comment"
+msgstr "コメント"
+
+#: content.php:9 content.php:50 news-content.php:18
+msgid "Permalink to %s"
+msgstr "%sへのリンク"
+
+#: content.php:37
+msgid "Pages:"
+msgstr "ページ:"
+
+#: content.php:43
+msgid "Category"
+msgstr "カテゴリー"
+
+#: content.php:44
+msgid "Tags"
+msgstr "タグ"
+
+#: footer.php:14
+msgid "Proudly powered by WordPress"
+msgstr "Proudly powered by WordPress"
+
+#: footer.php:16
+msgid "Go Top"
+msgstr "ページトップへ"
+
+#: functions.php:18
+msgid "Widget Area for header"
+msgstr "ウィジェットエリアヘッダー"
+
+#: functions.php:20
+msgid "Ont text widget for header"
+msgstr "ヘッダーに設置するひとつのテキストウィジェット"
+
+#: functions.php:31
+msgid "Widget Area for footer"
+msgstr "ウィジェットエリアフッター"
+
+#: functions.php:54
+msgid "Pingback"
+msgstr "ピンバック"
+
+#: function.php:54
+msgid "(Edit)"
+msgstr "(編集)"
+
+#: functions.php:64
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントは管理者の承認待ちです。"
+
+#: functions.php:323
+msgid "Navigation Menu"
+msgstr "ナビゲーションメニュー"
+
+#: functions.php:426
+msgid "Page %s"
+msgstr "%sページ目"
+
+#: functions.php:465
+msgid "Theme Options"
+msgstr "テーマ設定"
+
+#: functions.php:475
+msgid "Text Color"
+msgstr "文字色"
+
+#: functions.php:486
+msgid "Link Color"
+msgstr "リンク色"
+
+#: functions.php:497
+msgid "Header, Footer Background Color"
+msgstr "ヘッダ、フッター背景色"
+
+#: news-content.php:28
+msgid "NEWS"
+msgstr "お知らせ"
+
+#: home.php:9
+msgid "RECENT"
+msgstr "新着"
+
+#: search.php:12
+msgid "Search Results: %s"
+msgstr "「%s」 の検索結果"
+
+#: search.php:25
+msgid "Sorry, no posts matched &#8216;%s&#8217;"
+msgstr "「%s」 は見つかりませんでした。"
