@@ -18,9 +18,9 @@ This theme, like WordPress, is licensed under the GPL.
 @import "compass/reset";
 
 // variable
-$text-color: #555;
-$link-color: #3981e5;
-$header-color: #068441;
+$text-color: #222327;
+$link-color: #1c4bbe;
+$header-color: #79a596;
 $border-color: #E6E6E6;
 $meta-color: #999;
 
@@ -243,7 +243,7 @@ body , html {
 
 		.current_page_item > a,
 		.current_page_ancestor > a {
-			font-weight: bold;
+				font-weight: bold;
 		}
 	}
 }

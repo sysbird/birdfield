@@ -73,7 +73,7 @@ Font Awesome
 /* Link
 --------------------------------------------- */
 a {
-  color: #3981e5;
+  color: #1c4bbe;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -132,7 +132,7 @@ body, html {
 -------------------------------------------------------------- */
 .wrapper {
   font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
-  color: #555555;
+  color: #222327;
   background: #FCFCFC;
   overflow: hidden; }
   .wrapper * {
@@ -146,7 +146,7 @@ body, html {
 -------------------------------------------------------------- */
 #header {
   color: #FFF;
-  background: #068441;
+  background: #79a596;
   min-height: 80px;
   position: relative;
   z-index: 4; }
@@ -239,7 +239,7 @@ body, html {
 #content .content-header {
   margin: 1.6em 0; }
   #content .content-header .content-title {
-    color: #068441;
+    color: #79a596;
     margin: 0; }
 #content .hentry {
   width: 100%;
@@ -255,7 +255,7 @@ body, html {
     margin: 1.6em 0;
     position: relative; }
     #content .hentry .entry-header .entry-title {
-      color: #068441;
+      color: #79a596;
       font-size: 2.4rem;
       font-weight: normal;
       margin: 0 0 0.2em 0;
@@ -263,7 +263,7 @@ body, html {
       padding: 0;
       border: none; }
       #content .hentry .entry-header .entry-title a {
-        color: #555555; }
+        color: #222327; }
     #content .hentry .entry-header .postdate,
     #content .hentry .entry-header .author {
       color: #999999;
@@ -354,12 +354,12 @@ body, html {
     clear: both;
     margin: 1.6em 0;
     font-weight: bold;
-    color: #3981e5; }
+    color: #1c4bbe; }
     #content .hentry .page-link a {
-      color: #3981e5;
+      color: #1c4bbe;
       padding: 4px 10px;
       text-decoration: none;
-      border: solid 1px #3981e5;
+      border: solid 1px #1c4bbe;
       border-radius: 2px;
       font-weight: normal;
       text-align: center; }
@@ -381,9 +381,9 @@ body, html {
   margin: 0.7em 0;
   line-height: 1.2;
   font-weight: normal;
-  color: #068441; }
+  color: #79a596; }
   #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
-    color: #068441; }
+    color: #79a596; }
 #content h1 {
   font-size: 2.4rem; }
 #content h2 {
@@ -693,7 +693,7 @@ video {
       -moz-osx-font-smoothing: grayscale;
       padding-left: 0.2em; }
     #content #comments li.bypostauthor .comment_meta .author {
-      color: #068441; }
+      color: #79a596; }
     #content #comments li .postdate {
       color: #999; }
       #content #comments li .postdate:before {
@@ -746,7 +746,7 @@ video {
 /* Footer
 --------------------------------------------- */
 #footer {
-  background: #068441;
+  background: #79a596;
   color: #FFF; }
   #footer a {
     color: #FFF; }
@@ -805,7 +805,7 @@ video {
 /* Widget
 --------------------------------------------- */
 #widget-area {
-  background: #068441;
+  background: #79a596;
   padding: 0;
   overflow: hidden;
   *zoom: 1; }
@@ -876,7 +876,7 @@ video {
           padding: 2px 0;
           margin: 0 auto;
           background: #FFF;
-          color: #068441;
+          color: #79a596;
           border-radius: 2px; }
       #widget-area .widget #wp-calendar thead th {
         padding: 8px;
@@ -995,7 +995,7 @@ video {
           *zoom: 1; }
           .home #content #news ul.article li .entry-header .entry-title {
             font-size: 1.2rem;
-            color: #3981e5;
+            color: #1c4bbe;
             padding-top: 0.8em;
             margin: 0; }
           .home #content #news ul.article li .entry-header .postdate {
@@ -1024,7 +1024,7 @@ video {
           position: relative; }
           .home #content #blog ul.article .hentry .entry-header .entry-title {
             font-size: 1.6rem;
-            color: #555555; }
+            color: #222327; }
         .home #content #blog ul.article .hentry a {
           display: block;
           height: 100%; }
@@ -1044,7 +1044,7 @@ video {
               text-transform: uppercase;
               top: 0;
               right: -44px;
-              background: #068441;
+              background: #79a596;
               width: 100px;
               height: 20px;
               padding: 2px;
@@ -1092,7 +1092,7 @@ video {
         text-decoration: none; }
       .archive #content ul.list li a .entry-content,
       .search #content ul.list li a .entry-content {
-        color: #555555;
+        color: #222327;
         font-size: 0.96em; }
     .archive #content ul.list li .entry-header,
     .search #content ul.list li .entry-header {
@@ -1102,7 +1102,7 @@ video {
       .archive #content ul.list li .entry-header .entry-title,
       .search #content ul.list li .entry-header .entry-title {
         font-size: 1.6rem;
-        color: #3981e5; }
+        color: #1c4bbe; }
 
 /* Single
 -------------------------------------------------------------------- */
@@ -1141,14 +1141,14 @@ video {
 #content .tablenav {
   clear: both;
   padding: 2em 0 1em;
-  color: #3981e5;
+  color: #1c4bbe;
   overflow: hidden;
   *zoom: 1; }
   #content .tablenav a.page-numbers,
   #content .tablenav .current {
     display: inline-block;
-    color: #3981e5;
-    border: solid 1px #3981e5;
+    color: #1c4bbe;
+    border: solid 1px #1c4bbe;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -1166,7 +1166,7 @@ video {
       text-decoration: underline; }
   #content .tablenav .current {
     color: #FFF;
-    background: #3981e5; }
+    background: #1c4bbe; }
 
 /* Media queries for responsive design
 --------------------------------------------- */
@@ -1245,7 +1245,7 @@ video {
           padding: 0.8em; }
           #menu-wrapper .menu ul#menu-primary-items li a:hover {
             background: #FFF;
-            color: #068441; }
+            color: #79a596; }
         #menu-wrapper .menu ul#menu-primary-items li ul {
           margin: 0;
           padding: 0;
@@ -1263,7 +1263,7 @@ video {
             margin: 0;
             padding: 0; }
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
-              background-color: #068441;
+              background-color: #79a596;
               padding: 0.8em;
               border-top: dotted 1px #FFF;
               height: auto;
