@@ -161,7 +161,6 @@ body, html {
       padding: 20px 0;
       color: #FFF; }
       #header #branding #site-title a:hover {
-        color: #DDD;
         text-decoration: none; }
   #header #branding #site-description {
     display: none;
@@ -226,12 +225,10 @@ body, html {
         border-top: dotted 1px #FFF;
         *white-space: nowrap;
         /* IE7 and below */ }
-        #menu-wrapper .menu ul#menu-primary-items li a:hover {
-          font-weight: bold; }
       #menu-wrapper .menu ul#menu-primary-items li ul {
         padding-left: 0.8em; }
-  #menu-wrapper .menu .current_page_item > a,
-  #menu-wrapper .menu .current_page_ancestor > a {
+  #menu-wrapper .menu .current_menu_item > a,
+  #menu-wrapper .menu .current-menu-ancestor > a {
     font-weight: bold; }
 
 /* Posts
@@ -767,7 +764,7 @@ video {
   #footer #back-top {
     position: fixed;
     bottom: -80px;
-    left: 50%;
+    left: 36%;
     z-index: 3; }
     #footer #back-top a {
       background: none repeat scroll 0 0 #EEEEEE;
@@ -956,10 +953,19 @@ video {
       width: 100%;
       vertical-align: bottom; }
   .home #wall .widget {
-    padding: 0 10px; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); }
     .home #wall .widget h3 {
-      padding: 0;
+      padding: 0.5em 0;
+      margin: 0;
       border: none; }
+    .home #wall .widget .textwidget {
+      line-height: 1.2;
+      font-size: 0.9em; }
 .home #content {
   background: none; }
   .home #content h2 {
@@ -1015,12 +1021,9 @@ video {
         margin-bottom: 10px;
         padding: 0;
         background: #FFF; }
-        .home #content #blog ul.article .hentry .entry-eyecatch {
-          max-height: 100px;
-          overflow: hidden; }
-          .home #content #blog ul.article .hentry .entry-eyecatch img {
-            width: 100%;
-            vertical-align: text-bottom; }
+        .home #content #blog ul.article .hentry .entry-eyecatch img {
+          width: 100%;
+          vertical-align: text-bottom; }
         .home #content #blog ul.article .hentry .entry-header {
           padding: 20px;
           margin: 0;
@@ -1182,7 +1185,7 @@ video {
       top: 0;
       z-index: -1; }
     .home #wall .widget {
-      background: #FFF;
+      position: relative;
       background-color: rgba(255, 255, 255, 0.6);
       width: 380px;
       height: 380px;
@@ -1191,13 +1194,17 @@ video {
       text-align: center;
       margin: 20px auto 0; }
       .home #wall .widget .textwidget {
-        line-height: 1.4; }
+        line-height: 1.4;
+        font-size: 1em; }
 
   .fixed-header #header {
     position: fixed;
     top: 0; }
   .fixed-header #content {
     margin-top: 80px; }
+
+  #footer #back-top {
+    left: 46%; }
 
   .archive #content ul.list li .attachment-thumbnail,
   .search #content ul.list li .attachment-thumbnail {
@@ -1278,9 +1285,6 @@ video {
             #menu-wrapper .menu ul#menu-primary-items li ul li ul {
               top: 0;
               left: 100%; }
-    #menu-wrapper .menu .current_page_item > a,
-    #menu-wrapper .menu .current_page_ancestor > a {
-      font-weight: bold; }
 
   .fixed-header #header #branding {
     float: left; }
@@ -1315,6 +1319,9 @@ video {
       width: 300px;
       float: left;
       margin: 0 5px 10px 5px; }
+      .home #content #blog ul.article .hentry .entry-eyecatch {
+        max-height: 300px;
+        overflow: hidden; }
 
   #widget-area .widget {
     width: 290px;

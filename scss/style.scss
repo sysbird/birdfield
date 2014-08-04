@@ -155,7 +155,6 @@ body , html {
 				color: #FFF;
 
 				&:hover {
-					color: #DDD;
 					text-decoration: none;
 				}
 			}
@@ -229,10 +228,6 @@ body , html {
 					line-height: 1.2;
 					border-top: dotted 1px #FFF;
 					*white-space: nowrap; /* IE7 and below */
-
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				ul {
@@ -241,8 +236,8 @@ body , html {
 			}
 		}
 
-		.current_page_item > a,
-		.current_page_ancestor > a {
+		.current_menu_item > a,
+		.current-menu-ancestor > a {
 			font-weight: bold;
 		}
 	}
@@ -932,7 +927,7 @@ video {
 	#back-top {
 		position: fixed;
 		bottom: -80px;
-		left: 50%;
+		left: 36%;
 		z-index: 3;
 
 		a {
@@ -1159,11 +1154,22 @@ video {
 		}
 
 		.widget {
+			position: absolute;
+			top: 0;
+			left: 0;
 			padding: 0 10px;
+			height: 100%;
+			background-color:rgba(255,255,255,0.6);
 
 			h3 {
-				padding: 0;
+				padding: 0.5em 0;
+				margin: 0;
 				border: none;
+			}
+
+			.textwidget {
+				line-height: 1.2;
+				font-size: 0.9em;
 			}
 		}
 	}
@@ -1247,9 +1253,6 @@ video {
 					background: #FFF;
 
 					.entry-eyecatch {
-						max-height: 100px;
-						overflow: hidden;
-
 						img {
 							width: 100%;
 							vertical-align:text-bottom;
@@ -1448,7 +1451,7 @@ video {
 			}
 
 			.widget {
-				background: #FFF;
+				position: relative;
 				background-color:rgba(255,255,255,0.6);
 				width: 380px;
 				height: 380px;
@@ -1459,6 +1462,7 @@ video {
 
 				.textwidget {
 					line-height: 1.4;
+					font-size: 1em;
 				}
 			}
 		}
@@ -1472,6 +1476,12 @@ video {
 
 		#content {
 			margin-top: 80px;
+		}
+	}
+
+	#footer {
+		#back-top {
+			left: 46%;
 		}
 	}
 
@@ -1603,11 +1613,6 @@ video {
 					}
 				}
 			}
-
-			.current_page_item > a,
-			.current_page_ancestor > a {
-				font-weight: bold;
-			}
 		}
 	}
 
@@ -1683,6 +1688,11 @@ video {
 					width: 300px;
 					float: left;
 					margin: 0 5px 10px 5px;
+
+					.entry-eyecatch {
+						max-height: 300px;
+						overflow: hidden;
+					}
 				}
 			}
 		}

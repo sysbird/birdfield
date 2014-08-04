@@ -127,9 +127,9 @@ function birdfield_the_pagenation() {
 function birdfield_header_style() {
 
 	//Theme Option
-	$birdfield_text_color = get_theme_mod( 'birdfield_text_color', '#555555' );
-	$birdfield_link_color = get_theme_mod( 'birdfield_link_color', '#3981e5' );
-	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#068441' );
+	$birdfield_text_color = get_theme_mod( 'birdfield_text_color', '#222327' );
+	$birdfield_link_color = get_theme_mod( 'birdfield_link_color', '#1c4bbe' );
+	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#79a596' );
 
 ?>
 
@@ -220,7 +220,7 @@ function birdfield_header_style() {
 // Admin Header Style
 function birdfield_admin_header_style() {
 
-	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#068441' );
+	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#79a596' );
 ?>
 
 <style type="text/css">
@@ -333,7 +333,7 @@ function birdfield_setup() {
 		'height'                 => 900,
 		'width'                  => 1280,
 		'max-width'              => 900,
-		'default-image'          => '%s/images/green.jpg',
+		'default-image'          => '%s/images/header-1.jpg',
 
 		// Random image rotation off by default.
 		'random-default'         => true,
@@ -348,29 +348,29 @@ function birdfield_setup() {
 
 	register_default_headers( array(
 		'yellow' => array(
-			'url' => '%s/images/yellow.jpg',
-			'thumbnail_url' => '%s/images/yellow-thumbnail.jpg',
-			'description' => 'Yellow'
+			'url' => '%s/images/header-1.jpg',
+			'thumbnail_url' => '%s/images/header-1-thumbnail.jpg',
+			'description' => 'Header1'
 		),
 		'red' => array(
-			'url' => '%s/images/red.jpg',
-			'thumbnail_url' => '%s/images/red-thumbnail.jpg',
-			'description' => 'Red'
+			'url' => '%s/images/header-2.jpg',
+			'thumbnail_url' => '%s/images/header-2-thumbnail.jpg',
+			'description' => 'Header2'
 		),
 		'white' => array(
-			'url' => '%s/images/white.jpg',
-			'thumbnail_url' => '%s/images/white-thumbnail.jpg',
-			'description' => 'White'
+			'url' => '%s/images/header-3.jpg',
+			'thumbnail_url' => '%s/images/header-3-thumbnail.jpg',
+			'description' => 'Header3'
 		),
 		'pink' => array(
-			'url' => '%s/images/pink.jpg',
-			'thumbnail_url' => '%s/images/pink-thumbnail.jpg',
-			'description' => 'Pink'
+			'url' => '%s/images/header-4.jpg',
+			'thumbnail_url' => '%s/images/header-4-thumbnail.jpg',
+			'description' => 'Header4'
 		),
 		'purple' => array(
-			'url' => '%s/images/purple.jpg',
-			'thumbnail_url' => '%s/images/purple-thumbnail.jpg',
-			'description' => 'Purple'
+			'url' => '%s/images/header-5.jpg',
+			'thumbnail_url' => '%s/images/header-5-thumbnail.jpg',
+			'description' => 'Header5'
 		),
 	) );
 
@@ -468,7 +468,7 @@ function birdfield_customize($wp_customize) {
 
 	// Text Color
 	$wp_customize->add_setting( 'birdfield_text_color', array(
-		'default' => '#555555',
+		'default' => '#222327',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_text_color', array(
@@ -479,7 +479,7 @@ function birdfield_customize($wp_customize) {
 
 	// Link Color
 	$wp_customize->add_setting( 'birdfield_link_color', array(
-		'default' => '#3981e5',
+		'default' => '#1c4bbe',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_link_color', array(
@@ -490,7 +490,7 @@ function birdfield_customize($wp_customize) {
 
 	// Header, Footer Background Color
 	$wp_customize->add_setting( 'birdfield_header_color', array(
-		'default' => '#068441',
+		'default' => '#79a596',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_header_color', array(
