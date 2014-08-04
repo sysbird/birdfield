@@ -1015,9 +1015,12 @@ video {
         margin-bottom: 10px;
         padding: 0;
         background: #FFF; }
-        .home #content #blog ul.article .hentry .entry-eyecatch img {
-          width: 100%;
-          vertical-align: text-bottom; }
+        .home #content #blog ul.article .hentry .entry-eyecatch {
+          max-height: 100px;
+          overflow: hidden; }
+          .home #content #blog ul.article .hentry .entry-eyecatch img {
+            width: 100%;
+            vertical-align: text-bottom; }
         .home #content #blog ul.article .hentry .entry-header {
           padding: 20px;
           margin: 0;
@@ -1187,6 +1190,8 @@ video {
       padding: 50px;
       text-align: center;
       margin: 20px auto 0; }
+      .home #wall .widget .textwidget {
+        line-height: 1.4; }
 
   .fixed-header #header {
     position: fixed;

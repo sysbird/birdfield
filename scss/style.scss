@@ -698,7 +698,6 @@ a:active img[class*="wp-image-"],
 		&.gallery-columns-3 .gallery-item {
 			max-width: 33.33%;
 		}
-
 		&.gallery-columns-4 .gallery-item {
 			max-width: 25%;
 		}
@@ -1248,6 +1247,9 @@ video {
 					background: #FFF;
 
 					.entry-eyecatch {
+						max-height: 100px;
+						overflow: hidden;
+
 						img {
 							width: 100%;
 							vertical-align:text-bottom;
@@ -1454,6 +1456,10 @@ video {
 				padding: 50px;
 				text-align: center;
 				margin: 20px auto 0;
+
+				.textwidget {
+					line-height: 1.4;
+				}
 			}
 		}
 	}
