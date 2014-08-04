@@ -16,6 +16,7 @@ The default template for displaying content. Used for both single and index/page
 	<header class="entry-header">
 		<h3 class="entry-title"><?php the_title(); ?></h3>
 		<time class="postdate" datetime="<?php echo get_the_time('Y-m-d') ?>"><?php echo get_post_time( get_option( 'date_format' ) ); ?></time>
+		<span class="icon author"><?php the_author(); ?></span>
 		<?php if ( comments_open() ) : ?>
 			<span class="icon comment"><?php comments_number('0', '1', '%'); ?></span>
 		<?php endif; ?>
