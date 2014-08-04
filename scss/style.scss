@@ -236,7 +236,7 @@ body , html {
 			}
 		}
 
-		.current_menu_item > a,
+		.current-menu-item > a,
 		.current-menu-ancestor > a {
 			font-weight: bold;
 		}
@@ -1162,7 +1162,7 @@ video {
 			background-color:rgba(255,255,255,0.6);
 
 			h3 {
-				padding: 0.5em 0;
+				padding: 0.2em 0;
 				margin: 0;
 				border: none;
 			}
@@ -1460,6 +1460,10 @@ video {
 				text-align: center;
 				margin: 20px auto 0;
 
+				h3 {
+					padding: 0.5em 0;
+				}
+
 				.textwidget {
 					line-height: 1.4;
 					font-size: 1em;
@@ -1690,7 +1694,7 @@ video {
 					margin: 0 5px 10px 5px;
 
 					.entry-eyecatch {
-						max-height: 300px;
+						max-height: 240px;
 						overflow: hidden;
 					}
 				}

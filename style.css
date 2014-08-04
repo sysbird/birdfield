@@ -227,7 +227,7 @@ body, html {
         /* IE7 and below */ }
       #menu-wrapper .menu ul#menu-primary-items li ul {
         padding-left: 0.8em; }
-  #menu-wrapper .menu .current_menu_item > a,
+  #menu-wrapper .menu .current-menu-item > a,
   #menu-wrapper .menu .current-menu-ancestor > a {
     font-weight: bold; }
 
@@ -960,7 +960,7 @@ video {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.6); }
     .home #wall .widget h3 {
-      padding: 0.5em 0;
+      padding: 0.2em 0;
       margin: 0;
       border: none; }
     .home #wall .widget .textwidget {
@@ -1193,6 +1193,8 @@ video {
       padding: 50px;
       text-align: center;
       margin: 20px auto 0; }
+      .home #wall .widget h3 {
+        padding: 0.5em 0; }
       .home #wall .widget .textwidget {
         line-height: 1.4;
         font-size: 1em; }
@@ -1320,7 +1322,7 @@ video {
       float: left;
       margin: 0 5px 10px 5px; }
       .home #content #blog ul.article .hentry .entry-eyecatch {
-        max-height: 300px;
+        max-height: 240px;
         overflow: hidden; }
 
   #widget-area .widget {
