@@ -333,7 +333,7 @@ function birdfield_setup() {
 		'height'                 => 900,
 		'width'                  => 1280,
 		'max-width'              => 900,
-		'default-image'          => '%s/images/header-1.jpg',
+		'default-image'          => '%s/images/header.jpg',
 
 		// Random image rotation off by default.
 		'random-default'         => true,
@@ -347,31 +347,11 @@ function birdfield_setup() {
 	add_theme_support( 'custom-header', $custom_header_support );
 
 	register_default_headers( array(
-		'yellow' => array(
-			'url' => '%s/images/header-1.jpg',
-			'thumbnail_url' => '%s/images/header-1-thumbnail.jpg',
+		'birdfield' => array(
+			'url' => '%s/images/birdfield.jpg',
+			'thumbnail_url' => '%s/images/birdfield-thumbnail.jpg',
 			'description' => 'Header1'
-		),
-		'red' => array(
-			'url' => '%s/images/header-2.jpg',
-			'thumbnail_url' => '%s/images/header-2-thumbnail.jpg',
-			'description' => 'Header2'
-		),
-		'white' => array(
-			'url' => '%s/images/header-3.jpg',
-			'thumbnail_url' => '%s/images/header-3-thumbnail.jpg',
-			'description' => 'Header3'
-		),
-		'pink' => array(
-			'url' => '%s/images/header-4.jpg',
-			'thumbnail_url' => '%s/images/header-4-thumbnail.jpg',
-			'description' => 'Header4'
-		),
-		'purple' => array(
-			'url' => '%s/images/header-5.jpg',
-			'thumbnail_url' => '%s/images/header-5-thumbnail.jpg',
-			'description' => 'Header5'
-		),
+		)
 	) );
 
 	// Add support for news content.

@@ -1109,10 +1109,6 @@ video {
 		line-height: 1;
 		border-radius: 4px 0 0 4px;
 		border: none;
-
-		&:before {
-		    @include font-awesome("\f005");
-		}
 	}
 
 	#searchsubmit {
@@ -1124,9 +1120,10 @@ video {
 		width: 20%;
 		height: 30px;
 		border-radius: 0 4px 4px 0;
-		margin: 0;
+   		margin: 0;
 		background: #CCC;
 		color: #FFF;
+	    -webkit-appearance: button;
 	    @include font-awesome("\f005");
 	    font-size: 1.2em;
 	}

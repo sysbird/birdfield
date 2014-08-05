@@ -905,16 +905,6 @@ video {
     line-height: 1;
     border-radius: 4px 0 0 4px;
     border: none; }
-    #searchform #s:before {
-      content: "\f005";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      padding-right: 0.2em;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
   #searchform #searchsubmit {
     position: absolute;
     top: 0;
@@ -927,6 +917,7 @@ video {
     margin: 0;
     background: #CCC;
     color: #FFF;
+    -webkit-appearance: button;
     content: "\f005";
     display: inline-block;
     font-family: FontAwesome;
