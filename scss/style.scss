@@ -1294,7 +1294,7 @@ video {
 								background: $header-color;
 								width: 100px;
 								height: 20px;
-								padding: 2px;
+								padding: 3px;
 								-webkit-transform: rotate(45deg);
 								-moz-transform: rotate(45deg);
 								-o-transform: rotate(45deg);
@@ -1492,7 +1492,6 @@ video {
 				.attachment-thumbnail {
 					margin: 0 0 10px 10px;
 					float: right;
-
 				}
 			}
 		}
@@ -1688,11 +1687,6 @@ video {
 					width: 300px;
 					float: left;
 					margin: 0 5px 10px 5px;
-
-					.entry-eyecatch {
-						max-height: 240px;
-						overflow: hidden;
-					}
 				}
 			}
 		}

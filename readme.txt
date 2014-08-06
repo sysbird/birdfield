@@ -25,7 +25,7 @@ BirdFIELD WordPress theme, Copyright (C) 2014 Sysbird
 The theme is licensed under the GPL.
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-The script html5.js and respond.min.js, equalize.min.js  are released under the  MIT License.
+The script html5.js and jquery.tile.min.js are released under the  MIT License.
 The Font Awesome is released under the GPL license.
 The headers are created by theme author and are released under GPL license.
 
