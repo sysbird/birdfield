@@ -350,7 +350,7 @@ function birdfield_setup() {
 		'birdfield' => array(
 			'url' => '%s/images/birdfield.jpg',
 			'thumbnail_url' => '%s/images/birdfield-thumbnail.jpg',
-			'description' => 'Header1'
+			'description' => 'birdfield'
 		)
 	) );
 

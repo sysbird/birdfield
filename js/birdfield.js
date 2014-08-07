@@ -1,75 +1,38 @@
 jQuery(function() {
 
-	jQuery(document).ready(function () {
-
-/*	    var equalHeight = jQuery('#blog ul li a').equalHeight({wait: true});
-
-	    // Browser supports matchMedia
-	    if (window.matchMedia) {
-
-	        // MediaQueryList
-	        var mql = window.matchMedia("(min-width: 930px)");
-
-	        // MediaQueryListListener
-	        var equalHeightCheck = function (mql) {
-	            if (mql.matches) {
-	                equalHeight.start();
-	            } else {
-	                equalHeight.stop();
-	            }
-	        };
-
-	        // Add listener
-	        mql.addListener(equalHeightCheck);
-
-	        // Manually call listener
-	        equalHeightCheck(mql);
-
-	    }
-
-	    // Browser doesn't support matchMedia
-	    else {
-
-	        equalHeight.start();
-
-	    }
-*/
-	});
-
 	jQuery( window ).load(function() {
 
-		jQuery("#blog ul li").tile(3);
+		jQuery( "#blog ul li" ).tile( 3 );
 
 	    // Browser supports matchMedia
-	    if (window.matchMedia) {
+	    if ( window.matchMedia ) {
 
 	        // MediaQueryList
-	        var mq = window.matchMedia("(min-width: 930px)");
+	        var mq = window.matchMedia( "( min-width: 930px )" );
 
 	        // MediaQueryListListener
-	        var birdfieldHeightCheck = function (mq) {
-	            if (mq.matches) {
-					jQuery("#blog ul li").tile(3);
+	        var birdfieldHeightCheck = function ( mq ) {
+	            if ( mq.matches ) {
+					jQuery( "#blog ul li" ).tile(3);
 	            } else {
-					jQuery( '#blog ul li' ).css('height', 'auto');
+					jQuery( '#blog ul li' ).css( 'height', 'auto' );
 	            }
 	        };
 
 	        // Add listener
-	        mq.addListener(birdfieldHeightCheck);
+	        mq.addListener( birdfieldHeightCheck );
 
 	        // Manually call listener
-	        birdfieldHeightCheck(mq);
+	        birdfieldHeightCheck( mq );
 	    }
 
 	    // Browser doesn't support matchMedia
 	    else {
-			jQuery("#blog ul li").tile(3);
+			jQuery( "#blog ul li" ).tile( 3 );
 	    }
 
-
 		// Masonry for Footer
-		jQuery('#widget-area .container').masonry({
+		jQuery( '#widget-area .container' ).masonry({
 			itemSelector: '.widget',
 			isAnimated: true
 		});
