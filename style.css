@@ -985,6 +985,8 @@ video {
     z-index: 2;
     position: relative;
     padding-top: 2em; }
+    .home #content #news .container {
+      padding-bottom: 0; }
     .home #content #news ul.article {
       list-style: none;
       margin: 0;

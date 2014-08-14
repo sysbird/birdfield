@@ -1199,6 +1199,10 @@ video {
 		}
 
 		#news {
+			.container {
+				padding-bottom: 0;
+			}
+
 			background: #F5F5F5 repeat left top;
 			z-index: 2;
 			position: relative;
