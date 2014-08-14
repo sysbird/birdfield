@@ -15,24 +15,24 @@ add_action( 'template_redirect', 'birdfield_content_width' );
 function birdfield_widgets_init() {
 
 	register_sidebar( array (
-		'name' => __( 'Widget Area for header', 'birdfield' ),
-		'id' => 'widget-area-header',
-		'description' => __( 'Ont text widget for header', 'birdfield' ),
-		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
+		'name'			=> __( 'Widget Area for header', 'birdfield' ),
+		'id'			=> 'widget-area-header',
+		'description'	=> __( 'Ont text widget for header', 'birdfield' ),
+		'before_widget'	=> '<div class="widget">',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
 		) );
 
 
 	register_sidebar( array (
-		'name' => __( 'Widget Area for footer', 'birdfield' ),
-		'id' => 'widget-area-footer',
-		'description' => __( 'Widget Area for footer', 'birdfield' ),
+		'name'			=> __( 'Widget Area for footer', 'birdfield' ),
+		'id'			=> 'widget-area-footer',
+		'description'	=> __( 'Widget Area for footer', 'birdfield' ),
 		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
 		) );
 }
 add_action( 'widgets_init', 'birdfield_widgets_init' );
@@ -58,7 +58,7 @@ function birdfield_custom_comments( $comment, $args, $depth ) {
 		<div class="comment_meta">
 			<?php echo get_avatar( $comment, 40 ); ?>
 			<span class="author"><?php comment_author(); ?></span>
-			<span class="postdate"><?php echo get_comment_time(get_option('date_format') .' ' .get_option('time_format')); ?></span><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			<span class="postdate"><?php echo get_comment_time(get_option('date_format') .' ' .get_option('time_format')); ?></span><?php comment_reply_link( array_merge( $args, array( 'depth'	=> $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 		</div>
 		<?php if ( $comment->comment_approved == '0' ) : ?>
 			<em><?php _e( 'Your comment is awaiting moderation.', 'birdfield' ); ?></em>
@@ -113,11 +113,11 @@ function birdfield_the_pagenation() {
 		$birdfield_paginate_base .= '%_%';
 	}
 	echo paginate_links( array(
-		'base' => $birdfield_paginate_base,
-		'format' => $birdfield_paginate_format,
-		'total' => $wp_query->max_num_pages,
-		'mid_size' => 3,
-		'current' => ( $paged ? $paged : 1 ),
+		'base'		=> $birdfield_paginate_base,
+		'format'	=> $birdfield_paginate_format,
+		'total'		=> $wp_query->max_num_pages,
+		'mid_size'	=> 3,
+		'current'	=> ( $paged ? $paged : 1 ),
 	));
 }
 
@@ -186,7 +186,11 @@ function birdfield_header_style() {
 	a,
 	.home #content #news ul.article li .entry-header .entry-title,
 	.archive #content ul.list li .entry-header .entry-title,
-	.search #content ul.list li .entry-header .entry-title {
+	.search #content ul.list li .entry-header .entry-title,
+	#content .hentry .page-links,
+	#content .tablenav a.page-numbers.prev,
+	#content .tablenav a.page-numbers.next,
+	#content .hentry .more-link {
 		color:  <?php echo $birdfield_link_color; ?>;
 		}
 
@@ -195,7 +199,8 @@ function birdfield_header_style() {
 		color: <?php echo $birdfield_link_color; ?>;
 		}
 
-	#content .tablenav .current {
+	#content .tablenav .current,
+	#content .hentry .page-links span {
 	  	background: <?php echo $birdfield_link_color; ?>;
 	  	border-color: <?php echo $birdfield_link_color; ?>;
 		}
@@ -339,25 +344,25 @@ function birdfield_setup() {
 		'random-default'         => true,
 
 		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback' => 'birdfield_header_style',
-		'admin-head-callback' => 'birdfield_admin_header_style',
-		'admin-preview-callback' => 'birdfield_admin_header_image'
+		'wp-head-callback'			=> 'birdfield_header_style',
+		'admin-head-callback	'	=> 'birdfield_admin_header_style',
+		'admin-preview-callback'	=> 'birdfield_admin_header_image'
 	);
 
 	add_theme_support( 'custom-header', $custom_header_support );
 
 	register_default_headers( array(
-		'birdfield' => array(
-			'url' => '%s/images/birdfield.jpg',
-			'thumbnail_url' => '%s/images/birdfield-thumbnail.jpg',
-			'description' => 'birdfield'
+		'birdfield'			=> array(
+			'url'			=> '%s/images/birdfield.jpg',
+			'thumbnail_url'	=> '%s/images/birdfield-thumbnail.jpg',
+			'description'	=> 'Header1'
 		)
 	) );
 
 	// Add support for news content.
 	add_theme_support( 'news-content', array(
-		'news_content_filter' => 'birdfield_get_news_posts',
-		'max_posts' => 5,
+		'news_content_filter'	=> 'birdfield_get_news_posts',
+		'max_posts'				=> 5,
 	) );
 }
 add_action( 'after_setup_theme', 'birdfield_setup' );  
@@ -366,8 +371,8 @@ add_action( 'after_setup_theme', 'birdfield_setup' );
 // Filter the news posts to return
 function birdfield_get_news_posts(){
     $array = get_posts(array(
-        'tag_slug__in' => 'news',
-        'numberposts' => 5
+        'tag_slug__in'	=> 'news',
+        'numberposts'	=> 5
     ));
     return $array;
 }
@@ -442,8 +447,8 @@ add_action( 'admin_enqueue_scripts', 'birdfield_admin_scripts' );
 function birdfield_customize($wp_customize) {
  
 	$wp_customize->add_section( 'birdfield_customize', array(
-		'title'=> __( 'Theme Options', 'birdfield' ),
-		'priority' => 99,
+		'title'		=> __( 'Theme Options', 'birdfield' ),
+		'priority'	=> 99,
 	) );
 
 	// Text Color
@@ -452,9 +457,9 @@ function birdfield_customize($wp_customize) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_text_color', array(
-		'label' => __( 'Text Color', 'birdfield' ),
-		'section'=> 'birdfield_customize',
-		'settings' => 'birdfield_text_color',
+		'label'		=> __( 'Text Color', 'birdfield' ),
+		'section'	=> 'birdfield_customize',
+		'settings'	=> 'birdfield_text_color',
 	) ) );
 
 	// Link Color
@@ -463,9 +468,9 @@ function birdfield_customize($wp_customize) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_link_color', array(
-		'label' => __( 'Link Color', 'birdfield' ),
-		'section'=> 'birdfield_customize',
-		'settings' => 'birdfield_link_color',
+		'label'		=> __( 'Link Color', 'birdfield' ),
+		'section'	=> 'birdfield_customize',
+		'settings'	=> 'birdfield_link_color',
 	) ) );
 
 	// Header, Footer Background Color
@@ -474,9 +479,28 @@ function birdfield_customize($wp_customize) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_header_color', array(
-		'label' => __( 'Header, Footer Background Color', 'birdfield' ),
-		'section'=> 'birdfield_customize',
-		'settings' => 'birdfield_header_color',
+		'label'		=> __( 'Header, Footer Background Color', 'birdfield' ),
+		'section'	=> 'birdfield_customize',
+		'settings'	=> 'birdfield_header_color',
 	) ) );
 }
 add_action( 'customize_register', 'birdfield_customize' );
+
+//////////////////////////////////////////////////////
+// Excerpt More
+function birdfield_excerpt_more($more) { 
+	return '<span class="more-link">' .__( 'Continue reading', 'birdfield' ) . '</span>';
+}
+add_filter('excerpt_more', 'birdfield_excerpt_more'); 
+
+//////////////////////////////////////////////////////
+// Removing the default gallery style
+function birdfield_gallery_atts( $out, $pairs, $atts ) {
+
+	$atts = shortcode_atts( array( 'size' => 'medium', ), $atts );
+	$out['size'] = $atts['size'];
+
+	return $out;
+}
+add_filter( 'shortcode_atts_gallery', 'birdfield_gallery_atts', 10, 3 );
+add_filter( 'use_default_gallery_style', '__return_false' );

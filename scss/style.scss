@@ -246,6 +246,10 @@ body , html {
 /* Posts
 --------------------------------------------- */
 #content {
+	.container {
+		padding-bottom: 3.2em;
+	}
+
 	.content-header {
 		margin: 1.6em 0;
 
@@ -271,6 +275,7 @@ body , html {
 
 		.entry-header {
 			margin: 1.6em 0;
+			line-height: 1.4;
 			position: relative;
 
 			.entry-title {
@@ -310,6 +315,16 @@ body , html {
 			.comment {
 				&:before {
 				    @include font-awesome("\f075");
+				}
+			}
+
+			.parent-post-link {
+				a {
+					color: $meta-color;
+
+					&:before {
+					    @include font-awesome("\f03e");
+					}
 				}
 			}
 		}
@@ -359,20 +374,30 @@ body , html {
 			}
 		}
 
-		.page-link {
+		.page-links {
 			clear: both;
 			margin: 1.6em 0;
-			font-weight: bold;
 			color: $link-color;
 
-			a {
-				color: $link-color;
-				padding: 4px 10px;
+			span {
+				background: $link-color;
+				color: #FFF;
+				padding: 0.2em 0.4em;
 				text-decoration:none;
-				border: solid 1px $link-color;
 				border-radius: 2px;
 				font-weight: normal;
 				text-align: center;
+				border: solid 1px $link-color;
+				display: inline-block;
+				line-height: 1;
+			}
+
+			a {
+				span {
+					color: $meta-color;
+					border: solid 1px $meta-color;
+					background: #FFF;
+				}
 
 				&:hover {
 					background: #F5F5F5;
@@ -380,8 +405,14 @@ body , html {
 			}
 		}
 
-		a.more-link {
-			font-size: 0.8em;
+		.more-link {
+			color: $link-color;
+			padding-left: 0.8em;
+			border-radius: 2px;
+
+			&:before {
+			    @include font-awesome("\f061");
+			}
 		}
 
 		&.tag-news {
@@ -594,13 +625,13 @@ body , html {
 -------------------------------------------------------------- */
 #content .hentry img,
 .widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	max-width: 100%;
 	height: auto;
 }
 
 img[class*="align"],
 img[class*="wp-image-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+	height: auto;
 }
 
 .aligncenter {
@@ -625,19 +656,8 @@ img.aligncenter {
 	margin-bottom: 0.75em;
 }
 
-a:focus img[class*="attachment"],
-a:hover img[class*="attachment"],
-a:focus img[class*="align"],
-a:hover img[class*="align"],
-a:active img[class*="align"],
-a:focus img[class*="wp-image-"],
-a:hover img[class*="wp-image-"],
-a:active img[class*="wp-image-"],
-#content .gallery .gallery-icon a:focus img,
-#content .gallery .gallery-icon a:hover img,
-#content .gallery .gallery-icon a:active img,
-#content .hentry a:hover img {
-	border-color: #bbb;
+a:hover img {
+	@include opacity(0.9);
 }
 
 #content .hentry {
@@ -650,21 +670,6 @@ a:active img[class*="wp-image-"],
 		max-width: 100%;
 	}
 
-	.gallery-item a,
-	.entry-attachment a,
-	.entry-attachment a:hover,
-	.wp-caption a,
-	.wp-caption a:hover,
-	.gallery a:hover {
-		border: none ;
-	}
-
-	.gallery-thumb {
-		float: right;
-		display: block;
-		margin: 0 0 10px 10px;
-	}
-
 	.gallery {
 		margin: 0 auto;
 		clear: both;
@@ -672,16 +677,26 @@ a:active img[class*="wp-image-"],
 		.gallery-item {
 			float: left;
 			text-align: center;
-			margin: 0 0 10px 0;
+			padding: 0 2px;
+			margin-bottom: 4px;
 			width: 33%;
+
+			a {
+				display: block;
+			}
+
+			img {
+				vertical-align:bottom;
+			}
 		}
 
 		.wp-caption,
 		.gallery-caption {
 			font-size: 12px;
-			line-height: 1.2;
-		    color: #AAA;
-			max-width: 97.5%;
+			line-height: 1;
+		    color: $meta-color;
+			max-width: 100%;
+			margin: 2px 0;
 			text-align: center;
 		}
 
@@ -1238,7 +1253,7 @@ video {
 
 			ul.article {
 				list-style: none;
-				margin: 0;
+				margin: 0 0 1.6em 0;
 				padding: 0;
 
 				.hentry {
@@ -1253,6 +1268,7 @@ video {
 							width: 100%;
 							vertical-align:text-bottom;
 						}
+
 					}
 
 					.entry-header {
@@ -1364,12 +1380,11 @@ video {
 -------------------------------------------------------------------- */
 .single {
 	#content #nav-below {
-		padding-bottom: 1.6em;
-
 		.nav-next,
 		.nav-previous {
 			display: block;
 			width: 100%;
+			padding: 5px 0;
 		}
 
 		.nav-previous {
@@ -1398,6 +1413,7 @@ video {
 
 			.entry-attachment {
 				text-align: center;
+				margin-bottom: 1.6em;
 
 				.wp-caption {
 					background: none;
@@ -1411,24 +1427,23 @@ video {
 -------------------------------------------------------------------- */
 #content .tablenav {
 	clear: both;
-	padding: 2em 0 1em;
 	color: $link-color;
 	@include clearfix;
 
 	a.page-numbers,
 	.current {
 		display: inline-block;
-		color: $link-color;
-		border:solid 1px $link-color;
+		color: $meta-color;
+		border:solid 1px $meta-color;
 		text-decoration:none;
-		font-weight: bold;
 		text-align: center;
-		padding: 4px 10px;
+		padding: 0.2em 0.4em;
 		border-radius: 2px;
-		margin-right: 0.2em;
+		margin-right: 0.1em;
 
 		&.prev,
 		&.next {
+			color: $link-color;
 			border: none;
 		}
 	}
@@ -1446,6 +1461,7 @@ video {
 	.current {
 		color: #FFF;
 		background: $link-color;
+		border:solid 1px $link-color;
 	}
 }
 
@@ -1511,6 +1527,22 @@ video {
 					margin: 0 0 10px 10px;
 					float: right;
 				}
+			}
+		}
+	}
+
+	#content {
+		.hentry {
+			.gallery {
+				.gallery-item {
+					padding: 0 5px;
+					margin-bottom: 10px;
+				}
+			}
+
+			.wp-caption,
+			.gallery-caption {
+				margin: 5px 0;
 			}
 		}
 	}
@@ -1679,10 +1711,6 @@ video {
 		}
 
 		#content{
-			.container {
-				padding-bottom: 10px;
-			}
-
 			#news ul.article {
 				li {
 					.entry-header {

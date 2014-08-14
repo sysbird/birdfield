@@ -35,7 +35,12 @@ The default template for displaying content. Used for both single and index/page
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'birdfield' ), 'after' => '</span>' ) ); ?>
+		<?php wp_link_pages( array(
+			'before'		=> '<div class="page-links">' . __( 'Pages:', 'birdfield' ),
+			'after'			=> '</div>',
+			'link_before'	=> '<span>',
+			'link_after'	=> '</span>'
+			) ); ?>
 	</div>
 
 	<?php if(is_single()): // Only Display Excerpts for Single ?>

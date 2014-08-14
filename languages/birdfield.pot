@@ -74,7 +74,7 @@ msgstr ""
 #: comments.php:17
 msgid "One Comment"
 msgid_plural "%1$s Comments"
-msgstr ""
+msgstr[0] ""
 
 #: comments.php:24 comments.php:35
 msgid "Older Comments"
@@ -104,19 +104,19 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: content.php:9 content.php:50 news-content.php:18
+#: content.php:9 content.php:56 news-content.php:18
 msgid "Permalink to %s"
 msgstr ""
 
-#: content.php:37
+#: content.php:40 image.php:74
 msgid "Pages:"
 msgstr ""
 
-#: content.php:43
+#: content.php:49
 msgid "Category"
 msgstr ""
 
-#: content.php:44
+#: content.php:50
 msgid "Tags"
 msgstr ""
 
@@ -174,6 +174,9 @@ msgstr ""
 
 #: functions.php:497
 msgid "Header, Footer Background Color"
+msgstr ""
+
+msgid "Continue reading"
 msgstr ""
 
 #: news-content.php:28
