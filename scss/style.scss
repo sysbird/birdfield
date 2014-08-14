@@ -661,13 +661,29 @@ a:hover img {
 }
 
 #content .hentry {
-	.wp-caption {
-		background: #F5F5F5;
-		text-align: center;
-		padding-top: 5px;
-		font-size: 0.8em;
-		color: #999;
+	.wp-caption,
+	.gallery-caption {
+		font-size: 0.9em;
+		line-height: 1;
+	    color: $meta-color;
 		max-width: 100%;
+		text-align: center;
+	}
+
+	.wp-caption {
+		padding: 5px;
+		background: $border-color;
+		max-width: 100%;
+
+		p {
+			text-align: center;
+			margin: 5px 0 0 0;
+			line-height: 1;
+		}
+	}
+
+	.gallery-caption {
+		margin: 5px 0 0 0;
 	}
 
 	.gallery {
@@ -676,9 +692,9 @@ a:hover img {
 
 		.gallery-item {
 			float: left;
+			padding: 0 5px;
+			margin-bottom: 10px;
 			text-align: center;
-			padding: 0 2px;
-			margin-bottom: 4px;
 			width: 33%;
 
 			a {
@@ -688,16 +704,6 @@ a:hover img {
 			img {
 				vertical-align:bottom;
 			}
-		}
-
-		.wp-caption,
-		.gallery-caption {
-			font-size: 12px;
-			line-height: 1;
-		    color: $meta-color;
-			max-width: 100%;
-			margin: 2px 0;
-			text-align: center;
 		}
 
 		&.gallery-columns-2 .gallery-item {
@@ -1531,22 +1537,6 @@ video {
 					margin: 0 0 10px 10px;
 					float: right;
 				}
-			}
-		}
-	}
-
-	#content {
-		.hentry {
-			.gallery {
-				.gallery-item {
-					padding: 0 5px;
-					margin-bottom: 10px;
-				}
-			}
-
-			.wp-caption,
-			.gallery-caption {
-				margin: 5px 0;
 			}
 		}
 	}

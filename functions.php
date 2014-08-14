@@ -194,11 +194,6 @@ function birdfield_header_style() {
 		color:  <?php echo $birdfield_link_color; ?>;
 		}
 
-	#content .tablenav a.page-numbers {
-		border-color: <?php echo $birdfield_link_color; ?>;
-		color: <?php echo $birdfield_link_color; ?>;
-		}
-
 	#content .tablenav .current,
 	#content .hentry .page-links span {
 	  	background: <?php echo $birdfield_link_color; ?>;
@@ -270,7 +265,7 @@ function birdfield_admin_header_image() {
 	}
 
 	$style = '';
-		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
+	if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
 		$style = ' style="display:none;"';
 	}
 ?>
@@ -281,11 +276,8 @@ function birdfield_admin_header_image() {
 	</div>
 
 <?php
-	$header_image = get_header_image();
-	if ( ! empty( $header_image ) ) : ?>
-
+	if ( !empty( $header_image ) ) : ?>
 		<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
-
 	<?php endif; ?>
 
 	<?php
@@ -345,7 +337,7 @@ function birdfield_setup() {
 
 		// Callbacks for styling the header and the admin preview.
 		'wp-head-callback'			=> 'birdfield_header_style',
-		'admin-head-callback	'	=> 'birdfield_admin_header_style',
+		'admin-head-callback'		=> 'birdfield_admin_header_style',
 		'admin-preview-callback'	=> 'birdfield_admin_header_image'
 	);
 
@@ -353,8 +345,8 @@ function birdfield_setup() {
 
 	register_default_headers( array(
 		'birdfield'			=> array(
-			'url'			=> '%s/images/birdfield.jpg',
-			'thumbnail_url'	=> '%s/images/birdfield-thumbnail.jpg',
+			'url'			=> '%s/images/header.jpg',
+			'thumbnail_url'	=> '%s/images/header-thumbnail.jpg',
 			'description'	=> 'Header1'
 		)
 	) );

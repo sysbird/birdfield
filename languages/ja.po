@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: BirdFIELD 1.00 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
 "POT-Creation-Date: 2014-07-30 00:00+0300\n"
-"PO-Revision-Date: 2014-08-14 19:01+0900\n"
+"PO-Revision-Date: 2014-08-14 23:05+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.7\n"
-"Last-Translator: TORIYAMA Yuko <sysbirdj@gmail.com>\n"
+"Last-Translator: TORIYAMA Yuko <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
 "Language: ja\n"
 
@@ -184,6 +184,14 @@ msgstr "お知らせ"
 #: home.php:9
 msgid "RECENT"
 msgstr "新着"
+
+#: image.php:87
+msgid "Next Image"
+msgstr "次の画像へ"
+
+#: image.php:88
+msgid "Previous Image"
+msgstr "前の画像へ"
 
 #: search.php:12
 msgid "Search Results: %s"
