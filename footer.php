@@ -11,9 +11,9 @@ The template for displaying the footer.
 		</section>
 
 		<div class="container">
-			<div class="site-title"><span class="home"><a href="<?php echo esc_url(home_url( '/' )) ; ?>"><?php bloginfo( 'name' ); ?></a></span><span class="generator"><a href="http://wordpress.org/" target="_blank"><?php printf( __( 'Proudly powered by WordPress', 'birdfield' ), 'WordPress' ); ?></a></span></div>
+			<div class="site-title"><span class="home"><a href="<?php echo esc_url( home_url( '/' ) ) ; ?>"><?php bloginfo( 'name' ); ?></a></span><span class="generator"><a href="http://wordpress.org/" target="_blank"><?php printf( __( 'Proudly powered by WordPress', 'birdfield' ), 'WordPress' ); ?></a></span></div>
 		</div>
-		<p id="back-top"><a href="#top"><span><?php _e( 'Go Top', 'birdfield'); ?></span></a></p>
+		<p id="back-top"><a href="#top"><span><?php _e( 'Go Top', 'birdfield' ); ?></span></a></p>
 	</footer>
 
 </div><!-- wrapper -->

@@ -6,7 +6,7 @@
 
 <section id="news">
 	<div class="container">
-		<h2><?php _e('NEWS', 'birdfield') ?></h2>
+		<h2><?php _e( 'NEWS', 'birdfield' ) ?></h2>
 		<ul class="article">
 
 <?php

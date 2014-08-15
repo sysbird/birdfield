@@ -5,7 +5,7 @@ Theme URI: http://www.sysbird.jp/birdfield/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: http://www.sysbird.jp/wptips/
-Version: 1.0
+Version: 1.01
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -133,7 +133,7 @@ body, html {
 .wrapper {
   font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
   color: #222327;
-  background: #ffffdd;
+  background: white;
   overflow: hidden; }
   .wrapper * {
     -webkit-box-sizing: border-box;
@@ -326,6 +326,7 @@ body, html {
       #content .hentry .entry-meta .category span,
       #content .hentry .entry-meta .tag span {
         width: 7em;
+        padding: 2px 0;
         display: block;
         float: left; }
         #content .hentry .entry-meta .category span:before,
@@ -676,24 +677,27 @@ video {
     border-bottom: dashed 1px #e6e6e6; }
     #content #comments li li {
       border: none; }
-    #content #comments li .comment_meta .author {
-      font-weight: bold;
-      color: #000;
-      display: block; }
-    #content #comments li .comment_meta .time {
-      font-size: 85%;
-      color: #999; }
-    #content #comments li .comment_meta img {
-      border: none;
-      margin: 0 10px 0 0;
-      float: left; }
+    #content #comments li .comment_meta {
+      line-height: 1;
+      margin-bottom: 0.8em; }
+      #content #comments li .comment_meta .author {
+        display: block;
+        margin-bottom: 0.4em;
+        font-weight: bold; }
+      #content #comments li .comment_meta .time {
+        font-size: 90%;
+        color: #999999; }
+      #content #comments li .comment_meta img {
+        border: none;
+        margin: 0 10px 0 0;
+        float: left; }
     #content #comments li .comment_text {
       clear: both;
       margin: 0 0 0.8em 50px; }
       #content #comments li .comment_text p {
         line-height: 1.4; }
     #content #comments li em {
-      font-size: 80%;
+      font-size: 90%;
       padding: 5px 0 5px 50px;
       color: #FC6767;
       display: block; }
@@ -711,7 +715,7 @@ video {
     #content #comments li.bypostauthor .comment_meta .author {
       color: #79a596; }
     #content #comments li .postdate {
-      color: #999; }
+      color: #999999; }
       #content #comments li .postdate:before {
         content: "\f017";
         display: inline-block;
@@ -735,19 +739,20 @@ video {
   background: #FFF;
   border-radius: 4px; }
   #content #comments #commentform label {
-    padding: 3px 0 5px 0; }
+    padding: 0 0 0.8em 0;
+    display: block; }
   #content #comments #commentform em {
     font-size: 85%;
     display: block;
     padding: 5px 0; }
   #content #comments #commentform label input {
-    width: 95%;
+    width: 100%;
     max-width: 300px;
     padding: 5px;
     background: #FFF;
     border: solid 1px #e6e6e6; }
   #content #comments #commentform textarea {
-    width: 95%;
+    width: 100%;
     height: 100px;
     padding: 5px;
     background: #FFF;
@@ -985,7 +990,7 @@ video {
     .home #content h2 a {
       display: block; }
   .home #content #news {
-    background: #ffffdd;
+    background: white;
     z-index: 2;
     position: relative;
     padding-top: 2em; }
@@ -1016,7 +1021,7 @@ video {
           .home #content #news ul.article li .entry-header .postdate {
             display: block; }
   .home #content #blog {
-    background: #ffffdd;
+    background: white;
     position: relative;
     padding-top: 2em;
     z-index: 2; }
@@ -1283,6 +1288,17 @@ video {
           #menu-wrapper .menu ul#menu-primary-items li a:hover {
             background: #FFF;
             color: #79a596; }
+        #menu-wrapper .menu ul#menu-primary-items li.menu-item-has-children > a:after {
+          content: "\f0d7";
+          display: inline-block;
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1;
+          padding-right: 0.2em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          padding-left: 5px; }
         #menu-wrapper .menu ul#menu-primary-items li ul {
           margin: 0;
           padding: 0;
@@ -1299,6 +1315,17 @@ video {
             float: none;
             margin: 0;
             padding: 0; }
+            #menu-wrapper .menu ul#menu-primary-items li ul li.menu-item-has-children > a:after {
+              content: "\f0da";
+              display: inline-block;
+              font-family: FontAwesome;
+              font-style: normal;
+              font-weight: normal;
+              line-height: 1;
+              padding-right: 0.2em;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              padding-left: 5px; }
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
               padding: 0.8em;
               background-color: #79a596;

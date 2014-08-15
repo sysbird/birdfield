@@ -9,7 +9,7 @@ get_header(); ?>
 		<article class="hentry">
 
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e('Error 404 - Not Found', 'birdfield'); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Error 404 - Not Found', 'birdfield' ); ?></h1>
 	</header>
 
 	<div class="entry-content">

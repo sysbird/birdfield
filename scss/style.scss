@@ -5,7 +5,7 @@ Theme URI: http://www.sysbird.jp/birdfield/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: http://www.sysbird.jp/wptips/
-Version: 1.0
+Version: 1.01
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -18,8 +18,7 @@ This theme, like WordPress, is licensed under the GPL.
 @import "compass/reset";
 
 // variable
-$background-color: #F5F5F5;
-$background-color: #FFFFDD;
+$background-color: #FFF;
 $text-color: #222327;
 $link-color: #1c4bbe;
 $hover-background-color: #F5F5F5;
@@ -344,6 +343,7 @@ body , html {
 
 				span {
 					width: 7em;
+					padding: 2px 0;
 					display: block;
 					float: left;
 
@@ -807,7 +807,6 @@ video {
 
 		ul {
 			margin-left: 40px;
-
 		}
 	}
 
@@ -819,15 +818,18 @@ video {
 		}
 
 		.comment_meta {
+			line-height: 1;
+			margin-bottom: 0.8em;
+
 			.author {
-				font-weight: bold;
-				color: #000;
 				display: block;
+				margin-bottom: 0.4em;
+				font-weight: bold;
 			}
 
 			.time {
-				font-size: 85%;
-				color: #999;
+				font-size: 90%;
+				color: $meta-color;
 			}
 
 			img {
@@ -847,7 +849,7 @@ video {
 		}
 
 		em {
-			font-size: 80%;
+			font-size: 90%;
 			padding: 5px 0 5px 50px;
 			color: #FC6767;
 			display: block;
@@ -865,7 +867,7 @@ video {
 		}
 
 		.postdate {
-			color: #999;
+			color: $meta-color;
 
 			&:before {
 			    @include font-awesome("\f017");
@@ -889,7 +891,8 @@ video {
 	border-radius: 4px;
 
 	label {
-		padding: 3px 0 5px 0;
+		padding: 0 0 0.8em 0;
+		display: block;
 	}
 
 	em {
@@ -899,7 +902,7 @@ video {
 	}
 
 	label input {
-		width: 95%;
+		width: 100%;
 		max-width: 300px;
 	  	padding: 5px;
 		background: #FFF;
@@ -907,7 +910,7 @@ video {
 	}
 
 	textarea {
-		width: 95%;
+		width: 100%;
 		height: 100px;
 	  	padding:5px;
 		background: #FFF;
@@ -916,7 +919,7 @@ video {
 
 	input#submit {
 		padding: 5px 10px;
-		}
+	}
 
 	.form-allowed-tags {
 		font-size: 90%;
@@ -1626,6 +1629,13 @@ video {
 						}
 					}
 
+					&.menu-item-has-children {
+						>a:after {
+						   @include font-awesome("\f0d7");
+						   padding-left: 5px;
+						}
+					}
+
 					ul {
 						margin: 0;
 						padding: 0;
@@ -1642,6 +1652,13 @@ video {
 							float: none;
 							margin: 0;
 							padding: 0;
+
+							&.menu-item-has-children {
+								>a:after {
+								   @include font-awesome("\f0da");
+								   padding-left: 5px;
+								}
+							}
 
 							a {
 								padding: 0.8em;
