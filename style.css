@@ -133,7 +133,7 @@ body, html {
 .wrapper {
   font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
   color: #222327;
-  background: #FCFCFC;
+  background: #ffffdd;
   overflow: hidden; }
   .wrapper * {
     -webkit-box-sizing: border-box;
@@ -342,7 +342,8 @@ body, html {
           font-weight: bold; }
       #content .hentry .entry-meta .category a,
       #content .hentry .entry-meta .tag a {
-        background: #F5F5F5;
+        background: #FFF;
+        border: solid 1px #e6e6e6;
         padding: 2px 5px;
         color: #999;
         border-radius: 4px;
@@ -350,7 +351,7 @@ body, html {
         display: inline-block; }
         #content .hentry .entry-meta .category a:hover,
         #content .hentry .entry-meta .tag a:hover {
-          background: #EEE;
+          background: whitesmoke;
           text-decoration: none; }
     #content .hentry .entry-meta .tag span:before {
       content: "\f02c";
@@ -379,10 +380,11 @@ body, html {
       line-height: 1; }
     #content .hentry .page-links a span {
       color: #999999;
-      border: solid 1px #999999;
-      background: #FFF; }
-    #content .hentry .page-links a:hover {
-      background: #F5F5F5; }
+      border: solid 1px #e6e6e6;
+      background: #FFF;
+      border-radius: 2px; }
+      #content .hentry .page-links a span:hover {
+        background: whitesmoke; }
   #content .hentry .more-link {
     color: #1c4bbe;
     padding-left: 0.8em;
@@ -983,7 +985,7 @@ video {
     .home #content h2 a {
       display: block; }
   .home #content #news {
-    background: #F5F5F5 repeat left top;
+    background: #ffffdd;
     z-index: 2;
     position: relative;
     padding-top: 2em; }
@@ -1002,9 +1004,6 @@ video {
         .home #content #news ul.article li a {
           padding: 0.5em 0;
           display: block; }
-          .home #content #news ul.article li a:hover {
-            background: #F5F5F5;
-            text-decoration: none; }
         .home #content #news ul.article li .entry-header {
           margin: 0;
           overflow: hidden;
@@ -1017,7 +1016,7 @@ video {
           .home #content #news ul.article li .entry-header .postdate {
             display: block; }
   .home #content #blog {
-    background: #F5F5F5 repeat left top;
+    background: #ffffdd;
     position: relative;
     padding-top: 2em;
     z-index: 2; }
@@ -1046,7 +1045,7 @@ video {
           height: 100%; }
           .home #content #blog ul.article .hentry a:hover {
             text-decoration: none;
-            background: #F5F5F5; }
+            background: whitesmoke; }
         .home #content #blog ul.article .hentry.sticky {
           position: relative; }
           .home #content #blog ul.article .hentry.sticky i {
@@ -1104,8 +1103,12 @@ video {
       *zoom: 1; }
       .archive #content ul.list li a:hover,
       .search #content ul.list li a:hover {
-        background: #F5F5F5;
         text-decoration: none; }
+        .archive #content ul.list li a:hover .entry-header .entry-title,
+        .archive #content ul.list li a:hover .more-link,
+        .search #content ul.list li a:hover .entry-header .entry-title,
+        .search #content ul.list li a:hover .more-link {
+          text-decoration: underline; }
       .archive #content ul.list li a .entry-content,
       .search #content ul.list li a .entry-content {
         color: #222327;
@@ -1169,6 +1172,7 @@ video {
   #content .tablenav a.page-numbers,
   #content .tablenav .current {
     display: inline-block;
+    background: #FFF;
     color: #999999;
     border: solid 1px #999999;
     text-decoration: none;
@@ -1179,10 +1183,11 @@ video {
     #content .tablenav a.page-numbers.prev, #content .tablenav a.page-numbers.next,
     #content .tablenav .current.prev,
     #content .tablenav .current.next {
+      background: none;
       color: #1c4bbe;
       border: none; }
   #content .tablenav a.page-numbers:hover {
-    background: #F5F5F5; }
+    background: whitesmoke; }
     #content .tablenav a.page-numbers:hover.prev, #content .tablenav a.page-numbers:hover.next {
       background: none;
       text-decoration: underline; }
@@ -1250,7 +1255,8 @@ video {
     #header #branding #site-title a {
       display: inline; }
     #header #branding #site-description {
-      display: block; }
+      display: block;
+      padding: 5px 0; }
 
   #menu-wrapper {
     margin-top: 0;
@@ -1286,7 +1292,7 @@ video {
           position: absolute;
           top: 2.8em;
           left: 0;
-          border: dotted 1px #EEE;
+          border: dotted 1px #79a596;
           border-top: none;
           z-index: 9999; }
           #menu-wrapper .menu ul#menu-primary-items li ul li {
@@ -1294,16 +1300,19 @@ video {
             margin: 0;
             padding: 0; }
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
-              background-color: #79a596;
               padding: 0.8em;
+              background-color: #79a596;
               border-top: dotted 1px #FFF;
               height: auto;
               white-space: normal; }
               #menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
-                text-decoration: none; }
+                text-decoration: none;
+                border-top-color: #79a596; }
             #menu-wrapper .menu ul#menu-primary-items li ul li ul {
               top: 0;
               left: 100%; }
+              #menu-wrapper .menu ul#menu-primary-items li ul li ul li:first-child a {
+                border-top: dotted 1px #79a596; }
 
   .fixed-header #header #branding {
     float: left; }

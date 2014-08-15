@@ -18,8 +18,11 @@ This theme, like WordPress, is licensed under the GPL.
 @import "compass/reset";
 
 // variable
+$background-color: #F5F5F5;
+$background-color: #FFFFDD;
 $text-color: #222327;
 $link-color: #1c4bbe;
+$hover-background-color: #F5F5F5;
 $header-color: #79a596;
 $border-color: #E6E6E6;
 $meta-color: #999;
@@ -120,7 +123,7 @@ body , html {
 .wrapper {
 	font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
 	color: $text-color;
-	background: #FCFCFC;
+	background: $background-color;
 	overflow: hidden;
 
 	* {
@@ -351,7 +354,8 @@ body , html {
 				}
 
 				a {
-					background: #F5F5F5;
+					background: #FFF;
+					border: solid 1px $border-color;
 					padding: 2px 5px;
 					color: #999;
 					border-radius: 4px;
@@ -359,7 +363,7 @@ body , html {
 					display: inline-block;
 
 					&:hover {
-						background: #EEE;
+						background: $hover-background-color;
 						text-decoration:none;
 					}
 				}
@@ -395,12 +399,13 @@ body , html {
 			a {
 				span {
 					color: $meta-color;
-					border: solid 1px $meta-color;
+					border: solid 1px $border-color;
 					background: #FFF;
-				}
+					border-radius: 2px;
 
-				&:hover {
-					background: #F5F5F5;
+					&:hover {
+						background: $hover-background-color;
+					}
 				}
 			}
 		}
@@ -1209,7 +1214,7 @@ video {
 				padding-bottom: 0;
 			}
 
-			background: #F5F5F5 repeat left top;
+			background: $background-color;
 			z-index: 2;
 			position: relative;
 			padding-top: 2em;
@@ -1229,11 +1234,6 @@ video {
 					a {
 						padding: 0.5em 0;
 						display: block;
-
-						&:hover {
-							background: #F5F5F5;
-							text-decoration: none;
-						}
 					}
 
 					.entry-header {
@@ -1256,7 +1256,7 @@ video {
 		}
 
 		#blog {
-			background: #F5F5F5 repeat left top;
+			background: $background-color;
 			position: relative;
 			padding-top: 2em;
 			z-index: 2;
@@ -1298,7 +1298,7 @@ video {
 
 						&:hover {
 							text-decoration: none;
-							background: #F5F5F5;
+							background: $hover-background-color;
 						}
 					}
 
@@ -1363,8 +1363,12 @@ video {
 				@include clearfix;
 
 				&:hover {
-					background: #F5F5F5;
 					text-decoration: none;
+
+					.entry-header .entry-title,
+					.more-link {
+						text-decoration: underline;
+					}
 				}
 
 				.entry-content {
@@ -1443,6 +1447,7 @@ video {
 	a.page-numbers,
 	.current {
 		display: inline-block;
+		background: #FFF;
 		color: $meta-color;
 		border:solid 1px $meta-color;
 		text-decoration:none;
@@ -1453,13 +1458,14 @@ video {
 
 		&.prev,
 		&.next {
+			background: none;
 			color: $link-color;
 			border: none;
 		}
 	}
 
 	a.page-numbers:hover {
-		background: #F5F5F5;
+		background: $hover-background-color;
 
 		&.prev,
 		&.next {
@@ -1579,6 +1585,7 @@ video {
 
 			#site-description {
 				display: block;
+				padding: 5px 0;
 			}
 		}
 	}
@@ -1627,7 +1634,7 @@ video {
 						position: absolute;
 						top: 2.8em;
 						left: 0;
-						border: dotted 1px #EEE;
+						border: dotted 1px $header-color;
 						border-top: none;
 						z-index: 9999;
 
@@ -1637,20 +1644,27 @@ video {
 							padding: 0;
 
 							a {
-								background-color: $header-color;
 								padding: 0.8em;
+								background-color: $header-color;
 								border-top: dotted 1px #FFF;
 								height: auto;
 								white-space: normal;
 
 								&:hover {
 									text-decoration: none;
+									border-top-color: $header-color;
 								}
 							}
 
 							ul {
 								top: 0;
 								left: 100%;
+
+								li {
+									&:first-child a {
+										border-top: dotted 1px $header-color;
+									}
+								}
 							}
 						}
 					}

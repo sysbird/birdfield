@@ -146,13 +146,6 @@ function birdfield_header_style() {
 		color: #<?php header_textcolor();?>;
 		}
 
-	body.custom-background,
-	body.custom-background.home #content #news,
-	body.custom-background.home #content #blog,
-	body.custom-background .wrapper {
-		background: #<?php background_color();?>;
-		}
-
 	#header,
 	#footer,
 	#widget-area,
@@ -203,6 +196,15 @@ function birdfield_header_style() {
 	@media screen and (min-width: 930px) {
 		#menu-wrapper .menu ul#menu-primary-items li a:hover {
 			color: <?php echo $birdfield_header_color; ?>;
+			}
+
+		#menu-wrapper .menu ul#menu-primary-items li ul,
+		#menu-wrapper .menu ul#menu-primary-items li ul li ul li:first-child a {
+			border-color: <?php echo $birdfield_header_color; ?>;
+			}
+
+		#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
+			border-top-color: <?php echo $birdfield_header_color; ?>;
 			}
 
 		#menu-wrapper .menu ul#menu-primary-items li ul li a {
@@ -265,7 +267,7 @@ function birdfield_admin_header_image() {
 	}
 
 	$style = '';
-	if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
+		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
 		$style = ' style="display:none;"';
 	}
 ?>
@@ -276,8 +278,11 @@ function birdfield_admin_header_image() {
 	</div>
 
 <?php
-	if ( !empty( $header_image ) ) : ?>
+	$header_image = get_header_image();
+	if ( ! empty( $header_image ) ) : ?>
+
 		<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
+
 	<?php endif; ?>
 
 	<?php
@@ -312,7 +317,9 @@ function birdfield_setup() {
 	 * we also set up the default background color.
 	 */
 	add_theme_support( 'custom-background', array(
+		'default-image' => '',
 		'default-color' => 'FFF',
+		'wp-head-callback' => 'birdfield_custom_background_cb',
 	) );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -337,7 +344,7 @@ function birdfield_setup() {
 
 		// Callbacks for styling the header and the admin preview.
 		'wp-head-callback'			=> 'birdfield_header_style',
-		'admin-head-callback'		=> 'birdfield_admin_header_style',
+		'admin-head-callback	'	=> 'birdfield_admin_header_style',
 		'admin-preview-callback'	=> 'birdfield_admin_header_image'
 	);
 
@@ -345,8 +352,8 @@ function birdfield_setup() {
 
 	register_default_headers( array(
 		'birdfield'			=> array(
-			'url'			=> '%s/images/header.jpg',
-			'thumbnail_url'	=> '%s/images/header-thumbnail.jpg',
+			'url'			=> '%s/images/birdfield.jpg',
+			'thumbnail_url'	=> '%s/images/birdfield-thumbnail.jpg',
 			'description'	=> 'Header1'
 		)
 	) );
@@ -496,3 +503,53 @@ function birdfield_gallery_atts( $out, $pairs, $atts ) {
 }
 add_filter( 'shortcode_atts_gallery', 'birdfield_gallery_atts', 10, 3 );
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+//////////////////////////////////////////////////////
+// Custom Background callback
+function birdfield_custom_background_cb() {
+	// $background is the saved custom image, or the default image.
+	$background = set_url_scheme( get_background_image() );
+
+	// $color is the saved custom color.
+	// A default has to be specified in style.css. It will not be printed here.
+	$color = get_background_color();
+
+	if ( $color === get_theme_support( 'custom-background', 'default-color' ) ) {
+		$color = false;
+	}
+
+	if ( ! $background && ! $color )
+		return;
+
+	$style = $color ? "background-color: #$color;" : '';
+
+	if ( $background ) {
+		$image = " background-image: url('$background');";
+
+		$repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
+		if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
+			$repeat = 'repeat';
+		$repeat = " background-repeat: $repeat;";
+
+		$position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
+		if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
+			$position = 'left';
+		$position = " background-position: top $position;";
+
+		$attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
+		if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
+			$attachment = 'scroll';
+		$attachment = " background-attachment: $attachment;";
+
+		$style .= $image . $repeat . $position . $attachment;
+	}
+?>
+<style type="text/css" id="custom-background-css">
+	body.custom-background.home #content #news,
+	body.custom-background.home #content #blog,
+	body.custom-background .wrapper {
+		<?php echo trim( $style ); ?>
+		}
+</style>
+<?php
+}
