@@ -928,7 +928,7 @@ video {
     height: 30px;
     line-height: 1;
     border-radius: 4px 0 0 4px;
-    border: none; }
+    border: solid 1px #CCC; }
   #searchform #searchsubmit {
     position: absolute;
     top: 0;
@@ -938,17 +938,16 @@ video {
     width: 20%;
     height: 30px;
     border-radius: 0 4px 4px 0;
+    border: solid 1px #CCC;
     margin: 0;
     background: #CCC;
     color: #FFF;
     -webkit-appearance: button;
-    content: "\f005";
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    padding-right: 0.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em; }
