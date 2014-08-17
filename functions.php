@@ -267,7 +267,7 @@ function birdfield_admin_header_image() {
 	}
 
 	$style = '';
-		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
+	if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) ){
 		$style = ' style="display:none;"';
 	}
 ?>
@@ -280,9 +280,7 @@ function birdfield_admin_header_image() {
 <?php
 	$header_image = get_header_image();
 	if ( ! empty( $header_image ) ) : ?>
-
 		<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
-
 	<?php endif; ?>
 
 	<?php
@@ -344,7 +342,7 @@ function birdfield_setup() {
 
 		// Callbacks for styling the header and the admin preview.
 		'wp-head-callback'			=> 'birdfield_header_style',
-		'admin-head-callback	'	=> 'birdfield_admin_header_style',
+		'admin-head-callback'		=> 'birdfield_admin_header_style',
 		'admin-preview-callback'	=> 'birdfield_admin_header_image'
 	);
 
@@ -352,9 +350,9 @@ function birdfield_setup() {
 
 	register_default_headers( array(
 		'birdfield'			=> array(
-			'url'			=> '%s/images/birdfield.jpg',
-			'thumbnail_url'	=> '%s/images/birdfield-thumbnail.jpg',
-			'description'	=> 'Header1'
+			'url'			=> '%s/images/header.jpg',
+			'thumbnail_url'	=> '%s/images/header-thumbnail.jpg',
+			'description'	=> 'birdfield'
 		)
 	) );
 
@@ -447,7 +445,7 @@ function birdfield_customize($wp_customize) {
  
 	$wp_customize->add_section( 'birdfield_customize', array(
 		'title'		=> __( 'Theme Options', 'birdfield' ),
-		'priority'	=> 99,
+		'priority'	=> 999,
 	) );
 
 	// Text Color
