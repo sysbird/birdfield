@@ -1160,7 +1160,8 @@ video {
 
 /* Home
 --------------------------------------------- */
-.home {
+.home,
+.blog {
 	#wall {
 		width: 100%;
 		background: #FFF;
@@ -1489,7 +1490,8 @@ video {
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
 
-	.home {
+	.home,
+	.blog {
 		#wall {
 			min-height: 420px;
 
@@ -1610,9 +1612,10 @@ video {
 			ul#menu-primary-items {
 				/* ensure .menu is visible on desktop version */
 				display: block !important;
+				text-align: right;
 
 				li {
-					float: left;
+					display: inline-block;
 					position: relative;
 
 					&:hover > ul {
@@ -1646,10 +1649,11 @@ video {
 						left: 0;
 						border: dotted 1px $header-color;
 						border-top: none;
+						text-align: left;
 						z-index: 9999;
 
 						li {
-							float: none;
+							display: block;
 							margin: 0;
 							padding: 0;
 
@@ -1723,7 +1727,8 @@ video {
 		}
 	}
 
-	.home {
+	.home,
+	.blog {
 		#wall {
 			min-height: 600px;
 

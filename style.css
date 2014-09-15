@@ -928,7 +928,7 @@ video {
     height: 30px;
     line-height: 1;
     border-radius: 4px 0 0 4px;
-    border: solid 1px #CCC; }
+    border: none; }
   #searchform #searchsubmit {
     position: absolute;
     top: 0;
@@ -938,125 +938,154 @@ video {
     width: 20%;
     height: 30px;
     border-radius: 0 4px 4px 0;
-    border: solid 1px #CCC;
     margin: 0;
     background: #CCC;
     color: #FFF;
     -webkit-appearance: button;
+    content: "\f005";
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
+    padding-right: 0.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em; }
 
 /* Home
 --------------------------------------------- */
-.home #wall {
+.home #wall,
+.blog #wall {
   width: 100%;
   background: #FFF;
   overflow: hidden;
   position: relative;
   z-index: 1; }
-  .home #wall .headerimage {
+  .home #wall .headerimage,
+  .blog #wall .headerimage {
     width: 100%;
     overflow: hidden; }
-    .home #wall .headerimage img {
+    .home #wall .headerimage img,
+    .blog #wall .headerimage img {
       width: 100%;
       vertical-align: bottom; }
-  .home #wall .widget {
+  .home #wall .widget,
+  .blog #wall .widget {
     position: absolute;
     top: 0;
     left: 0;
     padding: 0 10px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.6); }
-    .home #wall .widget h3 {
+    .home #wall .widget h3,
+    .blog #wall .widget h3 {
       padding: 0.2em 0;
       margin: 0;
       border: none; }
-    .home #wall .widget .textwidget {
+    .home #wall .widget .textwidget,
+    .blog #wall .widget .textwidget {
       line-height: 1.2;
       font-size: 0.9em; }
-.home #content {
+.home #content,
+.blog #content {
   background: none; }
-  .home #content h2 {
+  .home #content h2,
+  .blog #content h2 {
     border: none;
     margin: 0;
     padding: 0 0 1em 0; }
-    .home #content h2 a {
+    .home #content h2 a,
+    .blog #content h2 a {
       display: block; }
-  .home #content #news {
+  .home #content #news,
+  .blog #content #news {
     background: white;
     z-index: 2;
     position: relative;
     padding-top: 2em; }
-    .home #content #news .container {
+    .home #content #news .container,
+    .blog #content #news .container {
       padding-bottom: 0; }
-    .home #content #news ul.article {
+    .home #content #news ul.article,
+    .blog #content #news ul.article {
       list-style: none;
       margin: 0;
       padding: 0; }
-      .home #content #news ul.article li {
+      .home #content #news ul.article li,
+      .blog #content #news ul.article li {
         border: none;
         background: none;
         margin: 0;
         padding: 0;
         border-top: dotted 1px #e6e6e6; }
-        .home #content #news ul.article li a {
+        .home #content #news ul.article li a,
+        .blog #content #news ul.article li a {
           padding: 0.5em 0;
           display: block; }
-        .home #content #news ul.article li .entry-header {
+        .home #content #news ul.article li .entry-header,
+        .blog #content #news ul.article li .entry-header {
           margin: 0;
           overflow: hidden;
           *zoom: 1; }
-          .home #content #news ul.article li .entry-header .entry-title {
+          .home #content #news ul.article li .entry-header .entry-title,
+          .blog #content #news ul.article li .entry-header .entry-title {
             font-size: 1.2rem;
             color: #1c4bbe;
             padding-top: 0.8em;
             margin: 0; }
-          .home #content #news ul.article li .entry-header .postdate {
+          .home #content #news ul.article li .entry-header .postdate,
+          .blog #content #news ul.article li .entry-header .postdate {
             display: block; }
-  .home #content #blog {
+  .home #content #blog,
+  .blog #content #blog {
     background: white;
     position: relative;
     padding-top: 2em;
     z-index: 2; }
-    .home #content #blog ul.article {
+    .home #content #blog ul.article,
+    .blog #content #blog ul.article {
       list-style: none;
       margin: 0 0 1.6em 0;
       padding: 0; }
-      .home #content #blog ul.article .hentry {
+      .home #content #blog ul.article .hentry,
+      .blog #content #blog ul.article .hentry {
         border: solid 1px #e6e6e6;
         border-radius: 4px;
         margin-bottom: 10px;
         padding: 0;
         background: #FFF; }
-        .home #content #blog ul.article .hentry .entry-eyecatch img {
+        .home #content #blog ul.article .hentry .entry-eyecatch img,
+        .blog #content #blog ul.article .hentry .entry-eyecatch img {
           width: 100%;
           vertical-align: text-bottom; }
-        .home #content #blog ul.article .hentry .entry-header {
+        .home #content #blog ul.article .hentry .entry-header,
+        .blog #content #blog ul.article .hentry .entry-header {
           padding: 20px;
           margin: 0;
           position: relative; }
-          .home #content #blog ul.article .hentry .entry-header .entry-title {
+          .home #content #blog ul.article .hentry .entry-header .entry-title,
+          .blog #content #blog ul.article .hentry .entry-header .entry-title {
             font-size: 1.6rem;
             color: #222327; }
-        .home #content #blog ul.article .hentry a {
+        .home #content #blog ul.article .hentry a,
+        .blog #content #blog ul.article .hentry a {
           display: block;
           height: 100%; }
-          .home #content #blog ul.article .hentry a:hover {
+          .home #content #blog ul.article .hentry a:hover,
+          .blog #content #blog ul.article .hentry a:hover {
             text-decoration: none;
             background: whitesmoke; }
-        .home #content #blog ul.article .hentry.sticky {
+        .home #content #blog ul.article .hentry.sticky,
+        .blog #content #blog ul.article .hentry.sticky {
           position: relative; }
-          .home #content #blog ul.article .hentry.sticky i {
+          .home #content #blog ul.article .hentry.sticky i,
+          .blog #content #blog ul.article .hentry.sticky i {
             display: inline;
             font-size: 12px;
             color: #fff; }
-            .home #content #blog ul.article .hentry.sticky i span {
+            .home #content #blog ul.article .hentry.sticky i span,
+            .blog #content #blog ul.article .hentry.sticky i span {
               position: absolute;
               display: inline-block;
               text-align: center;
@@ -1071,7 +1100,8 @@ video {
               -moz-transform: rotate(45deg);
               -o-transform: rotate(45deg);
               -ms-transform: rotate(45deg); }
-              .home #content #blog ul.article .hentry.sticky i span:before {
+              .home #content #blog ul.article .hentry.sticky i span:before,
+              .blog #content #blog ul.article .hentry.sticky i span:before {
                 content: "\f005";
                 display: inline-block;
                 font-family: FontAwesome;
@@ -1158,7 +1188,7 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* Archive
+/* Attachment
 -------------------------------------------------------------------- */
 .attachment #content .hentry .entry-attachment {
   text-align: center;
@@ -1204,13 +1234,16 @@ video {
 --------------------------------------------- */
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
-  .home #wall {
+  .home #wall,
+  .blog #wall {
     min-height: 420px; }
-    .home #wall .headerimage {
+    .home #wall .headerimage,
+    .blog #wall .headerimage {
       position: absolute;
       top: 0;
       z-index: -1; }
-    .home #wall .widget {
+    .home #wall .widget,
+    .blog #wall .widget {
       position: relative;
       background-color: rgba(255, 255, 255, 0.6);
       width: 380px;
@@ -1219,9 +1252,11 @@ video {
       padding: 50px;
       text-align: center;
       margin: 20px auto 0; }
-      .home #wall .widget h3 {
+      .home #wall .widget h3,
+      .blog #wall .widget h3 {
         padding: 0.5em 0; }
-      .home #wall .widget .textwidget {
+      .home #wall .widget .textwidget,
+      .blog #wall .widget .textwidget {
         line-height: 1.4;
         font-size: 1em; }
 
@@ -1274,9 +1309,10 @@ video {
       /* hide small menu initially */ }
     #menu-wrapper .menu ul#menu-primary-items {
       /* ensure .menu is visible on desktop version */
-      display: block !important; }
+      display: block !important;
+      text-align: right; }
       #menu-wrapper .menu ul#menu-primary-items li {
-        float: left;
+        display: inline-block;
         position: relative; }
         #menu-wrapper .menu ul#menu-primary-items li:hover > ul {
           display: block;
@@ -1309,9 +1345,10 @@ video {
           left: 0;
           border: dotted 1px #79a596;
           border-top: none;
+          text-align: left;
           z-index: 9999; }
           #menu-wrapper .menu ul#menu-primary-items li ul li {
-            float: none;
+            display: block;
             margin: 0;
             padding: 0; }
             #menu-wrapper .menu ul#menu-primary-items li ul li.menu-item-has-children > a:after {
@@ -1352,22 +1389,28 @@ video {
       .fixed-header #menu-wrapper .menu ul#menu-primary-items ul li ul {
         top: 0; }
 
-  .home #wall {
+  .home #wall,
+  .blog #wall {
     min-height: 600px; }
-    .home #wall .widget {
+    .home #wall .widget,
+    .blog #wall .widget {
       width: 400px;
       height: 400px;
       border-radius: 400px;
       margin-top: 100px; }
-  .home #content #news ul.article li .entry-header .postdate {
+  .home #content #news ul.article li .entry-header .postdate,
+  .blog #content #news ul.article li .entry-header .postdate {
     width: 10em;
     float: left; }
-  .home #content #news ul.article li .entry-header .entry-title {
+  .home #content #news ul.article li .entry-header .entry-title,
+  .blog #content #news ul.article li .entry-header .entry-title {
     padding: 0 0 0 8em; }
-  .home #content #blog ul.article {
+  .home #content #blog ul.article,
+  .blog #content #blog ul.article {
     overflow: hidden;
     *zoom: 1; }
-    .home #content #blog ul.article .hentry {
+    .home #content #blog ul.article .hentry,
+    .blog #content #blog ul.article .hentry {
       width: 300px;
       float: left;
       margin: 0 5px 10px 5px; }

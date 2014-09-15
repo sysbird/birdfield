@@ -1,6 +1,6 @@
 <?php
 /*
-The main template file.
+The home template file.
 */
 get_header();
 $birdfield_has_news = 0; ?>
