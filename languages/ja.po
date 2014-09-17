@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.00 ja\n"
+"Project-Id-Version: BirdFIELD 1.02 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2014-07-30 00:00+0300\n"
-"PO-Revision-Date: 2014-08-18 00:03+0900\n"
+"POT-Creation-Date: 2014-08-30 00:00+0300\n"
+"PO-Revision-Date: 2014-09-18 00:51+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -102,19 +102,19 @@ msgstr "ウェブサイト"
 msgid "Comment"
 msgstr "コメント"
 
-#: content.php:9 content.php:56 news-content.php:18
+#: content.php:9 content.php:60 news-content.php:18
 msgid "Permalink to %s"
 msgstr "%sへのリンク"
 
-#: content.php:40 image.php:74
+#: content.php:43 image.php:74
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content.php:49
+#: content.php:53
 msgid "Category"
 msgstr "カテゴリー"
 
-#: content.php:50
+#: content.php:54
 msgid "Tags"
 msgstr "タグ"
 
@@ -125,6 +125,19 @@ msgstr "Proudly powered by WordPress"
 #: footer.php:16
 msgid "Go Top"
 msgstr "ページトップへ"
+
+#: functions.php:16
+msgid ""
+"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
+"custom image, and fixed header. The homepage displays with tagged news and "
+"the grid posts. You can choose the text color, link color, header background "
+"color by theme options."
+msgstr ""
+"BirdFIELDは、レスポンシブWebデザインのWordPressテーマです。カスタムヘッダーの"
+"背景画像をパララックス効果で表示します。newsとタグ付けされた投稿を、トップ"
+"ページの「お知らせ」として表示します。その他の投稿一覧をグリッド表示します。"
+"テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選"
+"択することができます。"
 
 #: functions.php:18
 msgid "Widget Area for header"
@@ -150,30 +163,31 @@ msgstr "(編集)"
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは管理者の承認待ちです。"
 
-#: functions.php:323
+#: functions.php:325
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:426
+#: functions.php:408
 msgid "Page %s"
 msgstr "%sページ目"
 
-#: functions.php:465
-msgid "Theme Options"
-msgstr "テーマ設定"
+#: functions.php:447
+msgid "BirdFIELD Options"
+msgstr "BirdFIELDの設定"
 
-#: functions.php:475
+#: functions.php:457
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:486
+#: functions.php:468
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:497
+#: functions.php:479
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
+#: functions.php:489
 msgid "Continue reading"
 msgstr "続きを読む"
 

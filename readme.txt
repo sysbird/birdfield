@@ -37,12 +37,16 @@ http://www.sysbird.jp/wptips/contact/
 
 
 == Changelog ==
+v1.02
+* Change Theme URI.
+* Postdate and author are not display at Page.
+
 v1.01
 * Fix the theme review.
 * Change screenshot.png size for 880x660px.
 * Fix for custom-background image.
 * Removed the default gallery style.
-* Fix the Coding Standards
+* Fix the Coding Standards.
 
 v1.0
 * Hello, world!

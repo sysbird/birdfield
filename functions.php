@@ -11,6 +11,13 @@ function birdfield_content_width() {
 add_action( 'template_redirect', 'birdfield_content_width' );
 
 //////////////////////////////////////////
+// Theme Description
+function birdfield_theme_description() {
+	$theme_description = __( 'BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.', 'birdfield' );
+	return $theme_description;
+}
+
+//////////////////////////////////////////
 // Set Widgets
 function birdfield_widgets_init() {
 
@@ -200,7 +207,7 @@ function birdfield_header_style() {
 
 		#menu-wrapper .menu ul#menu-primary-items li ul,
 		#menu-wrapper .menu ul#menu-primary-items li ul li ul li:first-child a {
-			border-color: <?php echo $birdfield_header_color; ?>;
+			border-top-color: <?php echo $birdfield_header_color; ?>;
 			}
 
 		#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
@@ -422,7 +429,7 @@ function birdfield_scripts() {
 	wp_enqueue_script( 'jquery' );  
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.min.js', 'jquery', '20140801' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.01' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.02' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
 }
@@ -444,7 +451,7 @@ add_action( 'admin_enqueue_scripts', 'birdfield_admin_scripts' );
 function birdfield_customize($wp_customize) {
  
 	$wp_customize->add_section( 'birdfield_customize', array(
-		'title'		=> __( 'Theme Options', 'birdfield' ),
+		'title'		=> __( 'BirdFIELD Options', 'birdfield' ),
 		'priority'	=> 999,
 	) );
 

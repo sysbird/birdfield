@@ -30,8 +30,12 @@ The default template for displaying content. Used for both single and index/page
 <?php elseif(is_singular()): // Display Excerpts for Single/Page ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<time class="postdate" datetime="<?php echo get_the_time( 'Y-m-d' ) ?>"><?php echo get_post_time( get_option( 'date_format' ) ); ?></time>
-		<span class="icon author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+
+		<?php if( is_single() ) : ?>
+			<time class="postdate" datetime="<?php echo get_the_time( 'Y-m-d' ) ?>"><?php echo get_post_time( get_option( 'date_format' ) ); ?></time>
+			<span class="icon author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+		<?php endif; ?>
+
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>

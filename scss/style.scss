@@ -145,7 +145,7 @@ body , html {
 
 	#branding {
 		#site-title {
-			margin: 0 2em 0 0;
+			margin: 0 1em 0 0;
 			padding: 0;
 			font-size: 2rem;
 			font-weight: normal;
@@ -243,6 +243,11 @@ body , html {
 			font-weight: bold;
 		}
 	}
+}
+
+.no-nav-menu #menu-wrapper,
+.no-title #menu-wrapper {
+	margin-top: 0;
 }
 
 /* Posts
@@ -930,6 +935,14 @@ video {
 	}
 }
 
+form {
+	input, 
+	select,
+	textarea {
+		max-width: 100%;
+	}
+}
+
 /* Footer
 --------------------------------------------- */
 #footer {
@@ -1031,7 +1044,7 @@ video {
 			overflow: hidden;
 
 			li {
-				margin-top: -1px;
+					margin-top: -1px;
 				border-top: dotted 1px #FFF;
 				padding: 0.3em 0 0.3em 0.6em;
 				text-indent: -0.3em;
@@ -1512,7 +1525,7 @@ video {
 				margin: 20px auto 0;
 
 				h3 {
-					padding: 0.5em 0;
+					padding-top: 0;
 				}
 
 				.textwidget {

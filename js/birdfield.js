@@ -64,16 +64,16 @@ jQuery(function() {
 	// Fixed Menu
 	var headerHeight = jQuery( '#header' ).height();
 	headerHeight = parseInt( headerHeight );
-	if(80 == headerHeight){
+	if( 80 == headerHeight ){
 		// Parallax
-		jQuery( window ).scroll(function(){
+		jQuery( window ).scroll( function(){
 			var scrollTop = jQuery( this ).scrollTop();
 			var headerHeight = jQuery( '#header' ).height();
 			headerHeight = parseInt( headerHeight );
-			jQuery( '.headerimage' ).css( 'top', parseInt( scrollTop) + 'px' );
+			jQuery( '.headerimage' ).css( 'top', parseInt( scrollTop ) + 'px' );
 		});
 	}
 	else{
-		jQuery('.wrapper').removeClass('fixed-header');
+		jQuery( '.wrapper' ).removeClass( 'fixed-header' );
 	}
 });
