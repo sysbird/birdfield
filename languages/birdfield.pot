@@ -1,13 +1,13 @@
-# Translation of the WordPress theme BirdFIELD 1.02 by sysbird
+# Translation of the WordPress theme BirdFIELD 1.03 by sysbird
 # Copyright (C) Sysbird
 # This file is distributed under the same license as the BirdFIELD package.
 # FIRST AUTHOR <sysbird@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.02\n"
+"Project-Id-Version: BirdFIELD 1.03\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2014-09-17 00:00+0200\n"
+"POT-Creation-Date: 2014-09-21 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -69,7 +69,6 @@ msgstr ""
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
-msgstr ""
 
 #: comments.php:17
 msgid "One Comment"
@@ -120,63 +119,87 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: footer.php:14
+#: footer.php:18
+msgid "Copyright &copy; %s All Rights Reserved."
+msgstr ""
+
+#: footer.php:23
 msgid "Proudly powered by WordPress"
 msgstr ""
 
-#: footer.php:16
+#: footer.php:24
+msgid "BirdFIELD theme by %sSysbird%s"
+msgstr ""
+
+#: footer.php:28
 msgid "Go Top"
 msgstr ""
 
-#: functions.php:18
+#: functions.php:16
+msgid ""
+"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
+"custom image, and fixed header. The homepage displays with tagged news and "
+"the grid posts. You can choose the text color, link color, header background "
+"color by theme options."
+msgstr ""
+
+#: functions.php:25
 msgid "Widget Area for header"
 msgstr ""
 
-#: functions.php:20
+#: functions.php:27
 msgid "Ont text widget for header"
 msgstr ""
 
-#: functions.php:31
+#: functions.php:36 functions.php:38
 msgid "Widget Area for footer"
 msgstr ""
 
-#: functions.php:54
+#: functions.php:61
 msgid "Pingback"
 msgstr ""
 
-#: function.php:54
+#: function.php:61
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:71
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:325
+#: functions.php:356
 msgid "Navigation Menu"
 msgstr ""
 
-#: functions.php:408
+#: functions.php:439
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:447
-msgid "Theme Options"
+#: functions.php:478
+msgid "BirdFIELD Options"
 msgstr ""
 
-#: functions.php:457
+#: functions.php:488
 msgid "Text Color"
 msgstr ""
 
-#: functions.php:468
+#: functions.php:499
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:479
+#: functions.php:510
 msgid "Header, Footer Background Color"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:522
+msgid "Display Copyright"
+msgstr ""
+
+#: functions.php:535
+msgid "Display Credit"
+msgstr ""
+
+#: functions.php:547
 msgid "Continue reading"
 msgstr ""
 
@@ -188,10 +211,22 @@ msgstr ""
 msgid "RECENT"
 msgstr ""
 
+#: image.php:87
+msgid "Next Image"
+msgstr ""
+
+#: image.php:88
+msgid "Previous Image"
+msgstr ""
+
 #: search.php:12
 msgid "Search Results: %s"
 msgstr ""
 
 #: search.php:25
 msgid "Sorry, no posts matched &#8216;%s&#8217;"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search Åc"
 msgstr ""

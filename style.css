@@ -1,11 +1,11 @@
 @charset "utf-8";
 /*
 Theme Name: BirdFIELD
-Theme URI: http://www.sysbird.jp/birdfield/theme/
+Theme URI: http://www.sysbird.jp/birdfield/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
-Author URI: http://www.sysbird.jp/wptips/
-Version: 1.02
+Author URI: https://profiles.wordpress.org/sysbird/
+Version: 1.03
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -781,9 +781,10 @@ form textarea {
   #footer a {
     color: #FFF; }
   #footer .site-title {
-    padding-top: 0.8em;
-    border-top: dotted 1px #e6e6e6; }
-    #footer .site-title .generator:before {
+    padding: 0.8em 0;
+    border-top: dotted 1px #e6e6e6;
+    line-height: 1.4; }
+    #footer .site-title .generator:after {
       content: "\f19a";
       display: inline-block;
       font-family: FontAwesome;
@@ -794,6 +795,9 @@ form textarea {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding-left: 0.2em; }
+    #footer .site-title strong {
+      font-size: 1.2em;
+      font-weight: bold; }
   #footer #back-top {
     position: fixed;
     bottom: -80px;
@@ -991,11 +995,13 @@ form textarea {
     .blog #wall .widget h3 {
       padding: 0.2em 0;
       margin: 0;
-      border: none; }
+      border: none;
+      line-height: 1; }
     .home #wall .widget .textwidget,
-    .blog #wall .widget .textwidget {
-      line-height: 1.2;
-      font-size: 0.9em; }
+    .home #wall .widget .textwidget p,
+    .blog #wall .widget .textwidget,
+    .blog #wall .widget .textwidget p {
+      line-height: 1.2; }
 .home #content,
 .blog #content {
   background: none; }
@@ -1263,11 +1269,12 @@ form textarea {
       margin: 20px auto 0; }
       .home #wall .widget h3,
       .blog #wall .widget h3 {
-        padding: 0.5em 0; }
+        line-height: 1.2; }
       .home #wall .widget .textwidget,
-      .blog #wall .widget .textwidget {
-        line-height: 1.4;
-        font-size: 1em; }
+      .home #wall .widget .textwidget p,
+      .blog #wall .widget .textwidget,
+      .blog #wall .widget .textwidget p {
+        line-height: 1.4; }
 
   .fixed-header #header {
     position: fixed;

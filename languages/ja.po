@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.02 ja\n"
+"Project-Id-Version: BirdFIELD 1.03 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2014-08-30 00:00+0300\n"
-"PO-Revision-Date: 2014-09-18 00:51+0900\n"
+"POT-Creation-Date: 2014-09-21 00:00+0300\n"
+"PO-Revision-Date: 2014-09-21 22:17+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -118,11 +118,19 @@ msgstr "カテゴリー"
 msgid "Tags"
 msgstr "タグ"
 
-#: footer.php:14
+#: footer.php:18
+msgid "Copyright &copy; %s All Rights Reserved."
+msgstr "Copyright &copy; %s All Rights Reserved."
+
+#: footer.php:23
 msgid "Proudly powered by WordPress"
 msgstr "Proudly powered by WordPress"
 
-#: footer.php:16
+#: footer.php:24
+msgid "BirdFIELD theme by %sSysbird%s"
+msgstr "BirdFIELD theme by %sSysbird%s"
+
+#: footer.php:28
 msgid "Go Top"
 msgstr "ページトップへ"
 
@@ -139,55 +147,63 @@ msgstr ""
 "テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選"
 "択することができます。"
 
-#: functions.php:18
+#: functions.php:25
 msgid "Widget Area for header"
 msgstr "ウィジェットエリアヘッダー"
 
-#: functions.php:20
+#: functions.php:27
 msgid "Ont text widget for header"
 msgstr "ヘッダーに設置するひとつのテキストウィジェット"
 
-#: functions.php:31
+#: functions.php:36 functions.php:38
 msgid "Widget Area for footer"
 msgstr "ウィジェットエリアフッター"
 
-#: functions.php:54
+#: functions.php:61
 msgid "Pingback"
 msgstr "ピンバック"
 
-#: function.php:54
+#: function.php:61
 msgid "(Edit)"
 msgstr "(編集)"
 
-#: functions.php:64
+#: functions.php:71
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは管理者の承認待ちです。"
 
-#: functions.php:325
+#: functions.php:356
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:408
+#: functions.php:439
 msgid "Page %s"
 msgstr "%sページ目"
 
-#: functions.php:447
+#: functions.php:478
 msgid "BirdFIELD Options"
 msgstr "BirdFIELDの設定"
 
-#: functions.php:457
+#: functions.php:488
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:468
+#: functions.php:499
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:479
+#: functions.php:510
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:489
+#: functions.php:522
+msgid "Display Copyright"
+msgstr "コピーライトを表示"
+
+#: functions.php:535
+msgid "Display Credit"
+msgstr "クレジットを表示"
+
+#: functions.php:547
 msgid "Continue reading"
 msgstr "続きを読む"
 

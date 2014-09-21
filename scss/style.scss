@@ -4,8 +4,8 @@ Theme Name: BirdFIELD
 Theme URI: http://www.sysbird.jp/birdfield/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
-Author URI: http://www.sysbird.jp/wptips/
-Version: 1.01
+Author URI: https://profiles.wordpress.org/sysbird/
+Version: 1.03
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -954,14 +954,20 @@ form {
 	}
 
 	.site-title {
-		padding-top: 0.8em;
+		padding: 0.8em 0;
 		border-top: dotted 1px $border-color;
+		line-height: 1.4;
 
 		.generator {
-			&:before {
+			&:after {
 			    @include font-awesome("\f19a");
 			    padding-left: 0.2em;
 			}
+		}
+
+		strong {
+			font-size: 1.2em;
+			font-weight: bold;
 		}
 	}
 
@@ -1204,11 +1210,12 @@ form {
 				padding: 0.2em 0;
 				margin: 0;
 				border: none;
+				line-height: 1;
 			}
 
-			.textwidget {
+			.textwidget,
+			.textwidget p {
 				line-height: 1.2;
-				font-size: 0.9em;
 			}
 		}
 	}
@@ -1525,12 +1532,12 @@ form {
 				margin: 20px auto 0;
 
 				h3 {
-					padding-top: 0;
+					line-height: 1.2;
 				}
 
-				.textwidget {
+				.textwidget,
+				.textwidget p {
 					line-height: 1.4;
-					font-size: 1em;
 				}
 			}
 		}

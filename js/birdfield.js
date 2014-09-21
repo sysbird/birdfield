@@ -39,7 +39,7 @@ jQuery(function() {
 
 		// Fixed Footer
 		var widgetArea = jQuery( '#widget-area' ).height();
-		var footerHeight = jQuery( '#footer' ).height();
+		var footerHeight = jQuery( '#footer .site-title' ).innerHeight();
 		var height = parseInt( widgetArea ) + parseInt( footerHeight );
 		jQuery('#content').css('padding-bottom', height + 'px' );
 		jQuery('#footer').css('height', height + 'px' );

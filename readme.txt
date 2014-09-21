@@ -37,8 +37,11 @@ http://www.sysbird.jp/wptips/contact/
 
 
 == Changelog ==
+v1.03
+* Change Author URI
+
 v1.02
-* Change Theme URI.
+* Add theme option display copyright and display credit.
 * Postdate and author are not display at Page.
 
 v1.01
