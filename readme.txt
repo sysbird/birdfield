@@ -16,8 +16,16 @@ The Theme has customizable header and footer.
 
 = Usage =
 You can upload the header image by custom-header, and set the Widget Area for header.
-If the custom menu is short, the header becomes the upper fixed, header image becomes the parallax effect.
 When the posts are tagged with "news", display NEWS area on homepage.
+
+== Theme Customize ==
+Text Color: set at Colors section.
+Link Color: set at Colors section.
+Header, Footer Background Color: set at Colors section.
+Parallax Header Image: set at Header Image section.
+Fixed Menu: set at Navigation section.
+Display Copyright: set at Footer section.
+Display Credit: set at Foote section.
 
 
 == License ==
@@ -25,9 +33,29 @@ BirdFIELD WordPress theme, Copyright (C) 2014 Sysbird
 The theme is licensed under the GPL.
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-The script html5.js and jquery.tile.min.js, respond.min.js are released under the  MIT License.
-The iconfont Font Awesome is released under the GPL license.
-The headers are created by theme author and are released under GPL license.
+The header image is created by theme author and is released under GPL license.
+
+
+== Third-party Resources ==
+html5.js
+License: MIT/GPL2 License
+Source:  https://github.com/aFarkas/html5shiv
+
+Google Fonts
+License: SIL Open Font License, 1.1
+Source:  http://www.google.com/fonts
+
+jquery.tile.min.js
+License: MIT/GPL2 License
+Source:  http://urin.github.io/jquery.tile.js/
+
+respond.min.js
+License: MIT License
+Source:  https://github.com/scottjehl/Respond
+
+Font Awesome
+License: SIL Open Font License, 1.1/MIT License
+Source:  http://fortawesome.github.io/Font-Awesome/
 
 
 == Author ==
@@ -37,6 +65,10 @@ http://www.sysbird.jp/wptips/contact/
 
 
 == Changelog ==
+v1.04
+* Fix the theme review.
+* Add theme option fixed header, parallax header image.
+
 v1.03
 * Change Author URI
 

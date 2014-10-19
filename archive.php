@@ -40,7 +40,7 @@ get_header(); ?>
 						<?php get_template_part( 'content', get_post_format() ); ?>
 					<?php endwhile; ?>
 				</ul>
-				<div class="tablenav"><?php birdfield_the_pagenation(); ?></div>
+				<?php birdfield_the_pagenation(); ?>
 			<?php else: ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.', 'birdfield' ); ?></p>
 			<?php endif; ?>

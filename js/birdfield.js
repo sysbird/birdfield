@@ -51,29 +51,72 @@ jQuery(function() {
 		jQuery( this ).toggleClass( "current" );
 	});
 
-	// back to pagetop
+	// Fixed Navigation
+	birdfield_AdjustHeader();
+
+	// Window Resize
+	var timer = false;
+	jQuery(window).resize(function() {
+	    if (timer !== false) {
+	        clearTimeout(timer);
+	    }
+	    timer = setTimeout(function() {
+			birdfield_AdjustHeader();
+	    }, 200);
+	});
+
+	// Windows Scroll
     var totop = jQuery( '#back-top' );
     totop.hide();
     jQuery( window ).scroll(function () {
+		// back to pagetop
         if ( jQuery( this ).scrollTop() > 800 ) totop.fadeIn(); else totop.fadeOut();
+
+		// Parallax
+		if( jQuery('.wrapper[class*=parallax]').length ){
+			var scrollTop = parseInt( jQuery( this ).scrollTop() );
+			var top = 0;
+
+			if( jQuery('.wrapper[class*=fixed-header]').length ){
+				top = scrollTop;
+			}
+			else{
+				var headerHeight = parseInt( jQuery( '#header' ).height() );
+				if(scrollTop > headerHeight){
+					top = scrollTop - headerHeight;
+				}
+
+			}
+
+			jQuery( '.headerimage' ).css( 'top', top + 'px' );
+		}
     });
+
     totop.click( function () {
+		// back to pagetop
         jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
     });
 
-	// Fixed Menu
-	var headerHeight = jQuery( '#header' ).height();
-	headerHeight = parseInt( headerHeight );
-	if( 80 == headerHeight ){
-		// Parallax
-		jQuery( window ).scroll( function(){
-			var scrollTop = jQuery( this ).scrollTop();
-			var headerHeight = jQuery( '#header' ).height();
-			headerHeight = parseInt( headerHeight );
-			jQuery( '.headerimage' ).css( 'top', parseInt( scrollTop ) + 'px' );
-		});
+});
+
+////////////////////////////////////////
+// Adjust Header height
+function birdfield_AdjustHeader() {
+
+	var headerHeight = parseInt( jQuery( '#header' ).height() );
+	if( 80 < headerHeight ){
+		// Long Navigation
+		jQuery( '.wrapper' ).addClass( 'thin-navigation' );
+	}
+
+	if( jQuery( '#small-menu' ).is( ':visible' ) ){
+		// Wide Display
+		jQuery( '.fixed-header #content' ).css( 'margin-top', '' );
 	}
 	else{
-		jQuery( '.wrapper' ).removeClass( 'fixed-header' );
+		// Small Display
+		console.log(headerHeight);
+		headerHeight = parseInt( jQuery( '#header' ).height() );
+		jQuery( '.fixed-header #content' ).css( 'margin-top', headerHeight + 'px' );
 	}
-});
+}

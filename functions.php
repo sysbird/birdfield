@@ -89,7 +89,15 @@ function birdfield_custom_comments( $comment, $args, $depth ) {
 // Header markup
 function birdfield_wrapper_class() {
 
-	$birdfield_class = 'wrapper fixed-header';
+	$birdfield_class = 'wrapper';
+
+	if( get_theme_mod( 'birdfield_fixedheader', true ) ){
+		$birdfield_class .= ' fixed-header';
+	}
+
+	if( get_theme_mod( 'birdfield_parallax', true ) ){
+		$birdfield_class .= ' parallax';
+	}
 
 	if ( 'blank' == get_header_textcolor() ) {
 		$birdfield_class .= ' no-title';
@@ -106,26 +114,23 @@ function birdfield_wrapper_class() {
 // Pagenation
 function birdfield_the_pagenation() {
 
-	global $wp_rewrite;
-	global $wp_query;
-	global $paged;
+	global $wp_query, $paged;
+	$birdfield_big = 999999999;
 
-	$birdfield_paginate_base = get_pagenum_link( 1 );
-	if ( strpos($birdfield_paginate_base, '?' ) || ! $wp_rewrite->using_permalinks() ) {
-		$birdfield_paginate_format = '';
-		$birdfield_paginate_base = add_query_arg( 'paged', '%#%' );
-	} else {
-		$birdfield_paginate_format = ( substr( $birdfield_paginate_base, -1 ,1 ) == '/' ? '' : '/' ) .
-		user_trailingslashit( 'page/%#%/', 'paged' );;
-		$birdfield_paginate_base .= '%_%';
+	$birdfield_pages = $wp_query -> max_num_pages;
+	if ( empty( $paged ) ) $paged = 1;
+
+	if ( 1 < $birdfield_pages ) {
+		echo '	<div class="tablenav">'."\n";
+		echo paginate_links( array(
+			'base'      => str_replace( $birdfield_big, '%#%', get_pagenum_link( $birdfield_big ) ),
+			'format'    => '?paged=%#%',
+			'current'   => max( 1, get_query_var( 'paged' ) ),
+			'total'     => $wp_query -> max_num_pages,
+			'mid_size'  => 3,
+		) );
+		echo '</div>';
 	}
-	echo paginate_links( array(
-		'base'		=> $birdfield_paginate_base,
-		'format'	=> $birdfield_paginate_format,
-		'total'		=> $wp_query->max_num_pages,
-		'mid_size'	=> 3,
-		'current'	=> ( $paged ? $paged : 1 ),
-	));
 }
 
 //////////////////////////////////////////////////////
@@ -158,9 +163,9 @@ function birdfield_get_copyright_year() {
 function birdfield_header_style() {
 
 	//Theme Option
-	$birdfield_text_color = get_theme_mod( 'birdfield_text_color', '#222327' );
-	$birdfield_link_color = get_theme_mod( 'birdfield_link_color', '#1c4bbe' );
-	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#79a596' );
+	$birdfield_text_color = esc_attr( get_theme_mod( 'birdfield_text_color', '#222327' ) );
+	$birdfield_link_color = esc_attr( get_theme_mod( 'birdfield_link_color', '#1c4bbe' ) );
+	$birdfield_header_color = esc_attr( get_theme_mod( 'birdfield_header_color', '#79a596' ) );
 
 ?>
 
@@ -229,13 +234,8 @@ function birdfield_header_style() {
 			color: <?php echo $birdfield_header_color; ?>;
 			}
 
-		#menu-wrapper .menu ul#menu-primary-items li ul,
-		#menu-wrapper .menu ul#menu-primary-items li ul li ul li:first-child a {
-			border-top-color: <?php echo $birdfield_header_color; ?>;
-			}
-
 		#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
-			border-top-color: <?php echo $birdfield_header_color; ?>;
+			border-color: <?php echo $birdfield_header_color; ?>;
 			}
 
 		#menu-wrapper .menu ul#menu-primary-items li ul li a {
@@ -253,7 +253,7 @@ function birdfield_header_style() {
 // Admin Header Style
 function birdfield_admin_header_style() {
 
-	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', '#79a596' );
+	$birdfield_header_color = esc_attr( get_theme_mod( 'birdfield_header_color', '#79a596' ) );
 ?>
 
 <style type="text/css">
@@ -404,7 +404,7 @@ function birdfield_get_news_posts(){
     ));
     return $array;
 }
-add_filter( 'birdfield_get_news_posts','birdfield_get_news_posts',100 );
+add_filter( 'birdfield_get_news_posts', 'birdfield_get_news_posts', 100 );
 
 //////////////////////////////////////////////////////
 // Filter home and the news posts that returns a boolean value.
@@ -453,7 +453,7 @@ function birdfield_scripts() {
 	wp_enqueue_script( 'jquery' );  
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.min.js', 'jquery', '20140801' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.03' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.04' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
 }
@@ -473,49 +473,79 @@ add_action( 'admin_enqueue_scripts', 'birdfield_admin_scripts' );
 //////////////////////////////////////////////////////
 // Theme Customizer
 function birdfield_customize($wp_customize) {
- 
-	$wp_customize->add_section( 'birdfield_customize', array(
-		'title'		=> __( 'BirdFIELD Options', 'birdfield' ),
-		'priority'	=> 999,
-	) );
 
 	// Text Color
 	$wp_customize->add_setting( 'birdfield_text_color', array(
 		'default' => '#222327',
+		'sanitize_callback' => 'maybe_hash_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_text_color', array(
 		'label'		=> __( 'Text Color', 'birdfield' ),
-		'section'	=> 'birdfield_customize',
+		'section'	=> 'colors',
 		'settings'	=> 'birdfield_text_color',
 	) ) );
 
 	// Link Color
 	$wp_customize->add_setting( 'birdfield_link_color', array(
 		'default' => '#1c4bbe',
+		'sanitize_callback' => 'maybe_hash_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_link_color', array(
 		'label'		=> __( 'Link Color', 'birdfield' ),
-		'section'	=> 'birdfield_customize',
+		'section'	=> 'colors',
 		'settings'	=> 'birdfield_link_color',
 	) ) );
 
 	// Header, Footer Background Color
 	$wp_customize->add_setting( 'birdfield_header_color', array(
 		'default' => '#79a596',
+		'sanitize_callback' => 'maybe_hash_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_header_color', array(
 		'label'		=> __( 'Header, Footer Background Color', 'birdfield' ),
-		'section'	=> 'birdfield_customize',
+		'section'	=> 'colors',
 		'settings'	=> 'birdfield_header_color',
 	) ) );
 
+	// Parallax Header Image
+	$wp_customize->add_setting( 'birdfield_parallax', array(
+		'default'  => true,
+		'sanitize_callback' => 'birdfield_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'birdfield_parallax', array(
+		'label'		=> __( 'Display Parallax', 'birdfield' ),
+		'section'  => 'header_image',
+		'type'     => 'checkbox',
+		'settings' => 'birdfield_parallax',
+	) );
+
+	// Fixed Menu
+	$wp_customize->add_setting( 'birdfield_fixedheader', array(
+		'default'  => true,
+		'sanitize_callback' => 'birdfield_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'birdfield_fixedheader', array(
+		'label'		=> __( 'Fixed Header', 'birdfield' ),
+		'section'  => 'nav',
+		'type'     => 'checkbox',
+		'settings' => 'birdfield_fixedheader',
+	) );
+
+	// Footer Section
+	$wp_customize->add_section( 'birdfield_customize', array(
+		'title'		=> __( 'Footer', 'birdfield' ),
+		'priority'	=> 999,
+	) );
+
 	// Display Copyright
 	$wp_customize->add_setting( 'birdfield_copyright', array(
-		'default'  => 'true',
-		'type'     => 'theme_mod',
+		'default'  => true,
+		'sanitize_callback' => 'birdfield_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( 'birdfield_copyright', array(
@@ -527,8 +557,8 @@ function birdfield_customize($wp_customize) {
 
 	// Display Credit
 	$wp_customize->add_setting( 'birdfield_credit', array(
-		'default'  => 'true',
-		'type'     => 'theme_mod',
+		'default'  => true,
+		'sanitize_callback' => 'birdfield_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( 'birdfield_credit', array(
@@ -540,6 +570,17 @@ function birdfield_customize($wp_customize) {
 
 }
 add_action( 'customize_register', 'birdfield_customize' );
+
+//////////////////////////////////////////////////////
+// Santize a checkbox
+function birdfield_sanitize_checkbox( $input ) {
+
+	if ( $input == true ) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 //////////////////////////////////////////////////////
 // Excerpt More

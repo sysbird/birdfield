@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.03\n"
+"Project-Id-Version: BirdFIELD 1.04\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2014-09-21 00:00+0200\n"
+"POT-Creation-Date: 2014-10-19 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -175,39 +175,47 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:478
-msgid "BirdFIELD Options"
-msgstr ""
-
-#: functions.php:488
+#: functions.php:484
 msgid "Text Color"
 msgstr ""
 
-#: functions.php:499
+#: functions.php:496
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:510
+#: functions.php:508
 msgid "Header, Footer Background Color"
 msgstr ""
 
-#: functions.php:522
+#: functions.php:520
+msgid "Display Parallax"
+msgstr ""
+
+#: functions.php:533
+msgid "Fixed Header"
+msgstr ""
+
+#: functions.php:541
+msgid "Footer"
+msgstr ""
+
+#: functions.php:552
 msgid "Display Copyright"
 msgstr ""
 
-#: functions.php:535
+#: functions.php:565
 msgid "Display Credit"
 msgstr ""
 
-#: functions.php:547
+#: functions.php:588
 msgid "Continue reading"
 msgstr ""
 
-#: news-content.php:28
+#: news-content.php:9
 msgid "NEWS"
 msgstr ""
 
-#: home.php:9
+#: home.php:28
 msgid "RECENT"
 msgstr ""
 

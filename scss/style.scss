@@ -1,11 +1,11 @@
 @charset "utf-8";
 /*
 Theme Name: BirdFIELD
-Theme URI: http://www.sysbird.jp/birdfield/
+Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.03
+Version: 1.04
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -1601,6 +1601,7 @@ form {
 	#header {
 		#branding {
 			padding-top: 15px;
+			float: left;
 
 			#site-title {
 				a {
@@ -1665,10 +1666,8 @@ form {
 						display: none; /* hide dropdown */
 						width: 200px;
 						position: absolute;
-						top: 2.8em;
+						top: 80px;
 						left: 0;
-						border: dotted 1px $header-color;
-						border-top: none;
 						text-align: left;
 						z-index: 9999;
 
@@ -1687,59 +1686,52 @@ form {
 							a {
 								padding: 0.8em;
 								background-color: $header-color;
-								border-top: dotted 1px #FFF;
+								border-right: dotted 1px #FFF;
+								border-left: dotted 1px #FFF;
+								border-bottom: dotted 1px #FFF;
 								height: auto;
 								white-space: normal;
 
 								&:hover {
 									text-decoration: none;
-									border-top-color: $header-color;
+									border-color: $header-color;
 								}
+							}
+
+							&:first-child a {
+								border-top: dotted 1px #FFF;
 							}
 
 							ul {
 								top: 0;
 								left: 100%;
-
-								li {
-									&:first-child a {
-										border-top: dotted 1px $header-color;
-									}
-								}
 							}
 						}
+					}
+				}
+
+				>li {
+					>a {
+						padding: 30px 0.8em;
+						height: 80px;
 					}
 				}
 			}
 		}
 	}
 
-	.fixed-header {
-		#header {
-			#branding {
-				float: left;
-			}
-		}
-
+	.thin-navigation {
 		#menu-wrapper {
-			float: right;
-
 			.menu {
 				ul#menu-primary-items {
 					>li {
 						>a {
-							padding: 30px 0.8em;
-							height: 80px;
+							padding: 0.8em;
+							height: auto;
 						}
-					}
 
-					ul {
-						top: 80px;
-
-						li {
-							ul {
-								top: 0;
-							}
+						>ul {
+							top: 2.8em;
 						}
 					}
 				}

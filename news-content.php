@@ -10,8 +10,8 @@
 		<ul class="article">
 
 <?php
-	$news_posts = birdfield_get_news_posts();
-	foreach ( (array) $news_posts as $order => $post ) :
+	$birdfield_news_posts = birdfield_get_news_posts();
+	foreach ( (array) $birdfield_news_posts as $order => $post ) :
 		setup_postdata( $post ); ?>
 
 		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

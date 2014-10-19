@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.03 ja\n"
+"Project-Id-Version: BirdFIELD 1.04 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2014-09-21 00:00+0300\n"
-"PO-Revision-Date: 2014-09-21 22:17+0900\n"
+"POT-Creation-Date: 2014-10-19 00:00+0300\n"
+"PO-Revision-Date: 2014-10-19 22:29+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -179,39 +179,47 @@ msgstr "ナビゲーションメニュー"
 msgid "Page %s"
 msgstr "%sページ目"
 
-#: functions.php:478
-msgid "BirdFIELD Options"
-msgstr "BirdFIELDの設定"
-
-#: functions.php:488
+#: functions.php:484
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:499
+#: functions.php:496
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:510
+#: functions.php:508
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:522
+#: functions.php:520
+msgid "Display Parallax"
+msgstr "パララックス表示"
+
+#: functions.php:533
+msgid "Fixed Header"
+msgstr "ヘッダーを固定表示"
+
+#: functions.php:541
+msgid "Footer"
+msgstr "フッター"
+
+#: functions.php:552
 msgid "Display Copyright"
 msgstr "コピーライトを表示"
 
-#: functions.php:535
+#: functions.php:565
 msgid "Display Credit"
 msgstr "クレジットを表示"
 
-#: functions.php:547
+#: functions.php:588
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: news-content.php:28
+#: news-content.php:9
 msgid "NEWS"
 msgstr "お知らせ"
 
-#: home.php:9
+#: home.php:28
 msgid "RECENT"
 msgstr "新着"
 

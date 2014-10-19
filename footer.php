@@ -14,11 +14,11 @@ The template for displaying the footer.
 			<div class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ) ; ?>"><strong><?php bloginfo(); ?></strong></a>
 
-				<?php if( get_theme_mod( 'birdfield_copyright', 'true' ) ): ?>
+				<?php if( get_theme_mod( 'birdfield_copyright', true ) ): ?>
 					<?php printf(__( 'Copyright &copy; %s All Rights Reserved.', 'birdfield' ), birdfield_get_copyright_year() ); ?>
 				<?php endif; ?>
 
-				<?php if( get_theme_mod( 'birdfield_credit', 'true' ) ): ?>
+				<?php if( get_theme_mod( 'birdfield_credit', true ) ): ?>
 					<br>
 					<span class="generator"><a href="<?php echo esc_url('http://wordpress.org/'); ?>" target="_blank"><?php _e( 'Proudly powered by WordPress', 'birdfield' ); ?></a></span>
 				<?php printf(__( 'BirdFIELD theme by %sSysbird%s', 'birdfield' ), '<a href="' .esc_url('https://profiles.wordpress.org/sysbird/') .'" target="_blank">', '</a>' ); ?>
@@ -30,9 +30,6 @@ The template for displaying the footer.
 
 </div><!-- wrapper -->
 
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js" type="text/javascript"></script>
-<![endif]-->
 <?php wp_footer(); ?>
 
 </body>

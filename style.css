@@ -1,11 +1,11 @@
 @charset "utf-8";
 /*
 Theme Name: BirdFIELD
-Theme URI: http://www.sysbird.jp/birdfield/
+Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.03
+Version: 1.04
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -1306,7 +1306,8 @@ form textarea {
     width: 930px; }
 
   #header #branding {
-    padding-top: 15px; }
+    padding-top: 15px;
+    float: left; }
     #header #branding #site-title a {
       display: inline; }
     #header #branding #site-description {
@@ -1357,10 +1358,8 @@ form textarea {
           /* hide dropdown */
           width: 200px;
           position: absolute;
-          top: 2.8em;
+          top: 80px;
           left: 0;
-          border: dotted 1px #79a596;
-          border-top: none;
           text-align: left;
           z-index: 9999; }
           #menu-wrapper .menu ul#menu-primary-items li ul li {
@@ -1381,29 +1380,28 @@ form textarea {
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
               padding: 0.8em;
               background-color: #79a596;
-              border-top: dotted 1px #FFF;
+              border-right: dotted 1px #FFF;
+              border-left: dotted 1px #FFF;
+              border-bottom: dotted 1px #FFF;
               height: auto;
               white-space: normal; }
               #menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
                 text-decoration: none;
-                border-top-color: #79a596; }
+                border-color: #79a596; }
+            #menu-wrapper .menu ul#menu-primary-items li ul li:first-child a {
+              border-top: dotted 1px #FFF; }
             #menu-wrapper .menu ul#menu-primary-items li ul li ul {
               top: 0;
               left: 100%; }
-              #menu-wrapper .menu ul#menu-primary-items li ul li ul li:first-child a {
-                border-top: dotted 1px #79a596; }
+      #menu-wrapper .menu ul#menu-primary-items > li > a {
+        padding: 30px 0.8em;
+        height: 80px; }
 
-  .fixed-header #header #branding {
-    float: left; }
-  .fixed-header #menu-wrapper {
-    float: right; }
-    .fixed-header #menu-wrapper .menu ul#menu-primary-items > li > a {
-      padding: 30px 0.8em;
-      height: 80px; }
-    .fixed-header #menu-wrapper .menu ul#menu-primary-items ul {
-      top: 80px; }
-      .fixed-header #menu-wrapper .menu ul#menu-primary-items ul li ul {
-        top: 0; }
+  .thin-navigation #menu-wrapper .menu ul#menu-primary-items > li > a {
+    padding: 0.8em;
+    height: auto; }
+  .thin-navigation #menu-wrapper .menu ul#menu-primary-items > li > ul {
+    top: 2.8em; }
 
   .home #wall,
   .blog #wall {
