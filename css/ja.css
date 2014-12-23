@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/*
+Theme Name: BirdFIELD
+Japanese font
+*/
+
+.wrapper,
+#birdfield_header {
+  font-family: 'Raleway', Verdana,Arial,"メイリオ", Meiryo, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+}
