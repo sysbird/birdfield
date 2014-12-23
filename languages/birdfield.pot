@@ -1,13 +1,13 @@
-# Translation of the WordPress theme BirdFIELD 1.03 by sysbird
+# Translation of the WordPress theme BirdFIELD 1.07 by sysbird
 # Copyright (C) Sysbird
 # This file is distributed under the same license as the BirdFIELD package.
 # FIRST AUTHOR <sysbird@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.04\n"
+"Project-Id-Version: BirdFIELD 1.07\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2014-10-19 00:00+0200\n"
+"POT-Creation-Date: 2014-12-21 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -135,43 +135,35 @@ msgstr ""
 msgid "Go Top"
 msgstr ""
 
-#: functions.php:16
-msgid ""
-"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
-"custom image, and fixed header. The homepage displays with tagged news and "
-"the grid posts. You can choose the text color, link color, header background "
-"color by theme options."
-msgstr ""
-
-#: functions.php:25
+#: functions.php:18
 msgid "Widget Area for header"
 msgstr ""
 
-#: functions.php:27
-msgid "Ont text widget for header"
+#: functions.php:20
+msgid "One text widget for header"
 msgstr ""
 
-#: functions.php:36 functions.php:38
+#: functions.php:29 functions.php:31
 msgid "Widget Area for footer"
 msgstr ""
 
-#: functions.php:61
+#: functions.php:54
 msgid "Pingback"
 msgstr ""
 
-#: function.php:61
+#: function.php:54
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:64
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:356
+#: functions.php:349
 msgid "Navigation Menu"
 msgstr ""
 
-#: functions.php:439
+#: functions.php:431
 msgid "Page %s"
 msgstr ""
 
@@ -236,5 +228,14 @@ msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr ""
 
 #: searchform.php:3
-msgid "Search Åc"
+msgid "Search..."
 msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
+"custom image, and fixed header. The homepage displays with tagged news and "
+"the grid posts. You can choose the text color, link color, header background "
+"color by theme options."
+msgstr ""
+""

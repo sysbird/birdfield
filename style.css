@@ -5,7 +5,7 @@ Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.04
+Version: 1.07
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -131,7 +131,7 @@ body, html {
 /* Wrapper
 -------------------------------------------------------------- */
 .wrapper {
-  font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
+  font-family: 'Raleway', Verdana,Arial, Meiryo , "Hiragino Kaku Gothic Pro" ,sans-serif;
   color: #222327;
   background: white;
   overflow: hidden; }

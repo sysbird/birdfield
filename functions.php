@@ -11,13 +11,6 @@ function birdfield_content_width() {
 add_action( 'template_redirect', 'birdfield_content_width' );
 
 //////////////////////////////////////////
-// Theme Description
-function birdfield_theme_description() {
-	$theme_description = __( 'BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.', 'birdfield' );
-	return $theme_description;
-}
-
-//////////////////////////////////////////
 // Set Widgets
 function birdfield_widgets_init() {
 
@@ -259,7 +252,7 @@ function birdfield_admin_header_style() {
 <style type="text/css">
 
 	#birdfield_header {
-		font-family: 'Raleway', Verdana,Arial,"メイリオ",Meiryo,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
+		font-family: 'Raleway', Verdana,Arial,Meiryo, "Hiragino Kaku Gothic Pro", sans-serif;
 		background: <?php echo $birdfield_header_color;?>;
 		padding: 15px;
 		}
@@ -360,13 +353,12 @@ function birdfield_setup() {
 	$custom_header_support = array(
 		// Text color and image (empty to use none).
 		'default-text-color'     => 'FFF',
-		'default-image'          => '',
+		'default-image'          => '%s/images/header.jpg',
 
 		// Set height and width, with a maximum value for the width.
 		'height'                 => 900,
 		'width'                  => 1280,
 		'max-width'              => 900,
-		'default-image'          => '%s/images/header.jpg',
 
 		// Random image rotation off by default.
 		'random-default'         => true,
@@ -450,12 +442,15 @@ function birdfield_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'jquery' );  
 	wp_enqueue_script( 'jquery-masonry' );
-	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.min.js', 'jquery', '20140801' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.04' );
+	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '20140801' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.07' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
+
+	if ( strtoupper( get_locale() ) == 'JA' ) {
+		wp_enqueue_style( 'birdfield_ja', get_template_directory_uri().'/css/ja.css' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'birdfield_scripts' );
 
@@ -467,6 +462,10 @@ function birdfield_admin_scripts( $hook_suffix ) {
 		return;
 
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
+
+	if ( strtoupper( get_locale() ) == 'JA' ) {
+		wp_enqueue_style( 'birdfield_ja', get_template_directory_uri().'/css/ja.css' );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'birdfield_admin_scripts' );
 

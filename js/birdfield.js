@@ -115,7 +115,6 @@ function birdfield_AdjustHeader() {
 	}
 	else{
 		// Small Display
-		console.log(headerHeight);
 		headerHeight = parseInt( jQuery( '#header' ).height() );
 		jQuery( '.fixed-header #content' ).css( 'margin-top', headerHeight + 'px' );
 	}

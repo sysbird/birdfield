@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.04 ja\n"
+"Project-Id-Version: BirdFIELD 1.07 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2014-10-19 00:00+0300\n"
-"PO-Revision-Date: 2014-10-19 22:29+0900\n"
+"POT-Creation-Date: 2014-12-21 00:00+0300\n"
+"PO-Revision-Date: 2014-12-21 17:00+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,48 +134,35 @@ msgstr "BirdFIELD theme by %sSysbird%s"
 msgid "Go Top"
 msgstr "ページトップへ"
 
-#: functions.php:16
-msgid ""
-"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
-"custom image, and fixed header. The homepage displays with tagged news and "
-"the grid posts. You can choose the text color, link color, header background "
-"color by theme options."
-msgstr ""
-"BirdFIELDは、レスポンシブWebデザインのWordPressテーマです。カスタムヘッダーの"
-"背景画像をパララックス効果で表示します。newsとタグ付けされた投稿を、トップ"
-"ページの「お知らせ」として表示します。その他の投稿一覧をグリッド表示します。"
-"テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選"
-"択することができます。"
-
-#: functions.php:25
+#: functions.php:18
 msgid "Widget Area for header"
 msgstr "ウィジェットエリアヘッダー"
 
-#: functions.php:27
-msgid "Ont text widget for header"
+#: functions.php:20
+msgid "One text widget for header"
 msgstr "ヘッダーに設置するひとつのテキストウィジェット"
 
-#: functions.php:36 functions.php:38
+#: functions.php:29 functions.php:31
 msgid "Widget Area for footer"
 msgstr "ウィジェットエリアフッター"
 
-#: functions.php:61
+#: functions.php:54
 msgid "Pingback"
 msgstr "ピンバック"
 
-#: function.php:61
+#: function.php:54
 msgid "(Edit)"
 msgstr "(編集)"
 
-#: functions.php:71
+#: functions.php:64
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは管理者の承認待ちです。"
 
-#: functions.php:356
+#: functions.php:349
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:439
+#: functions.php:431
 msgid "Page %s"
 msgstr "%sページ目"
 
@@ -240,5 +227,18 @@ msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr "「%s」 は見つかりませんでした。"
 
 #: searchform.php:3
-msgid "Search …"
-msgstr "検索 …"
+msgid "Search..."
+msgstr "検索…"
+
+#. Description of the plugin/theme
+msgid ""
+"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
+"custom image, and fixed header. The homepage displays with tagged news and "
+"the grid posts. You can choose the text color, link color, header background "
+"color by theme options."
+msgstr ""
+"BirdFIELDは、レスポンシブWebデザインのWordPressテーマです。カスタムヘッダーの"
+"背景画像をパララックス効果で表示します。newsとタグ付けされた投稿を、トップ"
+"ページの「お知らせ」として表示します。その他の投稿一覧をグリッド表示します。"
+"テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選"
+"択することができます。"

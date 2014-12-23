@@ -37,20 +37,20 @@ The header image is created by theme author and is released under GPL license.
 
 
 == Third-party Resources ==
-html5.js
-License: MIT/GPL2 License
+html5shiv.js
+License: MIT/GPL2 Licensed
 Source:  https://github.com/aFarkas/html5shiv
 
 Google Fonts
 License: SIL Open Font License, 1.1
 Source:  http://www.google.com/fonts
 
-jquery.tile.min.js
-License: MIT/GPL2 License
-Source:  http://urin.github.io/jquery.tile.js/
+jquery.tile.js
+License: Dual licensed under the MIT and GPL licenses
+Source:  https://github.com/urin/jquery.tile.js
 
-respond.min.js
-License: MIT License
+respond.js
+License:  MIT Lic.
 Source:  https://github.com/scottjehl/Respond
 
 Font Awesome
@@ -65,6 +65,18 @@ http://www.sysbird.jp/wptips/contact/
 
 
 == Changelog ==
+v1.07
+* Fix the theme review.
+
+v1.06
+* Fix the theme review.
+* add ja.css for japanese file.
+* update searchform.php character code
+
+v1.05
+* Fix the theme review.
+* add ja.css for japanese.
+
 v1.04
 * Fix the theme review.
 * Add theme option fixed header, parallax header image.
