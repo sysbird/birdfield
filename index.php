@@ -1,7 +1,11 @@
 <?php
-/*
-The main template file.
-*/
+/**
+ * The main template file
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 get_header(); ?>
 
 <div id="content">
@@ -12,7 +16,13 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 		</ul>
-		<?php birdfield_the_pagenation(); ?>
+
+		<?php the_posts_pagination( array(
+				'mid_size' => 3,
+				'prev_text'          => esc_html__( 'Previous page', 'birdfield' ),
+				'next_text'          => esc_html__( 'Next page', 'birdfield' ),
+			) ); ?>
+
 		</article>
 	</div>
 </div>

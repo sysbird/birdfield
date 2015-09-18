@@ -1,6 +1,10 @@
 <?php
-/*
+/**
  * The template for displaying news content
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
  */
 ?>
 

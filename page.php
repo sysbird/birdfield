@@ -1,7 +1,11 @@
 <?php
-/*
-The template for displaying all pages.
-*/
+/**
+ * The template for displaying pages
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 get_header(); ?>
 
 <div id="content">

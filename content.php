@@ -1,7 +1,11 @@
 <?php
-/*
-The default template for displaying content. Used for both single and index/page/archive/search.
-*/
+/**
+ * The default template for displaying content
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 ?>
 
 <?php if( is_home() ): // Display Excerpts for Home ?>
@@ -49,7 +53,7 @@ The default template for displaying content. Used for both single and index/page
 
 	<?php if( is_single() ): // Only Display Excerpts for Single ?>
 		<footer class="entry-meta">
-			
+
 			<div class="category"><span><?php _e( 'Category', 'birdfield' ); ?></span><?php the_category( ' ' ) ?></div>
 			<?php the_tags('<div class="tag"><span>' .__( 'Tags', 'birdfield' ) .'</span>', ' ', '</div>' ) ?>
 		</footer>

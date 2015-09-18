@@ -23,9 +23,9 @@ Text Color: set at Colors section.
 Link Color: set at Colors section.
 Header, Footer Background Color: set at Colors section.
 Parallax Header Image: set at Header Image section.
-Fixed Menu: set at Navigation section.
+Fixed Menu: set at Site Identity section.
 Display Copyright: set at Footer section.
-Display Credit: set at Foote section.
+Display Credit: set at Footer section.
 
 
 == License ==
@@ -60,11 +60,14 @@ Source:  http://fortawesome.github.io/Font-Awesome/
 
 == Author ==
 The theme built by TORIYAMA Yuko at Sysbird.
-You can contact me at inquiry form.
-http://www.sysbird.jp/wptips/contact/
+http://www.sysbird.jp
 
 
 == Changelog ==
+v1.08
+* 20150907 working!
+* Fix the ver 4.3
+
 v1.07
 * Fix the theme review.
 

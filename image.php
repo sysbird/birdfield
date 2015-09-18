@@ -1,7 +1,11 @@
 <?php
-/*
-The Template for displaying all single posts.
-*/
+/**
+ * The template for displaying image attachments
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 get_header(); ?>
 
 <div id="content">

@@ -1,7 +1,11 @@
 <?php
-/*
-The template for displaying 404 pages (Not Found).
-*/
+/**
+ * The template for displaying 404 pages (Not Found).
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 get_header(); ?>
 
 <div id="content">

@@ -1,7 +1,11 @@
 <?php
-/*
-The template for displaying Search Results pages.
-*/
+/**
+ * The template for displaying search results pages.
+ *
+ * @package WordPress
+ * @subpackage BirdFILED
+ * @since BirdFILED 1.0
+ */
 get_header(); ?>
 
 <div id="content">
@@ -19,7 +23,12 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 				</ul>
-				<?php birdfield_the_pagenation(); ?>
+
+				<?php the_posts_pagination( array(
+						'mid_size' => 3,
+						'prev_text'          => esc_html__( 'Previous page', 'birdfield' ),
+						'next_text'          => esc_html__( 'Next page', 'birdfield' ),
+					) ); ?>
 
 			<?php else: ?>
 				<p><?php printf( __( 'Sorry, no posts matched &#8216;%s&#8217;', 'birdfield' ), esc_html( $s ) ); ?>
