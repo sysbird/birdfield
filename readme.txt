@@ -49,10 +49,6 @@ jquery.tile.js
 License: Dual licensed under the MIT and GPL licenses
 Source:  https://github.com/urin/jquery.tile.js
 
-respond.js
-License:  MIT Lic.
-Source:  https://github.com/scottjehl/Respond
-
 Font Awesome
 License: SIL Open Font License, 1.1/MIT License
 Source:  http://fortawesome.github.io/Font-Awesome/
@@ -65,8 +61,11 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.08
-* 20150907 working!
-* Fix the ver 4.3
+* 20151231 working!
+* Fix the ver 4.4
+* stop the correspondence for IE8 and below.
+* delete wp_list_comments callback.
+* change comment form to the default style.
 
 v1.07
 * Fix the theme review.

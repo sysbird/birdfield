@@ -5,7 +5,8 @@ Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.07
+Version: 1.08
+
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -36,16 +37,18 @@ Font Awesome
   font-weight: normal;
   font-style: normal; }
 
-@mixin font-awesome($param) {
-  content: $param;
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  padding-right: 0.2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;}
+@mixin font-awesome( $param, $padding-left:0, $padding-right:0 ) {
+	content: $param;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 /* Link
 --------------------------------------------- */
@@ -94,10 +97,10 @@ body {
 /* Adjust footer
 --------------------------------------------- */
 $footer-height: 100px;
-body , html {  
+body , html {
     height: 100%;
 }
- 
+
 .wrapper {
     width: 100%;
     position: relative;
@@ -105,11 +108,11 @@ body , html {
     height: 100%;
     min-height: 100%;
 }
- 
+
 #content {
     padding-bottom: $footer-height;
 }
- 
+
 #footer {
     position: absolute;
     bottom: 0;
@@ -305,7 +308,7 @@ body , html {
 				font-size: 0.9rem;
 
 				&:before {
-				    @include font-awesome("\f133");
+					@include font-awesome("\f133", 0, 0.2em );
 				}
 
 				a {
@@ -315,13 +318,13 @@ body , html {
 
 			.author {
 				&:before {
-				    @include font-awesome("\f007");
+				    @include font-awesome("\f007", 0, 0.2em );
 				}
 			}
 
 			.comment {
 				&:before {
-				    @include font-awesome("\f075");
+				    @include font-awesome("\f075", 0, 0.2em );
 				}
 			}
 
@@ -340,6 +343,7 @@ body , html {
 			font-size: 0.9rem;
 			padding: 1.6em 0;
 			color: #999;
+			clear: both;
 
 			.category,
 			.tag {
@@ -353,8 +357,7 @@ body , html {
 					float: left;
 
 					&:before {
-					    @include font-awesome("\f07b");
-						font-weight: bold;
+						@include font-awesome( "\f07b", 0, 0.2em );
 					}
 				}
 
@@ -377,7 +380,7 @@ body , html {
 			.tag {
 				span {
 					&:before {
-					    @include font-awesome("\f02c");
+						@include font-awesome( "\f02c", 0, 0.2em );
 					}
 				}
 			}
@@ -429,7 +432,7 @@ body , html {
 			.entry-header {
 				.postdate {
 					&:before {
-					    @include font-awesome("\f06c");
+						@include font-awesome( "\f06c", 0, 0.2em );
 					}
 				}
 			}
@@ -463,7 +466,7 @@ body , html {
 		border-left: solid 7px $border-color;
 		padding-left: 10px;
 	}
-	
+
 	p {
 		line-height: 1.6;
 		margin: 0 0 1.6em;
@@ -675,7 +678,7 @@ a:hover img {
 	.gallery-caption {
 		font-size: 0.9em;
 		line-height: 1;
-	    color: $meta-color;
+		color: $meta-color;
 		max-width: 100%;
 		text-align: center;
 	}
@@ -683,6 +686,7 @@ a:hover img {
 	.wp-caption {
 		padding: 5px;
 		background: $border-color;
+		margin-bottom: 0.75em;
 		max-width: 100%;
 
 		p {
@@ -768,12 +772,6 @@ video {
 	margin: 1.6em 0;
 	display: block;
 
-	#reply-title {
-		font-size: 110%;
-		font-weight: bold;
-		margin: 1em 0;
-	}
-
 	.navigation {
 		position: relative;
 		height: 1em;
@@ -822,61 +820,44 @@ video {
 			border: none;
 		}
 
-		.comment_meta {
+		.comment-meta {
 			line-height: 1;
+			padding-left: 50px;
 			margin-bottom: 0.8em;
 
-			.author {
-				display: block;
-				margin-bottom: 0.4em;
-				font-weight: bold;
-			}
-
-			.time {
-				font-size: 90%;
+			a {
 				color: $meta-color;
 			}
 
+			&:before {
+				color: $meta-color;
+				@include font-awesome( "\f017" );
+			}
+		}
+
+		.comment-author {
 			img {
-				border: none;
 				margin: 0 10px 0 0;
 				float: left;
 			}
 		}
 
-		.comment_text {
-			clear: both;
-			margin: 0 0 0.8em 50px;
+		.comment-awaiting-moderation {
+			color: #F66;
+		}
 
-			p {
-				line-height: 1.4;
+		.reply {
+			margin-bottom: 1.6em;
+
+			a.comment-reply-link {
+				&:before {
+					@include font-awesome( "\f112", 0, 0.2em );
+				}
 			}
 		}
 
-		em {
-			font-size: 90%;
-			padding: 5px 0 5px 50px;
-			color: #FC6767;
-			display: block;
-		}
-
-		a.comment-reply-link {
-			&:before {
-			    @include font-awesome("\f112");
-			    padding-left: 0.2em;
-			}
-		}
-
-		&.bypostauthor .comment_meta .author {
+		&.bypostauthor .comment-author  {
 			color: $header-color;
-		}
-
-		.postdate {
-			color: $meta-color;
-
-			&:before {
-			    @include font-awesome("\f017");
-			}
 		}
 	}
 
@@ -887,59 +868,68 @@ video {
 
 /* Forms
 -------------------------------------------------------------- */
-#content #comments #commentform {
-	border: solid 1px $border-color;
-	padding: 10px 15px 0 15px;
-	margin: 15px 0;
-	max-width: 650px;
+form {
+	input {
+		font-size: 100%;
+	}
+}
+
+#commentform {
+	border: 1px dotted $border-color;
+	padding: 10px 15px;
+	margin-bottom: 1.6em;
 	background: #FFF;
 	border-radius: 4px;
+	max-width: 650px;
+
+	p {
+		margin-bottom: 0.8em;
+	}
 
 	label {
-		padding: 0 0 0.8em 0;
+		padding: 0 0 5px 0;
 		display: block;
-	}
-
-	em {
-		font-size: 85%;
-		display: block;
-		padding: 5px 0;
-	}
-
-	label input {
-		width: 100%;
-		max-width: 300px;
-	  	padding: 5px;
-		background: #FFF;
-		border: solid 1px $border-color;
 	}
 
 	textarea {
 		width: 100%;
 		height: 100px;
-	  	padding:5px;
+		padding:5px;
 		background: #FFF;
 		border: solid 1px $border-color;
-		}
+	}
+
+	input:not([id="submit"]) {
+		width: 100%;
+		max-width: 300px;
+		padding: 5px;
+		background: #FFF;
+		border: solid 1px $border-color;
+	}
 
 	input#submit {
 		padding: 5px 10px;
+		margin-top: 0.4em;
+	}
+
+	#email-notes	 {
+		display: block;
 	}
 
 	.form-allowed-tags {
-		font-size: 90%;
-	}
+		line-height: 1.2;
 
-	.form-allowed-tags code {
-		display: block;
+		code {
+			display: block;
+		}
 	}
 }
 
-form {
-	input, 
-	select,
-	textarea {
-		max-width: 100%;
+.post-password-form {
+	input:not([type="submit"]) {
+		padding: 5px;
+		background: #FFF;
+		border: solid 1px $border-color;
 	}
 }
 
@@ -960,14 +950,13 @@ form {
 
 		.generator {
 			&:after {
-			    @include font-awesome("\f19a");
-			    padding-left: 0.2em;
+				@include font-awesome("\f19a");
+				padding-left: 0.2em;
 			}
 		}
 
 		strong {
 			font-size: 1.2em;
-			font-weight: bold;
 		}
 	}
 
@@ -986,20 +975,20 @@ form {
 			text-align: center;
 			text-decoration: none;
 			width: 100px;
-    
+
 			span {
 				@include hide-text;
 			}
 
 			&:hover {
 				text-decoration: none;
-				@include opacity(0.8);
+				@include opacity( 0.8 );
 			}
 
 			&:before {
-			    @include font-awesome("\f062");
-			    font-size: 50px;
-			    display: block;
+				@include font-awesome( "\f062" );
+				font-size: 50px;
+				display: block;
 				text-align: center;
 				padding: 0;
 				color: #999;
@@ -1203,6 +1192,7 @@ form {
 			top: 0;
 			left: 0;
 			padding: 0 10px;
+			width: 100%;
 			height: 100%;
 			background-color:rgba(255,255,255,0.6);
 
@@ -1330,7 +1320,7 @@ form {
 						position: relative;
 
 						i {
-							display: inline; 
+							display: inline;
 							font-size: 12px;
 							color: #fff;
 
@@ -1786,5 +1776,9 @@ form {
 			margin: 20px 10px;
 			float: left;
 		}
+	}
+
+	#commentform {
+		padding: 0.8em 1.6em;
 	}
 }

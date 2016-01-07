@@ -1,11 +1,12 @@
-@charset "utf-8";
+@charset "UTF-8";
 /*
 Theme Name: BirdFIELD
 Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.07
+Version: 1.08
+
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -57,7 +58,7 @@ q, blockquote {
 a img {
   border: none; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
 /*------------------------------
@@ -69,7 +70,6 @@ Font Awesome
   src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* Link
 --------------------------------------------- */
 a {
@@ -133,7 +133,7 @@ body, html {
 .wrapper {
   font-family: 'Raleway', Verdana,Arial, Meiryo , "Hiragino Kaku Gothic Pro" ,sans-serif;
   color: #222327;
-  background: white;
+  background: #FFF;
   overflow: hidden; }
   .wrapper * {
     -webkit-box-sizing: border-box;
@@ -199,13 +199,14 @@ body, html {
     text-align: right;
     font-size: 2rem; }
     #menu-wrapper .menu #small-menu:before {
-      content: "\f0c9";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding: 10px 0 0 0; }
@@ -270,58 +271,63 @@ body, html {
         color: #222327; }
     #content .hentry .entry-header .postdate,
     #content .hentry .entry-header .author {
-      color: #999999;
+      color: #999;
       font-size: 0.9rem; }
       #content .hentry .entry-header .postdate:before,
       #content .hentry .entry-header .author:before {
-        content: "\f133";
+        content: "";
         display: inline-block;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         line-height: 1;
+        padding-left: 0;
         padding-right: 0.2em;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
       #content .hentry .entry-header .postdate a,
       #content .hentry .entry-header .author a {
-        color: #999999; }
+        color: #999; }
     #content .hentry .entry-header .author:before {
-      content: "\f007";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
+      padding-left: 0;
       padding-right: 0.2em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
     #content .hentry .entry-header .comment:before {
-      content: "\f075";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
+      padding-left: 0;
       padding-right: 0.2em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
     #content .hentry .entry-header .parent-post-link a {
-      color: #999999; }
+      color: #999; }
       #content .hentry .entry-header .parent-post-link a:before {
-        content: "\f03e";
+        content: "";
         display: inline-block;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
   #content .hentry .entry-meta {
     font-size: 0.9rem;
     padding: 1.6em 0;
-    color: #999; }
+    color: #999;
+    clear: both; }
     #content .hentry .entry-meta .category,
     #content .hentry .entry-meta .tag {
       margin-bottom: 0.4em;
@@ -335,20 +341,20 @@ body, html {
         float: left; }
         #content .hentry .entry-meta .category span:before,
         #content .hentry .entry-meta .tag span:before {
-          content: "\f07b";
+          content: "";
           display: inline-block;
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
           line-height: 1;
+          padding-left: 0;
           padding-right: 0.2em;
           -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          font-weight: bold; }
+          -moz-osx-font-smoothing: grayscale; }
       #content .hentry .entry-meta .category a,
       #content .hentry .entry-meta .tag a {
         background: #FFF;
-        border: solid 1px #e6e6e6;
+        border: solid 1px #E6E6E6;
         padding: 2px 5px;
         color: #999;
         border-radius: 4px;
@@ -356,15 +362,16 @@ body, html {
         display: inline-block; }
         #content .hentry .entry-meta .category a:hover,
         #content .hentry .entry-meta .tag a:hover {
-          background: whitesmoke;
+          background: #F5F5F5;
           text-decoration: none; }
     #content .hentry .entry-meta .tag span:before {
-      content: "\f02c";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
+      padding-left: 0;
       padding-right: 0.2em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
@@ -384,33 +391,35 @@ body, html {
       display: inline-block;
       line-height: 1; }
     #content .hentry .page-links a span {
-      color: #999999;
-      border: solid 1px #e6e6e6;
+      color: #999;
+      border: solid 1px #E6E6E6;
       background: #FFF;
       border-radius: 2px; }
       #content .hentry .page-links a span:hover {
-        background: whitesmoke; }
+        background: #F5F5F5; }
   #content .hentry .more-link {
     color: #1c4bbe;
     padding-left: 0.8em;
     border-radius: 2px; }
     #content .hentry .more-link:before {
-      content: "\f061";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
   #content .hentry.tag-news .entry-header .postdate:before {
-    content: "\f06c";
+    content: "";
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
+    padding-left: 0;
     padding-right: 0.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
@@ -434,10 +443,10 @@ body, html {
 #content h6 {
   font-size: 1.2rem; }
 #content h2 {
-  border-bottom: dashed 1px #e6e6e6;
+  border-bottom: dashed 1px #E6E6E6;
   padding-bottom: 0.4em; }
 #content h3 {
-  border-left: solid 7px #e6e6e6;
+  border-left: solid 7px #E6E6E6;
   padding-left: 10px; }
 #content p {
   line-height: 1.6;
@@ -445,7 +454,7 @@ body, html {
 #content blockquote {
   margin-left: 1em;
   padding-left: 1em;
-  border-left: 10px solid #e6e6e6; }
+  border-left: 10px solid #E6E6E6; }
   #content blockquote small {
     display: block;
     line-height: 20px;
@@ -465,13 +474,13 @@ body, html {
   margin-bottom: 1.6em; }
   #content table th,
   #content table td {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #E6E6E6;
     line-height: 1.4;
     padding: 0.8em;
     text-align: left;
     vertical-align: top; }
   #content table th {
-    border-bottom: 2px solid #e6e6e6;
+    border-bottom: 2px solid #E6E6E6;
     font-weight: bold; }
 #content pre {
   border: dashed 1px #CCC;
@@ -484,7 +493,7 @@ body, html {
 #content code, #content kbd, #content pre, #content samp {
   font-family: monospace,serif; }
 #content hr {
-  background-color: #e6e6e6;
+  background-color: #E6E6E6;
   border: 0 none;
   height: 1px;
   margin-bottom: 1.6m; }
@@ -583,12 +592,13 @@ a:hover img {
 #content .hentry .gallery-caption {
   font-size: 0.9em;
   line-height: 1;
-  color: #999999;
+  color: #999;
   max-width: 100%;
   text-align: center; }
 #content .hentry .wp-caption {
   padding: 5px;
-  background: #e6e6e6;
+  background: #E6E6E6;
+  margin-bottom: 0.75em;
   max-width: 100%; }
   #content .hentry .wp-caption p {
     text-align: center;
@@ -643,10 +653,6 @@ video {
 #content #comments {
   margin: 1.6em 0;
   display: block; }
-  #content #comments #reply-title {
-    font-size: 110%;
-    font-weight: bold;
-    margin: 1em 0; }
   #content #comments .navigation {
     position: relative;
     height: 1em;
@@ -678,100 +684,93 @@ video {
     #content #comments ol.commentlist ul {
       margin-left: 40px; }
   #content #comments li {
-    border-bottom: dashed 1px #e6e6e6; }
+    border-bottom: dashed 1px #E6E6E6; }
     #content #comments li li {
       border: none; }
-    #content #comments li .comment_meta {
+    #content #comments li .comment-meta {
       line-height: 1;
+      padding-left: 50px;
       margin-bottom: 0.8em; }
-      #content #comments li .comment_meta .author {
-        display: block;
-        margin-bottom: 0.4em;
-        font-weight: bold; }
-      #content #comments li .comment_meta .time {
-        font-size: 90%;
-        color: #999999; }
-      #content #comments li .comment_meta img {
-        border: none;
-        margin: 0 10px 0 0;
-        float: left; }
-    #content #comments li .comment_text {
-      clear: both;
-      margin: 0 0 0.8em 50px; }
-      #content #comments li .comment_text p {
-        line-height: 1.4; }
-    #content #comments li em {
-      font-size: 90%;
-      padding: 5px 0 5px 50px;
-      color: #FC6767;
-      display: block; }
-    #content #comments li a.comment-reply-link:before {
-      content: "\f112";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      padding-right: 0.2em;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-left: 0.2em; }
-    #content #comments li.bypostauthor .comment_meta .author {
-      color: #79a596; }
-    #content #comments li .postdate {
-      color: #999999; }
-      #content #comments li .postdate:before {
-        content: "\f017";
+      #content #comments li .comment-meta a {
+        color: #999; }
+      #content #comments li .comment-meta:before {
+        color: #999;
+        content: "";
         display: inline-block;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         line-height: 1;
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    #content #comments li .comment-author img {
+      margin: 0 10px 0 0;
+      float: left; }
+    #content #comments li .comment-awaiting-moderation {
+      color: #F66; }
+    #content #comments li .reply {
+      margin-bottom: 1.6em; }
+      #content #comments li .reply a.comment-reply-link:before {
+        content: "";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        padding-left: 0;
         padding-right: 0.2em;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
+    #content #comments li.bypostauthor .comment-author {
+      color: #79a596; }
   #content #comments .nopassword {
-    color: #999999; }
+    color: #999; }
 
 /* Forms
 -------------------------------------------------------------- */
-#content #comments #commentform {
-  border: solid 1px #e6e6e6;
-  padding: 10px 15px 0 15px;
-  margin: 15px 0;
-  max-width: 650px;
+form input {
+  font-size: 100%; }
+
+#commentform {
+  border: 1px dotted #E6E6E6;
+  padding: 10px 15px;
+  margin-bottom: 1.6em;
   background: #FFF;
-  border-radius: 4px; }
-  #content #comments #commentform label {
-    padding: 0 0 0.8em 0;
+  border-radius: 4px;
+  max-width: 650px; }
+  #commentform p {
+    margin-bottom: 0.8em; }
+  #commentform label {
+    padding: 0 0 5px 0;
     display: block; }
-  #content #comments #commentform em {
-    font-size: 85%;
-    display: block;
-    padding: 5px 0; }
-  #content #comments #commentform label input {
-    width: 100%;
-    max-width: 300px;
-    padding: 5px;
-    background: #FFF;
-    border: solid 1px #e6e6e6; }
-  #content #comments #commentform textarea {
+  #commentform textarea {
     width: 100%;
     height: 100px;
     padding: 5px;
     background: #FFF;
-    border: solid 1px #e6e6e6; }
-  #content #comments #commentform input#submit {
-    padding: 5px 10px; }
-  #content #comments #commentform .form-allowed-tags {
-    font-size: 90%; }
-  #content #comments #commentform .form-allowed-tags code {
+    border: solid 1px #E6E6E6; }
+  #commentform input:not([id="submit"]) {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    background: #FFF;
+    border: solid 1px #E6E6E6; }
+  #commentform input#submit {
+    padding: 5px 10px;
+    margin-top: 0.4em; }
+  #commentform #email-notes {
     display: block; }
+  #commentform .form-allowed-tags {
+    line-height: 1.2; }
+    #commentform .form-allowed-tags code {
+      display: block; }
 
-form input,
-form select,
-form textarea {
-  max-width: 100%; }
+.post-password-form input:not([type="submit"]) {
+  padding: 5px;
+  background: #FFF;
+  border: solid 1px #E6E6E6; }
 
 /* Footer
 --------------------------------------------- */
@@ -782,22 +781,22 @@ form textarea {
     color: #FFF; }
   #footer .site-title {
     padding: 0.8em 0;
-    border-top: dotted 1px #e6e6e6;
+    border-top: dotted 1px #E6E6E6;
     line-height: 1.4; }
     #footer .site-title .generator:after {
-      content: "\f19a";
+      content: "";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding-left: 0.2em; }
     #footer .site-title strong {
-      font-size: 1.2em;
-      font-weight: bold; }
+      font-size: 1.2em; }
   #footer #back-top {
     position: fixed;
     bottom: -80px;
@@ -815,19 +814,21 @@ form textarea {
       #footer #back-top a span {
         text-indent: -119988px;
         overflow: hidden;
-        text-align: left; }
+        text-align: left;
+        text-transform: capitalize; }
       #footer #back-top a:hover {
         text-decoration: none;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
         opacity: 0.8; }
       #footer #back-top a:before {
-        content: "\f062";
+        content: "";
         display: inline-block;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 50px;
@@ -859,7 +860,7 @@ form textarea {
       font-weight: normal;
       margin: 0 0 0.4em 0;
       padding: 0 0 0.4em 0;
-      border-bottom: solid 2px #e6e6e6;
+      border-bottom: solid 2px #E6E6E6;
       font-size: 1.4rem; }
     #widget-area .widget ul {
       list-style: none;
@@ -872,13 +873,14 @@ form textarea {
         padding: 0.3em 0 0.3em 0.6em;
         text-indent: -0.3em; }
         #widget-area .widget ul li:before {
-          content: "\f0da";
+          content: "";
           display: inline-block;
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
           line-height: 1;
-          padding-right: 0.2em;
+          padding-left: 0;
+          padding-right: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale; }
         #widget-area .widget ul li ul {
@@ -901,7 +903,7 @@ form textarea {
       #widget-area .widget #wp-calendar tbody th,
       #widget-area .widget #wp-calendar tbody td {
         text-align: center;
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid #E6E6E6;
         padding: 8px; }
         #widget-area .widget #wp-calendar tbody th a,
         #widget-area .widget #wp-calendar tbody td a {
@@ -916,7 +918,7 @@ form textarea {
         padding: 8px;
         text-align: center; }
       #widget-area .widget #wp-calendar tfoot {
-        border-top: 1px solid #e6e6e6; }
+        border-top: 1px solid #E6E6E6; }
         #widget-area .widget #wp-calendar tfoot a {
           font-size: 1.2em; }
         #widget-area .widget #wp-calendar tfoot #next {
@@ -955,13 +957,14 @@ form textarea {
     background: #CCC;
     color: #FFF;
     -webkit-appearance: button;
-    content: "\f005";
+    content: "";
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    padding-right: 0.2em;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em; }
@@ -989,6 +992,7 @@ form textarea {
     top: 0;
     left: 0;
     padding: 0 10px;
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.6); }
     .home #wall .widget h3,
@@ -1015,7 +1019,7 @@ form textarea {
       display: block; }
   .home #content #news,
   .blog #content #news {
-    background: white;
+    background: #FFF;
     z-index: 2;
     position: relative;
     padding-top: 2em; }
@@ -1033,7 +1037,7 @@ form textarea {
         background: none;
         margin: 0;
         padding: 0;
-        border-top: dotted 1px #e6e6e6; }
+        border-top: dotted 1px #E6E6E6; }
         .home #content #news ul.article li a,
         .blog #content #news ul.article li a {
           padding: 0.5em 0;
@@ -1054,7 +1058,7 @@ form textarea {
             display: block; }
   .home #content #blog,
   .blog #content #blog {
-    background: white;
+    background: #FFF;
     position: relative;
     padding-top: 2em;
     z-index: 2; }
@@ -1065,7 +1069,7 @@ form textarea {
       padding: 0; }
       .home #content #blog ul.article .hentry,
       .blog #content #blog ul.article .hentry {
-        border: solid 1px #e6e6e6;
+        border: solid 1px #E6E6E6;
         border-radius: 4px;
         margin-bottom: 10px;
         padding: 0;
@@ -1090,7 +1094,7 @@ form textarea {
           .home #content #blog ul.article .hentry a:hover,
           .blog #content #blog ul.article .hentry a:hover {
             text-decoration: none;
-            background: whitesmoke; }
+            background: #F5F5F5; }
         .home #content #blog ul.article .hentry.sticky,
         .blog #content #blog ul.article .hentry.sticky {
           position: relative; }
@@ -1117,13 +1121,14 @@ form textarea {
               -ms-transform: rotate(45deg); }
               .home #content #blog ul.article .hentry.sticky i span:before,
               .blog #content #blog ul.article .hentry.sticky i span:before {
-                content: "\f005";
+                content: "";
                 display: inline-block;
                 font-family: FontAwesome;
                 font-style: normal;
                 font-weight: normal;
                 line-height: 1;
-                padding-right: 0.2em;
+                padding-left: 0;
+                padding-right: 0;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 color: #FFF; }
@@ -1141,7 +1146,7 @@ form textarea {
     background: none;
     margin: 0;
     padding: 0;
-    border-top: dotted 1px #e6e6e6;
+    border-top: dotted 1px #E6E6E6;
     overflow: hidden;
     *zoom: 1; }
     .archive #content ul.list li a,
@@ -1182,24 +1187,26 @@ form textarea {
 .single #content #nav-below .nav-previous {
   text-align: right; }
   .single #content #nav-below .nav-previous a:after {
-    content: "\f061";
+    content: "";
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    padding-right: 0.2em;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-left: 0.2em; }
 .single #content #nav-below .nav-next a:before {
-  content: "\f060";
+  content: "";
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  padding-right: 0.2em;
+  padding-left: 0;
+  padding-right: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1222,8 +1229,8 @@ form textarea {
   #content .tablenav .current {
     display: inline-block;
     background: #FFF;
-    color: #999999;
-    border: solid 1px #999999;
+    color: #999;
+    border: solid 1px #999;
     text-decoration: none;
     text-align: center;
     padding: 0.2em 0.4em;
@@ -1236,7 +1243,7 @@ form textarea {
       color: #1c4bbe;
       border: none; }
   #content .tablenav a.page-numbers:hover {
-    background: whitesmoke; }
+    background: #F5F5F5; }
     #content .tablenav a.page-numbers:hover.prev, #content .tablenav a.page-numbers:hover.next {
       background: none;
       text-decoration: underline; }
@@ -1341,13 +1348,14 @@ form textarea {
             background: #FFF;
             color: #79a596; }
         #menu-wrapper .menu ul#menu-primary-items li.menu-item-has-children > a:after {
-          content: "\f0d7";
+          content: "";
           display: inline-block;
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
           line-height: 1;
-          padding-right: 0.2em;
+          padding-left: 0;
+          padding-right: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           padding-left: 5px; }
@@ -1367,13 +1375,14 @@ form textarea {
             margin: 0;
             padding: 0; }
             #menu-wrapper .menu ul#menu-primary-items li ul li.menu-item-has-children > a:after {
-              content: "\f0da";
+              content: "";
               display: inline-block;
               font-family: FontAwesome;
               font-style: normal;
               font-weight: normal;
               line-height: 1;
-              padding-right: 0.2em;
+              padding-left: 0;
+              padding-right: 0;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               padding-left: 5px; }
@@ -1432,4 +1441,7 @@ form textarea {
   #widget-area .widget {
     width: 290px;
     margin: 20px 10px;
-    float: left; } }
+    float: left; }
+
+  #commentform {
+    padding: 0.8em 1.6em; } }

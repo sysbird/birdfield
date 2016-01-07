@@ -4,32 +4,31 @@ jQuery(function() {
 
 		jQuery( "#blog ul li" ).tile( 3 );
 
-	    // Browser supports matchMedia
-	    if ( window.matchMedia ) {
+		// Browser supports matchMedia
+		if ( window.matchMedia ) {
+			// MediaQueryList
+			var mq = window.matchMedia( "( min-width: 930px )" );
 
-	        // MediaQueryList
-	        var mq = window.matchMedia( "( min-width: 930px )" );
-
-	        // MediaQueryListListener
-	        var birdfieldHeightCheck = function ( mq ) {
-	            if ( mq.matches ) {
+			// MediaQueryListListener
+			var birdfieldHeightCheck = function ( mq ) {
+				if ( mq.matches ) {
 					jQuery( "#blog ul li" ).tile(3);
-	            } else {
+				}
+				else {
 					jQuery( '#blog ul li' ).css( 'height', 'auto' );
-	            }
-	        };
+				}
+			};
 
-	        // Add listener
-	        mq.addListener( birdfieldHeightCheck );
+			// Add listener
+			mq.addListener( birdfieldHeightCheck );
 
-	        // Manually call listener
-	        birdfieldHeightCheck( mq );
-	    }
-
-	    // Browser doesn't support matchMedia
-	    else {
+			// Manually call listener
+			birdfieldHeightCheck( mq );
+		}
+		else {
+			// Browser doesn't support matchMedia
 			jQuery( "#blog ul li" ).tile( 3 );
-	    }
+		}
 
 		// Masonry for Footer
 		jQuery( '#widget-area .container' ).masonry({
@@ -57,20 +56,20 @@ jQuery(function() {
 	// Window Resize
 	var timer = false;
 	jQuery(window).resize(function() {
-	    if (timer !== false) {
-	        clearTimeout(timer);
-	    }
-	    timer = setTimeout(function() {
+		if (timer !== false) {
+			clearTimeout(timer);
+		}
+		timer = setTimeout(function() {
 			birdfield_AdjustHeader();
-	    }, 200);
+		}, 200);
 	});
 
 	// Windows Scroll
-    var totop = jQuery( '#back-top' );
-    totop.hide();
-    jQuery( window ).scroll(function () {
+	var totop = jQuery( '#back-top' );
+	totop.hide();
+	jQuery( window ).scroll(function () {
 		// back to pagetop
-        if ( jQuery( this ).scrollTop() > 800 ) totop.fadeIn(); else totop.fadeOut();
+	if ( jQuery( this ).scrollTop() > 800 ) totop.fadeIn(); else totop.fadeOut();
 
 		// Parallax
 		if( jQuery('.wrapper[class*=parallax]').length ){
@@ -90,13 +89,12 @@ jQuery(function() {
 
 			jQuery( '.headerimage' ).css( 'top', top + 'px' );
 		}
-    });
+	});
 
-    totop.click( function () {
+	totop.click( function () {
 		// back to pagetop
-        jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
-    });
-
+		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
+	});
 });
 
 ////////////////////////////////////////

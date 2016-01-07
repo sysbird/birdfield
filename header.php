@@ -15,7 +15,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/respond.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
 </head>

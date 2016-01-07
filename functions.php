@@ -21,22 +21,22 @@ function birdfield_widgets_init() {
 	register_sidebar( array (
 		'name'			=> __( 'Widget Area for header', 'birdfield' ),
 		'id'			=> 'widget-area-header',
-		'description'	=> __( 'One text widget for header', 'birdfield' ),
+		'description'		=> __( 'One text widget for header', 'birdfield' ),
 		'before_widget'	=> '<div class="widget">',
-		'after_widget'	=> '</div>',
-		'before_title'	=> '<h3>',
-		'after_title'	=> '</h3>',
+		'after_widget'		=> '</div>',
+		'before_title'		=> '<h3>',
+		'after_title'		=> '</h3>',
 		) );
 
 
 	register_sidebar( array (
 		'name'			=> __( 'Widget Area for footer', 'birdfield' ),
 		'id'			=> 'widget-area-footer',
-		'description'	=> __( 'Widget Area for footer', 'birdfield' ),
-		'before_widget' => '<div class="widget">',
-		'after_widget'	=> '</div>',
-		'before_title'	=> '<h3>',
-		'after_title'	=> '</h3>',
+		'description'		=> __( 'Widget Area for footer', 'birdfield' ),
+		'before_widget'	=> '<div class="widget">',
+		'after_widget'		=> '</div>',
+		'before_title'		=> '<h3>',
+		'after_title'		=> '</h3>',
 		) );
 }
 add_action( 'widgets_init', 'birdfield_widgets_init' );
@@ -74,9 +74,9 @@ function birdfield_get_copyright_year() {
 
 	$birdfield_first_year = $birdfield_copyright_year;
 	$args = array(
-		'numberposts' => 1,
-		'orderby'     => 'post_date',
-		'order'       => 'ASC',
+		'numberposts'	=> 1,
+		'orderby'	=> 'post_date',
+		'order'		=> 'ASC',
 	);
 	$posts = get_posts( $args );
 
@@ -132,7 +132,9 @@ function birdfield_header_style() {
 	#content h4,
 	#content h5,
 	#content h6,
-	#content #comments li.bypostauthor .comment_meta .author,
+
+	#content #comments ol.commentlist li.pingback.bypostauthor .comment-author,
+	#content #comments ol.commentlist li.comment.bypostauthor .comment-author,
 	#widget-area .widget #wp-calendar tbody th a,
 	#widget-area .widget #wp-calendar tbody td a {
 		color: <?php echo $birdfield_header_color; ?>;
@@ -211,9 +213,9 @@ function birdfield_setup() {
 	 * we also set up the default background color.
 	 */
 	add_theme_support( 'custom-background', array(
-		'default-image' => '',
-		'default-color' => 'FFF',
-		'wp-head-callback' => 'birdfield_custom_background_cb',
+		'default-image'		=> '',
+		'default-color'		=> 'FFF',
+		'wp-head-callback'	=> 'birdfield_custom_background_cb',
 	) );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -224,19 +226,19 @@ function birdfield_setup() {
 	// Add support for custom headers.
 	$custom_header_support = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => 'FFF',
-		'default-image'          => '%s/images/header.jpg',
+		'default-text-color'	=> 'FFF',
+		'default-image'		=> '%s/images/header.jpg',
 
 		// Set height and width, with a maximum value for the width.
-		'height'                 => 900,
-		'width'                  => 1280,
-		'max-width'              => 900,
+		'height'			=> 900,
+		'width'			=> 1280,
+		'max-width'		=> 900,
 
 		// Random image rotation off by default.
-		'random-default'         => true,
+		'random-default'	=> true,
 
 		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'			=> 'birdfield_header_style',
+		'wp-head-callback'	=> 'birdfield_header_style',
 	);
 
 	// Add support for title tag.
@@ -248,15 +250,15 @@ function birdfield_setup() {
 	register_default_headers( array(
 		'birdfield'		=> array(
 		'url'			=> '%s/images/header.jpg',
-		'thumbnail_url'	=> '%s/images/header-thumbnail.jpg',
-		'description'	=> 'birdfield'
+		'thumbnail_url'		=> '%s/images/header-thumbnail.jpg',
+		'description'		=> 'birdfield'
 		)
 	) );
 
 	// Add support for news content.
 	add_theme_support( 'news-content', array(
 		'news_content_filter'	=> 'birdfield_get_news_posts',
-		'max_posts'				=> 5,
+		'max_posts'		=> 5,
 	) );
 }
 add_action( 'after_setup_theme', 'birdfield_setup' );
@@ -264,11 +266,12 @@ add_action( 'after_setup_theme', 'birdfield_setup' );
 //////////////////////////////////////////////////////
 // Filter the news posts to return
 function birdfield_get_news_posts(){
-    $array = get_posts(array(
-        'tag_slug__in'	=> 'news',
-        'numberposts'	=> 5
-    ));
-    return $array;
+	$array = get_posts(array(
+		'tag_slug__in'	=> 'news',
+		'numberposts'	=> 5
+	));
+
+	return $array;
 }
 add_filter( 'birdfield_get_news_posts', 'birdfield_get_news_posts', 100 );
 
@@ -281,7 +284,7 @@ function birdfield_has_news_posts() {
 //////////////////////////////////////////////////////
 // Filter main query at home
 function birdfield_home_query( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
+ 	if ( $query->is_home() && $query->is_main_query() ) {
 		$birdfield_news = get_term_by( 'name', 'news', 'post_tag' );
 		if( $birdfield_news ){
 			$query->set( 'tag__not_in', $birdfield_news->term_id );
@@ -312,7 +315,7 @@ add_filter( 'wp_title', 'birdfield_title' );
 // Enqueue Scripts
 function birdfield_scripts() {
 
-	if ( is_singular() && comments_open() && get_option('thread_comments' ) ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
@@ -331,7 +334,6 @@ add_action( 'wp_enqueue_scripts', 'birdfield_scripts' );
 //////////////////////////////////////////////////////
 // Theme Customizer
 function birdfield_customize($wp_customize) {
-
 	// Text Color
 	$wp_customize->add_setting( 'birdfield_text_color', array(
 		'default' => '#222327',
@@ -376,22 +378,22 @@ function birdfield_customize($wp_customize) {
 
 	$wp_customize->add_control( 'birdfield_parallax', array(
 		'label'		=> __( 'Display Parallax', 'birdfield' ),
-		'section'  => 'header_image',
-		'type'     => 'checkbox',
-		'settings' => 'birdfield_parallax',
+		'section'	=> 'header_image',
+		'type'		=> 'checkbox',
+		'settings'	=> 'birdfield_parallax',
 	) );
 
 	// Fixed Menu
 	$wp_customize->add_setting( 'birdfield_fixedheader', array(
-		'default'  => true,
-		'sanitize_callback' => 'birdfield_sanitize_checkbox',
+		'default'		=> true,
+		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( 'birdfield_fixedheader', array(
 		'label'		=> __( 'Fixed Header', 'birdfield' ),
-		'section'  => 'title_tagline',
-		'type'     => 'checkbox',
-		'settings' => 'birdfield_fixedheader',
+		'section'	=> 'title_tagline',
+		'type'		=> 'checkbox',
+		'settings'	=> 'birdfield_fixedheader',
 	) );
 
 	// Footer Section
@@ -402,50 +404,28 @@ function birdfield_customize($wp_customize) {
 
 	// Display Copyright
 	$wp_customize->add_setting( 'birdfield_copyright', array(
-		'default'  => true,
-		'sanitize_callback' => 'birdfield_sanitize_checkbox',
+		'default'		=> true,
+		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( 'birdfield_copyright', array(
 		'label'		=> __( 'Display Copyright', 'birdfield' ),
-		'section'  => 'birdfield_customize',
-		'type'     => 'checkbox',
-		'settings' => 'birdfield_copyright',
+		'section'	=> 'birdfield_customize',
+		'type'		=> 'checkbox',
+		'settings'	=> 'birdfield_copyright',
 	) );
 
 	// Display Credit
 	$wp_customize->add_setting( 'birdfield_credit', array(
-		'default'  => true,
-		'sanitize_callback' => 'birdfield_sanitize_checkbox',
+		'default'		=> true,
+		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
 	) );
 
 	$wp_customize->add_control( 'birdfield_credit', array(
 		'label'		=> __( 'Display Credit', 'birdfield' ),
-		'section'  => 'birdfield_customize',
-		'type'     => 'checkbox',
-		'settings' => 'birdfield_credit',
-	) );
-
-	// Add the featured content section in case it's not already there.
-	$wp_customize->add_section( 'featured_content', array(
-		'title'           => __( 'Featured Content', 'birdfield' ),
-		'description'     => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ),
-			esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ), admin_url( 'edit.php' ) ) ),
-			admin_url( 'edit.php?show_sticky=1' )
-		),
-		'active_callback' => 'is_front_page',
-	) );
-
-	// Add Featured Content controls.
-	$wp_customize->add_setting( 'featured-content', array(
-		'default'              => _x( 'featured', 'featured content default tag slug', 'birdfield' ),
-		'type'                 => 'option',
-		'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
-	) );
-
-	$wp_customize->add_control( 'featured-content', array(
-		'label'    => __( 'Tag Name', 'birdfield' ),
-		'section'  => 'featured_content',
+		'section'	=> 'birdfield_customize',
+		'type'		=> 'checkbox',
+		'settings'	=> 'birdfield_credit',
 	) );
 }
 add_action( 'customize_register', 'birdfield_customize' );
@@ -529,3 +509,4 @@ function birdfield_custom_background_cb() {
 </style>
 <?php
 }
+
