@@ -45,11 +45,15 @@ get_header(); ?>
 					<?php endwhile; ?>
 				</ul>
 
-				<?php the_posts_pagination( array(
-						'mid_size' => 3,
-						'prev_text'          => esc_html__( 'Previous page', 'birdfield' ),
-						'next_text'          => esc_html__( 'Next page', 'birdfield' ),
-					) ); ?>
+			<?php $birdfield_pagination = get_the_posts_pagination( array(
+					'mid_size'	=> 3,
+					'prev_text'	=> esc_html__( 'Previous page', 'birdfield' ),
+					'next_text'	=> esc_html__( 'Next page', 'birdfield' ),
+					'screen_reader_text'	=> 'pagination',
+				) );
+
+				$birdfield_pagination = str_replace( '<h2 class="screen-reader-text">pagination</h2>', '', $birdfield_pagination );
+				echo $birdfield_pagination; ?>
 
 			<?php else: ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.', 'birdfield' ); ?></p>
