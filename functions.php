@@ -152,13 +152,13 @@ function birdfield_header_style() {
 	.archive #content ul.list li .entry-header .entry-title,
 	.search #content ul.list li .entry-header .entry-title,
 	#content .hentry .page-links,
-	#content .tablenav a.page-numbers.prev,
-	#content .tablenav a.page-numbers.next,
-	#content .hentry .more-link {
+	#content .pagination a.page-numbers.prev,
+	#content .pagination a.page-numbers.next,
+	#content .pagination .more-link {
 		color:  <?php echo $birdfield_link_color; ?>;
 		}
 
-	#content .tablenav .current,
+	#content .pagination .current,
 	#content .hentry .page-links span {
 	  	background: <?php echo $birdfield_link_color; ?>;
 	  	border-color: <?php echo $birdfield_link_color; ?>;

@@ -209,7 +209,7 @@ body, html {
       padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      padding: 10px 0 0 0; }
+      padding-top: 10px; }
   #menu-wrapper .menu ul#menu-primary-items {
     margin: 0;
     padding: 0;
@@ -790,11 +790,10 @@ form input {
       font-style: normal;
       font-weight: normal;
       line-height: 1;
-      padding-left: 0;
+      padding-left: 0.2em;
       padding-right: 0;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-left: 0.2em; }
+      -moz-osx-font-smoothing: grayscale; }
     #footer .site-title strong {
       font-size: 1.2em; }
   #footer #back-top {
@@ -880,7 +879,7 @@ form input {
           font-weight: normal;
           line-height: 1;
           padding-left: 0;
-          padding-right: 0;
+          padding-right: 0.2em;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale; }
         #widget-area .widget ul li ul {
@@ -1128,7 +1127,7 @@ form input {
                 font-weight: normal;
                 line-height: 1;
                 padding-left: 0;
-                padding-right: 0;
+                padding-right: 0.2em;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 color: #FFF; }
@@ -1193,11 +1192,10 @@ form input {
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    padding-left: 0;
+    padding-left: 0.2em;
     padding-right: 0;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding-left: 0.2em; }
+    -moz-osx-font-smoothing: grayscale; }
 .single #content #nav-below .nav-next a:before {
   content: "";
   display: inline-block;
@@ -1206,7 +1204,7 @@ form input {
   font-weight: normal;
   line-height: 1;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1220,13 +1218,13 @@ form input {
 
 /* Pagenation
 -------------------------------------------------------------------- */
-#content .tablenav {
+#content .pagination {
   clear: both;
   color: #1c4bbe;
   overflow: hidden;
   *zoom: 1; }
-  #content .tablenav a.page-numbers,
-  #content .tablenav .current {
+  #content .pagination a.page-numbers,
+  #content .pagination .current {
     display: inline-block;
     background: #FFF;
     color: #999;
@@ -1236,21 +1234,47 @@ form input {
     padding: 0.2em 0.4em;
     border-radius: 2px;
     margin-right: 0.1em; }
-    #content .tablenav a.page-numbers.prev, #content .tablenav a.page-numbers.next,
-    #content .tablenav .current.prev,
-    #content .tablenav .current.next {
+    #content .pagination a.page-numbers.prev, #content .pagination a.page-numbers.next,
+    #content .pagination .current.prev,
+    #content .pagination .current.next {
       background: none;
       color: #1c4bbe;
       border: none; }
-  #content .tablenav a.page-numbers:hover {
+    #content .pagination a.page-numbers.prev:before,
+    #content .pagination .current.prev:before {
+      content: "";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      padding-left: 0;
+      padding-right: 0.2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    #content .pagination a.page-numbers.next:after,
+    #content .pagination .current.next:after {
+      content: "";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      padding-left: 0.2em;
+      padding-right: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+  #content .pagination a.page-numbers:hover {
     background: #F5F5F5; }
-    #content .tablenav a.page-numbers:hover.prev, #content .tablenav a.page-numbers:hover.next {
+    #content .pagination a.page-numbers:hover.prev, #content .pagination a.page-numbers:hover.next {
       background: none;
       text-decoration: underline; }
-  #content .tablenav .current {
+  #content .pagination .current {
     color: #FFF;
     background: #1c4bbe;
     border: solid 1px #1c4bbe; }
+  #content .pagination .screen-reader-text {
+    display: none; }
 
 /* Media queries for responsive design
 --------------------------------------------- */
@@ -1354,11 +1378,10 @@ form input {
           font-style: normal;
           font-weight: normal;
           line-height: 1;
-          padding-left: 0;
+          padding-left: 0.2em;
           padding-right: 0;
           -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          padding-left: 5px; }
+          -moz-osx-font-smoothing: grayscale; }
         #menu-wrapper .menu ul#menu-primary-items li ul {
           margin: 0;
           padding: 0;
@@ -1381,11 +1404,10 @@ form input {
               font-style: normal;
               font-weight: normal;
               line-height: 1;
-              padding-left: 0;
+              padding-left: 0.2em;
               padding-right: 0;
               -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              padding-left: 5px; }
+              -moz-osx-font-smoothing: grayscale; }
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
               padding: 0.8em;
               background-color: #79a596;

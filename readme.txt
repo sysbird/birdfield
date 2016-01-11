@@ -61,7 +61,6 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.08
-* 20151231 working!
 * Fix the ver 4.4
 * stop the correspondence for IE8 and below.
 * delete wp_list_comments callback.

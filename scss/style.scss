@@ -209,11 +209,11 @@ body , html {
 			height: 80px;
 			padding: 20px 0;
 			text-align: right;
-		    font-size: 2rem;
+			font-size: 2rem;
 
 			&:before {
-			    @include font-awesome("\f0c9");
-			    padding: 10px 0 0 0;
+				@include font-awesome("\f0c9");
+				padding-top: 10px;
 			}
 		}
 
@@ -318,13 +318,13 @@ body , html {
 
 			.author {
 				&:before {
-				    @include font-awesome("\f007", 0, 0.2em );
+					@include font-awesome("\f007", 0, 0.2em );
 				}
 			}
 
 			.comment {
 				&:before {
-				    @include font-awesome("\f075", 0, 0.2em );
+					@include font-awesome("\f075", 0, 0.2em );
 				}
 			}
 
@@ -333,7 +333,7 @@ body , html {
 					color: $meta-color;
 
 					&:before {
-					    @include font-awesome("\f03e");
+						@include font-awesome("\f03e");
 					}
 				}
 			}
@@ -424,7 +424,7 @@ body , html {
 			border-radius: 2px;
 
 			&:before {
-			    @include font-awesome("\f061");
+				@include font-awesome("\f061");
 			}
 		}
 
@@ -950,8 +950,7 @@ form {
 
 		.generator {
 			&:after {
-				@include font-awesome("\f19a");
-				padding-left: 0.2em;
+				@include font-awesome("\f19a", 0.2em, 0);
 			}
 		}
 
@@ -1045,7 +1044,7 @@ form {
 				text-indent: -0.3em;
 
 				&:before {
-				    @include font-awesome("\f0da");
+					@include font-awesome("\f0da", 0, 0.2em);
 				}
 
 				ul {
@@ -1156,12 +1155,12 @@ form {
 		width: 20%;
 		height: 30px;
 		border-radius: 0 4px 4px 0;
-   		margin: 0;
+		margin: 0;
 		background: #CCC;
 		color: #FFF;
-	    -webkit-appearance: button;
-	    @include font-awesome("\f005");
-	    font-size: 1.2em;
+		-webkit-appearance: button;
+		@include font-awesome("\f005");
+		font-size: 1.2em;
 	}
 }
 
@@ -1340,9 +1339,9 @@ form {
 								-o-transform: rotate(45deg);
 								-ms-transform: rotate(45deg);
 
-								 &:before {
-								     @include font-awesome("\f005");
-								     color: #FFF;
+								&:before {
+									@include font-awesome("\f005", 0, 0.2em);
+									color: #FFF;
 								}
 							}
 						}
@@ -1419,14 +1418,13 @@ form {
 			text-align: right;
 
 			a:after {
-			    @include font-awesome("\f061");
-			    padding-left: 0.2em;
+				@include font-awesome( "\f061", 0.2em , 0);
 			}
 		}
 
 		.nav-next {
 			a:before {
-			    @include font-awesome("\f060");
+				@include font-awesome( "\f060", 0, 0.2em );
 			}
 		}
 	}
@@ -1453,7 +1451,7 @@ form {
 
 /* Pagenation
 -------------------------------------------------------------------- */
-#content .tablenav {
+#content .pagination {
 	clear: both;
 	color: $link-color;
 	@include clearfix;
@@ -1476,6 +1474,18 @@ form {
 			color: $link-color;
 			border: none;
 		}
+
+		&.prev {
+			&:before {
+				@include font-awesome( "\f060", 0, 0.2em );
+			}
+		}
+
+		&.next {
+			&:after {
+				@include font-awesome( "\f061", 0.2em , 0);
+			}
+		}
 	}
 
 	a.page-numbers:hover {
@@ -1492,6 +1502,10 @@ form {
 		color: #FFF;
 		background: $link-color;
 		border:solid 1px $link-color;
+	}
+
+	.screen-reader-text {
+		display: none;
 	}
 }
 
@@ -1645,8 +1659,7 @@ form {
 
 					&.menu-item-has-children {
 						>a:after {
-						   @include font-awesome("\f0d7");
-						   padding-left: 5px;
+							@include font-awesome("\f0d7", 0.2em, 0);
 						}
 					}
 
@@ -1668,8 +1681,7 @@ form {
 
 							&.menu-item-has-children {
 								>a:after {
-								   @include font-awesome("\f0da");
-								   padding-left: 5px;
+									@include font-awesome("\f0da", 0.2em ,0);
 								}
 							}
 

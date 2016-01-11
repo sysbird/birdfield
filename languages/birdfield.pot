@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: 404.php:12
+#: 404.php:16
 msgid "Error 404 - Not Found"
 msgstr ""
 
-#: 404.php:16
+#: 404.php:20
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -29,205 +29,168 @@ msgstr ""
 msgid "Category Archives: %s"
 msgstr ""
 
-#: archive.php:17
+#: archive.php:18
 msgid "Tag Archives: %s"
 msgstr ""
 
-#: archive.php:20
+#: archive.php:21
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:23
+#: archive.php:27
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:23
+#: archive.php:27
 msgid "F, Y"
 msgstr ""
 
-#: archive.php:26
+#: archive.php:30
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:26
+#: archive.php:30
 msgid "Y"
 msgstr ""
 
-#: archive.php:29
+#: archive.php:33
 msgid "Author Archives: %s"
 msgstr ""
 
-#: archive.php:32
+#: archive.php:36
 msgid "Blog Archives"
 msgstr ""
 
-#: archive.php:45
+#: archive.php:57
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: comments.php:8
-msgid ""
-"This post is password protected. Enter the password to view any comments."
-msgstr ""
-
-#: comments.php:17
+#: comments.php:18
 msgid "One Comment"
-msgid_plural "%1$s Comments"
-msgstr[0] ""
+msgid_plural ""
+msgstr[0] "%"
 
-#: comments.php:24 comments.php:35
+#: comments.php:25 comments.php:41
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:25 comments.php:36
+#: comments.php:26 comments.php:42
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:43
-msgid "Name"
-msgstr ""
-
-#: comments.php:43 comments.php:44 comments.php:50
-msgid "(*required)"
-msgstr ""
-
-#: comments.php:44
-msgid "Email (will not be published)"
-msgstr ""
-
-#: comments.php:45
-msgid "Website"
-msgstr ""
-
-#: comments.php:50
-msgid "Comment"
-msgstr ""
-
-#: content.php:9 content.php:60 news-content.php:18
+#: content.php:13 content.php:64 news-content.php:22
 msgid "Permalink to %s"
 msgstr ""
 
-#: content.php:43 image.php:74
+#: content.php:47 image.php:78
 msgid "Pages:"
 msgstr ""
 
-#: content.php:53
+#: content.php:57
 msgid "Category"
 msgstr ""
 
-#: content.php:54
+#: content.php:58
 msgid "Tags"
 msgstr ""
 
-#: footer.php:18
+#: footer.php:22
 msgid "Copyright &copy; %s All Rights Reserved."
 msgstr ""
 
-#: footer.php:23
+#: footer.php:27
 msgid "Proudly powered by WordPress"
 msgstr ""
 
-#: footer.php:24
+#: footer.php:28
 msgid "BirdFIELD theme by %sSysbird%s"
 msgstr ""
 
-#: footer.php:28
+#: footer.php:32
 msgid "Go Top"
 msgstr ""
 
-#: functions.php:18
+#: functions.php:22
 msgid "Widget Area for header"
 msgstr ""
 
-#: functions.php:20
+#: functions.php:24
 msgid "One text widget for header"
 msgstr ""
 
-#: functions.php:29 functions.php:31
+#: functions.php:33 functions.php:35
 msgid "Widget Area for footer"
 msgstr ""
 
-#: functions.php:54
-msgid "Pingback"
-msgstr ""
-
-#: function.php:54
-msgid "(Edit)"
-msgstr ""
-
-#: functions.php:64
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: functions.php:349
+#: functions.php:223
 msgid "Navigation Menu"
 msgstr ""
 
-#: functions.php:431
+#: functions.php:308
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:344
 msgid "Text Color"
 msgstr ""
 
-#: functions.php:496
+#: functions.php:356
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:508
+#: functions.php:368
 msgid "Header, Footer Background Color"
 msgstr ""
 
-#: functions.php:520
+#: functions.php:380
 msgid "Display Parallax"
 msgstr ""
 
-#: functions.php:533
+#: functions.php:393
 msgid "Fixed Header"
 msgstr ""
 
-#: functions.php:541
+#: functions.php:401
 msgid "Footer"
 msgstr ""
 
-#: functions.php:552
+#: functions.php:412
 msgid "Display Copyright"
 msgstr ""
 
-#: functions.php:565
+#: functions.php:425
 msgid "Display Credit"
 msgstr ""
 
-#: functions.php:588
+#: functions.php:447
 msgid "Continue reading"
 msgstr ""
 
-#: news-content.php:9
+#: news-content.php:13
 msgid "NEWS"
 msgstr ""
 
-#: home.php:28
+#: home.php:32
 msgid "RECENT"
 msgstr ""
 
-#: image.php:87
+#: image.php:91
 msgid "Next Image"
 msgstr ""
 
-#: image.php:88
+#: image.php:92
 msgid "Previous Image"
 msgstr ""
 
-#: search.php:12
+#: search.php:16
 msgid "Search Results: %s"
 msgstr ""
 
-#: search.php:25
+#: search.php:36
 msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr ""
 
-#: searchform.php:3
+#: searchform.php:12
 msgid "Search..."
 msgstr ""
 

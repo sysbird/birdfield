@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BirdFIELD 1.08 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2015-09-09 00:00+0300\n"
+"POT-Creation-Date: 2016-01-11 00:00+0300\n"
 "PO-Revision-Date: 2014-12-21 17:00+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: sysbird <sysbird@gmail.com>\n"
 "Language: ja\n"
 
-#: 404.php:12
+#: 404.php:16
 msgid "Error 404 - Not Found"
 msgstr "エラー404 - ページが見つかりませんでした"
 
-#: 404.php:16
+#: 404.php:20
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -27,206 +27,168 @@ msgstr "お探しのページが見つかりませんでした。検索してみ
 msgid "Category Archives: %s"
 msgstr "「%s」カテゴリーの一覧"
 
-#: archive.php:17
+#: archive.php:18
 msgid "Tag Archives: %s"
 msgstr "「%s」に関する一覧"
 
-#: archive.php:20
+#: archive.php:21
 msgid "Daily Archives: %s"
 msgstr "%s の一覧"
 
-#: archive.php:23
+#: archive.php:27
 msgid "Monthly Archives: %s"
 msgstr "%s の一覧"
 
-#: archive.php:23
+#: archive.php:27
 msgid "F, Y"
 msgstr "Y年n月"
 
-#: archive.php:26
+#: archive.php:30
 msgid "Yearly Archives: %s"
 msgstr "%s の一覧"
 
-#: archive.php:26
+#: archive.php:30
 msgid "Y"
 msgstr "Y年"
 
-#: archive.php:29
+#: archive.php:33
 msgid "Author Archives: %s"
 msgstr "%s による投稿"
 
-#: archive.php:32
+#: archive.php:36
 msgid "Blog Archives"
 msgstr "アーカイブ"
 
-#: archive.php:45
+#: archive.php:57
 msgid "Sorry, no posts matched your criteria."
 msgstr "投稿が見つかりません。"
 
-#: comments.php:8
-msgid ""
-"This post is password protected. Enter the password to view any comments."
-msgstr ""
-"パスワード保護されています。コメントを見るにはパスワードを入力してください。"
-
-#: comments.php:17
+#: comments.php:18
 msgid "One Comment"
 msgid_plural "%1$s Comments"
 msgstr[0] "%1$s件のコメント"
 
-#: comments.php:24 comments.php:35
+#: comments.php:25 comments.php:41
 msgid "Older Comments"
 msgstr "古いコメント"
 
-#: comments.php:25 comments.php:36
+#: comments.php:26 comments.php:42
 msgid "Newer Comments"
 msgstr "新しいコメント"
 
-#: comments.php:43
-msgid "Name"
-msgstr "お名前"
-
-#: comments.php:43 comments.php:44 comments.php:50
-msgid "(*required)"
-msgstr "(*必須)"
-
-#: comments.php:44
-msgid "Email (will not be published)"
-msgstr "メールアドレス (公開されません)"
-
-#: comments.php:45
-msgid "Website"
-msgstr "ウェブサイト"
-
-#: comments.php:50
-msgid "Comment"
-msgstr "コメント"
-
-#: content.php:9 content.php:60 news-content.php:18
+#: content.php:13 content.php:64 news-content.php:22
 msgid "Permalink to %s"
 msgstr "%sへのリンク"
 
-#: content.php:43 image.php:74
+#: content.php:47 image.php:78
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content.php:53
+#: content.php:57
 msgid "Category"
 msgstr "カテゴリー"
 
-#: content.php:54
+#: content.php:58
 msgid "Tags"
 msgstr "タグ"
 
-#: footer.php:18
+#: footer.php:22
 msgid "Copyright &copy; %s All Rights Reserved."
 msgstr "Copyright &copy; %s All Rights Reserved."
 
-#: footer.php:23
+#: footer.php:27
 msgid "Proudly powered by WordPress"
 msgstr "Proudly powered by WordPress"
 
-#: footer.php:24
+#: footer.php:28
 msgid "BirdFIELD theme by %sSysbird%s"
 msgstr "BirdFIELD theme by %sSysbird%s"
 
-#: footer.php:28
+#: footer.php:32
 msgid "Go Top"
 msgstr "ページトップへ"
 
-#: functions.php:18
+#: functions.php:22
 msgid "Widget Area for header"
 msgstr "ウィジェットエリアヘッダー"
 
-#: functions.php:20
+#: functions.php:24
 msgid "One text widget for header"
 msgstr "ヘッダーに設置するひとつのテキストウィジェット"
 
-#: functions.php:29 functions.php:31
+#: functions.php:33 functions.php:35
 msgid "Widget Area for footer"
 msgstr "ウィジェットエリアフッター"
 
-#: functions.php:54
-msgid "Pingback"
-msgstr "ピンバック"
-
-#: function.php:54
-msgid "(Edit)"
-msgstr "(編集)"
-
-#: functions.php:64
-msgid "Your comment is awaiting moderation."
-msgstr "あなたのコメントは管理者の承認待ちです。"
-
-#: functions.php:349
+#: functions.php:223
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:431
+#: functions.php:308
 msgid "Page %s"
 msgstr "%sページ目"
 
-#: functions.php:484
+#: functions.php:344
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:496
+#: functions.php:356
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:508
+#: functions.php:368
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:520
+#: functions.php:380
 msgid "Display Parallax"
 msgstr "パララックス表示"
 
-#: functions.php:533
+#: functions.php:393
 msgid "Fixed Header"
 msgstr "ヘッダーを固定表示"
 
-#: functions.php:541
+#: functions.php:401
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:552
+#: functions.php:412
 msgid "Display Copyright"
 msgstr "コピーライトを表示"
 
-#: functions.php:565
+#: functions.php:425
 msgid "Display Credit"
 msgstr "クレジットを表示"
 
-#: functions.php:588
+#: functions.php:447
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: news-content.php:9
+#: news-content.php:13
 msgid "NEWS"
 msgstr "お知らせ"
 
-#: home.php:28
+#: home.php:32
 msgid "RECENT"
 msgstr "新着"
 
-#: image.php:87
+#: image.php:91
 msgid "Next Image"
 msgstr "次の画像へ"
 
-#: image.php:88
+#: image.php:92
 msgid "Previous Image"
 msgstr "前の画像へ"
 
-#: search.php:12
+#: search.php:16
 msgid "Search Results: %s"
 msgstr "「%s」 の検索結果"
 
-#: search.php:25
+#: search.php:36
 msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr "「%s」 は見つかりませんでした。"
 
-#: searchform.php:3
+#: searchform.php:12
 msgid "Search..."
 msgstr "検索…"
 
