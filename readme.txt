@@ -60,6 +60,9 @@ http://www.sysbird.jp
 
 
 == Changelog ==
+v1.09 Working!!! 2016-01-18
+* Add content template
+
 v1.08
 * Fix the ver 4.4
 * stop the correspondence for IE8 and below.
