@@ -2,6 +2,7 @@ jQuery(function() {
 
 	jQuery( window ).load(function() {
 
+		// home grid
 		jQuery( "#blog ul li" ).tile( 3 );
 
 		// Browser supports matchMedia
@@ -29,6 +30,15 @@ jQuery(function() {
 			// Browser doesn't support matchMedia
 			jQuery( "#blog ul li" ).tile( 3 );
 		}
+
+		// gallery columns tile
+		jQuery.each(  jQuery ( ' .gallery' ),  function(){
+			gallery_class = jQuery( this ).attr( 'class' );
+			gallery_columns = String(gallery_class.match( /gallery-columns-\d/ ));
+			gallery_columns = gallery_columns.replace( 'gallery-columns-', '' );
+				console.log( gallery_columns);
+				jQuery( this ).find( '.gallery-item').tile( parseInt( gallery_columns ));
+		});
 
 		// Masonry for Footer
 		jQuery( '#widget-area .container' ).masonry({
@@ -69,7 +79,8 @@ jQuery(function() {
 	totop.hide();
 	jQuery( window ).scroll(function () {
 		// back to pagetop
-	if ( jQuery( this ).scrollTop() > 800 ) totop.fadeIn(); else totop.fadeOut();
+		var scrollTop = parseInt( jQuery( this ).scrollTop() );
+		if ( scrollTop > 800 ) totop.fadeIn(); else totop.fadeOut();
 
 		// Parallax
 		if( jQuery('.wrapper[class*=parallax]').length ){
@@ -84,10 +95,21 @@ jQuery(function() {
 				if(scrollTop > headerHeight){
 					top = scrollTop - headerHeight;
 				}
+			}
 
+			if('absolute' == jQuery('.headerimage').css('position')){
+				top -= 20;
 			}
 
 			jQuery( '.headerimage' ).css( 'top', top + 'px' );
+		}
+
+		// mini header with scroll
+		if ( scrollTop > 200 ) {
+			jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
+		}
+		else {
+			jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
 		}
 	});
 

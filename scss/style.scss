@@ -5,7 +5,7 @@ Theme URI: http://www.sysbird.jp/birdfield/theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.08
+Version: 1.09
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,11 +64,11 @@ a {
 /* Structure
 --------------------------------------------- */
 body {
-    margin:0;
-    padding:0;
-    border:0;
-    width:100%;
-	background: #000;
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	background-color: #000;
 }
 
 .container {
@@ -98,26 +98,26 @@ body {
 --------------------------------------------- */
 $footer-height: 100px;
 body , html {
-    height: 100%;
+	height: 100%;
 }
 
 .wrapper {
-    width: 100%;
-    position: relative;
-    height: auto !important;
-    height: 100%;
-    min-height: 100%;
-}
+	width: 100%;
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	}
 
 #content {
-    padding-bottom: $footer-height;
+	padding-bottom: $footer-height;
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: $footer-height;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: $footer-height;
 }
 
 /* Wrapper
@@ -125,7 +125,7 @@ body , html {
 .wrapper {
 	font-family: 'Raleway', Verdana,Arial, Meiryo , "Hiragino Kaku Gothic Pro" ,sans-serif;
 	color: $text-color;
-	background: $background-color;
+	background-color: $background-color;
 	overflow: hidden;
 
 	* {
@@ -141,7 +141,7 @@ body , html {
 -------------------------------------------------------------- */
 #header {
 	color: #FFF;
-	background: $header-color;
+	background-color: $header-color;
 	min-height: 80px;
 	position: relative;
 	z-index: 4;
@@ -174,7 +174,7 @@ body , html {
 
 	img {
 		max-width: 100%;
-		vertical-align:bottom;
+		vertical-align: bottom;
 		margin-bottom: 0.5em;
 	}
 }
@@ -193,7 +193,7 @@ body , html {
 }
 
 .fixed-header.no-title.no-nav-menu #content {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 /* Menu
@@ -251,6 +251,21 @@ body , html {
 .no-nav-menu #menu-wrapper,
 .no-title #menu-wrapper {
 	margin-top: 0;
+}
+
+/* thin header for scroll
+--------------------------------------------- */
+#header.mini {
+	min-height: 60px;
+
+	#branding {
+		min-height: 60px;
+	}
+
+	#menu-wrapper .menu ul#menu-primary-items > li > a {
+		height: 60px;
+		padding: 20px 0.8em;
+	}
 }
 
 /* Posts
@@ -333,7 +348,7 @@ body , html {
 					color: $meta-color;
 
 					&:before {
-						@include font-awesome("\f03e");
+						@include font-awesome("\f03e", 0, 0.2em );
 					}
 				}
 			}
@@ -673,83 +688,79 @@ a:hover img {
 	@include opacity(0.9);
 }
 
-#content .hentry {
-	.wp-caption,
-	.gallery-caption {
-		font-size: 0.9em;
-		line-height: 1;
-		color: $meta-color;
-		max-width: 100%;
+
+/*  Galley
+-------------------------------------------------------------- */
+.wp-caption,
+.gallery-caption {
+	display: block;
+	font-size: 0.9em;
+	line-height: 1;
+	color: $meta-color;
+	max-width: 100%;
+	text-align: center;
+}
+
+.wp-caption {
+	padding: 5px;
+	background: $border-color;
+	margin-bottom: 0.75em;
+	max-width: 100%;
+}
+
+.gallery-caption {
+	margin: 5px 0 0 0;
+}
+
+.gallery {
+	margin: 0 auto;
+	@include clearfix;
+
+	.gallery-item {
+		float: left;
+		padding: 0 5px;
+		margin-bottom: 10px;
 		text-align: center;
-	}
+		width: 33%;
 
-	.wp-caption {
-		padding: 5px;
-		background: $border-color;
-		margin-bottom: 0.75em;
-		max-width: 100%;
+		a {
+			display: block;
+		}
 
-		p {
-			text-align: center;
-			margin: 5px 0 0 0;
-			line-height: 1;
+		img {
+			vertical-align:bottom;
 		}
 	}
 
-	.gallery-caption {
-		margin: 5px 0 0 0;
+	&.gallery-columns-2 .gallery-item {
+		max-width: 50%;
 	}
 
-	.gallery {
-		margin: 0 auto;
-		clear: both;
+	&.gallery-columns-3 .gallery-item {
+		max-width: 33.33%;
+	}
+	&.gallery-columns-4 .gallery-item {
+		max-width: 25%;
+	}
 
-		.gallery-item {
-			float: left;
-			padding: 0 5px;
-			margin-bottom: 10px;
-			text-align: center;
-			width: 33%;
+	&.gallery-columns-5 .gallery-item {
+		max-width: 20%;
+	}
 
-			a {
-				display: block;
-			}
+	&.gallery-columns-6 .gallery-item {
+		max-width: 16.66%;
+	}
 
-			img {
-				vertical-align:bottom;
-			}
-		}
+	&.gallery-columns-7 .gallery-item {
+		max-width: 14.28%;
+	}
 
-		&.gallery-columns-2 .gallery-item {
-			max-width: 50%;
-		}
+	&.gallery-columns-8 .gallery-item {
+		max-width: 12.5%;
+	}
 
-		&.gallery-columns-3 .gallery-item {
-			max-width: 33.33%;
-		}
-		&.gallery-columns-4 .gallery-item {
-			max-width: 25%;
-		}
-
-		&.gallery-columns-5 .gallery-item {
-			max-width: 20%;
-		}
-
-		&.gallery-columns-6 .gallery-item {
-			max-width: 16.66%;
-		}
-
-		&.gallery-columns-7 .gallery-item {
-			max-width: 14.28%;
-		}
-
-		&.gallery-columns-8 .gallery-item {
-			max-width: 12.5%;
-		}
-
-		&.gallery-columns-9 .gallery-item {
-			max-width: 11.11%;
-		}
+	&.gallery--9 .gallery-item {
+		max-width: 11.11%;
 	}
 }
 
@@ -821,15 +832,14 @@ video {
 		}
 
 		.comment-meta {
-			line-height: 1;
-			padding-left: 50px;
+			line-height: 1.4;
 			margin-bottom: 0.8em;
 
 			a {
 				color: $meta-color;
 			}
 
-			&:before {
+			time:before {
 				color: $meta-color;
 				@include font-awesome( "\f017" );
 			}
@@ -854,6 +864,13 @@ video {
 					@include font-awesome( "\f112", 0, 0.2em );
 				}
 			}
+		}
+
+		.comment-metadata,
+		.comment-awaiting-moderation,
+		.comment-content,
+		.reply {
+			padding-left: 50px;
 		}
 
 		&.bypostauthor .comment-author  {
@@ -1186,15 +1203,17 @@ form {
 			}
 		}
 
-		.widget {
+		.widget-area-header {
 			position: absolute;
 			top: 0;
 			left: 0;
-			padding: 0 10px;
 			width: 100%;
 			height: 100%;
 			background-color:rgba(255,255,255,0.6);
+			overflow: hidden;
+		}
 
+		.widget {
 			h3 {
 				padding: 0.2em 0;
 				margin: 0;
@@ -1521,19 +1540,21 @@ form {
 
 			.headerimage {
 				position: absolute;
-				top: 0;
+				top: -20px;
 				z-index: -1;
 			}
 
-			.widget {
+			.widget-area-header {
 				position: relative;
-				background-color:rgba(255,255,255,0.6);
 				width: 380px;
 				height: 380px;
 				border-radius: 380px;
-				padding: 50px;
 				text-align: center;
-				margin: 20px auto 0;
+				margin: 8% auto;
+			}
+
+			.widget {
+				padding: 50px;
 
 				h3 {
 					line-height: 1.2;
@@ -1722,6 +1743,24 @@ form {
 		}
 	}
 
+	#header.mini {
+		#branding {
+			#site-description {
+				display: none;
+			}
+		}
+
+		#menu-wrapper {
+			.menu {
+				ul#menu-primary-items {
+					li ul {
+						top: 60px;
+					}
+				}
+			}
+		}
+	}
+
 	.thin-navigation {
 		#menu-wrapper {
 			.menu {
@@ -1746,11 +1785,10 @@ form {
 		#wall {
 			min-height: 600px;
 
-			.widget {
+			.widget-area-header {
 				width: 400px;
 				height: 400px;
 				border-radius: 400px;
-				margin-top: 100px;
 			}
 		}
 

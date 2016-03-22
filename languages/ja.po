@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.08 ja\n"
+"Project-Id-Version: BirdFIELD 1.09 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
-"POT-Creation-Date: 2016-01-11 00:00+0300\n"
+"POT-Creation-Date: 2016-03-19 00:00+0300\n"
 "PO-Revision-Date: 2014-12-21 17:00+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,15 +23,15 @@ msgid ""
 "searching can help."
 msgstr "お探しのページが見つかりませんでした。検索してみてください。"
 
-#: archive.php:14
+#: archive.php:18
 msgid "Category Archives: %s"
 msgstr "「%s」カテゴリーの一覧"
 
-#: archive.php:18
+#: archive.php:20
 msgid "Tag Archives: %s"
 msgstr "「%s」に関する一覧"
 
-#: archive.php:21
+#: archive.php:24
 msgid "Daily Archives: %s"
 msgstr "%s の一覧"
 
@@ -76,19 +76,19 @@ msgstr "古いコメント"
 msgid "Newer Comments"
 msgstr "新しいコメント"
 
-#: content.php:13 content.php:64 news-content.php:22
+#: content-home.php:12 content.php:12 news-content.php:22
 msgid "Permalink to %s"
 msgstr "%sへのリンク"
 
-#: content.php:47 image.php:78
+#: content-singular.php:23 image.php:78
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content.php:57
+#: content-singular.php:33
 msgid "Category"
 msgstr "カテゴリー"
 
-#: content.php:58
+#: content-singular.php:34
 msgid "Tags"
 msgstr "タグ"
 
@@ -120,55 +120,47 @@ msgstr "ヘッダーに設置するひとつのテキストウィジェット"
 msgid "Widget Area for footer"
 msgstr "ウィジェットエリアフッター"
 
-#: functions.php:223
+#: functions.php:235
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:308
-msgid "Page %s"
-msgstr "%sページ目"
-
-#: functions.php:344
+#: functions.php:341
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:356
+#: functions.php:353
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:368
+#: functions.php:365
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:380
+#: functions.php:377
 msgid "Display Parallax"
 msgstr "パララックス表示"
 
-#: functions.php:393
+#: functions.php:390
 msgid "Fixed Header"
 msgstr "ヘッダーを固定表示"
 
-#: functions.php:401
+#: functions.php:398
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:412
+#: functions.php:409
 msgid "Display Copyright"
 msgstr "コピーライトを表示"
 
-#: functions.php:425
+#: functions.php:422
 msgid "Display Credit"
 msgstr "クレジットを表示"
 
-#: functions.php:447
+#: functions.php:444
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: news-content.php:13
-msgid "NEWS"
-msgstr "お知らせ"
-
-#: home.php:32
+#: home.php:34
 msgid "RECENT"
 msgstr "新着"
 
@@ -179,6 +171,10 @@ msgstr "次の画像へ"
 #: image.php:92
 msgid "Previous Image"
 msgstr "前の画像へ"
+
+#: news-content.php:13
+msgid "NEWS"
+msgstr "お知らせ"
 
 #: search.php:16
 msgid "Search Results: %s"

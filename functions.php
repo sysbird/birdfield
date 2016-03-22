@@ -119,7 +119,7 @@ function birdfield_header_style() {
 	#footer,
 	#widget-area,
 	.home #content #blog ul.article .hentry.sticky i span {
-		background: <?php echo $birdfield_header_color; ?>;
+		background-color: <?php echo $birdfield_header_color; ?>;
 		}
 
 	#content .hentry .entry-header .entry-title,
@@ -199,6 +199,18 @@ function birdfield_setup() {
 
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
+
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
 	/*
 	 * This theme supports all available post formats by default.
@@ -294,26 +306,11 @@ function birdfield_home_query( $query ) {
 add_action( 'pre_get_posts', 'birdfield_home_query' );
 
 //////////////////////////////////////////////////////
-// Document Title
-function birdfield_title( $title ) {
-	global $page, $paged;
-
-	$title .= get_bloginfo( 'name' );
-	$site_description = get_bloginfo( 'description', 'display' );
-
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " | $site_description";
-
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= ' | ' . sprintf( __( 'Page %s', 'birdfield' ), max( $paged, $page ) );
-
-	return $title;
-}
-add_filter( 'wp_title', 'birdfield_title' );
-
-//////////////////////////////////////////////////////
 // Enqueue Scripts
 function birdfield_scripts() {
+
+	wp_enqueue_script( 'birdfield-html5', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3' );
+	wp_script_add_data( 'birdfield-html5', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

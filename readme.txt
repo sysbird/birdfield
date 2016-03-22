@@ -60,8 +60,11 @@ http://www.sysbird.jp
 
 
 == Changelog ==
-v1.09 Working!!! 2016-01-18
-* Add content template
+v1.09
+* bug fix for title-tag.
+* add add_theme_support for html5.
+* add content template for home and singular.
+* show mini header with scroll.
 
 v1.08
 * Fix the ver 4.4

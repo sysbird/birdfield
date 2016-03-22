@@ -16,7 +16,9 @@ $birdfield_has_news = 0; ?>
 			<div class="headerimage">
 				<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" >
 			</div>
-			<?php dynamic_sidebar( 'widget-area-header' ); ?>
+			<div class='widget-area-header'>
+				<?php dynamic_sidebar( 'widget-area-header' ); ?>
+			</div>
 		</section>
 	<?php endif; ?>
 

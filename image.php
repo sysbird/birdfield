@@ -76,7 +76,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array(
 					'before'		=> '<div class="page-links">' . __( 'Pages:', 'birdfield' ),
-					'after'			=> '</div>',
+					'after'		=> '</div>',
 					'link_before'	=> '<span>',
 					'link_after'	=> '</span>'
 					) ); ?>

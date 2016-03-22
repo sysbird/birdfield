@@ -26,8 +26,6 @@ get_header(); ?>
 
 				<?php $birdfield_pagination = get_the_posts_pagination( array(
 						'mid_size'	=> 3,
-						'prev_text'	=> esc_html__( 'Previous page', 'birdfield' ),
-						'next_text'	=> esc_html__( 'Next page', 'birdfield' ),
 						'screen_reader_text'	=> 'pagination',
 					) );
 
