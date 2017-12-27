@@ -1,15 +1,13 @@
-@charset "UTF-8";
 /*
 Theme Name: BirdFIELD
-Theme URI: http://www.sysbird.jp/birdfield/theme/
+Theme URI: http://www.sysbird.jp/birdfirld-theme/
 Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
-Version: 1.09
-
+Version: 1.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: green, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Text Domain: birdfield
 
 This theme, like WordPress, is licensed under the GPL.
@@ -66,8 +64,8 @@ Font Awesome
 -----------------------------*/
 @font-face {
   font-family: 'FontAwesome';
-  src: url("font-awesome/fontawesome-webfont.eot?v=4.1.0");
-  src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  src: url("font-awesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Link

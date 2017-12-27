@@ -9,8 +9,7 @@
 //////////////////////////////////////////
 // Set the content width based on the theme's design and stylesheet.
 function birdfield_content_width() {
-	global $content_width;
-	$content_width = 930;
+	$GLOBALS['content_width'] = apply_filters( 'birdfield_content_width', 930 );
 }
 add_action( 'template_redirect', 'birdfield_content_width' );
 
@@ -27,7 +26,6 @@ function birdfield_widgets_init() {
 		'before_title'		=> '<h3>',
 		'after_title'		=> '</h3>',
 		) );
-
 
 	register_sidebar( array (
 		'name'			=> __( 'Widget Area for footer', 'birdfield' ),
@@ -75,8 +73,8 @@ function birdfield_get_copyright_year() {
 	$birdfield_first_year = $birdfield_copyright_year;
 	$args = array(
 		'numberposts'	=> 1,
-		'orderby'	=> 'post_date',
-		'order'		=> 'ASC',
+		'orderby'		=> 'post_date',
+		'order'			=> 'ASC',
 	);
 	$posts = get_posts( $args );
 
@@ -92,100 +90,8 @@ function birdfield_get_copyright_year() {
 }
 
 //////////////////////////////////////////////////////
-// Header Style
-function birdfield_header_style() {
-
-	//Theme Option
-	$birdfield_text_color = esc_attr( get_theme_mod( 'birdfield_text_color', '#222327' ) );
-	$birdfield_link_color = esc_attr( get_theme_mod( 'birdfield_link_color', '#1c4bbe' ) );
-	$birdfield_header_color = esc_attr( get_theme_mod( 'birdfield_header_color', '#79a596' ) );
-
-?>
-
-<style type="text/css">
-
-	#header #branding #site-title,
-	#header #branding #site-title a,
-	#header #branding #site-description,
-	#menu-wrapper .menu ul#menu-primary-items li a,
-	#menu-wrapper .menu #small-menu,
-	#widget-area .widget,
-	#footer,
-	#footer a {
-		color: #<?php header_textcolor();?>;
-		}
-
-	#header,
-	#footer,
-	#widget-area,
-	.home #content #blog ul.article .hentry.sticky i span {
-		background-color: <?php echo $birdfield_header_color; ?>;
-		}
-
-	#content .hentry .entry-header .entry-title,
-	#content .hentry .content-header .content-title,
-	.home #about .widget h3,
-	.home #content h2,
-	#content h1,
-	#content h2,
-	#content h3,
-	#content h4,
-	#content h5,
-	#content h6,
-
-	#content #comments ol.commentlist li.pingback.bypostauthor .comment-author,
-	#content #comments ol.commentlist li.comment.bypostauthor .comment-author,
-	#widget-area .widget #wp-calendar tbody th a,
-	#widget-area .widget #wp-calendar tbody td a {
-		color: <?php echo $birdfield_header_color; ?>;
-		}
-
-	.wrapper,
-	.home #content #blog ul.article .hentry .entry-header .entry-title,
-	.archive #content ul.list li a .entry-content,
-	.search #content ul.list li a .entry-content {
-		color:  <?php echo $birdfield_text_color; ?>;
-		}
-
-	a,
-	.home #content #news ul.article li .entry-header .entry-title,
-	.archive #content ul.list li .entry-header .entry-title,
-	.search #content ul.list li .entry-header .entry-title,
-	#content .hentry .page-links,
-	#content .pagination a.page-numbers.prev,
-	#content .pagination a.page-numbers.next,
-	#content .pagination .more-link {
-		color:  <?php echo $birdfield_link_color; ?>;
-		}
-
-	#content .pagination .current,
-	#content .hentry .page-links span {
-	  	background: <?php echo $birdfield_link_color; ?>;
-	  	border-color: <?php echo $birdfield_link_color; ?>;
-		}
-
-	@media screen and (min-width: 930px) {
-		#menu-wrapper .menu ul#menu-primary-items li a:hover {
-			color: <?php echo $birdfield_header_color; ?>;
-			}
-
-		#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
-			border-color: <?php echo $birdfield_header_color; ?>;
-			}
-
-		#menu-wrapper .menu ul#menu-primary-items li ul li a {
-			background-color: <?php echo $birdfield_header_color; ?>;
-			}
-		}
-
-</style>
-
-<?php
-
-}
-
-//////////////////////////////////////////////////////
 // Setup Theme
+if ( ! function_exists( 'birdfield_setup' ) ) :
 function birdfield_setup() {
 
 	// Set languages
@@ -235,26 +141,23 @@ function birdfield_setup() {
 		'primary' => __( 'Navigation Menu', 'birdfield' ),
 	) );
 
+	// Add support for title tag.
+	add_theme_support( 'title-tag' );
+
 	// Add support for custom headers.
 	$custom_header_support = array(
 		// Text color and image (empty to use none).
 		'default-text-color'	=> 'FFF',
-		'default-image'		=> '%s/images/header.jpg',
+		'default-image'			=> '%s/images/header.jpg',
 
 		// Set height and width, with a maximum value for the width.
-		'height'			=> 900,
-		'width'			=> 1280,
-		'max-width'		=> 900,
+		'height'				=> 900,
+		'width'					=> 1280,
+		'max-width'				=> 900,
 
 		// Random image rotation off by default.
 		'random-default'	=> true,
-
-		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'	=> 'birdfield_header_style',
 	);
-
-	// Add support for title tag.
-	add_theme_support( 'title-tag' );
 
 	// Add support for custom headers.
 	add_theme_support( 'custom-header', $custom_header_support );
@@ -270,9 +173,10 @@ function birdfield_setup() {
 	// Add support for news content.
 	add_theme_support( 'news-content', array(
 		'news_content_filter'	=> 'birdfield_get_news_posts',
-		'max_posts'		=> 5,
+		'max_posts'				=> 5,
 	) );
 }
+endif; // birdfield_setup
 add_action( 'after_setup_theme', 'birdfield_setup' );
 
 //////////////////////////////////////////////////////
@@ -317,8 +221,8 @@ function birdfield_scripts() {
 	}
 
 	wp_enqueue_script( 'jquery-masonry' );
-	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '20140801' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.08' );
+	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '1.1.2' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.10' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
 
@@ -330,7 +234,11 @@ add_action( 'wp_enqueue_scripts', 'birdfield_scripts' );
 
 //////////////////////////////////////////////////////
 // Theme Customizer
-function birdfield_customize($wp_customize) {
+function birdfield_customize( $wp_customize ) {
+
+	// defaut colors
+	$birdfield_default_colors = birdfield_get_default_colors();
+
 	// Text Color
 	$wp_customize->add_setting( 'birdfield_text_color', array(
 		'default' => '#222327',
@@ -436,6 +344,226 @@ function birdfield_sanitize_checkbox( $input ) {
 	} else {
 		return false;
 	}
+}
+
+//////////////////////////////////////////////////////
+// Get default colors
+function birdfield_get_default_colors() {
+	return array( 'header_text_color' => '#ffffff',
+					'header_color'	=> '#79a596',
+					'text_color'	=> '#222327',
+					'link_color'	=> '#1c4bbe' );
+}
+
+//////////////////////////////////////////////////////
+// Enqueues front-end CSS for the Theme Customizer.
+function birdfield_color_css() {
+
+	// default color
+	$birdfield_default_colors = birdfield_get_default_colors();
+
+	// Custom Header Text Color
+	$birdfield_header_text_color = get_header_textcolor();
+	if( strcasecmp( $birdfield_header_text_color, trim( $birdfield_default_colors[ 'header_text_color' ], '#' ))) {
+		$birdfield_css = "
+			/* Custom Header Text Color */
+			#header #branding #site-title,
+			#header #branding #site-title a,
+			#header #branding #site-description,
+			#menu-wrapper .menu ul#menu-primary-items li a,
+			#menu-wrapper .menu #small-menu,
+			#widget-area .widget,
+			#footer,
+			#footer a {
+				color: #{$birdfield_header_text_color};
+			}
+		";
+
+		wp_add_inline_style( 'birdfield', $birdfield_css );
+	}
+
+	// Custom Text Color
+	$birdfield_text_color = get_theme_mod( 'birdfield_text_color', $birdfield_default_colors[ 'text_color' ] );
+	if( strcasecmp( $birdfield_text_color, $birdfield_default_colors[ 'text_color' ] )) {
+		$birdfield_css = "
+			/* Custom Text Color */
+			.wrapper,
+			.home #content #blog ul.article .hentry .entry-header .entry-title,
+			.archive #content ul.list li a .entry-content,
+			.search #content ul.list li a .entry-content {
+				color: {$birdfield_text_color};
+			}
+		";
+
+		wp_add_inline_style( 'birdfield', $birdfield_css );
+	}
+
+	// Custom Link Color
+	$birdfield_link_color = get_theme_mod( 'birdfield_link_color', $birdfield_default_colors[ 'link_color' ] );
+	if( strcasecmp( $birdfield_link_color, $birdfield_default_colors[ 'link_color' ] )) {
+		$birdfield_css = "
+			/* Custom Link Color */
+			a,
+			.home #content #news ul.article li .entry-header .entry-title,
+			.archive #content ul.list li .entry-header .entry-title,
+			.search #content ul.list li .entry-header .entry-title,
+			#content .hentry .page-links,
+			#content .pagination a.page-numbers.prev,
+			#content .pagination a.page-numbers.next,
+			#content .pagination .more-link {
+				color: {$birdfield_link_color};
+			}
+
+			#content .pagination .current,
+			#content .hentry .page-links span {
+				background: {$birdfield_link_color};
+				border-color: {$birdfield_link_color};
+			}
+		";
+
+		wp_add_inline_style( 'birdfield', $birdfield_css );
+	}
+
+	// Custom Header, Footer Background Color
+	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', $birdfield_default_colors[ 'header_color' ] );
+	if( strcasecmp( $birdfield_header_color, $birdfield_default_colors[ 'header_color' ] )) {
+		$birdfield_css = "
+			/* Custom Header, Footer Background Color */
+			#header,
+			#footer,
+			#widget-area,
+			.home #content #blog ul.article .hentry.sticky i span {
+				background-color: {$birdfield_header_color};
+			}
+
+			#content .hentry .entry-header .entry-title,
+			#content .hentry .content-header .content-title,
+			.home #about .widget h3,
+			.home #content h2,
+			#content h1,
+			#content h2,
+			#content h3,
+			#content h4,
+			#content h5,
+			#content h6,
+			#content #comments ol.commentlist li.pingback.bypostauthor .comment-author,
+			#content #comments ol.commentlist li.comment.bypostauthor .comment-author,
+			#widget-area .widget #wp-calendar tbody th a,
+			#widget-area .widget #wp-calendar tbody td a {
+				color: {$birdfield_header_color};
+			}
+
+			@media screen and (min-width: 930px) {
+				#menu-wrapper .menu ul#menu-primary-items li a:hover {
+					color: {$birdfield_header_color};
+				}
+
+				#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
+					border-color: {$birdfield_header_color};
+				}
+
+				#menu-wrapper .menu ul#menu-primary-items li ul li a {
+					background-color: {$birdfield_header_color};
+				}
+			}
+		";
+
+		wp_add_inline_style( 'birdfield', $birdfield_css );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'birdfield_color_css', 11 );
+
+//////////////////////////////////////////////////////
+// Header Style
+function ___birdfield_header_style() {
+
+	//Theme Option
+	$birdfield_text_color = esc_attr( get_theme_mod( 'birdfield_text_color', '#222327' ) );
+	$birdfield_link_color = esc_attr( get_theme_mod( 'birdfield_link_color', '#1c4bbe' ) );
+	$birdfield_header_color = esc_attr( get_theme_mod( 'birdfield_header_color', '#79a596' ) );
+
+?>
+
+<style type="text/css">
+
+	#header #branding #site-title,
+	#header #branding #site-title a,
+	#header #branding #site-description,
+	#menu-wrapper .menu ul#menu-primary-items li a,
+	#menu-wrapper .menu #small-menu,
+	#widget-area .widget,
+	#footer,
+	#footer a {
+		color: #<?php header_textcolor();?>;
+		}
+
+	#header,
+	#footer,
+	#widget-area,
+	.home #content #blog ul.article .hentry.sticky i span {
+		background-color: <?php echo $birdfield_header_color; ?>;
+		}
+
+	#content .hentry .entry-header .entry-title,
+	#content .hentry .content-header .content-title,
+	.home #about .widget h3,
+	.home #content h2,
+	#content h1,
+	#content h2,
+	#content h3,
+	#content h4,
+	#content h5,
+	#content h6,
+
+	#content #comments ol.commentlist li.pingback.bypostauthor .comment-author,
+	#content #comments ol.commentlist li.comment.bypostauthor .comment-author,
+	#widget-area .widget #wp-calendar tbody th a,
+	#widget-area .widget #wp-calendar tbody td a {
+		color: <?php echo $birdfield_header_color; ?>;
+		}
+
+	.wrapper,
+	.home #content #blog ul.article .hentry .entry-header .entry-title,
+	.archive #content ul.list li a .entry-content,
+	.search #content ul.list li a .entry-content {
+		color:  <?php echo $birdfield_text_color; ?>;
+		}
+
+	a,
+	.home #content #news ul.article li .entry-header .entry-title,
+	.archive #content ul.list li .entry-header .entry-title,
+	.search #content ul.list li .entry-header .entry-title,
+	#content .hentry .page-links,
+	#content .pagination a.page-numbers.prev,
+	#content .pagination a.page-numbers.next,
+	#content .pagination .more-link {
+		color:  <?php echo $birdfield_link_color; ?>;
+		}
+
+	#content .pagination .current,
+	#content .hentry .page-links span {
+	  	background: <?php echo $birdfield_link_color; ?>;
+	  	border-color: <?php echo $birdfield_link_color; ?>;
+		}
+
+	@media screen and (min-width: 930px) {
+		#menu-wrapper .menu ul#menu-primary-items li a:hover {
+			color: <?php echo $birdfield_header_color; ?>;
+			}
+
+		#menu-wrapper .menu ul#menu-primary-items li ul li a:hover {
+			border-color: <?php echo $birdfield_header_color; ?>;
+			}
+
+		#menu-wrapper .menu ul#menu-primary-items li ul li a {
+			background-color: <?php echo $birdfield_header_color; ?>;
+			}
+		}
+
+</style>
+
+<?php
+
 }
 
 //////////////////////////////////////////////////////

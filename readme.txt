@@ -46,12 +46,12 @@ License: SIL Open Font License, 1.1
 Source:  http://www.google.com/fonts
 
 jquery.tile.js
-License: Dual licensed under the MIT and GPL licenses
+License: Dual licensed under the MIT license
 Source:  https://github.com/urin/jquery.tile.js
 
 Font Awesome
-License: SIL Open Font License, 1.1/MIT License
-Source:  http://fortawesome.github.io/Font-Awesome/
+License: SIL Open Font License 1.1 / MIT License
+Source:  http://fontawesome.io/
 
 
 == Author ==
@@ -60,6 +60,9 @@ http://www.sysbird.jp
 
 
 == Changelog ==
+v1.10
+Working 2017-12-27
+
 v1.09
 * bug fix for title-tag.
 * add add_theme_support for html5.
