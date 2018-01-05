@@ -126,11 +126,7 @@ body , html {
 	overflow: hidden;
 
 	* {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		box-sizing: border-box;
+		@include box-sizing( border-box );
 	}
 }
 
@@ -1212,10 +1208,9 @@ form {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			-webkit-transform: translate(-50%, -50%); /* for Safari */
-			transform: translate(-50%, -50%);
 			margin-right: -50%;
 			padding: 0 5%;
+			@include translate( -50%, -50% );
 
 			&:nth-child(n+2){
 				display: none;
@@ -1361,10 +1356,7 @@ form {
 								width: 100px;
 								height: 20px;
 								padding: 3px;
-								-webkit-transform: rotate(45deg);
-								-moz-transform: rotate(45deg);
-								-o-transform: rotate(45deg);
-								-ms-transform: rotate(45deg);
+								@include rotate( 45deg );
 
 								&:before {
 									@include font-awesome("\f005", 0, 0.2em);
@@ -1549,14 +1541,16 @@ form {
 			.headerimage {
 				position: absolute;
 				top: -20px;
-				z-index: -1;
+				left: 0;
+				right: 0;
+				bottom: 0;
 
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%); /* for Safari */
-			transform: translate(-50%, -50%);
-			margin-right: -50%;
-
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					@include translate( -50%, -50% );
+				}
 			}
 
 			.widget-area-header {

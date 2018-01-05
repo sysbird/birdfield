@@ -161,8 +161,6 @@ body, html {
 .wrapper * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1384,11 +1382,13 @@ form input {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  /* for Safari */
-  transform: translate(-50%, -50%);
   margin-right: -50%;
   padding: 0 5%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .home #wall .widget:nth-child(n+2),
@@ -1565,8 +1565,9 @@ form input {
   padding: 3px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .home #content #blog ul.article .hentry.sticky i span:before,
@@ -1782,13 +1783,20 @@ form input {
   .blog #wall .headerimage {
     position: absolute;
     top: -20px;
-    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .home #wall .headerimage img,
+  .blog #wall .headerimage img {
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    /* for Safari */
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    margin-right: -50%;
   }
   .home #wall .widget-area-header,
   .blog #wall .widget-area-header {

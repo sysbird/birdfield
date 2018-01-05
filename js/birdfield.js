@@ -1,5 +1,7 @@
 jQuery(function() {
 
+	var headerimage_y = 0;
+
 	jQuery( window ).load(function() {
 
 		// home grid
@@ -36,7 +38,6 @@ jQuery(function() {
 			gallery_class = jQuery( this ).attr( 'class' );
 			gallery_columns = String(gallery_class.match( /gallery-columns-\d/ ));
 			gallery_columns = gallery_columns.replace( 'gallery-columns-', '' );
-				console.log( gallery_columns);
 				jQuery( this ).find( '.gallery-item').tile( parseInt( gallery_columns ));
 		});
 
@@ -52,6 +53,11 @@ jQuery(function() {
 		var height = parseInt( widgetArea ) + parseInt( footerHeight );
 		jQuery('#content').css('padding-bottom', height + 'px' );
 		jQuery('#footer').css('height', height + 'px' );
+
+		if( jQuery('.wrapper[class*=parallax]').length ){
+			headerimage_y = jQuery( '.headerimage').height() /2;
+			jQuery( '.home #wall .headerimage img, .blog #wall .headerimage img' ).css({ 'top': headerimage_y + 'px' });
+		}
 	});
 
 	// Navigation for mobile
@@ -89,6 +95,7 @@ jQuery(function() {
 
 			if( jQuery('.wrapper[class*=fixed-header]').length ){
 				top = scrollTop;
+				var headerHeight = parseInt( jQuery( '#header' ).height() );
 			}
 			else{
 				var headerHeight = parseInt( jQuery( '#header' ).height() );
@@ -105,16 +112,19 @@ jQuery(function() {
 		}
 
 		// mini header with scroll
-		if ( scrollTop > 200 ) {
-			jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
-		}
-		else {
-			jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
+		var header_clip = jQuery( '#header' ).css( 'clip' );
+		if( -1 == header_clip.indexOf( 'rect' ) ) {
+			if ( scrollTop > 200 ) {
+				jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
+			}
+			else {
+				jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
+			}
 		}
 	});
 
+	// back to pagetop
 	totop.click( function () {
-		// back to pagetop
 		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
 	});
 });
