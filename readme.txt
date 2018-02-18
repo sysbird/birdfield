@@ -3,7 +3,7 @@ BirdFIELD is a responsive web design theme. Feature fullscreen and parallax cust
 
 
 === Tags ===
-one-columns, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+one-column, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog
 
 
 === Features ===
