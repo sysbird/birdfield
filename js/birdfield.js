@@ -8,7 +8,7 @@ jQuery(function() {
 		jQuery( "#blog ul li" ).tile( 3 );
 
 		// header sliderer
-		jQuery('.headerslider').slick({
+		jQuery('.headerimage.slider').slick({
 			infinite: true,
 			autoplaySpeed: 4000,
 			speed: 1000,
@@ -63,11 +63,6 @@ jQuery(function() {
 		var height = parseInt( widgetArea ) + parseInt( footerHeight );
 		jQuery('#content').css('padding-bottom', height + 'px' );
 		jQuery('#footer').css('height', height + 'px' );
-
-		if( jQuery('.wrapper[class*=parallax]').length ){
-			headerimage_y = jQuery( '.headerimage').height() /2;
-			jQuery( '.home #wall .headerimage img, .blog #wall .headerimage img' ).css({ 'top': headerimage_y + 'px' });
-		}
 	});
 
 	// Navigation for mobile
@@ -122,7 +117,7 @@ jQuery(function() {
 				// headerimage
 				if('absolute' == jQuery('.headerimage').css('position')){
 				}
-				jQuery( '.headerimage' ).css( 'top', top + 'px' );
+				jQuery( '.headerimage img' ).css( 'top', top + 'px' );
 			}
 		}
 

@@ -1532,16 +1532,10 @@ form {
 
 /*Hheader Slider
 --------------------------------------------- */
-.home #content .headerslider {
-	.slideitem {
-		height: 600px;
-		position: relative;
-	}
+.home #content .headerimage {
 
-	.slideitem img {
-		position: absolute;
-		top: 0;
-		width: 100%;
+	.slideitem {
+		position: relative;
 	}
 
 	.slideitem .caption {
@@ -1552,6 +1546,7 @@ form {
 		padding: 0 5%;
 		width:60%;
 		text-align: center;
+		font-size: 3.2vw;
 		-webkit-transform: translate(-50%, -50%);
 		-moz-transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
@@ -1562,13 +1557,12 @@ form {
 			color: #fff;
 			margin: 0;
 			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-			font-size: 3.6vw;
 			line-height: 1.4;
 			margin-bottom: 0.4em;
 
 			strong {
 				display: block;
-				font-size: 7vw;
+				font-size: 2em;
 			}
 		}
 
@@ -1579,7 +1573,7 @@ form {
 			border: solid 1px #FFF;
 			color: #666;
 			font-weight: bold;
-			font-size: 3vw;
+			font-size: 0.9em;
 			padding: 2% 5%;
 			border-radius: 3px;
 			text-decoration: none;
@@ -1614,17 +1608,17 @@ form {
 			min-height: 420px;
 
 			.headerimage {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
+				position: relative;
+				min-height: 420px;
 
 				img {
 					position: absolute;
-					top: 50%;
-					left: 50%;
-					@include translate( -50%, -50% );
+					top: 0;
+					width: 100%;
+				}
+
+				.slideitem {
+					min-height: 420px;
 				}
 			}
 
@@ -1859,7 +1853,18 @@ form {
 	.home,
 	.blog {
 		#wall {
-			min-height: 600px;
+			.headerimage {
+				min-height: 600px;
+
+				.slideitem {
+					min-height: 600px;
+
+					.caption {
+						font-size: 30px;
+						width:600px;
+					}
+				}
+			}
 
 			.widget-area-header {
 				width: 400px;
