@@ -14,6 +14,10 @@ function birdfield_content_width() {
 add_action( 'template_redirect', 'birdfield_content_width' );
 
 //////////////////////////////////////////
+// Customizer additions.
+require get_template_directory() . '/inc/customizer.php';
+
+//////////////////////////////////////////
 // Set Widgets
 function birdfield_widgets_init() {
 
@@ -220,8 +224,12 @@ function birdfield_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	wp_enqueue_style( 'birdfield_slick', get_template_directory_uri().'/js/slick/slick.css' );
+	wp_enqueue_style( 'birdfield_slick_theme', get_template_directory_uri().'/js/slick/slick-theme.css' );
+
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '1.1.2' );
+	wp_enqueue_script( 'jqueryslick', get_template_directory_uri() .'/js/slick/slick.min.js', 'jquery', '1.8.0' );
 	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.10' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
@@ -240,98 +248,113 @@ function birdfield_customize( $wp_customize ) {
 	$birdfield_default_colors = birdfield_get_default_colors();
 
 	// Text Color
-	$wp_customize->add_setting( 'birdfield_text_color', array(
-		'default' => '#222327',
-		'sanitize_callback' => 'maybe_hash_hex_color',
-	) );
+	$wp_customize->add_setting( 'birdfield_text_color',
+		array(
+			'default' => '#222327',
+			'sanitize_callback' => 'maybe_hash_hex_color',
+		));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_text_color', array(
-		'label'		=> __( 'Text Color', 'birdfield' ),
-		'section'	=> 'colors',
-		'settings'	=> 'birdfield_text_color',
-	) ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_text_color',
+		array(
+			'label'		=> __( 'Text Color', 'birdfield' ),
+			'section'	=> 'colors',
+			'settings'	=> 'birdfield_text_color',
+		)));
 
 	// Link Color
-	$wp_customize->add_setting( 'birdfield_link_color', array(
-		'default' => '#1c4bbe',
-		'sanitize_callback' => 'maybe_hash_hex_color',
-	) );
+	$wp_customize->add_setting( 'birdfield_link_color',
+		array(
+			'default' => '#1c4bbe',
+			'sanitize_callback' => 'maybe_hash_hex_color',
+		));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_link_color', array(
-		'label'		=> __( 'Link Color', 'birdfield' ),
-		'section'	=> 'colors',
-		'settings'	=> 'birdfield_link_color',
-	) ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_link_color',
+		array(
+			'label'		=> __( 'Link Color', 'birdfield' ),
+			'section'	=> 'colors',
+			'settings'	=> 'birdfield_link_color',
+		)));
 
 	// Header, Footer Background Color
-	$wp_customize->add_setting( 'birdfield_header_color', array(
-		'default' => '#79a596',
-		'sanitize_callback' => 'maybe_hash_hex_color',
-	) );
+	$wp_customize->add_setting( 'birdfield_header_color',
+		array(
+			'default' => '#79a596',
+			'sanitize_callback' => 'maybe_hash_hex_color',
+		));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_header_color', array(
-		'label'		=> __( 'Header, Footer Background Color', 'birdfield' ),
-		'section'	=> 'colors',
-		'settings'	=> 'birdfield_header_color',
-	) ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'birdfield_header_color',
+		array(
+			'label'		=> __( 'Header, Footer Background Color', 'birdfield' ),
+			'section'	=> 'colors',
+			'settings'	=> 'birdfield_header_color',
+		)));
 
 	// Parallax Header Image
-	$wp_customize->add_setting( 'birdfield_parallax', array(
-		'default'  => true,
-		'sanitize_callback' => 'birdfield_sanitize_checkbox',
-	) );
+	$wp_customize->add_setting( 'birdfield_parallax',
+		array(
+			'default'  => true,
+			'sanitize_callback' => 'birdfield_sanitize_checkbox',
+		));
 
-	$wp_customize->add_control( 'birdfield_parallax', array(
-		'label'		=> __( 'Display Parallax', 'birdfield' ),
-		'section'	=> 'header_image',
-		'type'		=> 'checkbox',
-		'settings'	=> 'birdfield_parallax',
-	) );
+	$wp_customize->add_control( 'birdfield_parallax',
+		array(
+			'label'		=> __( 'Display Parallax', 'birdfield' ),
+			'section'	=> 'header_image',
+			'type'		=> 'checkbox',
+			'settings'	=> 'birdfield_parallax',
+		));
 
 	// Fixed Menu
-	$wp_customize->add_setting( 'birdfield_fixedheader', array(
-		'default'		=> true,
-		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
-	) );
+	$wp_customize->add_setting( 'birdfield_fixedheader',
+		array(
+			'default'		=> true,
+			'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
+		));
 
-	$wp_customize->add_control( 'birdfield_fixedheader', array(
-		'label'		=> __( 'Fixed Header', 'birdfield' ),
-		'section'	=> 'title_tagline',
-		'type'		=> 'checkbox',
-		'settings'	=> 'birdfield_fixedheader',
-	) );
+	$wp_customize->add_control( 'birdfield_fixedheader',
+		array(
+			'label'		=> __( 'Fixed Header', 'birdfield' ),
+			'section'	=> 'title_tagline',
+			'type'		=> 'checkbox',
+			'settings'	=> 'birdfield_fixedheader',
+		));
 
 	// Footer Section
-	$wp_customize->add_section( 'birdfield_customize', array(
-		'title'		=> __( 'Footer', 'birdfield' ),
-		'priority'	=> 999,
-	) );
+	$wp_customize->add_section( 'birdfield_customize',
+		array(
+			'title'		=> __( 'Footer', 'birdfield' ),
+			'priority'	=> 999,
+		));
 
 	// Display Copyright
-	$wp_customize->add_setting( 'birdfield_copyright', array(
-		'default'		=> true,
-		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
-	) );
+	$wp_customize->add_setting( 'birdfield_copyright',
+		array(
+			'default'		=> true,
+			'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
+		));
 
-	$wp_customize->add_control( 'birdfield_copyright', array(
-		'label'		=> __( 'Display Copyright', 'birdfield' ),
-		'section'	=> 'birdfield_customize',
-		'type'		=> 'checkbox',
-		'settings'	=> 'birdfield_copyright',
-	) );
+	$wp_customize->add_control( 'birdfield_copyright',
+		array(
+			'label'		=> __( 'Display Copyright', 'birdfield' ),
+			'section'	=> 'birdfield_customize',
+			'type'		=> 'checkbox',
+			'settings'	=> 'birdfield_copyright',
+		));
 
 	// Display Credit
-	$wp_customize->add_setting( 'birdfield_credit', array(
-		'default'		=> true,
-		'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
-	) );
+	$wp_customize->add_setting( 'birdfield_credit',
+		array(
+			'default'		=> true,
+			'sanitize_callback'	=> 'birdfield_sanitize_checkbox',
+		));
 
-	$wp_customize->add_control( 'birdfield_credit', array(
-		'label'		=> __( 'Display Credit', 'birdfield' ),
-		'section'	=> 'birdfield_customize',
-		'type'		=> 'checkbox',
-		'settings'	=> 'birdfield_credit',
-	) );
+	$wp_customize->add_control( 'birdfield_credit',
+		array(
+			'label'		=> __( 'Display Credit', 'birdfield' ),
+			'section'	=> 'birdfield_customize',
+			'type'		=> 'checkbox',
+			'settings'	=> 'birdfield_credit',
+		));
 }
 add_action( 'customize_register', 'birdfield_customize' );
 
@@ -344,6 +367,12 @@ function birdfield_sanitize_checkbox( $input ) {
 	} else {
 		return false;
 	}
+}
+
+///////////////////////////////////////////////////////
+// Sanitize text
+function birdfield_sanitize_text( $input ) {
+	return wp_kses_post( force_balance_tags( $input ) );
 }
 
 //////////////////////////////////////////////////////
@@ -541,4 +570,61 @@ function birdfield_custom_background_cb() {
 </style>
 <?php
 }
+//////////////////////////////////////////////////////
+// Header Slider
+if ( ! function_exists( 'birdfield_headerslider' )) :
+function birdfield_headerslider() {
 
+	if (( !is_front_page())) {
+		return false;
+	}
+
+	$birdfield_html = '';
+	for( $birdfield_count = 1; $birdfield_count < 5; $birdfield_count++ ) {
+		$birdfield_default_image = '';
+		$birdfield_default_title = '';
+		$birdfield_default_description = '';
+		$birdfield_default_link = '';
+
+		if( 1 == $birdfield_count ){
+			$birdfield_default_image = get_template_directory_uri() . '/images/header.jpg';
+			$birdfield_default_title =  __( 'Hello world!','birdfield' );
+			$birdfield_default_description = __( 'Begin your website.', 'birdfield' );
+			$birdfield_default_link = '#';
+		}
+
+		$birdfield_image = get_theme_mod( 'slider_image_' .strval( $birdfield_count ), $birdfield_default_image );
+		if ( ! empty( $birdfield_image )) {
+			$birdfield_title = get_theme_mod( 'slider_title_' . strval( $birdfield_count ), $birdfield_default_title );
+			$birdfield_description = get_theme_mod( 'slider_description_' . strval( $birdfield_count ), $birdfield_default_description );
+			$birdfield_link = get_theme_mod( 'slider_link_' . strval( $birdfield_count ), $birdfield_default_link );
+
+			$birdfield_html .= '<div class="slideitem">';
+			$birdfield_html .= '<img src="' .$birdfield_image .'" alt="slide_' .strval( $birdfield_count ) .'">';
+			$birdfield_html .= '<div class="caption">';
+			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong>' .$birdfield_description .'</p>';
+			if( ! empty( $birdfield_link )){
+				$birdfield_html .= '<a href="' .$birdfield_link .'">' .__( 'More', 'birdfield' ) .'</a>';
+			}
+			$birdfield_html .= '</div>';
+			$birdfield_html .= '</div>';
+		}
+		else{
+			break;
+		}
+	}
+
+	if ( ! empty( $birdfield_html ) ) {
+?>
+			<section id="wall">
+				<div class="headerslider">
+					<?php echo $birdfield_html ?>
+				</div>
+			</section>
+<?php
+		return true;
+	}
+
+	return false;
+}
+endif;

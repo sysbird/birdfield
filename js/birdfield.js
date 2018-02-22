@@ -7,6 +7,16 @@ jQuery(function() {
 		// home grid
 		jQuery( "#blog ul li" ).tile( 3 );
 
+		// header sliderer
+		jQuery('.headerslider').slick({
+			infinite: true,
+			autoplaySpeed: 4000,
+			speed: 1000,
+			fade: true,
+			cssEase: 'linear',
+			autoplay: true,
+		});
+
 		// Browser supports matchMedia
 		if ( window.matchMedia ) {
 			// MediaQueryList
@@ -104,11 +114,16 @@ jQuery(function() {
 				}
 			}
 
-			if('absolute' == jQuery('.headerimage').css('position')){
-				top -= 20;
+			if( jQuery( '.headerslider' ).length ){
+				// headerslider
+				jQuery( '.slick-list img' ).css( 'top', top + 'px' );
 			}
-
-			jQuery( '.headerimage' ).css( 'top', top + 'px' );
+			else{
+				// headerimage
+				if('absolute' == jQuery('.headerimage').css('position')){
+				}
+				jQuery( '.headerimage' ).css( 'top', top + 'px' );
+			}
 		}
 
 		// mini header with scroll
@@ -137,15 +152,5 @@ function birdfield_AdjustHeader() {
 	if( 80 < headerHeight ){
 		// Long Navigation
 		jQuery( '.wrapper' ).addClass( 'thin-navigation' );
-	}
-
-	if( jQuery( '#small-menu' ).is( ':visible' ) ){
-		// Wide Display
-		jQuery( '.fixed-header #content' ).css( 'margin-top', '' );
-	}
-	else{
-		// Small Display
-		headerHeight = parseInt( jQuery( '#header' ).height() );
-		jQuery( '.fixed-header #content' ).css( 'margin-top', headerHeight + 'px' );
 	}
 }

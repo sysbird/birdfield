@@ -172,6 +172,8 @@ body, html {
   min-height: 80px;
   position: relative;
   z-index: 4;
+  transition-property: min-height;
+  transition-duration: .5s;
 }
 
 #header #branding #site-title {
@@ -1771,6 +1773,77 @@ form input {
   display: none;
 }
 
+/*Hheader Slider
+--------------------------------------------- */
+.home #content .headerslider .slideitem {
+  height: 600px;
+  position: relative;
+}
+
+.home #content .headerslider .slideitem img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home #content .headerslider .slideitem .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  padding: 0 5%;
+  width: 60%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.home #content .headerslider .slideitem .caption p {
+  color: #fff;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 3.6vw;
+  line-height: 1.4;
+  margin-bottom: 0.4em;
+}
+
+.home #content .headerslider .slideitem .caption p strong {
+  display: block;
+  font-size: 7vw;
+}
+
+.home #content .headerslider .slideitem .caption a {
+  display: inline-block;
+  text-align: center;
+  background-color: #FFF;
+  border: solid 1px #FFF;
+  color: #666;
+  font-weight: bold;
+  font-size: 3vw;
+  padding: 2% 5%;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home #content .headerslider .slideitem .caption a:hover {
+  background-color: transparent;
+  color: #FFF;
+}
+
+.home #content .headerslider .slick-next {
+  z-index: 1;
+  right: 0;
+}
+
+.home #content .headerslider .slick-prev {
+  z-index: 1;
+  left: 0;
+}
+
 /* Media queries for responsive design
 --------------------------------------------- */
 /* --- iPad Landscape --- */
@@ -1782,7 +1855,7 @@ form input {
   .home #wall .headerimage,
   .blog #wall .headerimage {
     position: absolute;
-    top: -20px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -1818,9 +1891,6 @@ form input {
   .fixed-header #header {
     position: fixed;
     top: 0;
-  }
-  .fixed-header #content {
-    margin-top: 80px;
   }
   #footer #back-top {
     left: 46%;
