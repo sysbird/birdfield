@@ -15,7 +15,7 @@ add_action( 'template_redirect', 'birdfield_content_width' );
 
 //////////////////////////////////////////
 // Customizer additions.
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/functions_customizer.php';
 
 //////////////////////////////////////////
 // Set Widgets
@@ -570,6 +570,7 @@ function birdfield_custom_background_cb() {
 </style>
 <?php
 }
+
 //////////////////////////////////////////////////////
 // Header Slider
 if ( ! function_exists( 'birdfield_headerslider' )) :
