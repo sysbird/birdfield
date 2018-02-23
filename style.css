@@ -173,7 +173,7 @@ body, html {
   position: relative;
   z-index: 4;
   transition-property: min-height;
-  transition-duration: .5s;
+  transition-duration: .3s;
 }
 
 #header #branding #site-title {
@@ -1775,19 +1775,21 @@ form input {
 
 /*Hheader Slider
 --------------------------------------------- */
-.home #content .headerimage .slideitem {
+.home #wall .slider .slideitem,
+.blog #wall .slider .slideitem {
   position: relative;
 }
 
-.home #content .headerimage .slideitem .caption {
+.home #wall .slider .slideitem .caption,
+.blog #wall .slider .slideitem .caption {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   padding: 0 5%;
-  width: 60%;
+  width: 85%;
   text-align: center;
-  font-size: 3.2vw;
+  font-size: 5vw;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1795,7 +1797,8 @@ form input {
   transform: translate(-50%, -50%);
 }
 
-.home #content .headerimage .slideitem .caption p {
+.home #wall .slider .slideitem .caption p,
+.blog #wall .slider .slideitem .caption p {
   color: #fff;
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -1803,36 +1806,42 @@ form input {
   margin-bottom: 0.4em;
 }
 
-.home #content .headerimage .slideitem .caption p strong {
+.home #wall .slider .slideitem .caption p strong,
+.blog #wall .slider .slideitem .caption p strong {
   display: block;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
-.home #content .headerimage .slideitem .caption a {
+.home #wall .slider .slideitem .caption a,
+.blog #wall .slider .slideitem .caption a {
   display: inline-block;
   text-align: center;
-  background-color: #FFF;
-  border: solid 1px #FFF;
-  color: #666;
+  border: solid 2px #FFF;
+  color: #FFF;
   font-weight: bold;
   font-size: 0.9em;
   padding: 2% 5%;
   border-radius: 3px;
   text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.home #content .headerimage .slideitem .caption a:hover {
-  background-color: transparent;
-  color: #FFF;
+.home #wall .slider .slideitem .caption a:hover,
+.blog #wall .slider .slideitem .caption a:hover {
+  background-color: #FFF;
+  color: #666;
+  text-shadow: none;
 }
 
-.home #content .headerimage .slick-next {
+.home #wall .slider .slideitem .slick-next,
+.blog #wall .slider .slideitem .slick-next {
   z-index: 1;
   right: 0;
 }
 
-.home #content .headerimage .slick-prev {
+.home #wall .slider .slideitem .slick-prev,
+.blog #wall .slider .slideitem .slick-prev {
   z-index: 1;
   left: 0;
 }
@@ -1843,22 +1852,24 @@ form input {
 @media screen and (min-width: 660px) {
   .home #wall,
   .blog #wall {
-    min-height: 420px;
-  }
-  .home #wall .headerimage,
-  .blog #wall .headerimage {
     position: relative;
     min-height: 420px;
+    margin-top: 60px;
   }
-  .home #wall .headerimage img,
-  .blog #wall .headerimage img {
+  .home #wall .fixedimage,
+  .blog #wall .fixedimage {
     position: absolute;
     top: 0;
     width: 100%;
   }
-  .home #wall .headerimage .slideitem,
-  .blog #wall .headerimage .slideitem {
+  .home #wall .slider .slideitem,
+  .blog #wall .slider .slideitem {
     min-height: 420px;
+  }
+  .home #wall .slider .slideitem .caption,
+  .blog #wall .slider .slideitem .caption {
+    font-size: 3.4vw;
+    width: 60%;
   }
   .home #wall .widget-area-header,
   .blog #wall .widget-area-header {
@@ -1902,6 +1913,9 @@ form input {
   }
   .single #content #nav-below .nav-previous {
     float: right;
+  }
+  body:not(.home) .fixed-header #content {
+    margin-top: 80px;
   }
 }
 
@@ -2033,16 +2047,16 @@ form input {
   .thin-navigation #menu-wrapper .menu ul#menu-primary-items > li > ul {
     top: 2.8em;
   }
-  .home #wall .headerimage,
-  .blog #wall .headerimage {
+  .home #wall,
+  .blog #wall {
     min-height: 600px;
   }
-  .home #wall .headerimage .slideitem,
-  .blog #wall .headerimage .slideitem {
+  .home #wall .slider .slideitem,
+  .blog #wall .slider .slideitem {
     min-height: 600px;
   }
-  .home #wall .headerimage .slideitem .caption,
-  .blog #wall .headerimage .slideitem .caption {
+  .home #wall .slider .slideitem .caption,
+  .blog #wall .slider .slideitem .caption {
     font-size: 30px;
     width: 600px;
   }

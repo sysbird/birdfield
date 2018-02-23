@@ -115,9 +115,9 @@ jQuery(function() {
 			}
 			else{
 				// headerimage
-				if('absolute' == jQuery('.headerimage').css('position')){
+				if('absolute' == jQuery('.fixedimage').css('position')){
 				}
-				jQuery( '.headerimage img' ).css( 'top', top + 'px' );
+				jQuery( '.fixedimage' ).css( 'top', top + 'px' );
 			}
 		}
 
