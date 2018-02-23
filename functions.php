@@ -599,8 +599,13 @@ function birdfield_headerslider() {
 			$birdfield_description = get_theme_mod( 'slider_description_' . strval( $birdfield_count ), $birdfield_default_description );
 			$birdfield_link = get_theme_mod( 'slider_link_' . strval( $birdfield_count ), $birdfield_default_link );
 
-			$birdfield_html .= '<div class="slideitem">';
-			$birdfield_html .= '<img src="' .$birdfield_image .'" alt="slide_' .strval( $birdfield_count ) .'">';
+			$birdfield_style = '';
+			if( 1 < $birdfield_count ){
+				$birdfield_style = ' style="display: none;"';
+			}
+
+			$birdfield_html .= '<div class="slideitem"' .$birdfield_style .'>';
+			$birdfield_html .= '<div class="fixedimage"><img src="' .$birdfield_image .'" alt="slide_' .strval( $birdfield_count ) .'"></div>';
 			$birdfield_html .= '<div class="caption">';
 			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong>' .$birdfield_description .'</p>';
 			if( ! empty( $birdfield_link )){
@@ -617,7 +622,7 @@ function birdfield_headerslider() {
 	if ( ! empty( $birdfield_html ) ) {
 ?>
 			<section id="wall">
-				<div class="headerslider">
+				<div class="headerimage slider">
 					<?php echo $birdfield_html ?>
 				</div>
 			</section>

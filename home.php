@@ -15,7 +15,7 @@ $birdfield_has_news = 0; ?>
 		<?php if( ! birdfield_headerslider()): ?>
 			<?php if( ! empty( $birdfarm_header_image )): ?>
 				<section id="wall">
-					<div class="headerimage">
+					<div class="headerimage fixedimage">
 						<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" >
 					</div>
 					<div class='widget-area-header'>

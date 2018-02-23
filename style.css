@@ -1775,12 +1775,12 @@ form input {
 
 /*Hheader Slider
 --------------------------------------------- */
-.home #wall .slider .slideitem,
+.home #wall .sliderm .slideitem,
 .blog #wall .slider .slideitem {
   position: relative;
 }
 
-.home #wall .slider .slideitem .caption,
+.home #wall .sliderm .slideitem .caption,
 .blog #wall .slider .slideitem .caption {
   position: absolute;
   top: 50%;
@@ -1797,7 +1797,7 @@ form input {
   transform: translate(-50%, -50%);
 }
 
-.home #wall .slider .slideitem .caption p,
+.home #wall .sliderm .slideitem .caption p,
 .blog #wall .slider .slideitem .caption p {
   color: #fff;
   margin: 0;
@@ -1806,13 +1806,13 @@ form input {
   margin-bottom: 0.4em;
 }
 
-.home #wall .slider .slideitem .caption p strong,
+.home #wall .sliderm .slideitem .caption p strong,
 .blog #wall .slider .slideitem .caption p strong {
   display: block;
   font-size: 1.8em;
 }
 
-.home #wall .slider .slideitem .caption a,
+.home #wall .sliderm .slideitem .caption a,
 .blog #wall .slider .slideitem .caption a {
   display: inline-block;
   text-align: center;
@@ -1827,21 +1827,21 @@ form input {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.home #wall .slider .slideitem .caption a:hover,
+.home #wall .sliderm .slideitem .caption a:hover,
 .blog #wall .slider .slideitem .caption a:hover {
   background-color: #FFF;
   color: #666;
   text-shadow: none;
 }
 
-.home #wall .slider .slideitem .slick-next,
-.blog #wall .slider .slideitem .slick-next {
+.home #wall .sliderm .slick-next,
+.blog #wall .slider .slick-next {
   z-index: 1;
   right: 0;
 }
 
-.home #wall .slider .slideitem .slick-prev,
-.blog #wall .slider .slideitem .slick-prev {
+.home #wall .sliderm .slick-prev,
+.blog #wall .slider .slick-prev {
   z-index: 1;
   left: 0;
 }

@@ -8,6 +8,10 @@ jQuery(function() {
 		jQuery( "#blog ul li" ).tile( 3 );
 
 		// header sliderer
+		jQuery('.headerimage.slider').on('init',function(){
+			jQuery('.headerimage.slider .slideitem').css({ 'display': 'block'});
+		});
+
 		jQuery('.headerimage.slider').slick({
 			infinite: true,
 			autoplaySpeed: 4000,
@@ -17,7 +21,7 @@ jQuery(function() {
 			autoplay: true,
 		});
 
-		// Browser supports matchMedia
+  		// Browser supports matchMedia
 		if ( window.matchMedia ) {
 			// MediaQueryList
 			var mq = window.matchMedia( "( min-width: 930px )" );
