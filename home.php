@@ -11,9 +11,9 @@ $birdfield_has_news = 0; ?>
 
 <div id="content">
 	<?php if( ! is_paged()): ?>
-		<?php $birdfarm_header_image = get_header_image(); ?>
+		<?php $birdfield_header_image = get_header_image(); ?>
 		<?php if( ! birdfield_headerslider()): ?>
-			<?php if( ! empty( $birdfarm_header_image )): ?>
+			<?php if( ! empty( $birdfield_header_image )): ?>
 				<section id="wall">
 					<div class="headerimage fixedimage">
 						<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" >

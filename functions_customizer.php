@@ -62,7 +62,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	$wp_customize->add_section(
 		'birdfield_slider',
 		array(
-			'title'			=> __(' Header Slider', 'birdfield' ),
+			'title'			=> __('Header Slider', 'birdfield' ),
 			'description'	=> __( 'You can add up to 5 images in the header slider. also you can add title, description, link URL for each image.', 'birdfield' ),
 			'priority'		=> 999,
 		));
@@ -454,7 +454,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	$wp_customize->add_control(
 		'slider_title_5',
 		array(
-			'label'		=> __( 'Title', 'birdfield' ),
+			'label'		=> __( 'Title', 'birdfield' ).' 5',
 			'section'	=> 'birdfield_slider',
 			'type'		=> 'text',
 			'priority'	=> 52
