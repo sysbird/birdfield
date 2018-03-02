@@ -57,18 +57,39 @@ img {
 
 /* 	hero header slideshow
 --------------------------------------------- */
-.slideitem {
-	height: 600px;
+.headerimage {
+	position: relative;
 }
 
 .slideitem {
-	position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .slideitem .fixedimage {
 	position: relative;
-	min-height: 600px;
+	padding-top: 65%;
+	height: 0;
+
+background-size: cover;
+background-position: 50% 50%;
+background-position-y: 50%;
+background-repeat: no-repeat;
+
 }
+
+/*.slideitem .fixedimage:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}*/
 
 .slideitem .caption {
 	position: absolute;
@@ -149,8 +170,7 @@ img {
 	<div id="wall">
 		<div class="headerimage slider">
 			<div class="slideitem">
-				<div class="fixedimage" style="background: url(images/red.jpg) no-repeat fixed center top / cover;">
-				</div>
+				<div class="fixedimage" style="background-image: url(images/red.jpg)"></div>
 				<div class="caption">
 					<h2>混淆街</h2>
 					<p>普及率は9割強だがセットアップ率は保有台数の半数にも満たない</p>
@@ -158,8 +178,7 @@ img {
 				</div>
 			</div>
 			<div class="slideitem">
-				<div class="fixedimage" style="background: url(images/blue.jpg) no-repeat fixed center top / cover;">
-				</div>
+				<div class="fixedimage" style="background-image: url(images/yellow.jpg)"></div>
 				<div class="caption">
 					<h2>輝く夜</h2>
 					<p>現金支払い車はかなりの少数派になっている</p>
@@ -167,8 +186,7 @@ img {
 				</div>
 			</div>
 			<div class="slideitem">
-				<div class="fixedimage" style="background: url(images/yellow.jpg) no-repeat fixed center top / cover;d">
-				</div>
+				<div class="fixedimage" style="background-image: url(images/blue.jpg)"></div>
 				<div class="caption">
 					<h2>追憶と観覧車</h2>
 					<p>ゲートをノンストップで通過できるだけで、それ以外の特典はナシ</p>
@@ -216,7 +234,7 @@ jQuery(function() {
 	jQuery( window ).scroll(function () {
 		// parallax
 		var scrollTop = parseInt( jQuery( this ).scrollTop() );
-		jQuery( '.fixedimage' ).css( 'background-position', 'center ' +scrollTop + 'px' );
+		jQuery( '.fixedimage' ).css( 'background-position-y', 'calc( 50%' + ' + ' + scrollTop + 'px)');
 
 		// mini navigation
 		// mini header with scroll
