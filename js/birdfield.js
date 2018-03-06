@@ -99,29 +99,9 @@ jQuery(function() {
 
 		// Parallax
 		if( jQuery('.wrapper[class*=parallax]').length ){
-			var scrollTop = parseInt( jQuery( this ).scrollTop() );
-			var top = 0;
-
-			if( jQuery('.wrapper[class*=fixed-header]').length ){
-				top = scrollTop;
-				var headerHeight = parseInt( jQuery( '#header' ).height() );
-			}
-			else{
-				var headerHeight = parseInt( jQuery( '#header' ).height() );
-				if(scrollTop > headerHeight){
-					top = scrollTop - headerHeight;
-				}
-			}
-
-			if( jQuery( '.headerslider' ).length ){
-				// headerslider
-				jQuery( '.slick-list img' ).css( 'top', top + 'px' );
-			}
-			else{
-				// headerimage
-				if('absolute' == jQuery('.fixedimage').css('position')){
-				}
-				jQuery( '.fixedimage' ).css( 'top', top + 'px' );
+			var wall_max_height = parseInt( jQuery( '#wall' ).css( 'max-height' ));
+			if( 600 == wall_max_height ){
+				jQuery( '.fixedimage' ).css( 'background-position-y', 'calc( 50%' + ' + ' + scrollTop + 'px)');
 			}
 		}
 

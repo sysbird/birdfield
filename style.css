@@ -1355,16 +1355,14 @@ form input {
   z-index: 1;
 }
 
-.home #wall .headerimage,
-.blog #wall .headerimage {
-  width: 100%;
-  overflow: hidden;
-}
-
-.home #wall .headerimage img,
-.blog #wall .headerimage img {
-  width: 100%;
-  vertical-align: bottom;
+.home #wall .fixedimage,
+.blog #wall .fixedimage {
+  position: relative;
+  padding-top: 70.3125%;
+  height: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .home #wall .widget-area-header,
@@ -1775,12 +1773,12 @@ form input {
 
 /*Hheader Slider
 --------------------------------------------- */
-.home #wall .sliderm .slideitem,
+.home #wall .slider .slideitem,
 .blog #wall .slider .slideitem {
   position: relative;
 }
 
-.home #wall .sliderm .slideitem .caption,
+.home #wall .slider .slideitem .caption,
 .blog #wall .slider .slideitem .caption {
   position: absolute;
   top: 50%;
@@ -1797,7 +1795,7 @@ form input {
   transform: translate(-50%, -50%);
 }
 
-.home #wall .sliderm .slideitem .caption p,
+.home #wall .slider .slideitem .caption p,
 .blog #wall .slider .slideitem .caption p {
   color: #fff;
   margin: 0;
@@ -1806,13 +1804,13 @@ form input {
   margin-bottom: 0.4em;
 }
 
-.home #wall .sliderm .slideitem .caption p strong,
+.home #wall .slider .slideitem .caption p strong,
 .blog #wall .slider .slideitem .caption p strong {
   display: block;
   font-size: 1.8em;
 }
 
-.home #wall .sliderm .slideitem .caption a,
+.home #wall .slider .slideitem .caption a,
 .blog #wall .slider .slideitem .caption a {
   display: inline-block;
   text-align: center;
@@ -1827,20 +1825,20 @@ form input {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.home #wall .sliderm .slideitem .caption a:hover,
+.home #wall .slider .slideitem .caption a:hover,
 .blog #wall .slider .slideitem .caption a:hover {
   background-color: #FFF;
   color: #666;
   text-shadow: none;
 }
 
-.home #wall .sliderm .slick-next,
+.home #wall .slider .slick-next,
 .blog #wall .slider .slick-next {
   z-index: 1;
   right: 0;
 }
 
-.home #wall .sliderm .slick-prev,
+.home #wall .slider .slick-prev,
 .blog #wall .slider .slick-prev {
   z-index: 1;
   left: 0;
@@ -1852,19 +1850,11 @@ form input {
 @media screen and (min-width: 660px) {
   .home #wall,
   .blog #wall {
-    position: relative;
-    min-height: 420px;
-    margin-top: 60px;
-  }
-  .home #wall .fixedimage,
-  .blog #wall .fixedimage {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    max-height: 600px;
   }
   .home #wall .slider .slideitem,
   .blog #wall .slider .slideitem {
-    min-height: 420px;
+    max-height: 600px;
   }
   .home #wall .slider .slideitem .caption,
   .blog #wall .slider .slideitem .caption {
@@ -1873,6 +1863,7 @@ form input {
   }
   .home #wall .widget-area-header,
   .blog #wall .widget-area-header {
+    top: 10%;
     width: 350px;
     height: 350px;
     border-radius: 350px;
@@ -2046,10 +2037,6 @@ form input {
   }
   .thin-navigation #menu-wrapper .menu ul#menu-primary-items > li > ul {
     top: 2.8em;
-  }
-  .home #wall,
-  .blog #wall {
-    min-height: 600px;
   }
   .home #wall .slider .slideitem,
   .blog #wall .slider .slideitem {

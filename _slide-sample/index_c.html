@@ -23,73 +23,50 @@ time, mark, audio, video {
   padding: 0;
 }
 
-#header {
+.wall {
+	height: 0;
+	margin: 0;
 	width: 100%;
-	min-height: 80px;
-	background-color: rgba( 0, 0, 0, 1 );
-	color: #FFF;
-	position: fixed;
-	top: 0;
-	z-index: 4;
-
-	transition-property:min-height;
-	transition-duration:.5s;
-}
-
-#header a {
-	color: #FFF;
-	text-decoration: none;
-}
-
-#header.mini {
-	min-height: 60px;
-	background-color: rgba( 0, 0, 0, 0.85 );
-}
-
-#header.mini #menu-wrapper .menu ul#menu-primary-items > li > a {
-  height: 60px;
-  padding: 20px 0.8em;
-}
-
-img {
-	width: 100%;
-}
-
-/* 	hero header slideshow
---------------------------------------------- */
-.headerimage {
+	padding-top: 60%;
 	position: relative;
+	overflow: hidden;
+}
+
+.headerimage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
 }
 
 .slideitem {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 1.5s;
+}
+
+.slideitem.active {
+	opacity: 1;
 }
 
 .fixedimage {
-	position: relative;
-	padding-top: 70%;
+	position: fixed;
+	padding-top: 60%;
 	height: 0;
+	width: 100%;
 	background-size: cover;
-	background-position: 50% 50%;
-	background-position-y: 50%;
+	background-position: center center;
 	background-repeat: no-repeat;
 }
 
-/*.slideitem .fixedimage:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}*/
-
-.slideitem .caption {
+.caption {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -104,22 +81,22 @@ img {
 	transform: translate(-50%, -50%);
 }
 
-.slideitem .caption h2,
-.slideitem .caption p {
+.caption h2,
+.caption p {
 	color: #fff;
 	margin: 0;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.slideitem .caption h2 {
+.caption h2 {
 	font-size: 7vw;
 }
 
-.slideitem .caption p {
+.caption p {
 	font-size: 3.6vw;
 }
 
-.slideitem .caption a {
+.caption a {
 	display: inline-block;
 	text-align: center;
 	background-color: #FFF;
@@ -133,81 +110,42 @@ img {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.slideitem .caption a:hover {
+.caption a:hover {
 	background-color: transparent;
 	color: #FFF;
 }
 
-.slick-next  {
-	z-index: 1;
-	right: 0;
-}
-
-.slick-prev {
-	z-index: 1;
-	left: 0;
+#content {
+	background-color: #FFF;
 }
 
 </style>
 </head>
-
 <body class="home">
+<div class="wall">
+	<div class="headerimage slider">
+		<div class="slideitem active start">
+			<div class="fixedimage" style="background-image: url(images/red.jpg)"></div>
+			<div class="caption">
+				<h2>混淆街</h2>
+				<p>普及率は9割強だがセットアップ率は保有台数の半数にも満たない</p>
+				<a href="#">詳しく見る</a>
+			</div>
+		</div>
 
-<div class="wrapper fixed-header parallax">
-<header id="header">
-	<div class="container">
-		<div id="branding">
-			<h1 id="site-title">
-			<a href="#" title="sysbird" rel="home">Demo</a>
-		</h1>
+		<div class="slideitem">
+			<div class="fixedimage" style="background-image: url(images/yellow.jpg)"></div>
+			<div class="caption">
+				<h2>輝く夜</h2>
+				<p>現金支払い車はかなりの少数派になっている</p>
+				<a href="#">詳しく見る</a>
+			</div>
 		</div>
 	</div>
-</header>
+</div>
 
 <div id="content">
-	<div id="wall">
-		<div class="headerimage slider">
-			<div class="slideitem">
-				<div class="fixedimage" style="background-image: url(images/red.jpg)"></div>
-				<div class="caption">
-					<h2>混淆街</h2>
-					<p>普及率は9割強だがセットアップ率は保有台数の半数にも満たない</p>
-					<a href="#">詳しく見る</a>
-				</div>
-			</div>
-			<div class="slideitem">
-				<div class="fixedimage" style="background-image: url(images/yellow.jpg)"></div>
-				<div class="caption">
-					<h2>輝く夜</h2>
-					<p>現金支払い車はかなりの少数派になっている</p>
-					<a href="#">詳しく見る</a>
-				</div>
-			</div>
-			<div class="slideitem">
-				<div class="fixedimage" style="background-image: url(images/blue.jpg)"></div>
-				<div class="caption">
-					<h2>追憶と観覧車</h2>
-					<p>ゲートをノンストップで通過できるだけで、それ以外の特典はナシ</p>
-					<a href="#">詳しく見る</a>
-				</div>
-			</div>
-		</div>
-<!--
-		<div class="headerimage">
-			<div class="fixedimage" style="background-image: url(../images/header.jpg)">
-				<div class='widget-area-header'>
-					<div class="widget"><h3>ウィジェットのタイトル</h3>
-						<div class="textwidget"><p>ここには、たったひとつのテキストウィジェットが入ります。たくさん設置しないでね！</p></div>
-					</div>
-					<div class="widget"><h3>ロコいたち</h3></div>
-					<div class="widget"><p>もげじ</p></div>
-				</div>
-			</div>
-		</div>
--->
-	</div>
-
-<h1>background-imageが動かないように見せる</h1>
+<h1>CSSだけでbackground-imageが動かないように見せる</h1>
 
 普及率は9割強だがセットアップ率は保有台数の半数にも満たない<br>
 <br>
@@ -224,45 +162,34 @@ ETCが本格普及を始めたのは、偽造問題などでハイカが廃止�
 そして現在は9割強。すでに普及を促す必要はないと言ってもいいが、いまさら割引を完全になくしてしまうわけにも行かず、以前よりは縮小しつつ、存続している。それでもETCのセットアップ総数は、現在約3300万台。これは、日本の自動車保有台数約8000万台の半数にも満たない。つまり、利用率が9割を超えているのは、高速道路をほぼ使わない、あるいはまったく使わないクルマが相当数存在するということである。<br>
 <br>
 確かに地方の高齢ドライバーなどは、高速道路なんか年に一度くらいしか乗らない、という人も多いはず。そのためにわざわざETC車載器を取り付けてETCカードを作るのは割に合わない。ETC割引は今後も存続するだろうが、現金利用も可としている限り、利用率を100%にするのは不可能だ。<br>
-
-</div>
 </div>
 
 <script type='text/javascript' src='jquery.js?ver=1.12.4'></script>
-<script type='text/javascript' src='slick/slick.min.js'></script>
 <script type='text/javascript'>
 jQuery(function() {
 
 	// hero header slideshow
-	jQuery('.home .slider').slick({
-		dots: true,
-		infinite: true,
-		autoplaySpeed: 3000,
-		speed: 1000,
-		fade: true,
-		cssEase: 'linear',
-		autoplay: true,
-	});
-
-	jQuery( window ).scroll(function () {
-		// parallax
-		var scrollTop = parseInt( jQuery( this ).scrollTop() );
-		jQuery( '.fixedimage' ).css( 'background-position-y','calc( 50%' + ' + ' + scrollTop + 'px)');
-
-		// mini navigation
-		// mini header with scroll
-		var header_clip = jQuery( '#header' ).css( 'clip' );
-		if( -1 == header_clip.indexOf( 'rect' ) ) {
-			if ( scrollTop > 200 ) {
-				jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
-			}
-			else {
-				jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
-			}
+	var birdfield_change_slide = function(){
+		if( 0 < jQuery('.slideitem.start').length ){
+			// now start
+			jQuery( '.slideitem.start' ).removeClass( 'start' );
 		}
-	});
+		else {
+			// change slide
+			var index = jQuery('.slideitem.active').index( '.slideitem' );
+			index++;
+			if( index >= jQuery('.slideitem' ).length ){
+				index = 0;
+			}
 
+			jQuery('.slideitem.active').removeClass( 'active' );
+			jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
+		}
 
+		setTimeout( birdfield_change_slide, 7000 );
+	}
+
+	birdfield_change_slide();
 });
 </script>
 
