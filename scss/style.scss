@@ -29,11 +29,11 @@ $meta-color: #999;
 Font Awesome
 -----------------------------*/
 @font-face {
-  font-family: 'FontAwesome';
-  src: url("font-awesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+	font-family: 'FontAwesome';
+	src: url("font-awesome/fontawesome-webfont.eot?v=4.7.0");
+	src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+	font-weight: normal;
+	font-style: normal; }
 
 @mixin font-awesome( $param, $padding-left:0, $padding-right:0 ) {
 	content: $param;
@@ -539,22 +539,22 @@ body , html {
 	}
 
 	code, kbd, pre, samp {
-	    font-family: monospace,serif;
+		font-family: monospace,serif;
 	}
 
 	hr {
-	    background-color: $border-color;
-	    border: 0 none;
-	    height: 1px;
-	    margin-bottom: 1.6m;
+		background-color: $border-color;
+		border: 0 none;
+		height: 1px;
+		margin-bottom: 1.6m;
 	}
 
 	sup, sub {
-	    font-size: 80%;
-	    height: 0;
-	    line-height: 0;
-	    position: relative;
-	    vertical-align: baseline;
+		font-size: 80%;
+		height: 0;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
 	}
 
 	sub {
@@ -574,8 +574,8 @@ body , html {
 	}
 
 	abbr, acronym {
-    	border-bottom: 1px dotted #666;
-    	cursor: help;
+		border-bottom: 1px dotted #666;
+		cursor: help;
 	}
 	ul,
 	ol {
@@ -680,7 +680,7 @@ a:hover img {
 }
 
 
-/*  Galley
+/* Galley
 -------------------------------------------------------------- */
 .wp-caption,
 .gallery-caption {
@@ -755,7 +755,7 @@ a:hover img {
 	}
 }
 
-/*  Make sure videos and embeds fit their containers
+/* Make sure videos and embeds fit their containers
 -------------------------------------------------------------- */
 embed,
 iframe,
@@ -864,7 +864,7 @@ video {
 			padding-left: 50px;
 		}
 
-		&.bypostauthor .comment-author  {
+		&.bypostauthor .comment-author {
 			color: $header-color;
 		}
 	}
@@ -1101,7 +1101,7 @@ form {
 						color: $header-color;
 						border-radius: 2px;
 					}
-			    }
+				}
 			}
 
 			thead {
@@ -1139,10 +1139,10 @@ form {
 	position: relative;
 
 	label {
-	    display: block;
-	    font-size: 0;
-	    overflow: hidden;
-	    text-indent: -9999px;
+		display: block;
+		font-size: 0;
+		overflow: hidden;
+		text-indent: -9999px;
 	}
 
 	#s {
@@ -1176,60 +1176,6 @@ form {
 --------------------------------------------- */
 .home,
 .blog {
-	#wall {
-		width: 100%;
-		background: #FFF;
-		overflow: hidden;
-		position: relative;
-		z-index: 1;
-
-		.fixedimage {
-			position: relative;
-			padding-top: ( 900 / 1280 ) *100%;
-			height: 0;
-			background-size: cover;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-		}
-
-		.widget-area-header {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			background-color:rgba(255,255,255,0.5);
-			overflow: hidden;
-		}
-
-		.widget {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-right: -50%;
-			padding: 0 5%;
-			@include translate( -50%, -50% );
-
-			&:nth-child(n+2){
-				display: none;
-			}
-
-			h3 {
-				padding: 0.2em 0;
-				margin: 0;
-				border: none;
-				line-height: 1;
-			}
-
-			.textwidget,
-			.textwidget p {
-				line-height: 1.2;
-				margin: 0;
-			}
-		}
-	}
-
 	#content {
 		background: none;
 
@@ -1527,32 +1473,110 @@ form {
 	}
 }
 
-/*Hheader Slider
+/* Home Header
 --------------------------------------------- */
-.home #wall .slider,
-.blog #wall .slider {
- 	.slideitem {
-	 	position: relative;
+#wall {
+	height: 0;
+	margin: 0;
+	width: 100%;
+	padding-top: (900 / 1280) *100%;
+	position: relative;
+	overflow: hidden;
+
+	.headerimage {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		.fixedimage {
+			padding-top: (900 / 1280) *100%;
+			height: 0;
+			width: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.widget-area-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		background-color:rgba( 255, 255, 255, 0.3 );
+		overflow: hidden;
+
+		.widget {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			padding: 0 5%;
+			@include translate( -50%, -50% );
+
+			&:nth-child(n+2){
+				display: none;
+			}
+
+			h3 {
+				padding: 0.2em 0;
+				margin: 0;
+				border: none;
+				line-height: 1;
+				color: #FFF;
+				font-size: 6vw;
+				text-shadow: 1px 1px 5px rgba( 0, 0, 0, 0.5 );
+			}
+
+			.textwidget,
+			.textwidget p {
+				line-height: 1.2;
+				margin: 0;
+				color: #FFF;
+				font-size: 4vw;
+				text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.5 );
+			}
+		}
+	}
+
+	.slideitem {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 0;
+		transition-property: opacity, z-index;
+		transition-duration: 1.5s;
+
+		&.active {
+			opacity: 1;
+			z-index: 1;
+		}
 
 		.caption {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			margin-right: -50%;
-			padding: 0 5%;
-			width:85%;
+			width: 85%;
 			text-align: center;
 			font-size: 5vw;
-			-webkit-transform: translate(-50%, -50%);
-			-moz-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			-o-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
+			-webkit-transform: translate( -50%, -50% );
+			-moz-transform: translate( -50%, -50% );
+			-ms-transform: translate( -50%, -50% );
+			-o-transform: translate( -50%, -50% );
+			transform: translate( -50%, -50% );
 
 			p {
 				color: #fff;
 				margin: 0;
-				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+				text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.5 );
 				line-height: 1.4;
 				margin-bottom: 0.4em;
 
@@ -1572,26 +1596,14 @@ form {
 				padding: 2% 5%;
 				border-radius: 3px;
 				text-decoration: none;
-				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-				box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+				text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.5 );
+				box-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.5 );
 
 				&:hover {
-					background-color: #FFF;
-					color: #666;
-					text-shadow: none;
+					background-color:rgba( 255,255,255,0.3 );
 				}
 			}
 		}
-	}
-
-	.slick-next  {
-		z-index: 1;
-		right: 0;
-	}
-
-	.slick-prev {
-		z-index: 1;
-		left: 0;
 	}
 }
 
@@ -1599,43 +1611,6 @@ form {
 --------------------------------------------- */
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
-
-	.home,
-	.blog {
-		#wall {
-			max-height: 600px;
-
-			.slider {
-				.slideitem {
-					max-height: 600px;
-
-					.caption {
-						font-size: 3.4vw;
-						width: 60%;
-					}
-				}
-			}
-
-			.widget-area-header {
-				top: 10%;
-				width: 350px;
-				height: 350px;
-				border-radius: 350px;
-				text-align: center;
-			}
-
-			.widget {
-				h3 {
-					line-height: 1.2;
-				}
-
-				.textwidget,
-				.textwidget p {
-					line-height: 1.4;
-				}
-			}
-		}
-	}
 
 	.fixed-header {
 		#header {
@@ -1681,6 +1656,42 @@ form {
 		}
 	}
 
+	#wall {
+		.headerimage {
+			.fixedimage {
+				position: fixed;
+			}
+		}
+
+		.widget-area-header {
+			top: 10%;
+			width: 350px;
+			height: 350px;
+			border-radius: 350px;
+			text-align: center;
+
+			.widget {
+				h3 {
+					line-height: 1.2;
+					font-size: 4vw;
+				}
+
+				.textwidget,
+				.textwidget p {
+					line-height: 1.4;
+					font-size: 2.8vw;
+				}
+			}
+		}
+
+		.slideitem {
+			.caption {
+				font-size: 3.4vw;
+				width: 60%;
+			}
+		}
+	}
+
 	body:not(.home) .fixed-header #content {
 		margin-top: 80px;
 	}
@@ -1714,9 +1725,9 @@ form {
 		margin-top: 0;
 		*zoom: 1;
 		&:after {
-		    clear: both;
-   			content: "";
-    		display: block;
+			clear: both;
+				content: "";
+				display: block;
 		}
 
 		.menu {
@@ -1851,26 +1862,7 @@ form {
 
 	.home,
 	.blog {
-		#wall {
-			.slider {
-				.slideitem {
-					min-height: 600px;
-
-					.caption {
-						font-size: 30px;
-						width:600px;
-					}
-				}
-			}
-
-			.widget-area-header {
-				width: 400px;
-				height: 400px;
-				border-radius: 400px;
-			}
-		}
-
-		#content{
+		#content {
 			#news ul.article {
 				li {
 					.entry-header {
@@ -1908,5 +1900,40 @@ form {
 
 	#commentform {
 		padding: 0.8em 1.6em;
+	}
+
+	#wall {
+		padding-top: 650px;
+
+		.headerimage {
+			.fixedimage {
+				padding-top: 650px;
+			}
+		}
+
+		.widget-area-header {
+			width: 420px;
+			height: 420px;
+			border-radius: 420px;
+
+			.widget {
+				h3 {
+					font-size: 2em;
+				}
+
+				.textwidget,
+				.textwidget p {
+					font-size: 1.2em;
+				}
+			}
+
+		}
+
+		.slideitem {
+			.caption {
+				font-size: 30px;
+				width:600px;
+			}
+		}
 	}
 }

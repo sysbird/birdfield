@@ -805,7 +805,7 @@ a:hover img {
   opacity: 0.9;
 }
 
-/*  Galley
+/* Galley
 -------------------------------------------------------------- */
 .wp-caption,
 .gallery-caption {
@@ -882,7 +882,7 @@ a:hover img {
   max-width: 11.11%;
 }
 
-/*  Make sure videos and embeds fit their containers
+/* Make sure videos and embeds fit their containers
 -------------------------------------------------------------- */
 embed,
 iframe,
@@ -1346,72 +1346,6 @@ form input {
 
 /* Home
 --------------------------------------------- */
-.home #wall,
-.blog #wall {
-  width: 100%;
-  background: #FFF;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.home #wall .fixedimage,
-.blog #wall .fixedimage {
-  position: relative;
-  padding-top: 70.3125%;
-  height: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.home #wall .widget-area-header,
-.blog #wall .widget-area-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.5);
-  overflow: hidden;
-}
-
-.home #wall .widget,
-.blog #wall .widget {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  padding: 0 5%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.home #wall .widget:nth-child(n+2),
-.blog #wall .widget:nth-child(n+2) {
-  display: none;
-}
-
-.home #wall .widget h3,
-.blog #wall .widget h3 {
-  padding: 0.2em 0;
-  margin: 0;
-  border: none;
-  line-height: 1;
-}
-
-.home #wall .widget .textwidget,
-.home #wall .widget .textwidget p,
-.blog #wall .widget .textwidget,
-.blog #wall .widget .textwidget p {
-  line-height: 1.2;
-  margin: 0;
-}
-
 .home #content,
 .blog #content {
   background: none;
@@ -1771,20 +1705,103 @@ form input {
   display: none;
 }
 
-/*Hheader Slider
+/* Home Header
 --------------------------------------------- */
-.home #wall .slider .slideitem,
-.blog #wall .slider .slideitem {
+#wall {
+  height: 0;
+  margin: 0;
+  width: 100%;
+  padding-top: 70.3125%;
   position: relative;
+  overflow: hidden;
 }
 
-.home #wall .slider .slideitem .caption,
-.blog #wall .slider .slideitem .caption {
+#wall .headerimage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#wall .headerimage .fixedimage {
+  padding-top: 70.3125%;
+  height: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#wall .widget-area-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+#wall .widget-area-header .widget {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   padding: 0 5%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#wall .widget-area-header .widget:nth-child(n+2) {
+  display: none;
+}
+
+#wall .widget-area-header .widget h3 {
+  padding: 0.2em 0;
+  margin: 0;
+  border: none;
+  line-height: 1;
+  color: #FFF;
+  font-size: 6vw;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#wall .widget-area-header .widget .textwidget,
+#wall .widget-area-header .widget .textwidget p {
+  line-height: 1.2;
+  margin: 0;
+  color: #FFF;
+  font-size: 4vw;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#wall .slideitem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  transition-property: opacity, z-index;
+  transition-duration: 1.5s;
+}
+
+#wall .slideitem.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#wall .slideitem .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
   width: 85%;
   text-align: center;
   font-size: 5vw;
@@ -1795,8 +1812,7 @@ form input {
   transform: translate(-50%, -50%);
 }
 
-.home #wall .slider .slideitem .caption p,
-.blog #wall .slider .slideitem .caption p {
+#wall .slideitem .caption p {
   color: #fff;
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -1804,14 +1820,12 @@ form input {
   margin-bottom: 0.4em;
 }
 
-.home #wall .slider .slideitem .caption p strong,
-.blog #wall .slider .slideitem .caption p strong {
+#wall .slideitem .caption p strong {
   display: block;
   font-size: 1.8em;
 }
 
-.home #wall .slider .slideitem .caption a,
-.blog #wall .slider .slideitem .caption a {
+#wall .slideitem .caption a {
   display: inline-block;
   text-align: center;
   border: solid 2px #FFF;
@@ -1825,60 +1839,14 @@ form input {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.home #wall .slider .slideitem .caption a:hover,
-.blog #wall .slider .slideitem .caption a:hover {
-  background-color: #FFF;
-  color: #666;
-  text-shadow: none;
-}
-
-.home #wall .slider .slick-next,
-.blog #wall .slider .slick-next {
-  z-index: 1;
-  right: 0;
-}
-
-.home #wall .slider .slick-prev,
-.blog #wall .slider .slick-prev {
-  z-index: 1;
-  left: 0;
+#wall .slideitem .caption a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Media queries for responsive design
 --------------------------------------------- */
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
-  .home #wall,
-  .blog #wall {
-    max-height: 600px;
-  }
-  .home #wall .slider .slideitem,
-  .blog #wall .slider .slideitem {
-    max-height: 600px;
-  }
-  .home #wall .slider .slideitem .caption,
-  .blog #wall .slider .slideitem .caption {
-    font-size: 3.4vw;
-    width: 60%;
-  }
-  .home #wall .widget-area-header,
-  .blog #wall .widget-area-header {
-    top: 10%;
-    width: 350px;
-    height: 350px;
-    border-radius: 350px;
-    text-align: center;
-  }
-  .home #wall .widget h3,
-  .blog #wall .widget h3 {
-    line-height: 1.2;
-  }
-  .home #wall .widget .textwidget,
-  .home #wall .widget .textwidget p,
-  .blog #wall .widget .textwidget,
-  .blog #wall .widget .textwidget p {
-    line-height: 1.4;
-  }
   .fixed-header #header {
     position: fixed;
     top: 0;
@@ -1904,6 +1872,29 @@ form input {
   }
   .single #content #nav-below .nav-previous {
     float: right;
+  }
+  #wall .headerimage .fixedimage {
+    position: fixed;
+  }
+  #wall .widget-area-header {
+    top: 10%;
+    width: 350px;
+    height: 350px;
+    border-radius: 350px;
+    text-align: center;
+  }
+  #wall .widget-area-header .widget h3 {
+    line-height: 1.2;
+    font-size: 4vw;
+  }
+  #wall .widget-area-header .widget .textwidget,
+  #wall .widget-area-header .widget .textwidget p {
+    line-height: 1.4;
+    font-size: 2.8vw;
+  }
+  #wall .slideitem .caption {
+    font-size: 3.4vw;
+    width: 60%;
   }
   body:not(.home) .fixed-header #content {
     margin-top: 80px;
@@ -2038,21 +2029,6 @@ form input {
   .thin-navigation #menu-wrapper .menu ul#menu-primary-items > li > ul {
     top: 2.8em;
   }
-  .home #wall .slider .slideitem,
-  .blog #wall .slider .slideitem {
-    min-height: 600px;
-  }
-  .home #wall .slider .slideitem .caption,
-  .blog #wall .slider .slideitem .caption {
-    font-size: 30px;
-    width: 600px;
-  }
-  .home #wall .widget-area-header,
-  .blog #wall .widget-area-header {
-    width: 400px;
-    height: 400px;
-    border-radius: 400px;
-  }
   .home #content #news ul.article li .entry-header .postdate,
   .blog #content #news ul.article li .entry-header .postdate {
     width: 10em;
@@ -2080,5 +2056,27 @@ form input {
   }
   #commentform {
     padding: 0.8em 1.6em;
+  }
+  #wall {
+    padding-top: 650px;
+  }
+  #wall .headerimage .fixedimage {
+    padding-top: 650px;
+  }
+  #wall .widget-area-header {
+    width: 420px;
+    height: 420px;
+    border-radius: 420px;
+  }
+  #wall .widget-area-header .widget h3 {
+    font-size: 2em;
+  }
+  #wall .widget-area-header .widget .textwidget,
+  #wall .widget-area-header .widget .textwidget p {
+    font-size: 1.2em;
+  }
+  #wall .slideitem .caption {
+    font-size: 30px;
+    width: 600px;
   }
 }

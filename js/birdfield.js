@@ -7,21 +7,7 @@ jQuery(function() {
 		// home grid
 		jQuery( "#blog ul li" ).tile( 3 );
 
-		// header sliderer
-		jQuery('.headerimage.slider').on('init',function(){
-			jQuery('.headerimage.slider .slideitem').css({ 'display': 'block'});
-		});
-
-		jQuery('.headerimage.slider').slick({
-			infinite: true,
-			autoplaySpeed: 4000,
-			speed: 1000,
-			fade: true,
-			cssEase: 'linear',
-			autoplay: true,
-		});
-
-  		// Browser supports matchMedia
+		// Browser supports matchMedia
 		if ( window.matchMedia ) {
 			// MediaQueryList
 			var mq = window.matchMedia( "( min-width: 930px )" );
@@ -97,14 +83,6 @@ jQuery(function() {
 		var scrollTop = parseInt( jQuery( this ).scrollTop() );
 		if ( scrollTop > 800 ) totop.fadeIn(); else totop.fadeOut();
 
-		// Parallax
-		if( jQuery('.wrapper[class*=parallax]').length ){
-			var wall_max_height = parseInt( jQuery( '#wall' ).css( 'max-height' ));
-			if( 600 == wall_max_height ){
-				jQuery( '.fixedimage' ).css( 'background-position-y', 'calc( 50%' + ' + ' + scrollTop + 'px)');
-			}
-		}
-
 		// mini header with scroll
 		var header_clip = jQuery( '#header' ).css( 'clip' );
 		if( -1 == header_clip.indexOf( 'rect' ) ) {
@@ -116,6 +94,28 @@ jQuery(function() {
 			}
 		}
 	});
+
+	// hero header slideshow
+	var birdfield_Slider = function(){
+		if( 0 < jQuery('.slideitem.start').length ){
+			// now start
+			jQuery( '.slideitem.start' ).removeClass( 'start' );
+		}
+		else {
+			// change slide
+			var index = jQuery('.slideitem.active').index( '.slideitem' );
+			index++;
+			if( index >= jQuery('.slideitem' ).length ){
+				index = 0;
+			}
+
+			jQuery('.slideitem.active').removeClass( 'active' );
+			jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
+		}
+
+		setTimeout( birdfield_Slider, 7000 );
+	}
+	birdfield_Slider();
 
 	// back to pagetop
 	totop.click( function () {
