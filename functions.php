@@ -53,10 +53,6 @@ function birdfield_wrapper_class() {
 		$birdfield_class .= ' fixed-header';
 	}
 
-	if( get_theme_mod( 'birdfield_parallax', true ) ){
-		$birdfield_class .= ' parallax';
-	}
-
 	if ( 'blank' == get_header_textcolor() ) {
 		$birdfield_class .= ' no-title';
 	}
@@ -284,21 +280,6 @@ function birdfield_customize( $wp_customize ) {
 			'section'	=> 'colors',
 			'settings'	=> 'birdfield_header_color',
 		)));
-
-	// Parallax Header Image
-	$wp_customize->add_setting( 'birdfield_parallax',
-		array(
-			'default'  => true,
-			'sanitize_callback' => 'birdfield_sanitize_checkbox',
-		));
-
-	$wp_customize->add_control( 'birdfield_parallax',
-		array(
-			'label'		=> __( 'Display Parallax', 'birdfield' ),
-			'section'	=> 'header_image',
-			'type'		=> 'checkbox',
-			'settings'	=> 'birdfield_parallax',
-		));
 
 	// Fixed Menu
 	$wp_customize->add_setting( 'birdfield_fixedheader',
@@ -576,8 +557,13 @@ function birdfield_headerslider() {
 		return false;
 	}
 
-	if( !get_theme_mod( 'birdfield_useslider', false ) ){
+	if( !get_theme_mod( 'use_slider', false ) ){
 		return false;
+	}
+
+	$birdfield_interval = get_theme_mod( 'slide_interval', 7000 );
+	if( 0 == $birdfield_interval){
+		$birdfield_interval = 7000;
 	}
 
 	$birdfield_html = '';
@@ -623,7 +609,7 @@ function birdfield_headerslider() {
 	if ( ! empty( $birdfield_html ) ) {
 ?>
 			<section id="wall">
-				<div class="headerimage slider">
+				<div class="headerimage slider" data-interval="<?php echo $birdfield_interval; ?>">
 					<?php echo $birdfield_html ?>
 				</div>
 			</section>

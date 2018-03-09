@@ -93,28 +93,19 @@ body {
 
 /* Adjust footer
 --------------------------------------------- */
-$footer-height: 100px;
-body , html {
-	height: 100%;
+html, body {
+	margin: 0;
+	padding: 0;
 }
 
 .wrapper {
-	width: 100%;
-	position: relative;
-	height: auto !important;
-	height: 100%;
-	min-height: 100%;
-	}
-
-#content {
-	padding-bottom: $footer-height;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
 }
 
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: $footer-height;
+#content {
+	flex-grow: 1;
 }
 
 /* Wrapper
@@ -946,6 +937,8 @@ form {
 #footer {
 	background: $header-color;
 	color: #FFF;
+	position: relative;
+	z-index: 1;
 
 	a {
 		color: #FFF;

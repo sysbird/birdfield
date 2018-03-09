@@ -59,6 +59,13 @@ function birdfield_customize_headerslider( $wp_customize ) {
 			));
 	}
 
+	$wp_customize->selective_refresh->add_partial( 'slide_interval',
+		array( 'selector'		=> '.slide-interval',
+			'render_callback'	=> function( $partial = null, $id = '' ) {
+				return get_theme_mod( $partial->id, 7000 );
+			}
+		));
+
 	// separation
 	class birdfield_Info extends WP_Customize_Control {
 		public $type = 'info';
@@ -81,18 +88,34 @@ function birdfield_customize_headerslider( $wp_customize ) {
 		));
 
 	// use slider
-	$wp_customize->add_setting( 'birdfield_useslider',
+	$wp_customize->add_setting( 'use_slider',
 		array(
 			'default'  => false,
 			'sanitize_callback' => 'birdfield_sanitize_checkbox',
 		));
 
-	$wp_customize->add_control( 'birdfield_useslider',
+	$wp_customize->add_control( 'use_slider',
 		array(
 			'label'		=> __( 'Use Header Slider', 'birdfield' ),
 			'section' => 'birdfield_slider',
 			'type'		=> 'checkbox',
-			'settings'	=> 'birdfield_useslider',
+			'settings'	=> 'use_slider',
+		));
+
+	// Interval
+	$wp_customize->add_setting( 'slide_interval',
+		array(
+			'default'  => 7000,
+			'sanitize_callback' => 'absint',
+			'transport'			=> 'postMessage'
+		));
+
+	$wp_customize->add_control( 'slide_interval',
+		array(
+			'label'		=> __( 'Slide Interval (1/1000 second)', 'birdfield' ),
+			'section' => 'birdfield_slider',
+			'type'		=> 'text',
+			'settings'	=> 'slide_interval',
 		));
 
 	// Slider 1 - 5
@@ -202,7 +225,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 			array(
 				'label' => __( 'Link URL', 'birdfield' ) .' ' .strval( $birdfield_count ),
 				'section' => 'birdfield_slider',
-				'type' => 'text',
+				'type' => 'url',
 				'priority' => ( $birdfield_count *10 ) + 4
 			));
 	}

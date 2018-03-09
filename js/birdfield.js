@@ -2,8 +2,6 @@
 // File birdfield.js.
 jQuery(function() {
 
-	var headerimage_y = 0;
-
 	jQuery( window ).load(function() {
 
 		// home grid
@@ -17,9 +15,11 @@ jQuery(function() {
 			// MediaQueryListListener
 			var birdfieldHeightCheck = function ( mq ) {
 				if ( mq.matches ) {
+					// tile for home
 					jQuery( "#blog ul li" ).tile(3);
 				}
 				else {
+					// cansel
 					jQuery( '#blog ul li' ).css( 'height', 'auto' );
 				}
 			};
@@ -41,20 +41,13 @@ jQuery(function() {
 			gallery_columns = String(gallery_class.match( /gallery-columns-\d/ ));
 			gallery_columns = gallery_columns.replace( 'gallery-columns-', '' );
 				jQuery( this ).find( '.gallery-item').tile( parseInt( gallery_columns ));
-		});
+			});
 
-		// Masonry for Footer
+		// Masonry for footer widget area
 		jQuery( '#widget-area .container' ).masonry({
-			itemSelector: '.widget',
-			isAnimated: true
-		});
-
-		// Fixed Footer
-		var widgetArea = jQuery( '#widget-area' ).height();
-		var footerHeight = jQuery( '#footer .site-title' ).innerHeight();
-		var height = parseInt( widgetArea ) + parseInt( footerHeight );
-		jQuery('#content').css('padding-bottom', height + 'px' );
-		jQuery('#footer').css('height', height + 'px' );
+				itemSelector: '.widget',
+				isAnimated: true
+			});
 	});
 
 	// Navigation for mobile
@@ -62,9 +55,6 @@ jQuery(function() {
 		jQuery( "#menu-primary-items" ).slideToggle();
 		jQuery( this ).toggleClass( "current" );
 	});
-
-	// Fixed Navigation
-	birdfield_AdjustHeader();
 
 	// Window Resize
 	var timer = false;
@@ -76,6 +66,7 @@ jQuery(function() {
 			birdfield_AdjustHeader();
 		}, 200);
 	});
+	birdfield_AdjustHeader();
 
 	// Windows Scroll
 	var totop = jQuery( '#back-top' );
@@ -97,8 +88,8 @@ jQuery(function() {
 		}
 	});
 
-	// hero header slideshow
-	if( 1 < jQuery('body.home .slideitem').length ){
+	// header slider
+	if( 1 < jQuery( 'body.home .slideitem' ).length ){
 		var birdfield_Slider = function(){
 			if( 0 < jQuery('.slideitem.start').length ){
 				// now start
@@ -116,7 +107,8 @@ jQuery(function() {
 				jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
 			}
 
-			setTimeout( birdfield_Slider, 7000 );
+			var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
+			setTimeout( birdfield_Slider, birdfield_interval );
 		}
 		birdfield_Slider();
 	}
@@ -135,5 +127,8 @@ function birdfield_AdjustHeader() {
 	if( 80 < headerHeight ){
 		// Long Navigation
 		jQuery( '.wrapper' ).addClass( 'thin-navigation' );
+	}
+	else{
+		jQuery( '.wrapper' ).removeClass( 'thin-navigation' );
 	}
 }
