@@ -224,12 +224,8 @@ function birdfield_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_style( 'birdfield_slick', get_template_directory_uri().'/js/slick/slick.css' );
-	wp_enqueue_style( 'birdfield_slick_theme', get_template_directory_uri().'/js/slick/slick-theme.css' );
-
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '1.1.2' );
-	wp_enqueue_script( 'jqueryslick', get_template_directory_uri() .'/js/slick/slick.min.js', 'jquery', '1.8.0' );
 	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.10' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
@@ -323,7 +319,7 @@ function birdfield_customize( $wp_customize ) {
 	$wp_customize->add_section( 'birdfield_customize',
 		array(
 			'title'		=> __( 'Footer', 'birdfield' ),
-			'priority'	=> 999,
+			'priority'	=> 61,
 		));
 
 	// Display Copyright
@@ -580,8 +576,12 @@ function birdfield_headerslider() {
 		return false;
 	}
 
+	if( !get_theme_mod( 'birdfield_useslider', false ) ){
+		return false;
+	}
+
 	$birdfield_html = '';
-	for( $birdfield_count = 1; $birdfield_count < 5; $birdfield_count++ ) {
+	for( $birdfield_count = 1; $birdfield_count <= 5; $birdfield_count++ ) {
 		$birdfield_default_image = '';
 		$birdfield_default_title = '';
 		$birdfield_default_description = '';

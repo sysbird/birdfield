@@ -1,3 +1,5 @@
+////////////////////////////////////////
+// File birdfield.js.
 jQuery(function() {
 
 	var headerimage_y = 0;
@@ -96,26 +98,28 @@ jQuery(function() {
 	});
 
 	// hero header slideshow
-	var birdfield_Slider = function(){
-		if( 0 < jQuery('.slideitem.start').length ){
-			// now start
-			jQuery( '.slideitem.start' ).removeClass( 'start' );
-		}
-		else {
-			// change slide
-			var index = jQuery('.slideitem.active').index( '.slideitem' );
-			index++;
-			if( index >= jQuery('.slideitem' ).length ){
-				index = 0;
+	if( 1 < jQuery('body.home .slideitem').length ){
+		var birdfield_Slider = function(){
+			if( 0 < jQuery('.slideitem.start').length ){
+				// now start
+				jQuery( '.slideitem.start' ).removeClass( 'start' );
+			}
+			else {
+				// change slide
+				var index = jQuery('.slideitem.active').index( '.slideitem' );
+				index++;
+				if( index >= jQuery('.slideitem' ).length ){
+					index = 0;
+				}
+
+				jQuery('.slideitem.active').removeClass( 'active' );
+				jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
 			}
 
-			jQuery('.slideitem.active').removeClass( 'active' );
-			jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
+			setTimeout( birdfield_Slider, 7000 );
 		}
-
-		setTimeout( birdfield_Slider, 7000 );
+		birdfield_Slider();
 	}
-	birdfield_Slider();
 
 	// back to pagetop
 	totop.click( function () {
