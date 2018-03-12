@@ -2,7 +2,7 @@
 /*
 Theme Name: BirdFIELD
 Theme URI: http://www.sysbird.jp/birdfirld-theme/
-Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
+Description: BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the header image.
 Author: Sysbird
 Author URI: https://profiles.wordpress.org/sysbird/
 Version: 1.10
@@ -870,7 +870,7 @@ a:hover img {
   max-width: 12.5%;
 }
 
-.gallery.gallery--9 .gallery-item {
+.gallery.gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
@@ -1867,9 +1867,6 @@ form input {
   .single #content #nav-below .nav-previous {
     float: right;
   }
-  #wall .headerimage .fixedimage {
-    position: fixed;
-  }
   #wall .widget-area-header {
     top: 10%;
     width: 350px;
@@ -1890,8 +1887,14 @@ form input {
     font-size: 3.4vw;
     width: 60%;
   }
+  .fixed-header #wall .headerimage .fixedimage {
+    position: fixed;
+  }
   body:not(.home) .fixed-header #content {
     margin-top: 80px;
+  }
+  .admin-bar .fixed-header #header {
+    top: 32px;
   }
 }
 

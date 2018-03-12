@@ -300,7 +300,7 @@ function birdfield_customize( $wp_customize ) {
 	$wp_customize->add_section( 'birdfield_customize',
 		array(
 			'title'		=> __( 'Footer', 'birdfield' ),
-			'priority'	=> 61,
+			'priority'	=> 62,
 		));
 
 	// Display Copyright
@@ -604,7 +604,7 @@ function birdfield_headerslider() {
 		else{
 			break;
 		}
-	}
+		}
 
 	if ( ! empty( $birdfield_html ) ) {
 ?>

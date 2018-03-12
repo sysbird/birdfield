@@ -1,4 +1,4 @@
-# Translation of the WordPress theme BirdFIELD 1.09 by sysbird
+# Translation of the WordPress theme BirdFIELD 1.10 by sysbird
 # Copyright (C) Sysbird
 # This file is distributed under the same license as the BirdFIELD package.
 # FIRST AUTHOR <sysbird@gmail.com>, 2014.
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BirdFIELD 1.08\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2015-09-09 00:00+0200\n"
+"POT-Creation-Date: 2017-03-12 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -20,48 +20,10 @@ msgid "Error 404 - Not Found"
 msgstr ""
 
 #: 404.php:20
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: archive.php:18
-msgid "Category Archives: %s"
-msgstr ""
-
-#: archive.php:20
-msgid "Tag Archives: %s"
-msgstr ""
-
-#: archive.php:24
-msgid "Daily Archives: %s"
-msgstr ""
-
-#: archive.php:27
-msgid "Monthly Archives: %s"
-msgstr ""
-
-#: archive.php:27
-msgid "F, Y"
-msgstr ""
-
-#: archive.php:30
-msgid "Yearly Archives: %s"
-msgstr ""
-
-#: archive.php:30
-msgid "Y"
-msgstr ""
-
-#: archive.php:33
-msgid "Author Archives: %s"
-msgstr ""
-
-#: archive.php:36
-msgid "Blog Archives"
-msgstr ""
-
-#: archive.php:57
+#: archive.php:40
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
@@ -78,7 +40,7 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: content-home.php:12 content.php:12 news-content.php:22
+#: content.php:12 content-home.php:12 news-content.php:22
 msgid "Permalink to %s"
 msgstr ""
 
@@ -110,59 +72,120 @@ msgstr ""
 msgid "Go Top"
 msgstr ""
 
-#: functions.php:22
+#: functions.php:25
 msgid "Widget Area for header"
 msgstr ""
 
-#: functions.php:24
+#: functions.php:27
 msgid "One text widget for header"
 msgstr ""
 
-#: functions.php:33 functions.php:35
+#: functions.php:35 functions.php:37
 msgid "Widget Area for footer"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:141
 msgid "Navigation Menu"
 msgstr ""
 
-#: functions.php:341
+#: functions.php:251
 msgid "Text Color"
 msgstr ""
 
-#: functions.php:353
+#: functions.php:265
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:365
+#: functions.php:279
 msgid "Header, Footer Background Color"
 msgstr ""
 
-#: functions.php:377
-msgid "Display Parallax"
-msgstr ""
-
-#: functions.php:390
+#: functions.php:293
 msgid "Fixed Header"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:302
 msgid "Footer"
 msgstr ""
 
-#: functions.php:409
+#: functions.php:315
 msgid "Display Copyright"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:330
 msgid "Display Credit"
 msgstr ""
 
-#: functions.php:444
+#: functions.php:485
 msgid "Continue reading"
 msgstr ""
 
-#: home.php:34
+#: functions.php:578 functions_customizer.php:32 functions_customizer.php:185
+msgid "Hello world!"
+msgstr ""
+
+#: functions.php:579 functions_customizer.php:44 functions_customizer.php:206
+msgid "Begin your website."
+msgstr ""
+
+#: functions.php:599
+msgid "More"
+msgstr ""
+
+#: functions_customizer.php:85
+msgid "Header Slider"
+msgstr "ヘッダースライダー"
+msgstr ""
+
+#: functions_customizer.php:86
+msgid "You can add up to 5 images in the header slider. also you can add title, description, link URL for each image."
+msgstr ""
+
+#: functions_customizer.php:99
+msgid "Use Header Slider"
+msgstr ""
+
+#: functions_customizer.php:115
+msgid "Slide Interval (1/1000 second)"
+msgstr ""
+
+#: functions_customizer.php:134
+msgid "1st slide"
+msgstr ""
+
+#: functions_customizer.php:137
+msgid "2nd slide"
+msgstr ""
+
+#: functions_customizer.php:140
+msgid "3rd slide"
+msgstr ""
+
+#: functions_customizer.php:143
+msgid "4th slide"
+msgstr ""
+
+#: functions_customizer.php:146
+msgid "5th slide"
+msgstr ""
+
+#: functions_customizer.php:175
+msgid "Upload image"
+msgstr ""
+
+#: functions_customizer.php:197
+msgid "Title"
+msgstr ""
+
+#: functions_customizer.php:219
+msgid "Description"
+msgstr ""
+
+#: functions_customizer.php:241
+msgid "Link URL"
+msgstr ""
+
+#: home.php:38
 msgid "RECENT"
 msgstr ""
 
@@ -191,10 +214,5 @@ msgid "Search..."
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"BirdFIELD is a responsive web design theme. Feature fullscreen and parallax "
-"custom image, and fixed header. The homepage displays with tagged news and "
-"the grid posts. You can choose the text color, link color, header background "
-"color by theme options."
+msgid "BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the header image."
 msgstr ""
-""

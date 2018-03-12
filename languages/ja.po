@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BirdFIELD 1.09 ja\n"
+"Project-Id-Version: BirdFIELD 1.10 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
 "POT-Creation-Date: 2016-03-19 00:00+0300\n"
-"PO-Revision-Date: 2018-02-26 19:17+0900\n"
+"PO-Revision-Date: 2018-03-12 17:41+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,43 +21,7 @@ msgstr "エラー404 - ページが見つかりませんでした"
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "お探しのページが見つかりませんでした。検索してみてください。"
 
-#: archive.php:18
-msgid "Category Archives: %s"
-msgstr "「%s」カテゴリーの一覧"
-
-#: archive.php:20
-msgid "Tag Archives: %s"
-msgstr "「%s」に関する一覧"
-
-#: archive.php:24
-msgid "Daily Archives: %s"
-msgstr "%s の一覧"
-
-#: archive.php:27
-msgid "Monthly Archives: %s"
-msgstr "%s の一覧"
-
-#: archive.php:27
-msgid "F, Y"
-msgstr "Y年n月"
-
-#: archive.php:30
-msgid "Yearly Archives: %s"
-msgstr "%s の一覧"
-
-#: archive.php:30
-msgid "Y"
-msgstr "Y年"
-
-#: archive.php:33
-msgid "Author Archives: %s"
-msgstr "%s による投稿"
-
-#: archive.php:36
-msgid "Blog Archives"
-msgstr "アーカイブ"
-
-#: archive.php:57
+#: archive.php:40
 msgid "Sorry, no posts matched your criteria."
 msgstr "投稿が見つかりません。"
 
@@ -74,7 +38,7 @@ msgstr "古いコメント"
 msgid "Newer Comments"
 msgstr "新しいコメント"
 
-#: content-home.php:12 content.php:12 news-content.php:22
+#: content.php:12 content-home.php:12 news-content.php:22
 msgid "Permalink to %s"
 msgstr "%sへのリンク"
 
@@ -106,123 +70,119 @@ msgstr "BirdFIELD theme by %sSysbird%s"
 msgid "Go Top"
 msgstr "ページトップへ"
 
-#: functions.php:22
+#: functions.php:25
 msgid "Widget Area for header"
 msgstr "ウィジェットエリアヘッダー"
 
-#: functions.php:24
+#: functions.php:27
 msgid "One text widget for header"
 msgstr "ヘッダーに設置するひとつのテキストウィジェット"
 
-#: functions.php:33 functions.php:35
+#: functions.php:35 functions.php:37
 msgid "Widget Area for footer"
 msgstr "ウィジェットエリアフッター"
 
-#: functions.php:235
+#: functions.php:141
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:341
+#: functions.php:251
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:353
+#: functions.php:265
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:365
+#: functions.php:279
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:377
-msgid "Display Parallax"
-msgstr "パララックス表示"
-
-#: functions.php:390
+#: functions.php:293
 msgid "Fixed Header"
 msgstr "ヘッダーを固定表示"
 
-#: functions.php:398
+#: functions.php:302
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:409
+#: functions.php:315
 msgid "Display Copyright"
 msgstr "コピーライトを表示"
 
-#: functions.php:422
+#: functions.php:330
 msgid "Display Credit"
 msgstr "クレジットを表示"
 
-#: functions.php:508
+#: functions.php:485
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: functions.php:592 functions_customizer.php:20 functions_customizer.php:109
+#: functions.php:578 functions_customizer.php:32 functions_customizer.php:185
 msgid "Hello world!"
 msgstr "ようこそ！"
 
-#: functions.php:593 functions_customizer.php:31 functions_customizer.php:125
+#: functions.php:579 functions_customizer.php:44 functions_customizer.php:206
 msgid "Begin your website."
 msgstr "Webサイトを始めましょう。"
 
-#: functions.php:613
+#: functions.php:599
 msgid "More"
 msgstr "詳しくみる"
 
-#: functions_customizer.php:65
+#: functions_customizer.php:85
 msgid "Header Slider"
 msgstr "ヘッダースライダー"
 
-#: functions_customizer.php:66
+#: functions_customizer.php:86
 msgid "You can add up to 5 images in the header slider. also you can add title, description, link URL for each image."
-msgstr "ヘッダーにスライダーを設定できます。5つまでのイメージとタイトル、説明、リンクURLを設定することができます。"
+msgstr "ヘッダーにスライダーを設定できます。5つまでのイメージとタイトル、説明、リンクURLを追加することができます。"
 
-#: functions_customizer.php:83
+#: functions_customizer.php:99
+msgid "Use Header Slider"
+msgstr "ヘッダースライダーを有効にする"
+
+#: functions_customizer.php:115
+msgid "Slide Interval (1/1000 second)"
+msgstr "スライドの間隔 (1/1000 秒)"
+
+#: functions_customizer.php:134
 msgid "1st slide"
 msgstr "1つめのスライド"
 
-#: functions_customizer.php:99 functions_customizer.php:184
-#: functions_customizer.php:269 functions_customizer.php:354
-#: functions_customizer.php:439
-msgid "Upload image"
-msgstr "画像をアップロード"
-
-#: functions_customizer.php:116 functions_customizer.php:202
-#: functions_customizer.php:287 functions_customizer.php:372
-#: functions_customizer.php:457
-msgid "Title"
-msgstr "タイトル"
-
-#: functions_customizer.php:133 functions_customizer.php:219
-#: functions_customizer.php:304 functions_customizer.php:389
-#: functions_customizer.php:474
-msgid "Description"
-msgstr "説明"
-
-#: functions_customizer.php:150 functions_customizer.php:236
-#: functions_customizer.php:321 functions_customizer.php:406
-#: functions_customizer.php:491
-msgid "Link URL"
-msgstr "リンクURL"
-
-#: functions_customizer.php:168
+#: functions_customizer.php:137
 msgid "2nd slide"
 msgstr "2つめのスライド"
 
-#: functions_customizer.php:253
+#: functions_customizer.php:140
 msgid "3rd slide"
 msgstr "3つめのスライド"
 
-#: functions_customizer.php:338
+#: functions_customizer.php:143
 msgid "4th slide"
 msgstr "4つめのスライド"
 
-#: functions_customizer.php:423
+#: functions_customizer.php:146
 msgid "5th slide"
 msgstr "5つめのスライド"
 
-#: home.php:34
+#: functions_customizer.php:175
+msgid "Upload image"
+msgstr "画像をアップロード"
+
+#: functions_customizer.php:197
+msgid "Title"
+msgstr "タイトル"
+
+#: functions_customizer.php:219
+msgid "Description"
+msgstr "説明"
+
+#: functions_customizer.php:241
+msgid "Link URL"
+msgstr "リンクURL"
+
+#: home.php:38
 msgid "RECENT"
 msgstr "新着"
 
@@ -251,5 +211,5 @@ msgid "Search..."
 msgstr "検索…"
 
 #. Description of the plugin/theme
-msgid "BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options."
-msgstr "BirdFIELDは、レスポンシブWebデザインのWordPressテーマです。カスタムヘッダーの背景画像をパララックス効果で表示します。newsとタグ付けされた投稿を、トップページの「お知らせ」として表示します。その他の投稿一覧をグリッド表示します。テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選択することができます。"
+msgid "BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the header image."
+msgstr "BirdFIELDは、レスポンシブWebデザインのWordPressテーマです。カスタムヘッダー画像をパララックス効果で表示します。newsとタグ付けされた投稿を、トップページの「お知らせ」として表示します。その他の投稿一覧をグリッド表示します。テーマカスタマイズではテキストの色、リンクの色、ヘッダーとフッター背景色を選択することができます。ヘッダー画像にスライダーを追加することもできます。"

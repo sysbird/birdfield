@@ -1,5 +1,5 @@
 == Description ==
-BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
+BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the header image.
 
 
 === Tags ===
@@ -18,12 +18,13 @@ The Theme has customizable header and footer.
 You can upload the header image by custom-header, and set the Widget Area for header.
 When the posts are tagged with "news", display NEWS area on homepage.
 
+
 == Theme Customize ==
 Text Color: set at Colors section.
 Link Color: set at Colors section.
 Header, Footer Background Color: set at Colors section.
-Parallax Header Image: set at Header Image section.
 Fixed Menu: set at Site Identity section.
+Header Slider: set 5 images at Header Slider section.
 Display Copyright: set at Footer section.
 Display Credit: set at Footer section.
 
@@ -61,7 +62,8 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.10
-Working 2017-12-27
+* fix the WordPress 4.9.
+* add Header Slider in theme customize.
 
 v1.09
 * bug fix for title-tag.

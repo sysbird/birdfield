@@ -17,7 +17,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 				'render_callback'	=> function( $partial = null, $id = '' ) {
 					$birdfield_default_text = '';
 					if( 1 == $partial->id ){
-						$birdfield_default_text = __( 'Hello world!','birdfield' );
+						$birdfield_default_text = get_template_directory_uri() . '/images/header.jpg';
 					}
 
 					return get_theme_mod( $partial->id, $birdfield_default_text );
@@ -84,7 +84,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 		array(
 			'title'			=> __('Header Slider', 'birdfield' ),
 			'description'	=> __( 'You can add up to 5 images in the header slider. also you can add title, description, link URL for each image.', 'birdfield' ),
-			'priority'		=> 60,
+			'priority'		=> 61,
 		));
 
 	// use slider
@@ -119,8 +119,6 @@ function birdfield_customize_headerslider( $wp_customize ) {
 		));
 
 	// Slider 1 - 5
-	$labels = array( "1st slide", "2nd slide", "3rd slide", "4th slide", '5th slide' );
-
 	for( $birdfield_count = 1; $birdfield_count <= 5; $birdfield_count++ ) {
 
 		// Label
@@ -131,11 +129,28 @@ function birdfield_customize_headerslider( $wp_customize ) {
 				'sanitize_callback'	=> 'esc_attr',
 			));
 
+		$birdfield_label = '';
+		if( 1 == $birdfield_count ){
+			$birdfield_label = __( '1st slide', 'birdfield' );
+		}
+		else if( 2 == $birdfield_count ){
+			$birdfield_label = __( '2nd slide', 'birdfield' );
+		}
+		else if( 3 == $birdfield_count ){
+			$birdfield_label = __( '3rd slide', 'birdfield' );
+		}
+		else if( 4 == $birdfield_count ){
+			$birdfield_label = __( '4th slide', 'birdfield' );
+		}
+		else if( 5 == $birdfield_count ){
+			$birdfield_label = __( '5th slide', 'birdfield' );
+		}
+
 		$wp_customize->add_control(
 			new birdfield_Info( $wp_customize,
 				's' .strval( $birdfield_count ),
 				array(
-					'label' => __( $labels[ $birdfield_count -1 ], 'birdfield' ),
+					'label' => $birdfield_label,
 					'section' => 'birdfield_slider',
 					'settings' => 'birdfield_options[info]',
 					'priority' => ( $birdfield_count *10 ),
