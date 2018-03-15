@@ -591,10 +591,10 @@ function birdfield_headerslider() {
 				$birdfield_class = ' active start';
 			}
 
-			$birdfield_html .= '<div class="slideitem' .$birdfield_class .'">';
+			$birdfield_html .= '<div class="slideitem' .$birdfield_class .'" id="slideitem_' .$birdfield_count .'">';
 			$birdfield_html .= '<div class="fixedimage" style="background-image: url(' .$birdfield_image .')"></div>';
 			$birdfield_html .= '<div class="caption">';
-			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong>' .$birdfield_description .'</p>';
+			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong><span>' .$birdfield_description .'</span></p>';
 			if( ! empty( $birdfield_link )){
 				$birdfield_html .= '<a href="' .$birdfield_link .'">' .__( 'More', 'birdfield' ) .'</a>';
 			}
@@ -604,7 +604,7 @@ function birdfield_headerslider() {
 		else{
 			break;
 		}
-		}
+	}
 
 	if ( ! empty( $birdfield_html ) ) {
 ?>

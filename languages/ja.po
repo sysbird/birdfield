@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BirdFIELD 1.10 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
 "POT-Creation-Date: 2016-03-19 00:00+0300\n"
-"PO-Revision-Date: 2018-03-12 17:41+0900\n"
+"PO-Revision-Date: 2018-03-15 19:02+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -118,11 +118,11 @@ msgstr "クレジットを表示"
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: functions.php:578 functions_customizer.php:32 functions_customizer.php:185
+#: functions.php:578 functions_customizer.php:152
 msgid "Hello world!"
 msgstr "ようこそ！"
 
-#: functions.php:579 functions_customizer.php:44 functions_customizer.php:206
+#: functions.php:579 functions_customizer.php:173
 msgid "Begin your website."
 msgstr "Webサイトを始めましょう。"
 
@@ -130,55 +130,55 @@ msgstr "Webサイトを始めましょう。"
 msgid "More"
 msgstr "詳しくみる"
 
-#: functions_customizer.php:85
+#: functions_customizer.php:52
 msgid "Header Slider"
 msgstr "ヘッダースライダー"
 
-#: functions_customizer.php:86
+#: functions_customizer.php:53
 msgid "You can add up to 5 images in the header slider. also you can add title, description, link URL for each image."
 msgstr "ヘッダーにスライダーを設定できます。5つまでのイメージとタイトル、説明、リンクURLを追加することができます。"
 
-#: functions_customizer.php:99
+#: functions_customizer.php:66
 msgid "Use Header Slider"
 msgstr "ヘッダースライダーを有効にする"
 
-#: functions_customizer.php:115
+#: functions_customizer.php:82
 msgid "Slide Interval (1/1000 second)"
 msgstr "スライドの間隔 (1/1000 秒)"
 
-#: functions_customizer.php:134
+#: functions_customizer.php:101
 msgid "1st slide"
 msgstr "1つめのスライド"
 
-#: functions_customizer.php:137
+#: functions_customizer.php:104
 msgid "2nd slide"
 msgstr "2つめのスライド"
 
-#: functions_customizer.php:140
+#: functions_customizer.php:107
 msgid "3rd slide"
 msgstr "3つめのスライド"
 
-#: functions_customizer.php:143
+#: functions_customizer.php:110
 msgid "4th slide"
 msgstr "4つめのスライド"
 
-#: functions_customizer.php:146
+#: functions_customizer.php:113
 msgid "5th slide"
 msgstr "5つめのスライド"
 
-#: functions_customizer.php:175
+#: functions_customizer.php:142
 msgid "Upload image"
 msgstr "画像をアップロード"
 
-#: functions_customizer.php:197
+#: functions_customizer.php:164
 msgid "Title"
 msgstr "タイトル"
 
-#: functions_customizer.php:219
+#: functions_customizer.php:186
 msgid "Description"
 msgstr "説明"
 
-#: functions_customizer.php:241
+#: functions_customizer.php:208
 msgid "Link URL"
 msgstr "リンクURL"
 

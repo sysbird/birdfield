@@ -13,57 +13,24 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	// preview
 	for( $birdfield_count = 1; $birdfield_count <= 5; $birdfield_count++ ) {
 		$wp_customize->selective_refresh->add_partial( 'slider_image_' .strval( $birdfield_count ),
-			array( 'selector'		=> '.slide-item-' .strval( $birdfield_count ) . ' .image',
-				'render_callback'	=> function( $partial = null, $id = '' ) {
-					$birdfield_default_text = '';
-					if( 1 == $partial->id ){
-						$birdfield_default_text = get_template_directory_uri() . '/images/header.jpg';
-					}
-
-					return get_theme_mod( $partial->id, $birdfield_default_text );
-				}
+			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' .fixedimage',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_title_' .strval( $birdfield_count ),
-			array( 'selector'		=> '.slide-item-' .strval( $birdfield_count ) . ' .title',
-				'render_callback'	=> function( $partial = null, $id = '' ) {
-					$birdfield_default_text = '';
-					if( 1 == $partial->id ){
-						$birdfield_default_text = __( 'Hello world!','birdfield' );
-					}
-
-					return get_theme_mod( $partial->id, $birdfield_default_text );
-				}
+			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' strong',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_description_' .strval( $birdfield_count ),
-			array( 'selector'	=> '.slide-item-' .strval( $birdfield_count ) .' .description',
-				'render_callback'	=> function( $partial = null, $id = '' ) {
-					$birdfield_default_text = '';
-					if( 1 == $partial->id ){
-						$birdfield_default_text = __( 'Begin your website.','birdfield' );
-					}
-					return get_theme_mod( $partial->id, $birdfield_default_text );
-				}
+			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' span',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_link_' .strval( $birdfield_count ),
-			array( 'selector'	=> '.slide-item-' .strval( $birdfield_count ) .' .link',
-				'render_callback'	=> function( $partial = null, $id = '' ) {
-					$birdfield_default_text = '';
-					if( 1 == $partial->id ){
-						$birdfield_default_text = '#';
-					}
-					return get_theme_mod( $partial->id, $birdfield_default_text );
-				}
+			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' a',
 			));
 	}
 
 	$wp_customize->selective_refresh->add_partial( 'slide_interval',
 		array( 'selector'		=> '.slide-interval',
-			'render_callback'	=> function( $partial = null, $id = '' ) {
-				return get_theme_mod( $partial->id, 7000 );
-			}
 		));
 
 	// separation

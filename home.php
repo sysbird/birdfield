@@ -16,7 +16,7 @@ $birdfield_has_news = 0; ?>
 			<?php if( ! empty( $birdfield_header_image )): ?>
 				<section id="wall">
 					<div class="headerimage">
-						<div class="fixedimage" style="background-image: url( <?php echo $birdfield_header_image; ?> )"></div>
+						<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" >
 					</div>
 					<div class='widget-area-header'>
 						<?php dynamic_sidebar( 'widget-area-header' ); ?>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BirdFIELD 1.08\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2017-03-12 00:00+0200\n"
+"POT-Creation-Date: 2018-03-15 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -120,11 +120,11 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:578 functions_customizer.php:32 functions_customizer.php:185
+#: functions.php:578 functions_customizer.php:152
 msgid "Hello world!"
 msgstr ""
 
-#: functions.php:579 functions_customizer.php:44 functions_customizer.php:206
+#: functions.php:579 functions_customizer.php:173
 msgid "Begin your website."
 msgstr ""
 
@@ -132,56 +132,56 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: functions_customizer.php:85
+#: functions_customizer.php:52
 msgid "Header Slider"
 msgstr "ヘッダースライダー"
 msgstr ""
 
-#: functions_customizer.php:86
+#: functions_customizer.php:53
 msgid "You can add up to 5 images in the header slider. also you can add title, description, link URL for each image."
 msgstr ""
 
-#: functions_customizer.php:99
+#: functions_customizer.php:66
 msgid "Use Header Slider"
 msgstr ""
 
-#: functions_customizer.php:115
+#: functions_customizer.php:82
 msgid "Slide Interval (1/1000 second)"
 msgstr ""
 
-#: functions_customizer.php:134
+#: functions_customizer.php:101
 msgid "1st slide"
 msgstr ""
 
-#: functions_customizer.php:137
+#: functions_customizer.php:104
 msgid "2nd slide"
 msgstr ""
 
-#: functions_customizer.php:140
+#: functions_customizer.php:107
 msgid "3rd slide"
 msgstr ""
 
-#: functions_customizer.php:143
+#: functions_customizer.php:110
 msgid "4th slide"
 msgstr ""
 
-#: functions_customizer.php:146
+#: functions_customizer.php:113
 msgid "5th slide"
 msgstr ""
 
-#: functions_customizer.php:175
+#: functions_customizer.php:142
 msgid "Upload image"
 msgstr ""
 
-#: functions_customizer.php:197
+#: functions_customizer.php:164
 msgid "Title"
 msgstr ""
 
-#: functions_customizer.php:219
+#: functions_customizer.php:186
 msgid "Description"
 msgstr ""
 
-#: functions_customizer.php:241
+#: functions_customizer.php:208
 msgid "Link URL"
 msgstr ""
 
