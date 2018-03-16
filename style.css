@@ -1793,7 +1793,7 @@ form input {
 
 #wall .slideitem .caption {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   margin-right: -50%;
   width: 85%;
@@ -1898,6 +1898,9 @@ form input {
   }
   .admin-bar .fixed-header #header {
     top: 32px;
+  }
+  .wa.no-title.no-nav-menu .slideitem .caption {
+    top: 50%;
   }
 }
 
