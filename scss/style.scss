@@ -35,15 +35,12 @@ Font Awesome
 	font-weight: normal;
 	font-style: normal; }
 
-@mixin font-awesome( $param, $padding-left:0, $padding-right:0 ) {
-	content: $param;
+@mixin font-awesome() {
 	display: inline-block;
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -195,7 +192,8 @@ html, body {
 			font-size: 2rem;
 
 			&:before {
-				@include font-awesome("\f0c9");
+				@include font-awesome();
+				content: "\f0c9";
 				padding-top: 10px;
 			}
 		}
@@ -305,7 +303,9 @@ html, body {
 				font-size: 0.9rem;
 
 				&:before {
-					@include font-awesome("\f133", 0, 0.2em );
+					@include font-awesome();
+					content:  "\f133";
+					padding-right: 0.2em;
 				}
 
 				a {
@@ -315,13 +315,17 @@ html, body {
 
 			.author {
 				&:before {
-					@include font-awesome("\f007", 0, 0.2em );
+					@include font-awesome();
+					content: "\f007";
+					padding-right: 0.2em;
 				}
 			}
 
 			.comment {
 				&:before {
-					@include font-awesome("\f075", 0, 0.2em );
+					@include font-awesome();
+					content:  "\f075";
+					padding-right: 0.2em;
 				}
 			}
 
@@ -330,7 +334,9 @@ html, body {
 					color: $meta-color;
 
 					&:before {
-						@include font-awesome("\f03e", 0, 0.2em );
+						@include font-awesome();
+						content: "\f03e";
+						padding-right: 0.2em;
 					}
 				}
 			}
@@ -354,7 +360,9 @@ html, body {
 					float: left;
 
 					&:before {
-						@include font-awesome( "\f07b", 0, 0.2em );
+						@include font-awesome();
+						content: "\f07b";
+						padding-right: 0.2em;
 					}
 				}
 
@@ -377,7 +385,9 @@ html, body {
 			.tag {
 				span {
 					&:before {
-						@include font-awesome( "\f02c", 0, 0.2em );
+						@include font-awesome();
+						content:  "\f02c";
+						padding-right: 0.2em;
 					}
 				}
 			}
@@ -421,7 +431,8 @@ html, body {
 			border-radius: 2px;
 
 			&:before {
-				@include font-awesome("\f061");
+				@include font-awesome();
+				content: "\f061";
 			}
 		}
 
@@ -429,7 +440,9 @@ html, body {
 			.entry-header {
 				.postdate {
 					&:before {
-						@include font-awesome( "\f06c", 0, 0.2em );
+						@include font-awesome();
+						content: "\f06c";
+						padding-right: 0.2em;
 					}
 				}
 			}
@@ -827,7 +840,8 @@ video {
 
 			time:before {
 				color: $meta-color;
-				@include font-awesome( "\f017" );
+				@include font-awesome();
+				content: "\f017";
 			}
 		}
 
@@ -847,7 +861,9 @@ video {
 
 			a.comment-reply-link {
 				&:before {
-					@include font-awesome( "\f112", 0, 0.2em );
+					@include font-awesome();
+					content:  "\f112";
+					padding-right: 0.2em;
 				}
 			}
 		}
@@ -955,7 +971,9 @@ form {
 
 		.generator {
 			&:after {
-				@include font-awesome("\f19a", 0.2em, 0);
+				@include font-awesome();
+				content: "\f19a";
+				padding-left: 0.2em;
 			}
 		}
 
@@ -990,7 +1008,8 @@ form {
 			}
 
 			&:before {
-				@include font-awesome( "\f062" );
+				@include font-awesome();
+				content: "\f062";
 				font-size: 50px;
 				display: block;
 				text-align: center;
@@ -1049,7 +1068,9 @@ form {
 				text-indent: -0.3em;
 
 				&:before {
-					@include font-awesome("\f0da", 0, 0.2em);
+					@include font-awesome();
+					content: "\f0da";
+					padding-right: 0.2em;
 				}
 
 				ul {
@@ -1164,7 +1185,8 @@ form {
 		background: #CCC;
 		color: #FFF;
 		-webkit-appearance: button;
-		@include font-awesome("\f005");
+		@include font-awesome();
+		content: "\f005";
 		font-size: 1.2em;
 	}
 }
@@ -1301,7 +1323,9 @@ form {
 								@include rotate( 45deg );
 
 								&:before {
-									@include font-awesome("\f005", 0, 0.2em);
+									@include font-awesome();
+									content: "\f005";
+									padding-right: 0.2em;
 									color: #FFF;
 								}
 							}
@@ -1379,13 +1403,17 @@ form {
 			text-align: right;
 
 			a:after {
-				@include font-awesome( "\f061", 0.2em , 0);
+				@include font-awesome();
+				content: "\f061";
+				padding-left: 0.2em;
 			}
 		}
 
 		.nav-next {
 			a:before {
-				@include font-awesome( "\f060", 0, 0.2em );
+				@include font-awesome();
+				content: "\f060";
+				padding-right: 0.2em;
 			}
 		}
 	}
@@ -1438,13 +1466,17 @@ form {
 
 		&.prev {
 			&:before {
-				@include font-awesome( "\f060", 0, 0.2em );
+				@include font-awesome();
+				content: "\f060";
+				padding-right: 0.2em;
 			}
 		}
 
 		&.next {
 			&:after {
-				@include font-awesome( "\f061", 0.2em , 0);
+				@include font-awesome();
+				content:  "\f061";
+				padding-left: 0.2em;
 			}
 		}
 	}
@@ -1782,7 +1814,9 @@ form {
 
 					&.menu-item-has-children {
 						>a:after {
-							@include font-awesome("\f0d7", 0.2em, 0);
+							@include font-awesome();
+							content: "\f0d7";
+							padding-left: 0.2em;
 						}
 					}
 
@@ -1804,7 +1838,9 @@ form {
 
 							&.menu-item-has-children {
 								>a:after {
-									@include font-awesome("\f0da", 0.2em ,0);
+									@include font-awesome();
+									content: "\f0da";
+									padding-left: 0.2em;
 								}
 							}
 
