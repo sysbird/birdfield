@@ -1364,7 +1364,7 @@ form input {
 .home #content #news,
 .blog #content #news {
   background: #FFF;
-  z-index: 2;
+  z-index: 1;
   position: relative;
   padding-top: 2em;
 }
@@ -1421,7 +1421,7 @@ form input {
   background: #FFF;
   position: relative;
   padding-top: 2em;
-  z-index: 2;
+  z-index: 1;
 }
 
 .home #content #blog ul.article,
@@ -1788,15 +1788,7 @@ form input {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
-  z-index: -1;
-  transition-property: opacity, z-index;
-  transition-duration: 1.5s;
-}
-
-#wall .slideitem.active {
-  opacity: 1;
-  z-index: 0;
+  display: none;
 }
 
 #wall .slideitem .caption {

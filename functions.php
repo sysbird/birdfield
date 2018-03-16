@@ -586,12 +586,7 @@ function birdfield_headerslider() {
 			$birdfield_description = get_theme_mod( 'slider_description_' . strval( $birdfield_count ), $birdfield_default_description );
 			$birdfield_link = get_theme_mod( 'slider_link_' . strval( $birdfield_count ), $birdfield_default_link );
 
-			$birdfield_class = '';
-			if( 1 == $birdfield_count ){
-				$birdfield_class = ' active start';
-			}
-
-			$birdfield_html .= '<div class="slideitem' .$birdfield_class .'" id="slideitem_' .$birdfield_count .'">';
+			$birdfield_html .= '<div class="slideitem' .'" id="slideitem_' .$birdfield_count .'">';
 			$birdfield_html .= '<div class="fixedimage" style="background-image: url(' .$birdfield_image .')"></div>';
 			$birdfield_html .= '<div class="caption">';
 			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong><span>' .$birdfield_description .'</span></p>';

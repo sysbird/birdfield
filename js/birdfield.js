@@ -35,6 +35,9 @@ jQuery(function() {
 			jQuery( "#blog ul li" ).tile( 3 );
 		}
 
+		// Header Slider
+		jQuery( '.slider').birdfield_Slider();
+
 		// gallery columns tile
 		jQuery.each(  jQuery ( ' .gallery' ),  function(){
 			gallery_class = jQuery( this ).attr( 'class' );
@@ -88,31 +91,6 @@ jQuery(function() {
 		}
 	});
 
-	// header slider
-	if( 1 < jQuery( 'body.home .slideitem' ).length ){
-		var birdfield_Slider = function(){
-			if( 0 < jQuery('.slideitem.start').length ){
-				// now start
-				jQuery( '.slideitem.start' ).removeClass( 'start' );
-			}
-			else {
-				// change slide
-				var index = jQuery('.slideitem.active').index( '.slideitem' );
-				index++;
-				if( index >= jQuery('.slideitem' ).length ){
-					index = 0;
-				}
-
-				jQuery('.slideitem.active').removeClass( 'active' );
-				jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
-			}
-
-			var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
-			setTimeout( birdfield_Slider, birdfield_interval );
-		}
-		birdfield_Slider();
-	}
-
 	// back to pagetop
 	totop.click( function () {
 		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
@@ -132,3 +110,30 @@ function birdfield_AdjustHeader() {
 		jQuery( '.wrapper' ).removeClass( 'thin-navigation' );
 	}
 }
+
+////////////////////////////////////////
+// Header Slider
+jQuery.fn.birdfield_Slider = function(){
+	return this.each(function(i, elem) {
+
+		// change slide
+		var index = 0;
+		if( 0 < jQuery('.slideitem.active').length ){
+			index = jQuery('.slideitem.active').index( '.slideitem' );
+			index++;
+			if( index >= jQuery('.slideitem' ).length ){
+				index = 0;
+			}
+		}
+
+		jQuery( '.slideitem.active' ).fadeOut( 1000 );
+		jQuery('.slideitem:eq(' + index + ')').fadeIn( 1000 );
+		var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
+		setTimeout(function(){
+			jQuery( '.slider' ).birdfield_Slider();
+			jQuery('.slideitem.active').removeClass( 'active' );
+			jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
+
+		}, birdfield_interval );
+	});
+};

@@ -1192,7 +1192,7 @@ form {
 			}
 
 			background: $background-color;
-			z-index: 2;
+			z-index: 1;
 			position: relative;
 			padding-top: 2em;
 
@@ -1236,7 +1236,7 @@ form {
 			background: $background-color;
 			position: relative;
 			padding-top: 2em;
-			z-index: 2;
+			z-index: 1;
 
 			ul.article {
 				list-style: none;
@@ -1552,15 +1552,7 @@ form {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		opacity: 0;
-		z-index: -1;
-		transition-property: opacity, z-index;
-		transition-duration: 1.5s;
-
-		&.active {
-			opacity: 1;
-			z-index: 0;
-		}
+		display: none;
 
 		.caption {
 			position: absolute;
