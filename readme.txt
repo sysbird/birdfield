@@ -16,6 +16,7 @@ The Theme has customizable header and footer.
 
 = Usage =
 You can upload the header image by custom-header, and set the Widget Area for header.
+Instead the header image, you can add a header slider at theme customizer.
 When the posts are tagged with "news", display NEWS area on homepage.
 
 
