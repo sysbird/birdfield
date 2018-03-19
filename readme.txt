@@ -62,6 +62,9 @@ http://www.sysbird.jp
 
 
 == Changelog ==
+v1.11
+* fix bug fixed header. 2018/3/19
+
 v1.10
 * fix the WordPress 4.9.
 * add Header Slider in theme customize.

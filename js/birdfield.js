@@ -83,10 +83,10 @@ jQuery(function() {
 		var header_clip = jQuery( '#header' ).css( 'clip' );
 		if( -1 == header_clip.indexOf( 'rect' ) ) {
 			if ( scrollTop > 200 ) {
-				jQuery('.fixed-header .wrapper:not(.thin-navigation) #header').addClass('mini');
+				jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
 			}
 			else {
-				jQuery('.fixed-header .wrapper:not(.thin-navigation) #header').removeClass('mini');
+				jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
 			}
 		}
 	});
