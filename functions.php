@@ -566,7 +566,11 @@ function birdfield_headerslider() {
 		$birdfield_interval = 7000;
 	}
 
-	$birdfield_html = '';
+
+	// get headerslide option
+	$birdfield_slides = array();
+	$birdfield_max = 0;
+
 	for( $birdfield_count = 1; $birdfield_count <= 5; $birdfield_count++ ) {
 		$birdfield_default_image = '';
 		$birdfield_default_title = '';
@@ -582,23 +586,35 @@ function birdfield_headerslider() {
 
 		$birdfield_image = get_theme_mod( 'slider_image_' .strval( $birdfield_count ), $birdfield_default_image );
 		if ( ! empty( $birdfield_image )) {
-			$birdfield_title = get_theme_mod( 'slider_title_' . strval( $birdfield_count ), $birdfield_default_title );
-			$birdfield_description = get_theme_mod( 'slider_description_' . strval( $birdfield_count ), $birdfield_default_description );
-			$birdfield_link = get_theme_mod( 'slider_link_' . strval( $birdfield_count ), $birdfield_default_link );
+			$birdfield_slides[ $birdfield_count -1 ][ 'image' ] = $birdfield_image;
+			$birdfield_slides[ $birdfield_count -1 ][ 'title' ] = get_theme_mod( 'slider_title_' . strval( $birdfield_count ), $birdfield_default_title );
+			$birdfield_slides[ $birdfield_count -1 ][ 'description' ] = get_theme_mod( 'slider_description_' . strval( $birdfield_count ), $birdfield_default_description );
+			$birdfield_slides[$birdfield_count -1 ][ 'link' ] = get_theme_mod( 'slider_link_' . strval( $birdfield_count ), $birdfield_default_link );
 
-			$birdfield_html .= '<div class="slideitem' .'" id="slideitem_' .$birdfield_count .'">';
-			$birdfield_html .= '<div class="fixedimage" style="background-image: url(' .$birdfield_image .')"></div>';
-			$birdfield_html .= '<div class="caption">';
-			$birdfield_html .= '<p><strong>' .$birdfield_title .'</strong><span>' .$birdfield_description .'</span></p>';
-			if( ! empty( $birdfield_link )){
-				$birdfield_html .= '<a href="' .$birdfield_link .'">' .__( 'More', 'birdfield' ) .'</a>';
-			}
-			$birdfield_html .= '</div>';
-			$birdfield_html .= '</div>';
+			$birdfield_max++;
 		}
 		else{
 			break;
 		}
+	}
+
+	// sort randam
+	$birdfield_start = mt_rand( 1, $birdfield_max );
+	for( $birdfield_count = 1; $birdfield_count <= $birdfield_max; $birdfield_count++ ) {
+			$birdfield_class = '';
+			if( $birdfield_start == $birdfield_count ){
+				$birdfield_class = ' start active';
+			}
+
+			$birdfield_html .= '<div class="slideitem' .$birdfield_class .'" id="slideitem_' .$birdfield_count .'">';
+			$birdfield_html .= '<div class="fixedimage" style="background-image: url(' .$birdfield_slides[ $birdfield_count -1 ][ 'image' ] .')"></div>';
+			$birdfield_html .= '<div class="caption">';
+			$birdfield_html .= '<p><strong>' .$birdfield_slides[ $birdfield_count -1 ][ 'title' ] .'</strong><span>' .$birdfield_slides[ $birdfield_count -1 ][ 'description' ] .'</span></p>';
+			if( ! empty( $birdfield_slides[ $birdfield_count -1 ][ 'link' ] )){
+				$birdfield_html .= '<a href="' .$birdfield_slides[ $birdfield_count -1 ][ 'link' ] .'">' .__( 'More', 'birdfield' ) .'</a>';
+			}
+			$birdfield_html .= '</div>';
+			$birdfield_html .= '</div>';
 	}
 
 	if ( ! empty( $birdfield_html ) ) {

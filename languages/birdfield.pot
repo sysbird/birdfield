@@ -1,4 +1,4 @@
-# Translation of the WordPress theme BirdFIELD 1.10 by sysbird
+# Translation of the WordPress theme BirdFIELD 1.11 by sysbird
 # Copyright (C) Sysbird
 # This file is distributed under the same license as the BirdFIELD package.
 # FIRST AUTHOR <sysbird@gmail.com>, 2014.
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BirdFIELD 1.08\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2018-03-15 00:00+0200\n"
+"POT-Creation-Date: 2018-03-22 00:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"

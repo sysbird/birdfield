@@ -36,7 +36,7 @@ jQuery(function() {
 		}
 
 		// Header Slider
-		jQuery( '.slider').birdfield_Slider();
+		jQuery( '.slider' ).birdfield_Slider();
 
 		// gallery columns tile
 		jQuery.each(  jQuery ( ' .gallery' ),  function(){
@@ -114,25 +114,24 @@ function birdfield_AdjustHeader() {
 ////////////////////////////////////////
 // Header Slider
 jQuery.fn.birdfield_Slider = function(){
-	return this.each(function(i, elem) {
 
+	return this.each(function(i, elem) {
 		// change slide
-		var index = 0;
-		if( 0 < jQuery('.slideitem.active').length ){
-			index = jQuery('.slideitem.active').index( '.slideitem' );
+		var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
+		setInterval( function(){
+
+			index = jQuery( '.slideitem.active' ).index( '.slideitem' );
 			index++;
-			if( index >= jQuery('.slideitem' ).length ){
+			if( index >= jQuery( '.slideitem' ).length ){
 				index = 0;
 			}
-		}
 
-		jQuery( '.slideitem.active' ).fadeOut( 1000 );
-		jQuery('.slideitem:eq(' + index + ')').fadeIn( 1000 );
-		var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
-		setTimeout(function(){
-			jQuery( '.slider' ).birdfield_Slider();
-			jQuery('.slideitem.active').removeClass( 'active' );
-			jQuery('.slideitem:eq(' + index + ')').addClass( 'active' );
+			jQuery( '.slideitem.active' ).fadeOut( 1000 );
+			jQuery( '.slideitem:eq(' + index + ')' ).fadeIn( 1000 );
+
+			jQuery( '.slideitem.start').removeClass( 'start' );
+			jQuery( '.slideitem.active').removeClass( 'active' );
+			jQuery( '.slideitem:eq(' + index + ')').addClass( 'active' );
 
 		}, birdfield_interval );
 	});

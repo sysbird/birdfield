@@ -63,7 +63,9 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.11
-* fix bug fixed header. 2018/3/19
+* fix headerslider on javascript.
+* fix bug fixed header.
+* sort Header Slider randam.
 
 v1.10
 * fix the WordPress 4.9.
