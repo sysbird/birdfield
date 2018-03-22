@@ -126,13 +126,15 @@ jQuery.fn.birdfield_Slider = function(){
 				index = 0;
 			}
 
-			jQuery( '.slideitem.active' ).fadeOut( 1000 );
-			jQuery( '.slideitem:eq(' + index + ')' ).fadeIn( 1000 );
-
-			jQuery( '.slideitem.start').removeClass( 'start' );
-			jQuery( '.slideitem.active').removeClass( 'active' );
-			jQuery( '.slideitem:eq(' + index + ')').addClass( 'active' );
-
+			// fade in
+			jQuery( '.slideitem:eq(' + index + ')' ).fadeIn( 1000, function (){
+				// fade out
+				jQuery( '.slideitem.active' ).fadeOut( 1000 );
+				jQuery( '.slideitem.start').removeClass( 'start' );
+				jQuery( '.slideitem.active').removeClass( 'active' );
+				jQuery( '.slideitem:eq(' + index + ')').addClass( 'active' );
+				console.log("out");
+			} );
 		}, birdfield_interval );
 	});
 };
