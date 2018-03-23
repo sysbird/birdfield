@@ -598,7 +598,17 @@ function birdfield_headerslider() {
 		}
 	}
 
+	if( !$birdfield_max ){
+		return false;
+	}
+
+?>
+	<section id="wall">
+		<div class="headerimage slider" data-interval="<?php echo $birdfield_interval; ?>">
+
+<?php
 	// sort randam
+	$birdfield_html = '';
 	$birdfield_start = mt_rand( 1, $birdfield_max );
 	for( $birdfield_count = 1; $birdfield_count <= $birdfield_max; $birdfield_count++ ) {
 			$birdfield_class = '';
@@ -617,17 +627,12 @@ function birdfield_headerslider() {
 			$birdfield_html .= '</div>';
 	}
 
-	if ( ! empty( $birdfield_html ) ) {
+	echo $birdfield_html;
 ?>
-			<section id="wall">
-				<div class="headerimage slider" data-interval="<?php echo $birdfield_interval; ?>">
-					<?php echo $birdfield_html ?>
-				</div>
-			</section>
-<?php
-		return true;
-	}
+		</div>
+	</section>
 
-	return false;
+<?php
+	return true;
 }
 endif;
