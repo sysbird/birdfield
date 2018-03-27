@@ -9,6 +9,8 @@
 get_header(); ?>
 
 <div id="content">
+	<?php birdfield_pre_content(); ?>
+
 	<div class="container">
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -25,7 +27,7 @@ get_header(); ?>
 
 				<div class="entry-attachment">
 					<div class="attachment">
-<?php
+	<?php
 
 	$post                = get_post();
 	$attachment_size     = apply_filters( 'birdfield', array( 930, 930 ) );
@@ -63,7 +65,7 @@ get_header(); ?>
 		wp_get_attachment_image( $post->ID, $attachment_size )
 	);
 
-?>
+	?>
 
 						<?php if ( has_excerpt() ) : ?>
 							<div class="wp-caption">
@@ -97,4 +99,3 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
-x

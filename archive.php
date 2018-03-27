@@ -9,16 +9,15 @@
 get_header(); ?>
 
 <div id="content">
-	<div class="container">
+	<?php birdfield_content_header(); ?>
 
+	<div class="container">
 		<article class="hentry">
 			<header class="content-header">
-				<h1 class="content-title">
 				<?php
-					the_archive_title( '<h1 class="entry-title">', '</h1>' );
+					the_archive_title( '<h1 class="content-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-				</h1>
 			</header>
 
 			<?php if ( have_posts() ) : ?>

@@ -66,6 +66,7 @@ v1.11
 * fix headerslider on javascript.
 * fix bug fixed header.
 * sort Header Slider randam.
+* add hook 'birdfield_pre_content' for example bread crumb.
 
 v1.10
 * fix the WordPress 4.9.

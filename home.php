@@ -10,6 +10,8 @@ get_header();
 $birdfield_has_news = 0; ?>
 
 <div id="content">
+	<?php birdfield_pre_content(); ?>
+
 	<?php if( ! is_paged()): ?>
 		<?php if( !birdfield_headerslider()): ?>
 			<?php $birdfield_header_image = get_header_image(); ?>

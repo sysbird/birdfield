@@ -549,6 +549,13 @@ function birdfield_custom_background_cb() {
 }
 
 //////////////////////////////////////////////////////
+// Add hook content begin
+function birdfield_content_header() {
+	$birdfield_html = apply_filters( 'birdfield_content_header', '' );
+	echo $birdfield_html;
+}
+
+//////////////////////////////////////////////////////
 // Header Slider
 if ( ! function_exists( 'birdfield_headerslider' )) :
 function birdfield_headerslider() {
