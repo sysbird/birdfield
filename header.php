@@ -32,3 +32,6 @@
 			</nav>
 		</div>
 	</header>
+
+	<div id="content">
+		<?php birdfield_content_header(); ?>

@@ -222,7 +222,7 @@ function birdfield_scripts() {
 
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '1.1.2' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.10' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', 'jquery', '1.11' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
 
@@ -552,6 +552,13 @@ function birdfield_custom_background_cb() {
 // Add hook content begin
 function birdfield_content_header() {
 	$birdfield_html = apply_filters( 'birdfield_content_header', '' );
+	echo $birdfield_html;
+}
+
+//////////////////////////////////////////////////////
+// Add hook content end
+function birdfield_content_footer() {
+	$birdfield_html = apply_filters( 'birdfield_content_footer', '' );
 	echo $birdfield_html;
 }
 

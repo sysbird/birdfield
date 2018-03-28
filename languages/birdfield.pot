@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BirdFIELD 1.08\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips/\n"
-"POT-Creation-Date: 2018-03-22 00:00+0200\n"
+"POT-Creation-Date: 2018-03-28 18:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: sysbird <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
@@ -19,11 +19,11 @@ msgstr ""
 msgid "Error 404 - Not Found"
 msgstr ""
 
-#: 404.php:20
+#: 404.php:19
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: archive.php:40
+#: archive.php:36
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Permalink to %s"
 msgstr ""
 
-#: content-singular.php:23 image.php:78
+#: content-singular.php:23 image.php:77
 msgid "Pages:"
 msgstr ""
 
@@ -56,19 +56,19 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: footer.php:22
+#: footer.php:25
 msgid "Copyright &copy; %s All Rights Reserved."
 msgstr ""
 
-#: footer.php:27
+#: footer.php:30
 msgid "Proudly powered by WordPress"
 msgstr ""
 
-#: footer.php:28
+#: footer.php:31
 msgid "BirdFIELD theme by %sSysbird%s"
 msgstr ""
 
-#: footer.php:32
+#: footer.php:35
 msgid "Go Top"
 msgstr ""
 
@@ -120,15 +120,15 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:578 functions_customizer.php:152
+#: functions.php:596 functions_customizer.php:152
 msgid "Hello world!"
 msgstr ""
 
-#: functions.php:579 functions_customizer.php:173
+#: functions.php:597 functions_customizer.php:173
 msgid "Begin your website."
 msgstr ""
 
-#: functions.php:599
+#: functions.php:638
 msgid "More"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Link URL"
 msgstr ""
 
-#: home.php:38
+#: home.php:37
 msgid "RECENT"
 msgstr ""
 
@@ -201,11 +201,11 @@ msgstr ""
 msgid "NEWS"
 msgstr ""
 
-#: search.php:16
+#: search.php:15
 msgid "Search Results: %s"
 msgstr ""
 
-#: search.php:36
+#: search.php:35
 msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr ""
 
