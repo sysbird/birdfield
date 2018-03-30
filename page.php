@@ -8,15 +8,21 @@
  */
 get_header(); ?>
 
-<div class="container">
+<div id="content">
+	<?php birdfield_content_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php get_template_part( 'content', 'singular' ); ?>
-	<?php comments_template( '', true ); ?>
-</article>
-<?php endwhile; ?>
+	<div class="container">
 
+	<?php while ( have_posts() ) : the_post(); ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php get_template_part( 'content', 'singular' ); ?>
+		<?php comments_template( '', true ); ?>
+	</article>
+	<?php endwhile; ?>
+
+	</div>
+
+	<?php birdfield_content_footer(); ?>
 </div>
 
 <?php get_footer(); ?>

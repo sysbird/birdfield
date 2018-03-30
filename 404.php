@@ -8,18 +8,24 @@
  */
 get_header(); ?>
 
-<div class="container">
-	<article class="hentry">
+<div id="content">
+	<?php birdfield_content_header(); ?>
 
-<header class="entry-header">
-	<h1 class="entry-title"><?php _e( 'Error 404 - Not Found', 'birdfield' ); ?></h1>
-</header>
+	<div class="container">
+		<article class="hentry">
 
-<div class="entry-content">
-	<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'birdfield' ); ?></p>
-</div>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php _e( 'Error 404 - Not Found', 'birdfield' ); ?></h1>
+	</header>
 
-	</article>
+	<div class="entry-content">
+		<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'birdfield' ); ?></p>
+	</div>
+
+		</article>
+	</div>
+
+	<?php birdfield_content_footer(); ?>
 </div>
 
 <?php get_footer(); ?>

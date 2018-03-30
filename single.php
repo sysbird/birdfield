@@ -8,21 +8,27 @@
  */
 get_header(); ?>
 
-<div class="container">
+<div id="content">
+	<?php birdfield_content_header(); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div class="container">
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php get_template_part( 'content', 'singular' ); ?>
-		<?php comments_template( '', true ); ?>
-	</article>
+	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-	<nav id="nav-below">
-		<span class="nav-next"><?php next_post_link('%link', '%title'); ?></span>
-		<span class="nav-previous"><?php previous_post_link('%link', '%title'); ?></span>
-	</nav>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php get_template_part( 'content', 'singular' ); ?>
+			<?php comments_template( '', true ); ?>
+		</article>
 
-	<?php endwhile; ?>
+		<nav id="nav-below">
+			<span class="nav-next"><?php next_post_link('%link', '%title'); ?></span>
+			<span class="nav-previous"><?php previous_post_link('%link', '%title'); ?></span>
+		</nav>
+
+		<?php endwhile; ?>
+	</div>
+
+	<?php birdfield_content_footer(); ?>
 </div>
 
 <?php get_footer(); ?>

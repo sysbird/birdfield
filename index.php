@@ -8,24 +8,30 @@
  */
 get_header(); ?>
 
-<div class="container">
+<div id="content">
+	<?php birdfield_content_header(); ?>
 
-	<article class="hentry">
-	<ul class="article">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-	</ul>
+	<div class="container">
 
-	<?php $birdfield_pagination = get_the_posts_pagination( array(
-			'mid_size'	=> 3,
-			'screen_reader_text'	=> 'pagination',
-		) );
+		<article class="hentry">
+		<ul class="article">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+		</ul>
 
-		$birdfield_pagination = str_replace( '<h2 class="screen-reader-text">pagination</h2>', '', $birdfield_pagination );
-		echo $birdfield_pagination; ?>
+		<?php $birdfield_pagination = get_the_posts_pagination( array(
+				'mid_size'	=> 3,
+				'screen_reader_text'	=> 'pagination',
+			) );
 
-	</article>
+			$birdfield_pagination = str_replace( '<h2 class="screen-reader-text">pagination</h2>', '', $birdfield_pagination );
+			echo $birdfield_pagination; ?>
+
+		</article>
+	</div>
+
+	<?php birdfield_content_footer(); ?>
 </div>
 
 <?php get_footer(); ?>
