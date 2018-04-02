@@ -1731,7 +1731,8 @@ form {
 		}
 	}
 
-	body:not(.home) .fixed-header #content {
+	body:not(.home) .fixed-header #content,
+	body.home.paged .fixed-header #content {
 		margin-top: 80px;
 	}
 

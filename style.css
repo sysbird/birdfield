@@ -1871,7 +1871,8 @@ form input {
   .fixed-header #wall .headerimage .fixedimage {
     position: fixed;
   }
-  body:not(.home) .fixed-header #content {
+  body:not(.home) .fixed-header #content,
+  body.home.paged .fixed-header #content {
     margin-top: 80px;
   }
   .admin-bar .fixed-header #header {
