@@ -133,7 +133,6 @@ jQuery.fn.birdfield_Slider = function(){
 				jQuery( '.slideitem.start').removeClass( 'start' );
 				jQuery( '.slideitem.active').removeClass( 'active' );
 				jQuery( '.slideitem:eq(' + index + ')').addClass( 'active' );
-				console.log("out");
 			} );
 		}, birdfield_interval );
 	});
