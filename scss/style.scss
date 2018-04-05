@@ -237,6 +237,7 @@ html, body {
 --------------------------------------------- */
 #header.mini {
 	min-height: 60px;
+	background-color: rgba( $header-color, 0.9 );
 
 	#branding {
 		min-height: 60px;

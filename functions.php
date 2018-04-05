@@ -433,6 +433,7 @@ function birdfield_color_css() {
 	// Custom Header, Footer Background Color
 	$birdfield_header_color = get_theme_mod( 'birdfield_header_color', $birdfield_default_colors[ 'header_color' ] );
 	if( strcasecmp( $birdfield_header_color, $birdfield_default_colors[ 'header_color' ] )) {
+		$birdfield_header_color_rgb = birdfield_hex2rgb( $birdfield_header_color );
 		$birdfield_css = "
 			/* Custom Header, Footer Background Color */
 			#header,
@@ -440,6 +441,10 @@ function birdfield_color_css() {
 			#widget-area,
 			.home #content #blog ul.article .hentry.sticky i span {
 				background-color: {$birdfield_header_color};
+			}
+
+			#header.mini {
+				background-color: rgba( {$birdfield_header_color_rgb}, 0.9 );
 			}
 
 			#content .hentry .entry-header .entry-title,
@@ -560,6 +565,19 @@ function birdfield_content_header() {
 function birdfield_content_footer() {
 	$birdfield_html = apply_filters( 'birdfield_content_footer', '' );
 	echo $birdfield_html;
+}
+
+//////////////////////////////////////////////////////
+// hex color to rgb
+function birdfield_hex2rgb ( $hex ) {
+
+	$birdfield_hex = preg_replace('/#/', '', $hex);
+
+	$birdfield_hex_rgba = hexdec(substr($birdfield_hex, 0, 2));
+	$birdfield_hex_rgba .= ', ' .hexdec(substr($birdfield_hex, 2, 2));
+	$birdfield_hex_rgba .= ', ' .hexdec(substr($birdfield_hex, 4, 2));
+
+	return $birdfield_hex_rgba;
 }
 
 //////////////////////////////////////////////////////
