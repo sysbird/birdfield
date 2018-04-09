@@ -68,6 +68,7 @@ v1.11
 * sort Header Slider randam.
 * add hook 'birdfield_content_header' for example bread crumb.
 * add hook 'birdfield_content_footer' for example ad.
+* remove /css/ja.css.
 
 v1.10
 * fix the WordPress 4.9.
