@@ -65,6 +65,7 @@ http://www.sysbird.jp
 v1.11
 * fix Header Slider on javascript.
 * fix bug fixed header.
+* fix bug no header image.
 * sort Header Slider randam.
 * add hook 'birdfield_content_header' for example bread crumb.
 * add hook 'birdfield_content_footer' for example ad.

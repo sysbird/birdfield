@@ -173,10 +173,6 @@ html, body {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-.fixed-header.no-title.no-nav-menu #content {
-	margin-top: 0;
-}
-
 /* Menu
 -------------------------------------------------------------- */
 #menu-wrapper {
@@ -229,7 +225,6 @@ html, body {
 	}
 }
 
-.no-nav-menu #menu-wrapper,
 .no-title #menu-wrapper {
 	margin-top: 0;
 }
@@ -240,7 +235,7 @@ html, body {
 	min-height: 60px;
 	background-color: rgba( $header-color, 0.9 );
 
-	#branding {
+	not('.no-title') #branding {
 		min-height: 60px;
 	}
 
@@ -1630,6 +1625,10 @@ form {
 			}
 		}
 	}
+
+	&.no-image {
+		padding-top: 0;
+	}
 }
 
 /* Media queries for responsive design
@@ -1725,13 +1724,13 @@ form {
 		}
 	}
 
-	body:not(.home) .fixed-header #content,
-	body.home.paged .fixed-header #content {
+	body:not(.home) .fixed-header:not(.no-title) #content,
+	body:not(.home) .fixed-header:not(.no-nav-menu) #content,
+	body.home.paged .fixed-header:not(.no-title) #content,
+	body.home.paged .fixed-header:not(.no-nav-menu) #content,
+	body.home .fixed-header:not(.no-title) #wall.no-image,
+	body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
 		margin-top: 80px;
-	}
-
-	.admin-bar .fixed-header #header {
-		top: 32px;
 	}
 
 	.wrapper:not(.no-title),
@@ -2004,3 +2003,19 @@ form {
 		}
 	}
 }
+
+/* admin-bar
+--------------------------------------------- */
+@media screen and (min-width: 48em) {
+	.admin-bar .fixed-header #header {
+		top: 32px;
+	}
+}
+
+@media screen and ( max-width: 48.875em ) and ( min-width: 660px ) {
+
+	.admin-bar .fixed-header #header {
+		top: 46px;
+	}
+}
+
