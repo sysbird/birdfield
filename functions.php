@@ -73,8 +73,8 @@ function birdfield_get_copyright_year() {
 	$birdfield_first_year = $birdfield_copyright_year;
 	$args = array(
 		'numberposts'	=> 1,
-		'orderby'		=> 'post_date',
-		'order'			=> 'ASC',
+		'orderby'	=> 'post_date',
+		'order'		=> 'ASC',
 	);
 	$posts = get_posts( $args );
 
@@ -148,12 +148,12 @@ function birdfield_setup() {
 	$custom_header_support = array(
 		// Text color and image (empty to use none).
 		'default-text-color'	=> 'FFF',
-		'default-image'			=> '%s/images/header.jpg',
+		'default-image'		=> '%s/images/header.jpg',
 
 		// Set height and width, with a maximum value for the width.
-		'height'				=> 900,
-		'width'					=> 1280,
-		'max-width'				=> 900,
+		'height'		=> 900,
+		'width'		=> 1280,
+		'max-width'	=> 900,
 
 		// Random image rotation off by default.
 		'random-default'	=> true,
@@ -163,17 +163,17 @@ function birdfield_setup() {
 	add_theme_support( 'custom-header', $custom_header_support );
 
 	register_default_headers( array(
-		'birdfield'		=> array(
-		'url'			=> '%s/images/header.jpg',
-		'thumbnail_url'		=> '%s/images/header-thumbnail.jpg',
-		'description'		=> 'birdfield'
+		'birdfield'	=> array(
+		'url'		=> '%s/images/header.jpg',
+		'thumbnail_url'	=> '%s/images/header-thumbnail.jpg',
+		'description'	=> 'birdfield'
 		)
 	) );
 
 	// Add support for news content.
 	add_theme_support( 'news-content', array(
 		'news_content_filter'	=> 'birdfield_get_news_posts',
-		'max_posts'				=> 5,
+		'max_posts'		=> 5,
 	) );
 }
 endif; // birdfield_setup
@@ -212,9 +212,6 @@ add_action( 'pre_get_posts', 'birdfield_home_query' );
 //////////////////////////////////////////////////////
 // Enqueue Scripts
 function birdfield_scripts() {
-
-	wp_enqueue_script( 'birdfield-html5', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3' );
-	wp_script_add_data( 'birdfield-html5', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -351,10 +348,10 @@ function birdfield_sanitize_text( $input ) {
 //////////////////////////////////////////////////////
 // Get default colors
 function birdfield_get_default_colors() {
-	return array( 'header_text_color' => '#ffffff',
-					'header_color'	=> '#79a596',
-					'text_color'	=> '#222327',
-					'link_color'	=> '#1c4bbe' );
+	return array( 'header_text_color'	=> '#ffffff',
+			'header_color'		=> '#79a596',
+			'text_color'		=> '#222327',
+			'link_color'		=> '#1c4bbe' );
 }
 
 //////////////////////////////////////////////////////
@@ -406,20 +403,26 @@ function birdfield_color_css() {
 		$birdfield_css = "
 			/* Custom Link Color */
 			a,
+			#content .pagination a.page-numbers,
+			#content .pagination .more-link,
+			#content .hentry .page-links,
+			#content .hentry .page-links a span,
 			.home #content #news ul.article li .entry-header .entry-title,
 			.archive #content ul.list li .entry-header .entry-title,
-			.search #content ul.list li .entry-header .entry-title,
-			#content .hentry .page-links,
-			#content .pagination a.page-numbers.prev,
-			#content .pagination a.page-numbers.next,
-			#content .pagination .more-link {
+			.search #content ul.list li .entry-header .entry-title {
 				color: {$birdfield_link_color};
+			}
+
+			#content .pagination a.page-numbers,
+			#content .pagination .current,
+			#content .hentry .page-links span,
+			#content .hentry .page-links a span {
+				border-color: {$birdfield_link_color};
 			}
 
 			#content .pagination .current,
 			#content .hentry .page-links span {
-				background: {$birdfield_link_color};
-				border-color: {$birdfield_link_color};
+				background-color: {$birdfield_link_color};
 			}
 		";
 
@@ -447,6 +450,8 @@ function birdfield_color_css() {
 			#content .hentry .content-header .content-title,
 			.home #about .widget h3,
 			.home #content h2,
+			.home #content #blog ul.article .hentry.sticky .entry-header .entry-title,
+			.blog #content #blog ul.article .hentry.sticky .entry-header .entry-title,
 			#content h1,
 			#content h2,
 			#content h3,
@@ -458,6 +463,11 @@ function birdfield_color_css() {
 			#widget-area .widget #wp-calendar tbody th a,
 			#widget-area .widget #wp-calendar tbody td a {
 				color: {$birdfield_header_color};
+			}
+
+			#content h2,
+			#content h3 {
+				border-color: {$birdfield_header_color};
 			}
 
 			@media screen and (min-width: 930px) {

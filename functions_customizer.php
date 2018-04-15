@@ -13,24 +13,24 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	// preview
 	for( $birdfield_count = 1; $birdfield_count <= 5; $birdfield_count++ ) {
 		$wp_customize->selective_refresh->add_partial( 'slider_image_' .strval( $birdfield_count ),
-			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' .fixedimage',
+			array( 'selector' => '#slideitem_' .strval( $birdfield_count ) . ' .fixedimage',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_title_' .strval( $birdfield_count ),
-			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' strong',
+			array( 'selector' => '#slideitem_' .strval( $birdfield_count ) . ' strong',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_description_' .strval( $birdfield_count ),
-			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' span',
+			array( 'selector' => '#slideitem_' .strval( $birdfield_count ) . ' span',
 			));
 
 		$wp_customize->selective_refresh->add_partial( 'slider_link_' .strval( $birdfield_count ),
-			array( 'selector'		=> '#slideitem_' .strval( $birdfield_count ) . ' a',
+			array( 'selector' => '#slideitem_' .strval( $birdfield_count ) . ' a',
 			));
 	}
 
 	$wp_customize->selective_refresh->add_partial( 'slide_interval',
-		array( 'selector'		=> '.slide-interval',
+		array( 'selector' => '.slide-interval',
 		));
 
 	// separation
@@ -49,9 +49,9 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	$wp_customize->add_section(
 		'birdfield_slider',
 		array(
-			'title'			=> __('Header Slider', 'birdfield' ),
+			'title'		=> __('Header Slider', 'birdfield' ),
 			'description'	=> __( 'You can add up to 5 images in the header slider. also you can add title, description, link URL for each image.', 'birdfield' ),
-			'priority'		=> 61,
+			'priority'	=> 61,
 		));
 
 	// use slider
@@ -64,7 +64,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	$wp_customize->add_control( 'use_slider',
 		array(
 			'label'		=> __( 'Use Header Slider', 'birdfield' ),
-			'section' => 'birdfield_slider',
+			'section'	=> 'birdfield_slider',
 			'type'		=> 'checkbox',
 			'settings'	=> 'use_slider',
 		));
@@ -72,15 +72,15 @@ function birdfield_customize_headerslider( $wp_customize ) {
 	// Interval
 	$wp_customize->add_setting( 'slide_interval',
 		array(
-			'default'  => 7000,
-			'sanitize_callback' => 'absint',
-			'transport'			=> 'postMessage'
+			'default'		=> 7000,
+			'sanitize_callback'	=> 'absint',
+			'transport'		=> 'postMessage'
 		));
 
 	$wp_customize->add_control( 'slide_interval',
 		array(
 			'label'		=> __( 'Slide Interval (1/1000 second)', 'birdfield' ),
-			'section' => 'birdfield_slider',
+			'section'	=> 'birdfield_slider',
 			'type'		=> 'text',
 			'settings'	=> 'slide_interval',
 		));
@@ -91,7 +91,7 @@ function birdfield_customize_headerslider( $wp_customize ) {
 		// Label
 		$wp_customize->add_setting( 'birdfield_options[info]',
 			array(
-				'type'				=> 'info_control',
+				'type'			=> 'info_control',
 				'capability'		=> 'edit_theme_options',
 				'sanitize_callback'	=> 'esc_attr',
 			));
@@ -117,10 +117,10 @@ function birdfield_customize_headerslider( $wp_customize ) {
 			new birdfield_Info( $wp_customize,
 				's' .strval( $birdfield_count ),
 				array(
-					'label' => $birdfield_label,
-					'section' => 'birdfield_slider',
-					'settings' => 'birdfield_options[info]',
-					'priority' => ( $birdfield_count *10 ),
+					'label'		=> $birdfield_label,
+					'section'	=> 'birdfield_slider',
+					'settings'	=> 'birdfield_options[info]',
+					'priority'	=> ( $birdfield_count *10 ),
 				)));
 
 		// Upload image
@@ -131,9 +131,9 @@ function birdfield_customize_headerslider( $wp_customize ) {
 
 		$wp_customize->add_setting( 'slider_image_' .strval( $birdfield_count ),
 			array(
-				'default'			=> $birdfield_default_text,
+				'default'		=> $birdfield_default_text,
 				'sanitize_callback'	=> 'esc_url_raw',
-				'transport'			=> 'postMessage'
+				'transport'		=> 'postMessage'
 			));
 
 			$wp_customize->add_control(
@@ -154,9 +154,9 @@ function birdfield_customize_headerslider( $wp_customize ) {
 
 		$wp_customize->add_setting( 'slider_title_' .strval( $birdfield_count ),
 			array(
-				'default'			=> $birdfield_default_text,
+				'default'		=> $birdfield_default_text,
 				'sanitize_callback'	=> 'birdfield_sanitize_text',
-				'transport'			=> 'postMessage'
+				'transport'		=> 'postMessage'
 			));
 
 		$wp_customize->add_control( 'slider_title_' .strval( $birdfield_count ),
@@ -175,18 +175,18 @@ function birdfield_customize_headerslider( $wp_customize ) {
 
 		$wp_customize->add_setting( 'slider_description_' .strval( $birdfield_count ),
 			array(
-				'default'			=> $birdfield_default_text,
+				'default'		=> $birdfield_default_text,
 				'sanitize_callback'	=> 'birdfield_sanitize_text',
-				'transport'			=> 'postMessage'
+				'transport'		=> 'postMessage'
 			));
 
 		$wp_customize->add_control(
 			'slider_description_' .strval( $birdfield_count ),
 			array(
-				'label' => __( 'Description', 'birdfield' ) .' ' .strval( $birdfield_count ),
-				'section' => 'birdfield_slider',
-				'type' => 'text',
-				'priority' => ( $birdfield_count *10 ) + 3
+				'label'		=> __( 'Description', 'birdfield' ) .' ' .strval( $birdfield_count ),
+				'section'	=> 'birdfield_slider',
+				'type'		=> 'text',
+				'priority'	=> ( $birdfield_count *10 ) + 3
 			));
 
 		// Link URL
@@ -197,18 +197,18 @@ function birdfield_customize_headerslider( $wp_customize ) {
 
 		$wp_customize->add_setting( 'slider_link_' .strval( $birdfield_count ),
 			array(
-				'default'			=> $birdfield_default_text,
+				'default'		=> $birdfield_default_text,
 				'sanitize_callback'	=> 'esc_url_raw',
-				'transport'			=> 'postMessage'
+				'transport'		=> 'postMessage'
 			));
 
 		$wp_customize->add_control(
 			'slider_link_' .strval( $birdfield_count ),
 			array(
-				'label' => __( 'Link URL', 'birdfield' ) .' ' .strval( $birdfield_count ),
-				'section' => 'birdfield_slider',
-				'type' => 'url',
-				'priority' => ( $birdfield_count *10 ) + 4
+				'label'		=> __( 'Link URL', 'birdfield' ) .' ' .strval( $birdfield_count ),
+				'section'	=> 'birdfield_slider',
+				'type'		=> 'url',
+				'priority'	=> ( $birdfield_count *10 ) + 4
 			));
 	}
 }

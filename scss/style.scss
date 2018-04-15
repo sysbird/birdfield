@@ -7,7 +7,6 @@ Author URI: https://profiles.wordpress.org/sysbird/
 Version: 1.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Text Domain: birdfield
 
 This theme, like WordPress, is licensed under the GPL.
@@ -193,6 +192,10 @@ html, body {
 				content: "\f0c9";
 				padding-top: 10px;
 			}
+
+			&.current:before {
+				content: "\f00d";
+			}
 		}
 
 		ul#menu-primary-items {
@@ -234,10 +237,6 @@ html, body {
 #header.mini {
 	min-height: 60px;
 	background-color: rgba( $header-color, 0.9 );
-
-	not('.no-title') #branding {
-		min-height: 60px;
-	}
 
 	#menu-wrapper .menu ul#menu-primary-items > li > a {
 		height: 60px;
@@ -313,7 +312,7 @@ html, body {
 			.author {
 				&:before {
 					@include font-awesome();
-					content: "\f007";
+					content: "\f118";
 					padding-right: 0.2em;
 				}
 			}
@@ -321,7 +320,7 @@ html, body {
 			.comment {
 				&:before {
 					@include font-awesome();
-					content:  "\f075";
+					content:  "\f4b4";
 					padding-right: 0.2em;
 				}
 			}
@@ -410,8 +409,8 @@ html, body {
 
 			a {
 				span {
-					color: $meta-color;
-					border: solid 1px $border-color;
+					color: $link-color;
+					border: solid 1px $link-color;
 					background: #FFF;
 					border-radius: 2px;
 
@@ -464,13 +463,17 @@ html, body {
 	h5 {font-size:1.4rem;}
 	h6 {font-size:1.2rem;}
 
+	h1 {
+		font-weight: bold;
+	}
+
 	h2 {
-		border-bottom: dashed 1px $border-color;
+		border-bottom: dashed 1px $header-color;
 		padding-bottom: 0.4em;
 	}
 
 	h3 {
-		border-left: solid 7px $border-color;
+		border-left: solid 7px $header-color;
 		padding-left: 10px;
 	}
 
@@ -1319,6 +1322,10 @@ form {
 								}
 							}
 						}
+
+						.entry-header .entry-title {
+							color: $header-color;
+						}
 					}
  				}
 			}
@@ -1438,8 +1445,8 @@ form {
 	.current {
 		display: inline-block;
 		background: #FFF;
-		color: $meta-color;
-		border:solid 1px $meta-color;
+		color: $link-color;
+		border:solid 1px $link-color;
 		text-decoration:none;
 		text-align: center;
 		padding: 0.2em 0.4em;
@@ -1449,7 +1456,6 @@ form {
 		&.prev,
 		&.next {
 			background: none;
-			color: $link-color;
 			border: none;
 		}
 
@@ -1807,7 +1813,8 @@ form {
 					position: relative;
 
 					&:hover > ul {
-						display: block; /* show dropdown on hover */
+						opacity: 1;
+						visibility: visible;
 					}
 
 					a {
@@ -1831,13 +1838,15 @@ form {
 					ul {
 						margin: 0;
 						padding: 0;
-						display: none; /* hide dropdown */
 						width: 200px;
 						position: absolute;
 						top: 80px;
 						left: 0;
 						text-align: left;
 						z-index: 9999;
+						visibility: hidden;
+						opacity: 0;
+						transition: .5s;
 
 						li {
 							display: block;

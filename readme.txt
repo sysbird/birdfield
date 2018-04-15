@@ -39,10 +39,6 @@ The header image is created by theme author and is released under GPL license.
 
 
 == Third-party Resources ==
-html5shiv.js
-License: MIT/GPL2 Licensed
-Source:  https://github.com/aFarkas/html5shiv
-
 Google Fonts
 License: SIL Open Font License, 1.1
 Source:  http://www.google.com/fonts
@@ -63,13 +59,14 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.11
-* fix Header Slider on javascript.
+* fix bug Header Slider on javascript.
 * fix bug fixed header.
 * fix bug no header image.
 * sort Header Slider randam.
 * add hook 'birdfield_content_header' for example bread crumb.
 * add hook 'birdfield_content_footer' for example ad.
 * remove /css/ja.css.
+* remove html5shiv.js.
 
 v1.10
 * fix the WordPress 4.9.

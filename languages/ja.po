@@ -3,25 +3,25 @@ msgstr ""
 "Project-Id-Version: BirdFIELD 1.11 ja\n"
 "Report-Msgid-Bugs-To: http://www.sysbird.jp/wptips\n"
 "POT-Creation-Date: 2016-03-19 00:00+0300\n"
-"PO-Revision-Date: 2018-03-28 18:46+0900\n"
+"PO-Revision-Date: 2018-04-15 15:07+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.1\n"
 "Last-Translator: TORIYAMA Yuko <sysbird@gmail.com>\n"
 "Language-Team: sysbird <sysbird@gmail.com>\n"
 "Language: ja\n"
 
-#: 404.php:16
+#: 404.php:18
 msgid "Error 404 - Not Found"
 msgstr "エラー404 - ページが見つかりませんでした"
 
-#: 404.php:19
+#: 404.php:22
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "お探しのページが見つかりませんでした。検索してみてください。"
 
-#: archive.php:36
+#: archive.php:39
 msgid "Sorry, no posts matched your criteria."
 msgstr "投稿が見つかりません。"
 
@@ -42,7 +42,7 @@ msgstr "新しいコメント"
 msgid "Permalink to %s"
 msgstr "%sへのリンク"
 
-#: content-singular.php:23 image.php:77
+#: content-singular.php:23 image.php:80
 msgid "Pages:"
 msgstr "ページ:"
 
@@ -54,19 +54,19 @@ msgstr "カテゴリー"
 msgid "Tags"
 msgstr "タグ"
 
-#: footer.php:25
+#: footer.php:22
 msgid "Copyright &copy; %s All Rights Reserved."
 msgstr "Copyright &copy; %s All Rights Reserved."
 
-#: footer.php:30
+#: footer.php:27
 msgid "Proudly powered by WordPress"
 msgstr "Proudly powered by WordPress"
 
-#: footer.php:31
+#: footer.php:28
 msgid "BirdFIELD theme by %sSysbird%s"
 msgstr "BirdFIELD theme by %sSysbird%s"
 
-#: footer.php:35
+#: footer.php:32
 msgid "Go Top"
 msgstr "ページトップへ"
 
@@ -86,47 +86,47 @@ msgstr "ウィジェットエリアフッター"
 msgid "Navigation Menu"
 msgstr "ナビゲーションメニュー"
 
-#: functions.php:251
+#: functions.php:244
 msgid "Text Color"
 msgstr "文字色"
 
-#: functions.php:265
+#: functions.php:258
 msgid "Link Color"
 msgstr "リンク色"
 
-#: functions.php:279
+#: functions.php:272
 msgid "Header, Footer Background Color"
 msgstr "ヘッダ、フッター背景色"
 
-#: functions.php:293
+#: functions.php:286
 msgid "Fixed Header"
 msgstr "ヘッダーを固定表示"
 
-#: functions.php:302
+#: functions.php:295
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:315
+#: functions.php:308
 msgid "Display Copyright"
 msgstr "コピーライトを表示"
 
-#: functions.php:330
+#: functions.php:323
 msgid "Display Credit"
 msgstr "クレジットを表示"
 
-#: functions.php:485
+#: functions.php:495
 msgid "Continue reading"
 msgstr "続きを読む"
 
-#: functions.php:596 functions_customizer.php:152
+#: functions.php:620 functions_customizer.php:152
 msgid "Hello world!"
 msgstr "ようこそ！"
 
-#: functions.php:597 functions_customizer.php:173
+#: functions.php:621 functions_customizer.php:173
 msgid "Begin your website."
 msgstr "Webサイトを始めましょう。"
 
-#: functions.php:638
+#: functions.php:662
 msgid "More"
 msgstr "詳しくみる"
 
@@ -182,15 +182,15 @@ msgstr "説明"
 msgid "Link URL"
 msgstr "リンクURL"
 
-#: home.php:37
+#: home.php:43
 msgid "RECENT"
 msgstr "新着"
 
-#: image.php:90
+#: image.php:93
 msgid "Next Image"
 msgstr "次の画像へ"
 
-#: image.php:91
+#: image.php:94
 msgid "Previous Image"
 msgstr "前の画像へ"
 
@@ -198,11 +198,11 @@ msgstr "前の画像へ"
 msgid "NEWS"
 msgstr "お知らせ"
 
-#: search.php:15
+#: search.php:18
 msgid "Search Results: %s"
 msgstr "「%s」 の検索結果"
 
-#: search.php:35
+#: search.php:38
 msgid "Sorry, no posts matched &#8216;%s&#8217;"
 msgstr "「%s」 は見つかりませんでした。"
 
