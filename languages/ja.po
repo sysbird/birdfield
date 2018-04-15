@@ -19,11 +19,11 @@ msgstr "エラー404 - ページが見つかりませんでした"
 
 #: 404.php:22
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "お探しのページが見つかりませんでした。検索してみてください。"
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
 
 #: archive.php:39
 msgid "Sorry, no posts matched your criteria."
-msgstr "投稿が見つかりません。"
+msgstr "条件に合う投稿はありませんでした。"
 
 #: comments.php:18
 msgid "One Comment"
