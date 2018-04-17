@@ -24,10 +24,8 @@ When the posts are tagged with "news", display NEWS area on homepage.
 Text Color: set at Colors section.
 Link Color: set at Colors section.
 Header, Footer Background Color: set at Colors section.
-Fixed Menu: set at Site Identity section.
 Header Slider: set 5 images at Header Slider section.
-Display Copyright: set at Footer section.
-Display Credit: set at Footer section.
+Display Copyright and Credit: set at Footer section.
 
 
 == License ==
@@ -65,6 +63,7 @@ v1.11
 * sort Header Slider randam.
 * add hook 'birdfield_content_header' for example bread crumb.
 * add hook 'birdfield_content_footer' for example ad.
+* remove fixedheader option(always fixed header in most navigation).
 * remove /css/ja.css.
 * remove html5shiv.js.
 

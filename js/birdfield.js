@@ -24,11 +24,22 @@ jQuery(function() {
 				}
 			};
 
-			// Add listener
-			mq.addListener( birdfieldHeightCheck );
+			var birdfield_AdjustHeader = function() {
+				var headerHeight = parseInt( jQuery( '#header' ).height() );
+				if( 80 < headerHeight ){
+					// so many Navigation
+					jQuery( '.wrapper' ).addClass( 'many-navigation' );
+					jQuery( '.wrapper' ).removeClass( 'fixed-header' );
+				}
+			}
 
-			// Manually call listener
+			// Add listener HeightChec
+			mq.addListener( birdfieldHeightCheck );
 			birdfieldHeightCheck( mq );
+
+			// Add listener navigation height
+			mq.addListener( birdfield_AdjustHeader );
+			birdfield_AdjustHeader();
 		}
 		else {
 			// Browser doesn't support matchMedia
@@ -59,18 +70,6 @@ jQuery(function() {
 		jQuery( this ).toggleClass( "current" );
 	});
 
-	// Window Resize
-	var timer = false;
-	jQuery(window).resize(function() {
-		if (timer !== false) {
-			clearTimeout(timer);
-		}
-		timer = setTimeout(function() {
-			birdfield_AdjustHeader();
-		}, 200);
-	});
-	birdfield_AdjustHeader();
-
 	// Windows Scroll
 	var totop = jQuery( '#back-top' );
 	totop.hide();
@@ -83,10 +82,10 @@ jQuery(function() {
 		var header_clip = jQuery( '#header' ).css( 'clip' );
 		if( -1 == header_clip.indexOf( 'rect' ) ) {
 			if ( scrollTop > 200 ) {
-				jQuery('.wrapper:not(.thin-navigation) #header').addClass('mini');
+				jQuery('.wrapper:not(.many-navigation) #header').addClass('mini');
 			}
 			else {
-				jQuery('.wrapper:not(.thin-navigation) #header').removeClass('mini');
+				jQuery('.wrapper:not(.many-navigation) #header').removeClass('mini');
 			}
 		}
 	});
@@ -96,20 +95,6 @@ jQuery(function() {
 		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
 	});
 });
-
-////////////////////////////////////////
-// Adjust Header height
-function birdfield_AdjustHeader() {
-
-	var headerHeight = parseInt( jQuery( '#header' ).height() );
-	if( 80 < headerHeight ){
-		// Long Navigation
-		jQuery( '.wrapper' ).addClass( 'thin-navigation' );
-	}
-	else{
-		jQuery( '.wrapper' ).removeClass( 'thin-navigation' );
-	}
-}
 
 ////////////////////////////////////////
 // Header Slider
