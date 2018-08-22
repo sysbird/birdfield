@@ -215,7 +215,7 @@ function birdfield_scripts() {
 
 	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'jquerytile', get_template_directory_uri() .'/js/jquery.tile.js', 'jquery', '1.1.2' );
-	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', array( 'jquery' , 'jquery-masonry', 'jquerytile' ), '1.11' );
+	wp_enqueue_script( 'birdfield', get_template_directory_uri() .'/js/birdfield.js', array( 'jquery' , 'jquery-masonry', 'jquerytile' ), '1.12' );
 	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
 	wp_enqueue_style( 'birdfield', get_stylesheet_uri() );
 }
@@ -585,7 +585,6 @@ function birdfield_headerslider() {
 		$birdfield_interval = 7000;
 	}
 
-
 	// get headerslide option
 	$birdfield_slides = array();
 	$birdfield_max = 0;
@@ -621,9 +620,16 @@ function birdfield_headerslider() {
 		return false;
 	}
 
+	if( 1 < $birdfield_max ){
+		$birdfield_interval = 'data-interval="' .$birdfield_interval .'"';
+	}
+	else{
+		$birdfield_interval = '';
+	}
+
 ?>
 	<section id="wall">
-		<div class="headerimage slider" data-interval="<?php echo $birdfield_interval; ?>">
+		<div class="headerimage slider" <?php echo $birdfield_interval; ?>>
 
 <?php
 	// sort randam

@@ -57,6 +57,10 @@ http://www.sysbird.jp
 
 
 == Changelog ==
+v1.12
+* fix bug Header Slider on javascript.
+* remove languages files. and theme translation migrated to GlotPress.
+
 v1.11
 * fix bug Header Slider on javascript.
 * fix bug fixed header.

@@ -47,7 +47,7 @@ jQuery(function() {
 		}
 
 		// Header Slider
-		jQuery( '.slider' ).birdfield_Slider();
+		jQuery( '.slider[data-interval]' ).birdfield_Slider();
 
 		// gallery columns tile
 		jQuery.each(  jQuery ( ' .gallery' ),  function(){
@@ -99,7 +99,6 @@ jQuery(function() {
 ////////////////////////////////////////
 // Header Slider
 jQuery.fn.birdfield_Slider = function(){
-
 	return this.each(function(i, elem) {
 		// change slide
 		var birdfield_interval = jQuery( '.slider' ).attr( 'data-interval' );
