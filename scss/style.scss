@@ -179,23 +179,73 @@ html, body {
 	.menu {
 		#small-menu {
 			position: absolute;
-			top: 0.4em;
+			top: 0;
 			right: 0;
-			cursor: pointer;
 			display: block;
-			text-align: right;
-			font-size: 2rem;
+			box-sizing: content-box;
+			width: 2rem;
+			padding: 0;
+			padding-top: 18px;
+			padding-right: .75rem;
+			padding-bottom: 30px;
+			padding-left: .75rem;
+			-webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+			border: 0;
+			outline: 0;
+			background-color: transparent;
 
-			&:before {
-				@include font-awesome();
-				content: "\f0c9";
+			.icon {
+				position: relative;
+				display: block;
+				margin-top: 10px;
+
+	
+				&,
+				&:before,
+				&:after {
+					width: 100%;
+					height: 2px;
+					-webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+					transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+					background-color: #FFF;
+				}
+	
+				&:before,
+				&:after {
+					position: absolute;
+					top: -10px;
+					left: 0;
+					content: ' ';
+				}
+				
+				&:after {
+					top: 10px;
+				}
 			}
-
-			&.current:before {
-				content: "\f00d";
+			
+			&.current .icon {
+				background-color: transparent;
+	
+				&:before,
+				&:after {
+					top: 0;
+				}
+	
+				&:before {
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				}
+				
+				&:after {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				}
 			}
 		}
-
+	
 		ul#menu-primary-items {
 			margin: 0;
 			padding: 0;

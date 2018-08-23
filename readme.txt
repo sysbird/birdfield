@@ -17,7 +17,6 @@ The Theme has customizable header and footer.
 = Usage =
 You can upload the header image by custom-header, and set the Widget Area for header.
 Instead the header image, you can add a header slider at theme customizer.
-You can add up to 5 images in the header slider. also you can add title, description, link URL for each image.
 When the posts are tagged with "news", display NEWS area on homepage.
 
 
@@ -59,6 +58,7 @@ http://www.sysbird.jp
 == Changelog ==
 v1.12
 * fix bug Header Slider on javascript.
+* animate small menu for mobile.
 * remove languages files. and theme translation migrated to GlotPress.
 
 v1.11
