@@ -1690,13 +1690,6 @@ form {
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
 
-	.fixed-header {
-		#header {
-			position: fixed;
-			top: 0;
-		}
-	}
-
 	#footer {
 		#back-top {
 			left: 46%;
@@ -1764,7 +1757,7 @@ form {
 		}
 	}
 
-	.fixed-header {
+/*	.fixed-header {
 		#wall {
 			.headerimage {
 				&:not(.slider) {
@@ -1786,7 +1779,7 @@ form {
 	body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
 		margin-top: 60px;
 	}
-
+*/
 	.wrapper:not(.no-title),
 	.wrapper:not(.no-nav-menu){
 		#wall {
@@ -2060,6 +2053,25 @@ form {
 		}
 	}
 
+	.fixed-header {
+		#header {
+			position: fixed;
+			top: 0;
+		}
+
+		#wall {
+			.headerimage {
+				&:not(.slider) {
+					position: fixed;
+				}
+
+				.fixedimage {
+					position: fixed;
+				}
+			}
+		}
+	}
+
 	body:not(.home) .fixed-header:not(.no-title) #content,
 	body:not(.home) .fixed-header:not(.no-nav-menu) #content,
 	body.home.paged .fixed-header:not(.no-title) #content,
@@ -2078,7 +2090,7 @@ form {
 	}
 }
 
-@media screen and ( max-width: 48.875em ) and ( min-width: 660px ) {
+@media screen and ( max-width: 48.875em ) and ( min-width: 930px ) {
 
 	.admin-bar .fixed-header #header {
 		top: 46px;

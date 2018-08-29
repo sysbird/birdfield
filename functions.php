@@ -142,17 +142,11 @@ function birdfield_setup() {
 
 	// Add support for custom headers.
 	$custom_header_support = array(
-		// Text color and image (empty to use none).
-		'default-text-color'	=> 'FFF',
 		'default-image'			=> '%s/images/header.jpg',
-
-		// Set height and width, with a maximum value for the width.
-		'height'	=> 900,
-		'width'		=> 1280,
-		'max-width'	=> 900,
-
-		// Random image rotation off by default.
-		'random-default'	=> true,
+		'height'				=> 900,
+		'width'					=> 1280,
+		'max-width'				=> 900,
+		'random-default'		=> true,
 	);
 
 	// Add support for custom headers.
@@ -344,7 +338,8 @@ function birdfield_color_css() {
 
 	// Custom Header Text Color
 	$birdfield_header_text_color = get_header_textcolor();
-	if( strcasecmp( $birdfield_header_text_color, trim( $birdfield_default_colors[ 'header_text_color' ], '#' ))) {
+
+	if( !empty( $birdfield_header_text_color ) && strcasecmp( $birdfield_header_text_color, trim( $birdfield_default_colors[ 'header_text_color' ], '#' ))) {
 		$birdfield_css = "
 			/* Custom Header Text Color */
 			#header #branding #site-title,
@@ -357,7 +352,28 @@ function birdfield_color_css() {
 			#footer a {
 				color: #{$birdfield_header_text_color};
 			}
-		";
+
+			#menu-wrapper .menu ul#menu-primary-items li a {
+				border-color: #{$birdfield_header_text_color};
+			}
+
+			#menu-wrapper .menu #small-menu .icon,
+			#menu-wrapper .menu #small-menu .icon:before,
+			#menu-wrapper .menu #small-menu .icon:after {
+				background-color: #{$birdfield_header_text_color};
+			}
+
+			@media screen and (min-width: 930px) {
+				#menu-wrapper .menu ul#menu-primary-items li a:hover {
+					background-color: #{$birdfield_header_text_color};
+				}
+
+				#menu-wrapper .menu ul#menu-primary-items li ul li a,
+				#menu-wrapper .menu ul#menu-primary-items li ul li:first-child a {
+					border-color: #{$birdfield_header_text_color};
+				}
+			}
+			";
 
 		wp_add_inline_style( 'birdfield', $birdfield_css );
 	}

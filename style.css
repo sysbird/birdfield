@@ -1852,10 +1852,6 @@ form input {
 --------------------------------------------- */
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
-  .fixed-header #header {
-    position: fixed;
-    top: 0;
-  }
   #footer #back-top {
     left: 46%;
   }
@@ -1898,20 +1894,29 @@ form input {
     font-size: 3.4vw;
     width: 60%;
   }
-  .fixed-header #wall .headerimage:not(.slider) {
-    position: fixed;
-  }
-  .fixed-header #wall .headerimage .fixedimage {
-    position: fixed;
-  }
-  body:not(.home) .fixed-header:not(.no-title) #content,
-  body:not(.home) .fixed-header:not(.no-nav-menu) #content,
-  body.home.paged .fixed-header:not(.no-title) #content,
-  body.home.paged .fixed-header:not(.no-nav-menu) #content,
-  body.home .fixed-header:not(.no-title) #wall.no-image,
-  body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
-    margin-top: 60px;
-  }
+  /*	.fixed-header {
+		#wall {
+			.headerimage {
+				&:not(.slider) {
+					position: fixed;
+				}
+
+				.fixedimage {
+					position: fixed;
+				}
+			}
+		}
+	}
+
+	body:not(.home) .fixed-header:not(.no-title) #content,
+	body:not(.home) .fixed-header:not(.no-nav-menu) #content,
+	body.home.paged .fixed-header:not(.no-title) #content,
+	body.home.paged .fixed-header:not(.no-nav-menu) #content,
+	body.home .fixed-header:not(.no-title) #wall.no-image,
+	body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
+		margin-top: 60px;
+	}
+*/
   .wrapper:not(.no-title) #wall .widget-area-header,
   .wrapper:not(.no-nav-menu) #wall .widget-area-header {
     top: 10%;
@@ -2107,6 +2112,16 @@ form input {
     font-size: 30px;
     width: 600px;
   }
+  .fixed-header #header {
+    position: fixed;
+    top: 0;
+  }
+  .fixed-header #wall .headerimage:not(.slider) {
+    position: fixed;
+  }
+  .fixed-header #wall .headerimage .fixedimage {
+    position: fixed;
+  }
   body:not(.home) .fixed-header:not(.no-title) #content,
   body:not(.home) .fixed-header:not(.no-nav-menu) #content,
   body.home.paged .fixed-header:not(.no-title) #content,
@@ -2125,7 +2140,7 @@ form input {
   }
 }
 
-@media screen and (max-width: 48.875em) and (min-width: 660px) {
+@media screen and (max-width: 48.875em) and (min-width: 930px) {
   .admin-bar .fixed-header #header {
     top: 46px;
   }
