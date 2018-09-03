@@ -192,7 +192,7 @@ html, body {
 #header img {
   max-width: 100%;
   vertical-align: bottom;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.85rem;
 }
 
 .no-title #header #site-title,
@@ -284,7 +284,7 @@ html, body {
 }
 
 #menu-wrapper .menu ul#menu-primary-items li a {
-  padding: 0.8em;
+  padding: 0.85rem;
   display: block;
   color: #FFF;
   text-decoration: none;
@@ -293,7 +293,7 @@ html, body {
 }
 
 #menu-wrapper .menu ul#menu-primary-items li ul {
-  padding-left: 0.8em;
+  padding-left: 0.85rem;
 }
 
 #menu-wrapper .menu .current-menu-item > a,
@@ -314,17 +314,17 @@ html, body {
 
 #header.mini #menu-wrapper .menu ul#menu-primary-items > li > a {
   height: 60px;
-  padding: 20px 0.8em;
+  padding: 20px 0.85rem;
 }
 
 /* Posts
 --------------------------------------------- */
 #content .container {
-  padding-bottom: 3.2em;
+  padding-bottom: 3.4rem;
 }
 
 #content .content-header {
-  margin: 1.6em 0;
+  margin: 1.7rem 0;
 }
 
 #content .content-header .content-title {
@@ -349,7 +349,7 @@ html, body {
 }
 
 #content .hentry .entry-header {
-  margin: 1.6em 0;
+  margin: 1.7rem 0;
   line-height: 1.4;
   position: relative;
 }
@@ -384,7 +384,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f133";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .entry-header .postdate a,
@@ -401,7 +401,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f118";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .entry-header .comment:before {
@@ -413,7 +413,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f075";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .entry-header .parent-post-link a {
@@ -429,26 +429,26 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f03e";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .entry-meta {
   font-size: 0.9rem;
-  padding: 1.6em 0;
+  padding: 1.7rem 0;
   color: #999;
   clear: both;
 }
 
 #content .hentry .entry-meta .category,
 #content .hentry .entry-meta .tag {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.425rem;
   overflow: hidden;
   *zoom: 1;
 }
 
 #content .hentry .entry-meta .category span,
 #content .hentry .entry-meta .tag span {
-  width: 7em;
+  width: 7rem;
   padding: 2px 0;
   display: block;
   float: left;
@@ -464,7 +464,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f07b";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .entry-meta .category a,
@@ -493,19 +493,19 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f02c";
-  padding-right: 0.2em;
+  padding-right: 0.2rem;
 }
 
 #content .hentry .page-links {
   clear: both;
-  margin: 1.6em 0;
+  margin: 1.7rem 0;
   color: #1c4bbe;
 }
 
 #content .hentry .page-links span {
   background: #1c4bbe;
   color: #FFF;
-  padding: 0.2em 0.4em;
+  padding: 0.2125rem 0.425rem;
   text-decoration: none;
   border-radius: 2px;
   font-weight: normal;
@@ -528,7 +528,7 @@ html, body {
 
 #content .hentry .more-link {
   color: #1c4bbe;
-  padding-left: 0.8em;
+  padding-left: 0.85rem;
   border-radius: 2px;
 }
 
@@ -552,11 +552,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f06c";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
 }
 
 #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
-  margin: 0.7em 0;
+  margin: 0.85rem 0;
   line-height: 1.2;
   font-weight: normal;
   color: #79a596;
@@ -605,13 +605,13 @@ html, body {
 }
 
 #content p {
-  line-height: 1.6;
-  margin: 0 0 1.6em;
+  line-height: 1.7;
+  margin: 0 0 1.7rem;
 }
 
 #content blockquote {
-  margin-left: 1em;
-  padding-left: 1em;
+  margin-left: 1.7rem;
+  padding-left: 1.7rem;
   border-left: 10px solid #E6E6E6;
 }
 
@@ -639,14 +639,14 @@ html, body {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
 }
 
 #content table th,
 #content table td {
   border-bottom: 1px solid #E6E6E6;
   line-height: 1.4;
-  padding: 0.8em;
+  padding: 0.85rem;
   text-align: left;
   vertical-align: top;
 }
@@ -658,9 +658,9 @@ html, body {
 
 #content pre {
   border: dashed 1px #CCC;
-  padding: 0.8em;
+  padding: 0.85rem;
   background: #EEE;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
   line-height: 1.4;
 }
 
@@ -676,7 +676,7 @@ html, body {
   background-color: #E6E6E6;
   border: 0 none;
   height: 1px;
-  margin-bottom: 1.6m;
+  margin-bottom: 1.7rem;
 }
 
 #content sup, #content sub {
@@ -710,14 +710,14 @@ html, body {
 
 #content ul,
 #content ol {
-  margin: 0 0 1.6em 1em;
-  padding: 0 0 0 1em;
+  margin: 0 0 1.7rem 0.85rem;
+  padding: 0 0 0 0.85rem;
   line-height: 1.4;
 }
 
 #content ul li,
 #content ol li {
-  padding: 0.2em 0;
+  padding: 0.2125rem 0;
 }
 
 #content ul ul,
@@ -756,8 +756,8 @@ html, body {
 }
 
 #content dl {
-  margin: 0 0 1em 0;
-  line-height: 1.6;
+  margin: 0 0 1.7rem 0;
+  line-height: 1.7;
 }
 
 #content dl dt {
@@ -765,7 +765,7 @@ html, body {
 }
 
 #content dl dd {
-  margin: 0 1.5em 1.6em;
+  margin: 0 1.7rem 1.7rem;
   padding: 0;
 }
 
@@ -802,7 +802,7 @@ img[class*="wp-image-"] {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.85rem;
 }
 
 a:hover img {
@@ -825,7 +825,7 @@ a:hover img {
 .wp-caption {
   padding: 5px;
   background: #E6E6E6;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.85rem;
   max-width: 100%;
 }
 
@@ -908,29 +908,29 @@ video {
 /* Comments
 -------------------------------------------------------------- */
 #content #comments {
-  margin: 1.6em 0;
+  margin: 1.7rem 0;
   display: block;
 }
 
 #content #comments .navigation {
   position: relative;
-  height: 1em;
+  height: 1.7rem;
   padding-bottom: 10px;
-  margin-bottom: 1em;
+  margin-bottom: 1.7rem;
 }
 
 #content #comments .navigation .nav-previous a {
   position: absolute;
   top: 0;
   right: 0;
-  padding-left: 1em;
+  padding-left: 1.7rem;
 }
 
 #content #comments .navigation .nav-next a {
   position: absolute;
   top: 0;
   left: 0;
-  padding-right: 1em;
+  padding-right: 1.7rem;
 }
 
 #content #comments ol.commentlist {
@@ -942,7 +942,7 @@ video {
 #content #comments ol.commentlist li.pingback,
 #content #comments ol.commentlist li.comment {
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: 1.7rem;
   padding: 0;
   position: relative;
   list-style: none;
@@ -964,7 +964,7 @@ video {
 
 #content #comments li .comment-meta {
   line-height: 1.4;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.85rem;
 }
 
 #content #comments li .comment-meta a {
@@ -993,7 +993,7 @@ video {
 }
 
 #content #comments li .reply {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
 }
 
 #content #comments li .reply a.comment-reply-link:before {
@@ -1005,7 +1005,7 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f112";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
 }
 
 #content #comments li .comment-metadata,
@@ -1032,14 +1032,14 @@ form input {
 #commentform {
   border: 1px dotted #E6E6E6;
   padding: 10px 15px;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
   background: #FFF;
   border-radius: 4px;
   max-width: 650px;
 }
 
 #commentform p {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.85rem;
 }
 
 #commentform label {
@@ -1065,7 +1065,7 @@ form input {
 
 #commentform input#submit {
   padding: 5px 10px;
-  margin-top: 0.4em;
+  margin-top: 0.425rem;
 }
 
 #commentform #email-notes {
@@ -1100,7 +1100,7 @@ form input {
 }
 
 #footer .site-title {
-  padding: 0.8em 0;
+  padding: 0.85rem 0;
   border-top: dotted 1px #E6E6E6;
   line-height: 1.4;
 }
@@ -1114,11 +1114,11 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f19a";
-  padding-left: 0.2em;
+  padding-left: 0.2125rem;
 }
 
 #footer .site-title strong {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #footer #back-top {
@@ -1198,10 +1198,9 @@ form input {
 #widget-area .widget h3 {
   font-size: 1.4rem;
   font-weight: normal;
-  margin: 0 0 0.4em 0;
-  padding: 0 0 0.4em 0;
+  margin: 0 0 0.425rem 0;
+  padding: 0 0 0.425rem 0;
   border-bottom: solid 2px #E6E6E6;
-  font-size: 1.4rem;
 }
 
 #widget-area .widget ul {
@@ -1214,8 +1213,8 @@ form input {
 #widget-area .widget ul li {
   margin-top: -1px;
   border-top: dotted 1px #FFF;
-  padding: 0.3em 0 0.3em 0.6em;
-  text-indent: -0.3em;
+  padding: 0.3rem 0 0.3rem 0.6rem;
+  text-indent: -0.3rem;
 }
 
 #widget-area .widget ul li:before {
@@ -1227,11 +1226,11 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f0da";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
 }
 
 #widget-area .widget ul li ul {
-  padding: 0.5em 0 0 0.5em;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
 #widget-area .widget table {
@@ -1357,7 +1356,7 @@ form input {
 .blog #content h2 {
   border: none;
   margin: 0;
-  padding: 0 0 1em 0;
+  padding: 0 0 1.7rem 0;
 }
 
 .home #content h2 a,
@@ -1370,7 +1369,7 @@ form input {
   background: #FFF;
   z-index: 1;
   position: relative;
-  padding-top: 2em;
+  padding-top: 1.7rem;
 }
 
 .home #content #news .container,
@@ -1396,7 +1395,7 @@ form input {
 
 .home #content #news ul.article li a,
 .blog #content #news ul.article li a {
-  padding: 0.5em 0;
+  padding: 0.85rem 0;
   display: block;
 }
 
@@ -1411,7 +1410,7 @@ form input {
 .blog #content #news ul.article li .entry-header .entry-title {
   font-size: 1.2rem;
   color: #1c4bbe;
-  padding-top: 0.8em;
+  padding-top: 0.85rem;
   margin: 0;
 }
 
@@ -1424,14 +1423,14 @@ form input {
 .blog #content #blog {
   background: #FFF;
   position: relative;
-  padding-top: 2em;
+  padding-top: 1.7rem;
   z-index: 1;
 }
 
 .home #content #blog ul.article,
 .blog #content #blog ul.article {
   list-style: none;
-  margin: 0 0 1.6em 0;
+  margin: 0 0 1.7rem 0;
   padding: 0;
 }
 
@@ -1459,7 +1458,7 @@ form input {
 
 .home #content #blog ul.article .hentry .entry-header .entry-title,
 .blog #content #blog ul.article .hentry .entry-header .entry-title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #222327;
 }
 
@@ -1516,7 +1515,7 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f005";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
   color: #FFF;
 }
 
@@ -1547,7 +1546,7 @@ form input {
 
 .archive #content ul.list li a,
 .search #content ul.list li a {
-  padding: 0.5em 0;
+  padding: 0.85rem 0;
   display: block;
   overflow: hidden;
   *zoom: 1;
@@ -1580,7 +1579,7 @@ form input {
 
 .archive #content ul.list li .entry-header .entry-title,
 .search #content ul.list li .entry-header .entry-title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #1c4bbe;
 }
 
@@ -1606,7 +1605,7 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f061";
-  padding-left: 0.2em;
+  padding-left: 0.2125rem;
 }
 
 .single #content #nav-below .nav-next a:before {
@@ -1618,14 +1617,14 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f060";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
 }
 
 /* Attachment
 -------------------------------------------------------------------- */
 .attachment #content .hentry .entry-attachment {
   text-align: center;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
 }
 
 .attachment #content .hentry .entry-attachment .wp-caption {
@@ -1649,9 +1648,9 @@ form input {
   border: solid 1px #1c4bbe;
   text-decoration: none;
   text-align: center;
-  padding: 0.2em 0.4em;
+  padding: 0.2125rem 0.425rem;
   border-radius: 2px;
-  margin-right: 0.1em;
+  margin-right: 0.1rem;
 }
 
 #content .pagination a.page-numbers.prev, #content .pagination a.page-numbers.next,
@@ -1671,7 +1670,7 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f060";
-  padding-right: 0.2em;
+  padding-right: 0.2125rem;
 }
 
 #content .pagination a.page-numbers.next:after,
@@ -1684,7 +1683,7 @@ form input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f061";
-  padding-left: 0.2em;
+  padding-left: 0.2125rem;
 }
 
 #content .pagination a.page-numbers:hover {
@@ -1894,29 +1893,6 @@ form input {
     font-size: 3.4vw;
     width: 60%;
   }
-  /*	.fixed-header {
-		#wall {
-			.headerimage {
-				&:not(.slider) {
-					position: fixed;
-				}
-
-				.fixedimage {
-					position: fixed;
-				}
-			}
-		}
-	}
-
-	body:not(.home) .fixed-header:not(.no-title) #content,
-	body:not(.home) .fixed-header:not(.no-nav-menu) #content,
-	body.home.paged .fixed-header:not(.no-title) #content,
-	body.home.paged .fixed-header:not(.no-nav-menu) #content,
-	body.home .fixed-header:not(.no-title) #wall.no-image,
-	body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
-		margin-top: 60px;
-	}
-*/
   .wrapper:not(.no-title) #wall .widget-area-header,
   .wrapper:not(.no-nav-menu) #wall .widget-area-header {
     top: 10%;
@@ -2075,12 +2051,13 @@ form input {
   .blog #content #blog ul.article {
     overflow: hidden;
     *zoom: 1;
+    margin-left: -10px;
   }
   .home #content #blog ul.article .hentry,
   .blog #content #blog ul.article .hentry {
-    width: 300px;
+    width: 303px;
     float: left;
-    margin: 0 5px 10px 5px;
+    margin: 0 0 10px 10px;
   }
   #widget-area .widget {
     width: 290px;
@@ -2088,7 +2065,7 @@ form input {
     float: left;
   }
   #commentform {
-    padding: 0.8em 1.6em;
+    padding: 0.85rem 1.7rem;
   }
   #wall {
     padding-top: 650px;

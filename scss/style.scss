@@ -24,6 +24,7 @@ $hover-background-color: #F5F5F5;
 $header-color: #79a596;
 $border-color: #E6E6E6;
 $meta-color: #999;
+$line-height: 1.7;
 
 /*------------------------------
 Font Awesome
@@ -157,7 +158,7 @@ html, body {
 	img {
 		max-width: 100%;
 		vertical-align: bottom;
-		margin-bottom: 0.5em;
+		margin-bottom: #{$line-height /2}rem;
 	}
 }
 
@@ -255,7 +256,7 @@ html, body {
 				list-style: none;
 
 				a {
-					padding: 0.8em;
+					padding: #{$line-height /2}rem;
 					display: block;
 					color: #FFF;
 					text-decoration: none;
@@ -264,7 +265,7 @@ html, body {
 				}
 
 				ul {
-					padding-left: 0.8em;
+					padding-left: #{$line-height /2}rem;
 				}
 			}
 		}
@@ -288,7 +289,7 @@ html, body {
 
 	#menu-wrapper .menu ul#menu-primary-items > li > a {
 		height: 60px;
-		padding: 20px 0.8em;
+		padding: 20px #{$line-height /2}rem;
 	}
 }
 
@@ -296,11 +297,11 @@ html, body {
 --------------------------------------------- */
 #content {
 	.container {
-		padding-bottom: 3.2em;
+		padding-bottom: #{$line-height *2}rem;
 	}
 
 	.content-header {
-		margin: 1.6em 0;
+		margin: #{$line-height}rem 0;
 
 		.content-title {
 			color: $header-color;
@@ -323,7 +324,7 @@ html, body {
 		}
 
 		.entry-header {
-			margin: 1.6em 0;
+			margin: #{$line-height}rem 0;
 			line-height: 1.4;
 			position: relative;
 
@@ -349,7 +350,7 @@ html, body {
 				&:before {
 					@include font-awesome();
 					content:  "\f133";
-					padding-right: 0.2em;
+					padding-right: 0.2rem;
 				}
 
 				a {
@@ -361,7 +362,7 @@ html, body {
 				&:before {
 					@include font-awesome();
 					content: "\f118";
-					padding-right: 0.2em;
+					padding-right: 0.2rem;
 				}
 			}
 
@@ -369,7 +370,7 @@ html, body {
 				&:before {
 					@include font-awesome();
 					content: "\f075";
-					padding-right: 0.2em;
+					padding-right: 0.2rem;
 				}
 			}
 
@@ -380,7 +381,7 @@ html, body {
 					&:before {
 						@include font-awesome();
 						content: "\f03e";
-						padding-right: 0.2em;
+						padding-right: 0.2rem;
 					}
 				}
 			}
@@ -388,17 +389,17 @@ html, body {
 
 		.entry-meta {
 			font-size: 0.9rem;
-			padding: 1.6em 0;
+			padding: #{$line-height}rem 0;
 			color: #999;
 			clear: both;
 
 			.category,
 			.tag {
-				margin-bottom: 0.4em;
+				margin-bottom: #{$line-height /4}rem;
 				@include clearfix;
 
 				span {
-					width: 7em;
+					width: 7rem;
 					padding: 2px 0;
 					display: block;
 					float: left;
@@ -406,7 +407,7 @@ html, body {
 					&:before {
 						@include font-awesome();
 						content: "\f07b";
-						padding-right: 0.2em;
+						padding-right: 0.2rem;
 					}
 				}
 
@@ -431,7 +432,7 @@ html, body {
 					&:before {
 						@include font-awesome();
 						content:  "\f02c";
-						padding-right: 0.2em;
+						padding-right: 0.2rem;
 					}
 				}
 			}
@@ -439,13 +440,13 @@ html, body {
 
 		.page-links {
 			clear: both;
-			margin: 1.6em 0;
+			margin: #{$line-height}rem 0;
 			color: $link-color;
 
 			span {
 				background: $link-color;
 				color: #FFF;
-				padding: 0.2em 0.4em;
+				padding: #{$line-height /8}rem #{$line-height /4}rem;
 				text-decoration:none;
 				border-radius: 2px;
 				font-weight: normal;
@@ -471,7 +472,7 @@ html, body {
 
 		.more-link {
 			color: $link-color;
-			padding-left: 0.8em;
+			padding-left: #{$line-height /2}rem;
 			border-radius: 2px;
 
 			&:before {
@@ -486,7 +487,7 @@ html, body {
 					&:before {
 						@include font-awesome();
 						content: "\f06c";
-						padding-right: 0.2em;
+						padding-right: #{$line-height /8}rem;
 					}
 				}
 			}
@@ -494,7 +495,7 @@ html, body {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		margin: 0.7em 0;
+		margin: #{$line-height /2}rem 0;
 		line-height:1.2;
 		font-weight: normal;
 		color: $header-color;
@@ -526,13 +527,13 @@ html, body {
 	}
 
 	p {
-		line-height: 1.6;
-		margin: 0 0 1.6em;
+		line-height: $line-height;
+		margin: 0 0 #{$line-height}rem;
 	}
 
 	blockquote {
-		margin-left: 1em;
-		padding-left: 1em;
+		margin-left: #{$line-height}rem;
+		padding-left: #{$line-height}rem;
 		border-left: 10px solid $border-color;
 
 		small {
@@ -561,13 +562,13 @@ html, body {
 		width: 100%;
 		border-collapse: collapse;
 		border-spacing: 0;
-		margin-bottom: 1.6em;
+		margin-bottom: #{$line-height}rem;
 
 		th,
 		td {
 			border-bottom: 1px solid $border-color;
 			line-height: 1.4;
-			padding: 0.8em;
+			padding: #{$line-height /2}rem;
 			text-align: left;
 			vertical-align: top;
 		}
@@ -580,9 +581,9 @@ html, body {
 
 	pre {
 		border: dashed 1px #CCC;
-		padding: 0.8em;
+		padding: #{$line-height /2}rem;
 		background: #EEE;
-		margin-bottom: 1.6em;
+		margin-bottom: #{$line-height}rem;
 		line-height: 1.4;
 	}
 
@@ -598,7 +599,7 @@ html, body {
 		background-color: $border-color;
 		border: 0 none;
 		height: 1px;
-		margin-bottom: 1.6m;
+		margin-bottom: #{$line-height}rem;
 	}
 
 	sup, sub {
@@ -631,12 +632,12 @@ html, body {
 	}
 	ul,
 	ol {
-		margin: 0 0 1.6em 1em;
-		padding: 0 0 0 1em;
+		margin: 0 0 #{$line-height}rem #{$line-height /2}rem;
+		padding: 0 0 0 #{$line-height /2}rem;
 		line-height: 1.4;
 
 		li {
-			padding: 0.2em 0;
+			padding: #{$line-height /8}rem 0;
 		}
 
 		ul,
@@ -669,15 +670,15 @@ html, body {
 	}
 
 	dl {
-		margin:0 0 1em 0;
-		line-height: 1.6;
+		margin:0 0 #{$line-height}rem 0;
+		line-height: $line-height;
 
 		dt {
 			font-weight: bold;
 		}
 
 		dd {
-			margin: 0 1.5em 1.6em;
+			margin: 0 #{$line-height}rem #{$line-height}rem;
 			padding: 0;
 		}
 	}
@@ -716,7 +717,7 @@ img[class*="wp-image-"] {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 0.75em;
+	margin-bottom: #{$line-height /2}rem;
 }
 
 a:hover img {
@@ -739,7 +740,7 @@ a:hover img {
 .wp-caption {
 	padding: 5px;
 	background: $border-color;
-	margin-bottom: 0.75em;
+	margin-bottom: #{$line-height /2}rem;
 	max-width: 100%;
 }
 
@@ -819,27 +820,27 @@ video {
 /* Comments
 -------------------------------------------------------------- */
 #content #comments {
-	margin: 1.6em 0;
+	margin: #{$line-height}rem 0;
 	display: block;
 
 	.navigation {
 		position: relative;
-		height: 1em;
+		height: #{$line-height}rem;
 		padding-bottom: 10px;
-		margin-bottom: 1em;
+		margin-bottom: #{$line-height}rem;
 
 		.nav-previous a {
 			position: absolute;
 			top: 0;
 			right: 0;
-			padding-left: 1em;
+			padding-left: #{$line-height}rem;
 		}
 
 		.nav-next a {
 			position: absolute;
 			top: 0;
 			left: 0;
-			padding-right: 1em;
+			padding-right: #{$line-height}rem;
 		}
 	}
 
@@ -851,7 +852,7 @@ video {
 		li.pingback,
 		li.comment {
 			clear: both;
-			margin-bottom: 1em;
+			margin-bottom: #{$line-height}rem;
 			padding: 0;
 			position: relative;
 			list-style: none;
@@ -872,7 +873,7 @@ video {
 
 		.comment-meta {
 			line-height: 1.4;
-			margin-bottom: 0.8em;
+			margin-bottom: #{$line-height /2}rem;
 
 			a {
 				color: $meta-color;
@@ -897,13 +898,13 @@ video {
 		}
 
 		.reply {
-			margin-bottom: 1.6em;
+			margin-bottom: #{$line-height}rem;
 
 			a.comment-reply-link {
 				&:before {
 					@include font-awesome();
 					content:  "\f112";
-					padding-right: 0.2em;
+					padding-right: #{$line-height /8}rem;
 				}
 			}
 		}
@@ -936,13 +937,13 @@ form {
 #commentform {
 	border: 1px dotted $border-color;
 	padding: 10px 15px;
-	margin-bottom: 1.6em;
+	margin-bottom: #{$line-height}rem;
 	background: #FFF;
 	border-radius: 4px;
 	max-width: 650px;
 
 	p {
-		margin-bottom: 0.8em;
+		margin-bottom: #{$line-height /2}rem;
 	}
 
 	label {
@@ -968,7 +969,7 @@ form {
 
 	input#submit {
 		padding: 5px 10px;
-		margin-top: 0.4em;
+		margin-top: #{$line-height /4}rem;
 	}
 
 	#email-notes	 {
@@ -1005,7 +1006,7 @@ form {
 	}
 
 	.site-title {
-		padding: 0.8em 0;
+		padding: #{$line-height /2}rem 0;
 		border-top: dotted 1px $border-color;
 		line-height: 1.4;
 
@@ -1013,12 +1014,12 @@ form {
 			&:after {
 				@include font-awesome();
 				content: "\f19a";
-				padding-left: 0.2em;
+				padding-left: #{$line-height /8}rem;
 			}
 		}
 
 		strong {
-			font-size: 1.2em;
+			font-size: 1.2rem;
 		}
 	}
 
@@ -1088,11 +1089,9 @@ form {
 		h3 {
 			font-size: 1.4rem;
 			font-weight: normal;
-			margin: 0 0 0.4em 0;
-			padding: 0 0 0.4em 0;
+			margin: 0 0 #{$line-height /4}rem 0;
+			padding: 0 0 #{$line-height /4}rem 0;
 			border-bottom: solid 2px $border-color;
-
-			font-size: 1.4rem;
 		}
 
 		ul {
@@ -1104,17 +1103,17 @@ form {
 			li {
 					margin-top: -1px;
 				border-top: dotted 1px #FFF;
-				padding: 0.3em 0 0.3em 0.6em;
-				text-indent: -0.3em;
+				padding: 0.3rem 0 0.3rem 0.6rem;
+				text-indent: -0.3rem;
 
 				&:before {
 					@include font-awesome();
 					content: "\f0da";
-					padding-right: 0.2em;
+					padding-right: #{$line-height /8}rem;
 				}
 
 				ul {
-					padding: 0.5em 0 0 0.5em;
+					padding: 0.5rem 0 0 0.5rem;
 				}
 			}
 		}
@@ -1241,7 +1240,7 @@ form {
 		h2 {
 			border: none;
 			margin: 0;
-			padding: 0 0 1em 0;
+			padding: 0 0 #{$line-height}rem 0;
 
 			a {
 				display: block;
@@ -1256,7 +1255,7 @@ form {
 			background: $background-color;
 			z-index: 1;
 			position: relative;
-			padding-top: 2em;
+			padding-top: #{$line-height}rem;
 
 			ul.article {
 				list-style: none;
@@ -1271,7 +1270,7 @@ form {
 					border-top: dotted 1px $border-color;
 
 					a {
-						padding: 0.5em 0;
+						padding: #{$line-height /2}rem 0;
 						display: block;
 					}
 
@@ -1282,7 +1281,7 @@ form {
 						.entry-title {
 							font-size: 1.2rem;
 							color: $link-color;
-							padding-top: 0.8em;
+							padding-top: #{$line-height /2}rem;
 							margin: 0;
 						}
 
@@ -1297,12 +1296,12 @@ form {
 		#blog {
 			background: $background-color;
 			position: relative;
-			padding-top: 2em;
+			padding-top: #{$line-height}rem;
 			z-index: 1;
 
 			ul.article {
 				list-style: none;
-				margin: 0 0 1.6em 0;
+				margin: 0 0 #{$line-height}rem 0;
 				padding: 0;
 
 				.hentry {
@@ -1326,7 +1325,7 @@ form {
 						position: relative;
 
 						.entry-title {
-							font-size: 1.6rem;
+							font-size: #{$line-height}rem;
 							color: $text-color;
 						}
 					}
@@ -1365,7 +1364,7 @@ form {
 								&:before {
 									@include font-awesome();
 									content: "\f005";
-									padding-right: 0.2em;
+									padding-right: #{$line-height /8}rem;
 									color: #FFF;
 								}
 							}
@@ -1400,7 +1399,7 @@ form {
 			@include clearfix;
 
 			a {
-				padding: 0.5em 0;
+				padding: #{$line-height /2}rem 0;
 				display: block;
 				@include clearfix;
 
@@ -1424,7 +1423,7 @@ form {
 				@include clearfix;
 
 				.entry-title {
-					font-size: 1.6rem;
+					font-size: #{$line-height}rem;
 					color: $link-color;
 				}
 			}
@@ -1449,7 +1448,7 @@ form {
 			a:after {
 				@include font-awesome();
 				content: "\f061";
-				padding-left: 0.2em;
+				padding-left: #{$line-height /8}rem;
 			}
 		}
 
@@ -1457,7 +1456,7 @@ form {
 			a:before {
 				@include font-awesome();
 				content: "\f060";
-				padding-right: 0.2em;
+				padding-right: #{$line-height /8}rem;
 			}
 		}
 	}
@@ -1472,7 +1471,7 @@ form {
 
 			.entry-attachment {
 				text-align: center;
-				margin-bottom: 1.6em;
+				margin-bottom: #{$line-height}rem;
 
 				.wp-caption {
 					background: none;
@@ -1497,9 +1496,9 @@ form {
 		border:solid 1px $link-color;
 		text-decoration:none;
 		text-align: center;
-		padding: 0.2em 0.4em;
+		padding: #{$line-height /8}rem #{$line-height /4}rem;
 		border-radius: 2px;
-		margin-right: 0.1em;
+		margin-right: 0.1rem;
 
 		&.prev,
 		&.next {
@@ -1511,7 +1510,7 @@ form {
 			&:before {
 				@include font-awesome();
 				content: "\f060";
-				padding-right: 0.2em;
+				padding-right: #{$line-height /8}rem;
 			}
 		}
 
@@ -1519,7 +1518,7 @@ form {
 			&:after {
 				@include font-awesome();
 				content:  "\f061";
-				padding-left: 0.2em;
+				padding-left: #{$line-height /8}rem;
 			}
 		}
 	}
@@ -1757,29 +1756,6 @@ form {
 		}
 	}
 
-/*	.fixed-header {
-		#wall {
-			.headerimage {
-				&:not(.slider) {
-					position: fixed;
-				}
-
-				.fixedimage {
-					position: fixed;
-				}
-			}
-		}
-	}
-
-	body:not(.home) .fixed-header:not(.no-title) #content,
-	body:not(.home) .fixed-header:not(.no-nav-menu) #content,
-	body.home.paged .fixed-header:not(.no-title) #content,
-	body.home.paged .fixed-header:not(.no-nav-menu) #content,
-	body.home .fixed-header:not(.no-title) #wall.no-image,
-	body.home .fixed-header:not(.no-nav-menu) #wall.no-image {
-		margin-top: 60px;
-	}
-*/
 	.wrapper:not(.no-title),
 	.wrapper:not(.no-nav-menu){
 		#wall {
@@ -1996,11 +1972,12 @@ form {
 
 			#blog ul.article {
 				@include clearfix;
+				margin-left: -10px;
 
 				.hentry {
-					width: 300px;
+					width: 303px;
 					float: left;
-					margin: 0 5px 10px 5px;
+					margin: 0 0 10px 10px;
 				}
 			}
 		}
@@ -2015,7 +1992,7 @@ form {
 	}
 
 	#commentform {
-		padding: 0.8em 1.6em;
+		padding: #{$line-height /2}rem #{$line-height}rem;
 	}
 
 	#wall {
