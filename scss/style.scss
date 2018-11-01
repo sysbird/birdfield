@@ -75,19 +75,10 @@ body {
 	position: relative;
 }
 
-#header {
-	width: 100%;
-}
-
-#content {
-	width: 100%;
-}
-
+#header,
+#content,
 #footer {
-	overflow: hidden;
-	clear: both;
-	width: 100%;
-	margin: 0 auto;
+			width: 100%;
 }
 
 /* Adjust footer
