@@ -57,7 +57,8 @@ http://www.sysbird.jp
 
 == Changelog ==
 v1.12
-* fix bug Header Slider on javascript.
+* fix bug when the header slider set one image.
+* fix bug the back-top button hides on the main content.
 * animate small menu for mobile.
 * remove languages files. and theme translation migrated to GlotPress.
 
