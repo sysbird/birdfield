@@ -26,7 +26,7 @@ jQuery(function() {
 
 			var birdfield_AdjustHeader = function() {
 				var headerHeight = parseInt( jQuery( '#header' ).height() );
-				if( 80 < headerHeight ){
+				if( 81 < headerHeight ){
 					// so many Navigation
 					jQuery( '.wrapper' ).addClass( 'many-navigation' );
 					jQuery( '.wrapper' ).removeClass( 'fixed-header' );
