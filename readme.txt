@@ -61,6 +61,7 @@ v1.12
 * fix bug the back-top button hides on the main content.
 * animate small menu for mobile.
 * remove languages files. and theme translation migrated to GlotPress.
+* add support for editor styles on the Block Editor.
 
 v1.11
 * fix bug Header Slider on javascript.

@@ -93,8 +93,12 @@ function birdfield_setup() {
 	// Set languages
 	load_theme_textdomain( 'birdfield', get_template_directory() . '/languages' );
 
+	// Add support for Block Styles.
+	add_theme_support( 'wp-block-styles' );
+
 	// This theme styles the visual editor with editor-style.css to match the theme style.
-	add_editor_style();
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-style.css' );
 
 	// Set feed
 	add_theme_support( 'automatic-feed-links' );
