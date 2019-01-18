@@ -51,10 +51,11 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-* {
-  font-family: 'Lucida Grande','Verdana','Hiragino Kaku Gothic ProN',Meiryo, sans-serif;
+body {
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial','Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
   color: #222327;
-	}
+  font-size: 1rem;
+}
 
 #tinymce {
 	padding: 1em;
@@ -91,11 +92,11 @@ h3 {
   border-left: solid 7px #e6e6e6;
   padding-left: 10px; }
 p {
-  line-height: 1.6;
-  margin: 0 0 1.6em; }
+  line-height: 1.7;
+  margin: 0 0 1.7rem; }
 blockquote {
-  margin-left: 1em;
-  padding-left: 1em;
+  margin-left: 1.7rem;
+  padding-left: 1.7rem;
   border-left: 10px solid #e6e6e6; }
   blockquote small {
     display: block;
@@ -113,12 +114,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.6em; }
+  margin-bottom: 1.7rem; }
   table th,
   table td {
     border-bottom: 1px solid #e6e6e6;
     line-height: 1.4;
-    padding: 0.8em;
+    padding: 0.85rem;
     text-align: left;
     vertical-align: top; }
   table th {
@@ -126,9 +127,9 @@ table {
     font-weight: bold; }
 pre {
   border: dashed 1px #CCC;
-  padding: 0.8em;
+  padding: 0.85rem;
   background: #EEE;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7rem;
   line-height: 1.4; }
 code {
   background: #EEE; }
@@ -138,7 +139,7 @@ hr {
   background-color: #e6e6e6;
   border: 0 none;
   height: 1px;
-  margin-bottom: 1.6m; }
+  margin-bottom: 1.7rem; }
 sup, sub {
   font-size: 80%;
   height: 0;
@@ -153,17 +154,16 @@ em {
   font-style: italic; }
 strong {
   font-weight: bold; }
-abbr, acronym {
-  border-bottom: 1px dotted #666;
+abbr {
   cursor: help; }
 ul,
 ol {
-  margin: 0 0 1.6em 1em;
-  padding: 0 0 0 1em;
+  margin: 0 0 1.7rem 0.85rem;
+  padding: 0 0 0 0.85rem;
   line-height: 1.4; }
   ul li,
   ol li {
-    padding: 0.2em 0; }
+    padding: 0.2125rem 0; }
   ul ul,
   ul ol,
   ol ul,
@@ -184,12 +184,12 @@ ol {
       ol ol ol ol {
         list-style: lower-alpha; }
 dl {
-  margin: 0 0 1em 0;
-  line-height: 1.6; }
+  margin: 0 0 1.7rem 0;
+  line-height: 1.7; }
   dl dt {
     font-weight: bold; }
   dl dd {
-    margin: 0 1.5em 1.6em;
+    margin: 0 1.7rem 1.7rem;
     padding: 0; }
 del {
   color: #C00; }
@@ -197,72 +197,104 @@ ins {
   background: #ffc;
   text-decoration: none; }
 
-img.size-full {
-	width: auto;
-	}
-
-img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-	}
-
-p img,
-.wp-caption {
-	margin-top: 0.4em;
-	}
-
-.aligncenter {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	}
+.aligncenter,
+.alignleft,
+.alignright {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
 .alignleft {
-	float: left;
-	margin-right: 0.5em;
-	}
-
+  float: left;
+  margin-right: 0.75em;
+}
 .alignright {
-	float: right;
-	margin-left: 0.5em;
-	}
+  float: right;
+  margin-left: 0.75em;
+}
 
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 0.75em;
-	}
+  margin-bottom: 0.85rem;
+}
+
+.wp-caption,
+.gallery-caption {
+  display: block;
+  font-size: 0.9em;
+  line-height: 1;
+  color: #999;
+  max-width: 100%;
+  text-align: center;
+}
 
 .wp-caption {
-    background: none repeat scroll 0 0 #F5F5F5;
-    color: #999999;
-    font-size: 0.8em;
-    max-width: 100%;
-    padding-top: 5px;
-    text-align: center;
-	}
+  padding: 5px;
+  background: #E6E6E6;
+  margin-bottom: 0.85rem;
+  max-width: 100%;
+}
 
-.wp-caption img {
-	display: block;
-	margin: 5px auto 0 !important;
-	max-width: 98%;
-	}
+.gallery-caption {
+  margin: 5px 0 0 0;
+}
 
-.wp-caption a {
-	border: none !important;
-	}
+.gallery {
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
 
-.wp-caption .wp-caption-text,
-.wp-caption-dd {
-    color: #999999;
-	margin: 0 0 0.6em 0 !important;
-	padding: 0 0 5px 0;
-	position: relative;
-	}
+.gallery .gallery-item {
+  float: left;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 33%;
+}
 
-.wp-smiley {
-	margin:0;
-	}
-	
+.gallery .gallery-item a {
+  display: block;
+}
+
+.gallery .gallery-item img {
+  vertical-align: bottom;
+}
+
+.gallery.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery.gallery-columns-3 .gallery-item {
+  width: 33.33%;
+}
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery.gallery-columns-6 .gallery-item {
+  width: 16.66%;
+}
+
+.gallery.gallery-columns-7 .gallery-item {
+  width: 14.28%;
+}
+
+.gallery.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery.gallery-columns-9 .gallery-item {
+  width: 11.11%;
+}

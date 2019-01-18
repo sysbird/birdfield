@@ -522,7 +522,8 @@ html, body {
 		margin: 0 0 #{$line-height}rem;
 	}
 
-	blockquote {
+	blockquote:not( .wp-block-quote ),
+	blockquote.wp-block-quote.is-large {
 		margin-left: #{$line-height}rem;
 		padding-left: #{$line-height}rem;
 		border-left: 10px solid $border-color;

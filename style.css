@@ -600,27 +600,32 @@ html, body {
   margin: 0 0 1.7rem;
 }
 
-#content blockquote {
+#content blockquote:not(.wp-block-quote),
+#content blockquote.wp-block-quote.is-large {
   margin-left: 1.7rem;
   padding-left: 1.7rem;
   border-left: 10px solid #E6E6E6;
 }
 
-#content blockquote small {
+#content blockquote:not(.wp-block-quote) small,
+#content blockquote.wp-block-quote.is-large small {
   display: block;
   line-height: 20px;
   color: #999999;
 }
 
-#content blockquote small:before {
+#content blockquote:not(.wp-block-quote) small:before,
+#content blockquote.wp-block-quote.is-large small:before {
   content: '\2014 \00A0';
 }
 
-#content blockquote cite:before {
+#content blockquote:not(.wp-block-quote) cite:before,
+#content blockquote.wp-block-quote.is-large cite:before {
   content: "-";
 }
 
-#content blockquote cite {
+#content blockquote:not(.wp-block-quote) cite,
+#content blockquote.wp-block-quote.is-large cite {
   color: #999999;
   display: block;
 }
