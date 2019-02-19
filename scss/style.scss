@@ -733,6 +733,10 @@ a:hover img {
 	background: $border-color;
 	margin-bottom: #{$line-height /2}rem;
 	max-width: 100%;
+
+	.wp-caption-text {
+		color: $meta-color;
+	}
 }
 
 .gallery-caption {

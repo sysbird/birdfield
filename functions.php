@@ -220,6 +220,13 @@ function birdfield_scripts() {
 add_action( 'wp_enqueue_scripts', 'birdfield_scripts' );
 
 //////////////////////////////////////////////////////
+// Enqueue Scripts for Dashboard
+function birdfield_admin_enqueue_scripts() {
+	wp_enqueue_style( 'birdfield-google-font', '//fonts.googleapis.com/css?family=Raleway', false, null, 'all' );
+}
+add_action( 'admin_enqueue_scripts', 'birdfield_admin_enqueue_scripts' );
+
+//////////////////////////////////////////////////////
 // Theme Customizer
 function birdfield_customize( $wp_customize ) {
 

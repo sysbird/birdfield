@@ -52,7 +52,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
-  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial','Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
+  font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial','Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
   color: #222327;
   font-size: 1rem;
 }
@@ -237,6 +237,15 @@ img.aligncenter {
   max-width: 100%;
 }
 
+.wp-caption .wp-caption-dd,
+.gallery-caption .wp-caption-dd {
+  margin: 0;
+}
+
+.wp-caption .wp-caption-text {
+  color: #999;
+}
+
 .gallery-caption {
   margin: 5px 0 0 0;
 }
@@ -297,4 +306,11 @@ img.aligncenter {
 
 .gallery.gallery-columns-9 .gallery-item {
   width: 11.11%;
+}
+
+.editor-post-title__block
+.editor-post-title__input {
+  font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial','Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
+  font-weight: normal;
+  line-height: 1.2;
 }
