@@ -308,9 +308,14 @@ img.aligncenter {
   width: 11.11%;
 }
 
-.editor-post-title__block
+.editor-post-title__block,
 .editor-post-title__input {
   font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial','Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
   font-weight: normal;
   line-height: 1.2;
+}
+
+/* Make sure our non-latin font overrides don't overwrite the iconfont used in the classic editor toolbar */
+.wp-block[data-type="core/freeform"] .mce-btn i {
+  font-family: dashicons !important;
 }
