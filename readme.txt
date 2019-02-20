@@ -1,5 +1,5 @@
 == Description ==
-BirdFIELD is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the header image.
+BirdFIELD is a responsive web design theme,  also supports the block editor. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options. You can also add a slider to the hero header image.
 
 
 === Tags ===
@@ -56,6 +56,9 @@ http://www.sysbird.jp
 
 
 == Changelog ==
+v1.13
+* add Theme Tags "block-styles".
+
 v1.12
 * fix bug when the header slider set one image.
 * fix bug the back-top button hides on the main content.
