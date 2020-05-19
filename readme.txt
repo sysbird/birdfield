@@ -58,6 +58,9 @@ http://www.sysbird.jp
 == Changelog ==
 v1.13
 * add Theme Tags "block-styles".
+* support block "align-wide".
+* remove jquery.tile.js.
+* layout on flexbox.
 
 v1.12
 * fix bug when the header slider set one image.

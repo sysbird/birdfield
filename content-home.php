@@ -17,13 +17,15 @@
 	<?php endif; ?>
 
 	<header class="entry-header">
-		<h3 class="entry-title"><?php the_title(); ?></h3>
-		<time class="postdate" datetime="<?php echo get_the_time( 'Y-m-d' ) ?>"><?php echo get_post_time( get_option( 'date_format' ) ); ?></time>
-		<span class="icon author"><?php the_author(); ?></span>
-		<?php if ( comments_open() ) : ?>
-			<span class="icon comment"><?php comments_number( '0', '1', '%' ); ?></span>
-		<?php endif; ?>
-	</header>
+        <h3 class="entry-title"><?php the_title(); ?></h3>
+    </header>
+    <footer class="entry-meta">
+        <time class="postdate" datetime="<?php echo get_the_time( 'Y-m-d' ) ?>"><?php echo get_post_time( get_option( 'date_format' ) ); ?>&nbsp;</time>
+        <span class="icon author"><?php the_author(); ?></span>
+        <?php if ( comments_open() ) : ?>
+            <span class="icon comment"><?php comments_number( '0', '1', '%' ); ?></span>
+        <?php endif; ?>
+    </footer>
 	</a>
 	<?php if(is_sticky()): ?>
 		<i><span></span></i>

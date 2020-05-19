@@ -30,8 +30,8 @@
 <?php if( is_single() ): // Only Display Excerpts for Single ?>
 	<footer class="entry-meta">
 
-		<div class="category"><span><?php _e( 'Category', 'birdfield' ); ?></span><?php the_category( ' ' ) ?></div>
-		<?php the_tags('<div class="tag"><span>' .__( 'Tags', 'birdfield' ) .'</span>', ' ', '</div>' ) ?>
+		<div class="category"><span><?php _e( 'Category', 'birdfield' ); ?></span><em><?php the_category( ' ' ) ?></em></div>
+		<?php the_tags( '<div class="tag"><span>' .__( 'Tags', 'birdfield' ) .'</span><em>', ' ', '</em></div>' ) ?>
 	</footer>
 <?php endif; ?>
 

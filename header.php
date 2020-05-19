@@ -24,11 +24,13 @@
 				<<?php echo $heading_tag; ?> id="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</<?php echo $heading_tag; ?>>
-				<p id="site-description"><?php bloginfo( 'description' ); ?></p>
-			</div>
+                <p id="site-description"><?php bloginfo( 'description' ); ?></p>
 
-			<nav id="menu-wrapper">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-primary-items', 'items_wrap' => '<button id="small-menu" type="button"><span class="icon"></span></button><ul id="%1$s" class="%2$s">%3$s</ul>', 'fallback_cb' => '' ) ); ?>
-			</nav>
-		</div>
-	</header>
+                <button id="small-menu" type="button"><span class="icon"></span></button>
+			</div>
+    
+            <nav id="menu-wrapper">
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-primary-items', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'fallback_cb' => '' ) ); ?>
+            </nav>
+        </div>
+ 	</header>

@@ -13,22 +13,11 @@ $birdfield_has_news = 0; ?>
 	<?php birdfield_content_header(); ?>
 
 	<?php if( ! is_paged()): ?>
-		<?php if( !( $birdfield_header_image = birdfield_headerslider())): ?>
-			<?php $birdfield_header_image = get_header_image(); ?>
-			<?php if( ! empty( $birdfield_header_image )): ?>
-				<section id="wall">
-					<div class="headerimage">
-						<img src="<?php echo $birdfield_header_image; ?>" alt="<?php bloginfo( 'name' ); ?>" >
-					</div>
-					<div class='widget-area-header'>
-						<?php dynamic_sidebar( 'widget-area-header' ); ?>
-					</div>
-				</section>
-			<?php else: ?>
+		<?php if( ! ( $birdfield_header_image = birdfield_headerslider())): ?>
+			<?php if( ! birdfield_custom_header()): ?>
 				<section id="wall" class="no-image"></section>
 			<?php endif; ?>
 		<?php endif; ?>
-
 	<?php endif; ?>
 
 	<?php if ( is_front_page() && birdfield_has_news_posts()): ?>
